@@ -1,0 +1,125 @@
+# 预设国相关需要在prescripted_countries文件夹下写
+# 首先先自己创建一个预设国直接对着模板来改是最快的
+# 文件夹前面写00或者01可以使预设国排到最上面
+############################################
+# zijian_diguo这个prescripted_countries值可以随便写一个,但需要唯一
+zijian_diguo = {
+    # 然后我会整一个这样的模板放到我的群文件里
+    # 你可以对着注释慢慢改
+    name = zijian_diguo
+    # 预设国的名字,可以是中文,也可以去localisation注册使用
+    adjective = zijian_diguo
+    # 预设国的形容,可以是中文,也可以去localisation注册使用
+    spawn_enabled = no
+    # 是否在进入对局的时候必定创建这个帝国？
+    # 一般为no,大家都是手动选择创建还是不创建的
+    room = "personality_ruthless_capitalists_room"
+    # 房间图的样式,有很多样子,default_room是默认,自己想用什么可以去原版文件里找
+    ethic = "ethic_fanatic_militarist"
+    # 思潮
+    ethic = "ethic_spiritualist"
+    # 思潮
+    origin = origin_common_ground
+    # 起源
+    civics = {
+        # 国策
+        civic_media_conglomerate
+        civic_private_healthcare_corporate
+    }
+    ship_prefix = ""
+    # 舰船的名字,比如ISS这种,你可以直接写个 "" 空着
+    authority = auth_corporate
+    # 政体
+    government = gov_megacorporation
+    # 权力制度
+    # advisor_voice_type = yuanqianbei
+    # # 语音
+    planet_name = zijian_diguo_planet
+    # 星球名字
+    planet_class = pc_savannah
+    # 星球类别,这里是陆地星球
+    system_name = zijian_diguo_system
+    # 星系名字
+    initializer = ""
+    # 绑定的初始恒星系,因为没有绑定母星系所以这里为空
+    graphical_culture = "reptilian_01"
+    # 舰船样式
+    city_graphical_culture = "reptilian_01"
+    # 城市图片样式
+    spawn_as_fallen = no
+    # 是否生成堕落
+    ignore_portrait_duplication = yes
+    # 无视图片重复
+    species = {
+        # 物种
+        class = REP
+        # 物种类别
+        portrait = "rep11"
+        # 物种图
+        gender = female
+        # 物种的性别
+    }
+    species_class = REP
+    # 物种
+    portrait = rep11
+    # 物种图
+    species_name = zijian_diguo_wuzhong
+    # 物种名字
+    species_plural = zijian_diguo_wuzhong
+    # 负数物种的名字
+    species_adjective = zijian_diguo_wuzhongjieshao
+    # 物种的形容
+    name_list = REP3
+    # 使用的哪一种物种名字列表
+    trait = trait_ingenious
+    # 物种特质
+    empire_flag = {
+        # 旗帜
+        icon = {
+            # 图片
+            category = "corporate"
+            file = "corporate_03.dds"
+        }
+        background = {
+            # 背景
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            # 颜色
+            "yellow"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        # 领袖
+        gender = female
+        # 性别
+        ruler_title = zijian_diguo_lingxiutouxian
+        # 领袖头衔名
+        name = zijian_diguo_lingxiu
+        # 领袖名字
+        portrait = "rep11"
+        # 领袖图
+        texture = 5
+        evolution_mask = 0
+        attachment = 0
+        clothes = 1
+        # MOD物种一般直接使用0即可,你也可以根据你使用的自己调整
+        leader_class = "official"
+        # 领袖指挥类别
+        trait = "leader_trait_spycraft"
+        # 领袖特质
+        ruler_title_female = zijian_diguo_lingxiutouxian
+        # 女性统治者头衔名
+        ruler_title_male = zijian_diguo_lingxiutouxian
+        # 男性统治者头衔名
+        heir_title_female = zijian_diguo_lingxiutouxian
+        # 女性继承人头衔名
+        heir_title = zijian_diguo_lingxiutouxian
+        # 男性继承人头衔名
+    }
+}
+# 差不多就是这样

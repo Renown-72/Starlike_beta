@@ -1,0 +1,59 @@
+building_zijianjianzhu = {
+    capital = no
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = yes
+    base_buildtime = 300
+    empire_limit = {
+        base = 1
+        modifier = {
+            add = 3
+            is_ai = no
+        }
+    }
+    potential = {
+        owner = {
+            is_ai = no
+        }
+    }
+    planet_modifier = {
+        job_roboticist_add = 2
+    }
+    country_modifier = {
+        country_naval_cap_mult = 300
+    }
+    army_modifier = {
+
+    }
+    triggered_planet_modifier = {
+        potential = {
+
+        }
+    }
+
+    prerequisites = {
+        tech_mega_engineering
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            rare_crystals = @b3_rare_cost
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            rare_crystals = @b3_rare_upkeep
+        }
+        produces = {
+            energy = 3000000
+        }
+    }
+
+    category = research
+
+    upgrades = {
+
+    }
+
+}

@@ -1,0 +1,81 @@
+# 推进器和跃迁引擎
+# 使用utility_component_template编写
+utility_component_template = {
+    key = "ZIJIANTUIJINQI"
+    # 武器的KEY值，需要唯一
+    size = small
+    # 武器槽位，复制原版推进器的即可
+    icon = "GFX_zijian_tu"
+    # 武器的图片
+    icon_frame = 1
+    # 1就行
+    power = -300
+    # 能源消耗
+    resources = {
+        # 资源消耗相关
+        category = ship_components
+        cost = {
+            alloys = @cost4
+            sr_dark_matter = 1
+        }
+    }
+    modifier = {
+        # BUFF修正，一般原版的推进器只使用了下面两个值
+        ship_base_speed_mult = 3
+        # 亚空间航速
+        ship_evasion_add = 30
+        # 舰船闪避，这里也可以写光环什么的
+    }
+    prerequisites = { "tech_dark_matter_propulsion" }
+    # 这个部件所需的科技
+    component_set = "thruster_components"
+    # 原版右侧插槽不需要注册，复制对应的component_set即可
+    # size_restriction = {  }
+    # size_restriction是用来将这个武器限制只能在某些舰船上使用的，这里不写
+    ai_weight = {
+        # AI权重相关
+        weight = 0
+    }
+}
+# 跃迁引擎一样使用utility_component_template编写
+utility_component_template = {
+    key = "ZIJIANYUEQIANYINQING"
+    # 武器的KEY
+    size = small
+    # 武器槽，使用复制的即可
+    icon = "GFX_zijian_tu"
+    # 武器图片
+    icon_frame = 1
+    # 1就行
+    power = -300
+    # 能源消耗相关
+    resources = {
+        # 资源消耗相关
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    ftl = yes
+    # ftl指的是亚空间航道航行，yes就是可以
+    jumpdrive = yes
+    # jumpdrive指的是这个部件是否可以跃迁，yes代表可以
+    ship_modifier = {
+        # 给与舰船的修正
+        ship_disengage_opportunities_add = 1
+        ship_windup_mult = -1
+        ship_ftl_jumpdrive_range_mult = 1
+    }
+    ai_weight = {
+        # AI权重相关
+        weight = 5
+    }
+    # class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+    # # class_restriction代表能在哪些类型的舰船上使用，
+    # shipclass_military是普通舰船，shipclass_constructor是工程船，shipclass_colonizer是殖民船等等
+    # 也是用来写限制的，这里不用它
+    prerequisites = { "tech_psi_jump_drive_1" }
+    # 这个部件所需的科技
+    component_set = "ftl_components"
+    # 武器的注册，右侧插槽不需要注册，直接使用原版跃迁引擎武器的即可
+}

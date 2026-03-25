@@ -1,0 +1,5 @@
+on_game_start_country = { #开局执行事件
+    events = {
+        event_homing.1
+    }
+}

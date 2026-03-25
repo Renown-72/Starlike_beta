@@ -1,0 +1,23 @@
+﻿l_simp_chinese:
+ ok: "OK"
+ zijiande.1.title: "事件通知"
+ zijiande.1.desc: "事件触发啦"
+
+ zijiande.2.title: "事件-2的,通知"
+ zijiande.2.desc: "事件-2,触发啦"
+
+ zijiande.3.title: "事件-3的,通知"
+ zijiande.3.desc: "事件-3,触发啦"
+
+ zijiande.4.title: "事件-4的,通知"
+ zijiande.4.desc: "事件-4,触发啦"
+
+ zijiande.5.title: "事件-5的,通知"
+ zijiande.5.desc: "事件-5,触发啦"
+
+ zijiandefenmu: "自建坟墓"
+ zijiandefenmu_desc: "自建坟墓的介绍"
+
+ zijiandeyichang_desc: "自建异常的介绍"
+ zijiandeyichang_desc_1: "自建异常的文本介绍"
+ zijiandeyichang: "自建异常"

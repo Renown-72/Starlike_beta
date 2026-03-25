@@ -1,0 +1,10 @@
+component_set = {
+    key = "ZIJIANWUQI_A"
+    icon = "GFX_zijian_tu"
+    icon_frame = 1
+}
+component_set = {
+    key = "ZIJIANWUQI_HUDUN"
+    icon = "GFX_zijian_tu"
+    icon_frame = 1
+}

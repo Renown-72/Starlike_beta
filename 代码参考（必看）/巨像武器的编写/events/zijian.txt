@@ -1,0 +1,16 @@
+namespace = zijianjuxiang
+# 注册事件名
+planet_event = {
+    # 巨像一般使用planet_event来编写它的效果
+    id = zijianjuxiang.1
+    # 事件的id
+    hide_window = yes
+    # 关闭弹窗，这里也基本不需要弹窗
+    is_triggered_only = yes
+    # 需要满足条件才可以触发，这里作用是让其不随随便便就触发了
+    # 可以不用写trigger,直接写它的效果，比如把这个星球固定转化为虚境星球
+    immediate = {
+        change_pc = pc_shrouded
+        # change_pc，这个代码的作用是转化星球，pc_shrouded是虚境星球的值，直接填入进去即可
+    }
+}

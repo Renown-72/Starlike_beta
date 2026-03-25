@@ -1,0 +1,44 @@
+#政体相关
+#一体汉和政体
+auth_copan = {
+    election_term_years = 10 #选举间隔
+    re_election_allowed = yes #允许紧急选举
+    election_type = democratic #选举制度
+    has_heir = no #有无继嗣
+    can_reform = no #可否改革
+
+    color = { 81 140 44 255 }
+
+    ruler_council_position = councilor_ruler_copan
+
+    random_weight = { #AI开局几率
+        base = 0
+    }
+
+    ai_weight = { #AI选择几率
+        base = 0
+    }
+
+    possible = { #限制条件
+        ethics = {
+            NOR = {
+                text = auth_copan.ethic
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+                value = ethic_militarist
+                value = ethic_fanatic_militarist
+                value = ethic_spiritualist
+                value = ethic_fanatic_spiritualist
+            }
+        }
+    }
+
+    country_modifier = {
+        country_leader_pool_size = 1
+        custom_tooltip = auth_copan_tt
+    }
+
+    advanced_authority_swap = {
+        name = "auth_ling_new_copan"
+    }
+}

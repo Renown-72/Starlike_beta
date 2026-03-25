@@ -1,0 +1,23 @@
+﻿l_simp_chinese:
+ leader_trait_zijian: "自建特质"
+ leader_trait_zijian_desc: "自建特质的介绍"
+ leader_trait_zijian_toop: "自建特质的内容"
+
+ zijianguojia: "自建领袖的国家"
+ zijianlingxiu: "自建领袖"
+ zijianlingxiu_1: "自建领袖-指挥官"
+ zijianlingxiu_2: "自建领袖-行政官"
+ zijianlingxiudejieshao: "自建领袖的介绍"
+
+ zijianlingxiu.2.title: "通讯传输接入"
+ zijianlingxiu.2.desc: "我们要做什么呢?"
+ zijianlingxiu.2.a: "暂时没想好"
+ zijianlingxiu.2.b: "变成指挥官"
+ zijianlingxiu.2.b.a: "好的-1"
+ zijianlingxiu.2.c: "变成行政官"
+ zijianlingxiu.2.c.a: "好的-2"
+ zijianlingxiu.2.d: "我们的自建领袖正在重塑身体,暂时无法进行召唤"
+
+ zijianlingxiu.3.title: "通讯传输接入"
+ zijianlingxiu.3.desc: "我们的领袖受到了严重的攻击,暂时回到了亚空间重塑身体,暂时我们无法召唤它"
+ zijianlingxiu.3.a: "好的"

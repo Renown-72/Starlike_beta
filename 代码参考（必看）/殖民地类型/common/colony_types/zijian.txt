@@ -1,0 +1,41 @@
+# 星球类型，殖民地类型，在common文件夹下的colony_types文件夹中编写
+col_zijian = {
+    icon = GFX_colony_type_capital
+    # icon，也就是图片，需要在interface文件夹中注册，这里使用原版的来演示
+    # custom_tooltip =
+    # custom_tooltip = 用来写介绍文本的，里面的文本需要在localisation里注册
+    potential = {
+        # potential，限制，写什么星球才能使用，什么控制者才能使用的
+        is_capital = yes
+        # 原版是靠is_capital来判断是否是首都的，像什么首都专有的星球类型就是靠这个写的,值写yes就是判断它是首都
+        # 因为上面的条件是直接作用与行星的，所以要给控制者的条件需要使用下面的方法
+        # 然后在owner = {  }中写国家条件，这里只做简单限制，也就是禁止AI使用
+        exists = owner
+        owner = { is_ai = no }
+        # 1
+    }
+    planet_modifier = {
+        # planet_modifier,也就是行星修正
+        # 你启用这个星球类型这个星球能吃到的星球修正，你不使用它就没有
+        planet_stability_add = 500
+        planet_amenities_add = 1000
+        pop_government_ethic_attraction = 10
+        planet_resettlement_unemployed_destination_mult = 1
+        planet_jobs_produces_mult = 1
+    }
+    triggered_planet_modifier = {
+        # triggered_planet_modifier，需要条件才可以获得的星球修正
+        # potential写殖民地或者控制者的条件，
+        potential = {
+
+        }
+        # 然后在这里写BUFF修正，其实就是potential和planet_modifier的结合体
+    }
+    # 这些一堆AI相关的都是给AI使用的，按原版AI的聪明程度，你还不如
+    # 直接使用weight_modifier，然后base值写大点让它更容易选择这个星球类型
+    weight_modifier = {
+        base = 10000
+    }
+
+    # 就这样
+}

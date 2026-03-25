@@ -1,0 +1,85 @@
+portraits = {
+    zijian1 = { textureFile = gfx/models/portraits/god1.dds }
+    zijian2 = { textureFile = gfx/models/portraits/deamon1.dds }
+}
+
+portrait_groups = {
+    zijian001 = {
+        default = zijian1
+        game_setup = {
+            add = {
+                portraits = {
+                    #勾式蠢驴，上面用的是zijian1，那么你如果想让物种图像和你物种框里一样你需要把zijian1放在下面的第一位
+                    zijian1
+                    zijian2
+                }
+            }
+            add = {
+                portraits = {
+
+                }
+            }
+        }
+        species = {
+            #generic portrait for a species
+            add = {
+                portraits = {
+                    zijian1
+                    zijian2
+                }
+            }
+            add = {
+                portraits = {
+
+                }
+            }
+        }
+        pop = {
+            #for a specific pop
+            add = {
+
+                portraits = {
+                    zijian1
+                    zijian2
+                }
+            }
+            add = {
+
+                portraits = {
+
+                }
+            }
+        }
+        leader = {
+            #scientists, generals, admirals, governor
+            add = {
+
+                portraits = {
+                    zijian1
+                    zijian2
+                }
+            }
+            add = {
+
+                portraits = {
+
+                }
+            }
+        }
+        ruler = {
+            add = {
+
+                portraits = {
+                    zijian1
+                    zijian2
+                }
+            }
+            add = {
+
+                portraits = {
+
+                }
+            }
+        }
+    }
+}

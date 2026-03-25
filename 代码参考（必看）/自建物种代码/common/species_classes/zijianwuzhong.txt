@@ -1,0 +1,6 @@
+zijianwuzhong = {
+    archetype = BIOLOGICAL
+    graphical_culture = humanoid_01
+    move_pop_sound_effect = "moving_pop_confirmation"
+    randomized = no
+}

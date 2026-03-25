@@ -1,0 +1,58 @@
+﻿#原文文本
+l_simp_chinese:
+  #词条
+  SL_LABEL: "§g辉夙星人类文明博物馆 呈现§!"
+
+  #音乐OST
+  Hui_Su_Name: "Hui Su 辉夙"
+  Hinna_Name: "Hinna 海娜"
+  Soltos_Name: "Soltos 索尔托斯"
+  Fog_Name: "Fog 弗格"
+  Dawn_On_Me_Name: "Dawn On Me 朝闻道"
+  Canossa_Expectations_Name: "Canossa's Expectations 卡诺莎的期待"
+  Light_Sea_Boundary_Name: "Light Sea Boundary 光海边界"
+  The_Graham_Act_Name: "The Graham Act 葛立恒行动"
+  Planet_Reclamation_Name: "Planet Reclamation 星垦"
+  Wiedburt_Name: "Wiedburt 维德伯特"
+  The_Hover_Name: "The Hover 萦回"
+  Moonlight_Route_Name: "Moonlight Route 月光航线"
+  Dive_Into_The_Abyss_Name: "Dive Into the Abyss 潜入深渊"
+  Wind_Of_The_Earth_Name: "Wind of the Earth 地球之风"
+  Celestial_Rush_Name: "Celestial Rush 天穹奔袭"
+  March_On_The_Enemies_Of_The_SUPREME_Name: "March On the Enemies of the SUPREME 向神的敌人前进"
+  The_Sacrifice_Name: "The Sacrifice 牺牲"
+  Praptro_Name: "Praptro 普拉帕特洛"
+  Shine_Like_Our_Fathers_Name: "Shine like Our Fathers 像父辈一样闪烁"
+  Core_s_Will_Name: "Core's Will 地核意志"
+  Rule_The_Stars_Name: "Rule the Stars 统治星空"
+  Blood_Rose_Impact_Name: "Blood Rose Impact 血玫瑰冲击"
+  Extinguish_Me_Name: "Extinguish Me 将我熄灭"
+  In_The_Name_Of_The_Ocean_Name: "In the Name of the Ocean 以海洋之名"
+  Dimensionality_Reduction_Name: "Dimensionality Reduction 降维"
+
+  #起源相关汉化
+  origin_homing: "归巢计划"
+  origin_homing_desc: "征途千年一日，未敢忘其初源；我辈命之所属，定还尔汝新天。“江东子弟今虽在，肯与君王卷土来？” \n$SL_LABEL$"
+  origin_tooltip_projece_homing_effects: "—['concept_robots', £mod_planet_jobs_robotic_produces_mult£机器人]£pop£§H人口§!：800\n—$HOMEWORLD$\n"
+  origin_tooltip_project_homing_negative_effects: "—$INITIAL_POPS$§R-1.8K§!"
+
+  #恒星系相关汉化
+  homing_earth_NAME: "归巢计划地球"
+  homing_earth_DESC: "这将是选择归巢计划起源时的起始恒星系。\n\n决定你的一开始的恒星系的布局，但并不确定其具体位置。"
+  NAME_Homing_Earth: "星尘化地球"
+
+  #政体相关汉化
+  auth_copan: "一体汉和"
+  auth_copan_DESC: "一体汉和"
+  auth_copan.ethic: "不包含§H$ethic_militarist$§!，§H$ethic_authoritarian$§!，§H$ethic_spiritualist$§!相关思潮"
+  auth_copan_tt: ""
+  auth_ling_new_copan: "User的新时代一体汉和"
+  councilor_ruler_copan: "统治者"
+  councilor_ruler_copan_desc: "一体汉和政体下的统治者统揽一切行政事务。"
+
+
+  #国策相关汉化
+  civic_huisu_museum:  "博物遗产"
+  civic_huisu_museum_desc: ""
+  civic_huisu_museum_effects: ""
+  civic_huisu_museum_negative_effects: ""

@@ -1,0 +1,67 @@
+# 区划特化,需要在common/zones文件夹中编写
+zijiande_1 = {
+    icon = GFX_diplomatic_weight_large
+    # icon,有些人应该已经知道了,这时区划特化的图片,需要你自己去注册,有教程,自己去学
+    base_buildtime = 30
+    # 这个区划特化的建造时间,看你心情想写多少写多少,别整负数
+    potential = {
+        # potential,条件,一般使用下面这个unlock
+    }
+    unlock = {
+        # unlock,条件
+        exists = owner
+        owner = {
+            # 因为这里上面的作用域是行星所以这里转换一下作用域来判断帝国
+            is_ai = no
+            # 需要不是AI才可以使用这个区划特化
+        }
+    }
+    resources = {
+        # 建造这个区划特化的消耗,写法和建筑,岗位什么的差不多,注意类别别整错了就行了
+        category = planet_zones
+        cost = {
+            minerals = 10000
+        }
+    }
+    max_buildings = 3
+    # max_buildings,这玩意一般写3,为什么呢?因为蠢驴的UI大小只能放3个不然超出了看不见
+    # 你要整了什么UIMOD那当我没说,你想写几个写几个
+    zone_sets = {
+        # zone_sets,这玩意和区划对应一下就行了,
+        # 你想让你得区划特化可以在哪里建造的话,就去抄原版的区划特化所在的zone_sets下面的值
+        urban
+    }
+    # 这俩玩意是让这个区划特化允许或者是不允许建筑什么东西的
+    # 你把对应建筑的building_sets的值拿来用就行
+    # 如果你想所有的建筑都能放这个区划特化上面那就是这样
+    include = {
+        all
+    }
+    included_building_sets = {
+        # 包含的建筑集合
+    }
+    excluded_building_sets = {
+        # 排除的建筑集合
+    }
+    # planet_modifier和triggered_planet_modifier,写过建筑或者是用过这玩意的应该都知道它是什么了
+    # 你可以在上面写BUFF修正值,比如
+    planet_modifier = {
+        planet_jobs_produces_mult = 1
+        job_foundry_add = 100
+        # 同样已经讲过了,岗位也是BUFF修正,大多数岗位也是这么加上去的
+    }
+    triggered_planet_modifier = {
+        # triggered_planet_modifier和planet_modifier作用差不多
+        # 但一般是像这样满足条件才能拿到这个修正
+        potential = {
+            exists = owner
+            owner = {
+                # 因为这里上面的作用域是行星所以这里转换一下作用域来判断帝国
+                is_ai = no
+                # 需要不是AI才可以使用这个区划特化
+            }
+        }
+        planet_jobs_produces_mult = 1
+    }
+}
+# 就和演示的这样,很简单吧,快去写

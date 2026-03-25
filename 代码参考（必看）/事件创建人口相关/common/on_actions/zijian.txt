@@ -1,0 +1,7 @@
+# 等下要用的接口
+# 这个接口前置科技(视频)里说过作用是什么
+empire_init_capital_planet = {
+    events = {
+        zijiande.1
+    }
+}

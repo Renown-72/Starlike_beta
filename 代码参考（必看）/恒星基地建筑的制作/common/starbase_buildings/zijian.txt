@@ -1,0 +1,56 @@
+# 恒星基地建筑，在starbase_buildings中编写，
+# starbase_modules是写上面的船坞等建筑，下面的建筑是在starbase_buildings里写
+zijian_starbase_buildings = {
+    icon = "GFX_zijian_tu"
+    # icon，引入的建筑图片，如何引入看上期
+    construction_days = 360
+    # construction_days，这个建筑的建造时间
+    potential = {
+        is_normal_starbase = yes
+
+        # exists = owner
+        # owner = { is_ai = no }
+
+        # exists = owner
+        # owner = { has_technology = }
+    }
+    possible = {}
+    # possible和potential效果差不多,都是写限制的,恒星基地的建筑限制不知道写上什么可以直接复制原版的通用限制条件脚本,也可以不写
+    # show_in_tech =
+    # show_in_tech,代表这个模块所需要的科技,也可以写在potential里
+    # 如上所示,值写在has_technology的=后面,或者直接使用show_in_tech
+    station_modifier = {
+        # 给这个恒星基地增加探测强度
+        ship_cloaking_detection_add = 114514
+    }
+    # station_modifier,恒星基地能直接获得的BUFF
+    triggered_station_modifier = {}
+    # triggered_station_modifier,满足条件恒星基地能直接获得的BUFF
+    resources = {
+        # resources代表资源
+        category = starbase_buildings
+        # category代表分类,写什么东西直接复制对应的category即可
+        cost = {
+            # cost,建造这个建筑所用的消耗
+            alloys = 500
+            sr_dark_matter = 25
+        }
+        upkeep = {
+            # upkeep,建造这个建筑所用的维护
+            energy = 5
+            sr_dark_matter = 0.25
+        }
+        produces = {
+            # produces,这个建筑直接给与你的产出,太逆天一般不用
+        }
+    }
+    # custom_tooltip =
+    # 给你这个建筑的效果修正介绍,有的效果需要事件的支持
+
+    ai_weight = {
+        # ai使用这个建筑的权重,值越大越有可能用,或者直接去potential里限制它不能使用,如
+        weight = 0
+    }
+
+    # 已经生效了
+}

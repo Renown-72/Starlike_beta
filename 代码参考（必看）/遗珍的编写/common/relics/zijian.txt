@@ -1,0 +1,82 @@
+# 遗珍，在common文件夹下的relics文件夹中编写
+r_zijian = {
+    activation_duration = 3600
+    # 这个遗珍激活后效果持续的时间
+    portrait = "GFX_ZIJIANYIZHEN"
+    # portrait，注册并引入这个遗珍的图片，需要在interface文件夹下注册
+    # 复制注册好的name引入
+    sound = "relic_activation_ether_drake_trophy"
+    # 这个遗珍开启时发出的声音
+
+    resources = {
+        # 资源，下面是类别和资源消耗相关
+        category = relics
+        # Activation cost
+        cost = {
+            # 这里就是消耗3000凝聚力开启遗珍
+            unity = -3000
+        }
+    }
+
+    ai_weight = {
+        # AI使用它的权重，你得遗珍太厉害最好不让它使用或者这里的值设置为0
+        weight = 100
+    }
+
+    # score = 1000
+    # 获得这个遗珍后得到的分数，不写也行
+
+    # 这里是条件满足才能得到的效果修正
+    triggered_country_modifier = {
+        potential = {
+            # potential里写条件，这里意思是只有AI不可获得
+            is_ai = no
+        }
+        # 效果是增加海军容量
+        country_naval_cap_add = 1000
+    }
+
+    can_be_stolen = no
+    # 可以被偷走吗，很奇怪的代码，建议设置成no
+
+    active_effect = {
+        # active_effect里就是写点击遗珍后开启的效果了
+
+        # 开启后我们可以执行一个原版事件
+        country_event = { id = utopia.2650 }
+        # 在开启后执行utopia.2650，灵能传统的大觉醒事件
+        # 这里先屏蔽了原版传统的条件用于演示，你们不要学我
+
+        # 这里建议加上我这两串代码，
+        hidden_effect = {
+            # 这里的代码作用是在开启后会给你的国家设置一个遗珍冷却的修正BUFF
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                # modifier是效果修正，你不用管
+                days = 3600
+                # days是持续的时间，这里可以进行修改
+            }
+        }
+
+        # 1
+    }
+
+    possible = {
+        custom_tooltip = {
+            # requires_relic_no_cooldown的代码在原版是这个遗珍还未冷却完毕无法使用
+            # 差不多就是这个意思
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                # NOT是检测你这个国家有无
+                # relic_activation_cooldown效果修正，也就是这个
+                # 连起来的意思就是在开启后给你加一个效果修正，在这个效果修正持续的时间里你
+                # 无法再次开启遗珍，
+                # 也就是它们的作用是给你添加冷却BUFF，冷却持续的时间里无法开启遗珍
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+
+    # 就是这样，注意不要学我往原版代码里改，这里只是为了演示
+    # 演示完毕我也复原了
+}

@@ -1,0 +1,6 @@
+# 刚刚编辑器发癫了
+component_set = {
+    key = "ZIJIANWUQI_JUXIANG"
+    icon = "GFX_zijian_tu"
+    icon_frame = 1
+}

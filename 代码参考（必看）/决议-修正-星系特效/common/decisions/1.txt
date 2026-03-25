@@ -1,0 +1,26 @@
+zheshijueyi = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = decision_politics
+    resources = {
+        category = decisions
+        cost = {
+            influence = 30
+        }
+    }
+    potential = {
+        owner = {
+            is_ai = no
+        }
+    }
+    effect = {
+        every_country = {
+            limit = { is_ai = no }
+            add_modifier = {
+                modifier = jianduixiuzheng
+                days = -1
+            }
+        }
+    }
+
+}

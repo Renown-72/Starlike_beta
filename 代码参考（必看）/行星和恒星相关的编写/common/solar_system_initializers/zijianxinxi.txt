@@ -1,0 +1,69 @@
+zijianxingxi = {
+    name = zijianxingxi
+    class = rl_standard_stars
+    usage = custom_empire
+    init_effect = {
+        spawn_megastructure = {
+            type = mega_shipyard_ruined
+            coords_from = event_target:zijianxingxi_event
+        }
+        spawn_system = {
+            initializer = cybrex_system
+            min_distance = 1
+            max_distance = 3
+        }
+        spawn_system = {
+            initializer = solarpunk_01
+            min_distance = 1
+            max_distance = 3
+        }
+    }
+    # 这里用初始恒星系快速演示,初始恒星系是以前的演示代码
+    planet = {
+        name = zijianxingxi_1
+        class = pc_zijian_hengxing
+        # 恒星
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+        init_effect = {
+            save_global_event_target_as = zijianxingxi_event
+        }
+    }
+
+    change_orbit = 45
+
+    planet = {
+        name = zijianxingxi_2
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        starting_planet = yes
+    }
+
+    planet = {
+        name = zijianxingxi_3
+        class = pc_zijian_xingxing
+        # 行星
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        deposit_blockers = none
+    }
+
+    planet = {
+        name = zijianxingxi_4
+        class = pc_zijian_xingxing
+        # 行星
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        deposit_blockers = none
+    }
+
+}

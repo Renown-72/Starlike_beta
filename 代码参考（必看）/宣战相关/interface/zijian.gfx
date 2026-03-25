@@ -1,0 +1,10 @@
+spriteTypes = {
+    spriteType = {
+        # 注意,编辑器虽然没有显示,但你还是需要在interface下注册宣战的图片
+        # 注册方式是 GFX_ + 你的war_goals文件夹下对应宣战的名字
+        name = "GFX_wg_zijianxuanzhan"
+        # texturefile里是原版的图片,这里我直接用原版的,你自己做的话放对应文件夹里就行
+        # 注意格式是.dds,大小不能和原版差太多,最好和原版大小一样
+        texturefile = "gfx/interface/icons/diplomacy/diplomacy_opinion.dds"
+    }
+}

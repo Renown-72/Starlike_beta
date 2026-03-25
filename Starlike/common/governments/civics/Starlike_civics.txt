@@ -1,0 +1,23 @@
+#一体汉和专属国策
+civic_huisu_museum = {
+    description = "civic_huisu_museum_effects" #国策效果
+    negative_description = "civic_huisu_museum_negative_effects" #国策负面效果
+#    traits = {  } #强制给物种加特质
+    modification = yes #开局后是否可以修改
+    possible = { #限制条件
+        OR = {
+            authority = {
+                value = auth_copan
+            }
+        }
+    }
+    modifier = { #给予修正
+
+    }
+    random_weight = { #AI开局概率
+        base = 0
+    }
+    ai_weight = { #AI选择概率
+        base = 0
+    }
+}

@@ -1,0 +1,182 @@
+#恒星系
+#归巢起源地球
+homing_earth = {
+
+    class = "sc_g" #恒星系恒星类型
+    usage = origin #恒星系使用限制
+
+    flags = { Homing_Sol }
+
+    planet = {
+        name = "NAME_Sol"
+        class = "pc_g_star" #行星或恒星类型
+        orbit_distance = 30 #轨道距离
+        orbit_angle = 0 #轨道角度
+        size = 30 #大小
+        has_ring = no #环带
+    }
+
+    planet = {
+        name = "NAME_Homing_Earth"
+        class = "pc_g_star"
+        orbit_distance = 0
+        orbit_angle = 180
+        size = 30
+        has_ring = no
+        }
+
+    planet = {
+        name = "NAME_Mars"
+        class = "pc_city"
+        orbit_distance = 40
+        orbit_angle = 60
+        size = 13
+        starting_planet = yes
+        has_ring = no
+    }
+
+    planet = {
+        name = "NAME_1_Ceres"
+        class = "pc_asteroid"
+        orbit_distance = 30
+        orbit_angle = -210
+        size = 5
+        has_ring = no
+    }
+
+    planet = {
+        name = "NAME_2_Pallas"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = -95
+        size = 5
+        has_ring = no
+    }
+
+    planet = {
+        name = "NAME_3_Juno"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = 285
+        size = 5
+        has_ring = no
+    }
+
+    planet = {
+        name = "NAME_4_Vesta"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = -80
+        size = 5
+        has_ring = no
+    }
+
+    planet = {
+        name = "NAME_Jupiter"
+        class = "pc_gas_giant"
+        orbit_distance = 40
+        orbit_angle = -160
+        size = 35
+        has_ring = no
+        change_orbit = 6
+
+        moon = {
+            name = "NAME_Io"
+            class = "pc_barren"
+            size = 6
+            orbit_distance = 10
+            orbit_angle = 110
+            has_ring = no
+        }
+        moon = {
+            name = "NAME_Europa"
+            class = "pc_ocean"
+            size = 6
+            orbit_distance = 2.5
+            orbit_angle = 190
+            has_ring = no
+        }
+        moon = {
+            name = "NAME_Ganymede"
+            class = "pc_ocean"
+            size = 9
+            orbit_distance = 2.5
+            orbit_angle = 80
+            has_ring = no
+        }
+        moon = {
+            name = "NAME_Callisto"
+            class = "pc_ocean"
+            size = 7
+            orbit_distance = 2.5
+            orbit_angle = -155
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "NAME_Saturn"
+        class = "pc_gas_giant"
+        orbit_distance = 25
+        orbit_angle = 170
+        size = 30
+        has_ring = yes
+        change_orbit = 7
+
+        moon = {
+            name = "NAME_Titan"
+            class = "pc_ocean"
+            size = 8
+            orbit_distance = 12
+            orbit_angle = 320
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "NAME_Uranus"
+        class = "pc_gas_giant"
+        orbit_distance = 25
+        orbit_angle = 125
+        size = 20
+        has_ring = no
+    }
+
+    planet = {
+        name = "NAME_Neptune"
+        class = "pc_gas_giant"
+        orbit_distance = 25
+        orbit_angle = -195
+        size = 20
+        has_ring = no
+        change_orbit = 4
+
+        moon = {
+            name = "NAME_Triton"
+            class = "pc_ocean"
+            size = 6
+            orbit_distance = 7
+            orbit_angle = 115
+            has_ring = no
+        }
+
+        init_effect = {
+            set_planet_entity = {
+                entity = gas_giant_neptune_entity
+                atmosphere_color = hsv { 0.626 0.782 0.9 }
+                atmosphere_intensity = 0.1
+                atmosphere_width = 1.0
+            }
+        }
+    }
+
+    planet = {
+        name = "NAME_134340_Pluto"
+        class = "pc_asteroid"
+        orbit_distance = 30
+        orbit_angle = -210
+        size = 5
+        has_ring = no
+    }
+
+}

@@ -1,0 +1,27 @@
+namespace = event_homing
+
+country_event = {
+    id = event_homing.1
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+        every_system = {
+            limit = { has_star_flag = Homing_Sol }
+            every_system_planet = {
+                limit = {
+                    is_colony = no #是不是殖民地
+                    is_colonizable = yes #是不是可殖民
+                    has_planet_flag = Homing_Europa
+                }
+                set_owner = root
+                create_colony = {
+                    owner = root
+                }
+            }
+        }
+    }
+}

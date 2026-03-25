@@ -1,0 +1,51 @@
+# 在interface文件夹中注册
+# 原版图片放在interface文件夹下的fleet_view.gfx文件中，不会注册图片可以直接复制原版的
+# 复制对应代码后将你复制的轰炸图片注册名字复制在下方的name中即可，注意要复制到对的地方
+# 这里已经复制过了
+spriteTypes = {
+    spriteType = {
+        # 这里直接使用原版的图片
+        # 你引用原版图片只需要复制代表修改对应的name值即可
+        # 一般有两个
+        # GFX_fleet_order_button_ground_support_zijianhongzha
+        # GFX_fleet_order_button_ground_support_zijianhongzha_selected
+        # 一个结尾有selected，一个没有，对着改即可
+        name = "GFX_fleet_order_button_ground_support_zijianhongzha_selected"
+        # 你想修改成自己的轰炸图片一般只需要修改texturefile的值即可
+        texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_indiscriminate_selected.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        noOfFrames = 3
+        animation = {
+            animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+            animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+            animationrotation = 180.0
+            animationlooping = yes
+            animationtime = 12.0
+            animationdelay = 0.0
+            animationblendmode = "overlay"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+            animationframes = { 1 2 3 }
+        }
+    }
+    spriteType = {
+        name = "GFX_fleet_order_button_ground_support_zijianhongzha"
+        texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_indiscriminate_action.dds"
+        effectFile = "gfx/FX/buttonstate.shader"
+        noOfFrames = 3
+        animation = {
+            animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+            animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+            animationrotation = 180.0
+            animationlooping = yes
+            animationtime = 12.0
+            animationdelay = 0.0
+            animationblendmode = "overlay"       #add, multiply, overlay
+            animationtype = "scrolling"      #scrolling, rotating, pulsing
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+            animationframes = { 1 2 3 }
+        }
+    }
+}

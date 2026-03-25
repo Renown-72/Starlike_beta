@@ -1,0 +1,59 @@
+namespace = shanchushijian
+
+country_event = {
+    id = shanchushijian.1
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        FROMFROM = {
+            has_fleet_flag = zheshiwode
+        }
+        FromFromFrom = {
+            NOT = { has_fleet_flag = zheshiwode }
+        }
+    }
+    immediate = {
+        FROMFROM = {
+
+        }
+        FROMFROMFROM = {
+            destroy_fleet = this
+        }
+    }
+}
+country_event = {
+    id = shanchushijian.2
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_owned_fleet = {
+            limit = { NOT = { has_fleet_flag = zheshiwode } }
+            set_fleet_flag = zheshiwode
+        }
+    }
+}
+country_event = {
+    id = shanchushijian.3
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_owned_fleet = {
+            limit = { has_fleet_flag = zheshiwode }
+            remove_fleet_flag = zheshiwode
+        }
+    }
+}
+country_event = {
+    id = shanchushijian.4
+    title = 是否获得删除之力
+    desc = 我们将获得，失去删除之力
+    is_triggered_only = yes
+    option = {
+        name = 获得
+        country_event = { id = shanchushijian.2 }
+    }
+    option = {
+        name = 失去
+        country_event = { id = shanchushijian.3 }
+    }
+}

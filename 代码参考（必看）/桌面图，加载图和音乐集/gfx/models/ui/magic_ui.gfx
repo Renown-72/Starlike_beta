@@ -1,0 +1,117 @@
+# 最后是静态的桌面
+# 在gfx文件夹下的models文件夹下的ui文件夹中注册
+# 需要 .anim - .asset - .gfx .mesh 这几个文件和两张.dds图
+# .anim 文件和 .mesh文件不用管,你在源文件或者拿我这演示文件改一下名字即可
+# 重点是这两张图和 .gfx 文件和 .asset 文件
+objectTypes = {
+    pdxmesh = {
+        name = "magic_ui_mesh"
+        # name值,这个可以随便改,但entity里的pdxmesh的name值要输入正确
+        file = "gfx/models/ui/magic_ui.mesh"
+        # 输入正确的文件名字
+        animation = {
+            # 然后是这个animation,输入
+            id = "idle"
+            type = "magic_ui_idle_animation"
+            # 输入asset文件内animation的name值即可
+        }
+        meshsettings = {
+            # 然后是这些meshsettings,只有第一张需要
+            name = "background_geoShape"
+            texture_diffuse = "magic_ui_export_background.dds"
+            # 静态大图
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "background_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "bridgeLowBack_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "buildingRightFront_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "wagonM_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "line2_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "buildingMid_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "line3_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "android_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "wagonR_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "structureFrontTip_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "line1_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "structureToptFront_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "structureRightFront_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "line4_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+        meshsettings = {
+            name = "structureFront_geoShape"
+            texture_diffuse = "magic_ui_export_background_animated.dds"
+            # 大图,图内无东西
+            shader = "PdxMeshFrontendBackground"
+        }
+    }
+}
+# 这样就注册好了音乐,静态加载图和静态桌面图

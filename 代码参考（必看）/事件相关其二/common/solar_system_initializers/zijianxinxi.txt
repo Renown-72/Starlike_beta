@@ -1,0 +1,68 @@
+zijianxingxi = {
+    name = zijianxingxi
+    class = rl_standard_stars
+    usage = custom_empire
+
+    init_effect = {
+        spawn_megastructure = {
+            type = mega_shipyard_ruined
+            coords_from = event_target:zijianxingxi_event
+        }
+        spawn_system = {
+            initializer = cybrex_system
+            min_distance = 1
+            max_distance = 3
+        }
+        spawn_system = {
+            initializer = solarpunk_01
+            min_distance = 1
+            max_distance = 3
+        }
+    }
+
+    planet = {
+        name = zijianxingxi_1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+        init_effect = {
+            # 因为要改恒星,所以这里给恒星加个flag,使其事件能快速,正确的找到这个星系
+            solar_system = {
+                set_star_flag = zijianxingxi_1
+            }
+            save_global_event_target_as = zijianxingxi_event
+        }
+    }
+
+    change_orbit = 45
+
+    planet = {
+        name = zijianxingxi_2
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+    planet = {
+        name = zijianxingxi_3
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+    planet = {
+        name = zijianxingxi_4
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+}

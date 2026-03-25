@@ -1,0 +1,9 @@
+spriteTypes = {
+
+    #一体汉和起源图片
+    spriteType = {
+        name = "GFX_origin_project_homing"
+        texturefile = "gfx/event_pictures/origins/origins_homing.dds"
+        alwaystransparent = yes
+    }
+}

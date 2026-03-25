@@ -1,0 +1,28 @@
+namespace = zijian
+
+country_event = {
+    id = zijian.1
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        start_situation = { type = situation_zijian }
+    }
+}
+country_event = {
+    id = zijian.2
+    title = 成功
+    desc = 成功啦
+    is_triggered_only = yes
+    option = {
+        name = ok
+    }
+}
+country_event = {
+    id = zijian.3
+    title = 失败
+    desc = 失败啦
+    is_triggered_only = yes
+    option = {
+        name = ok
+    }
+}

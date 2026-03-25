@@ -1,0 +1,154 @@
+# 使用事件注册领袖
+namespace = zijiande
+# 注册事件名字
+country_event = {
+    id = zijiande.1
+    # 注册事件ID 由zijiande + . + 数字组成，数字不要太大最好也不要写个0
+    hide_window = yes
+    # 因为不需要弹窗，所以直接使用hide_window = yes让这个事件不弹出弹窗
+    is_triggered_only = yes
+    # 使这个事件不随随便便触发
+
+    trigger = {
+        # trigger,条件
+        # 这里只是一个简便的判定，因为执行事件后会给我们添加一个国家FLAG
+        # 所以我们只需要使用NOT里面放上has_country_flag + flag来判断我们没有这个flag
+        # 才可以执行事件获得领袖，你也可以用其他的方法判定
+        NOT = { has_country_flag = zijiande }
+    }
+
+    immediate = {
+        # 如果只是想写个领袖就行了这个immediate和里面的值你不用管
+        set_country_flag = zijiande
+    }
+
+    after = {
+        # after在这里是执行直接后创建领袖
+        hidden_effect = {
+            # 执行创建
+            create_leader = {
+                # create_leader创建领袖
+                class = commander
+                # 领袖的类别，这里使用指挥官
+                # official是行政官，scientist是科研
+                skill = 10
+                # 使用skill来确认这个领袖的等级，一般最高十级
+                name = zijianlingxiu
+                # 使用name注册领袖名字
+                custom_catch_phrase = zijianlingxiudejieshao
+                # 使用custom_catch_phrase注册领袖的介绍
+                immortal = yes
+                # 使用immortal来确认你得领袖是否永生不死，yes是是永生不死，no就是不是
+                gender = female
+                # gender是领袖的性别，一般使用male男性
+                # 或者indeterminable性别不明
+                # 或者female女性
+                species = owner_main_species
+                # 设置你得领袖的物种，一般使用owner_main_species即可，意思使其是固定为你得主体物种
+                set_age = 18
+                # 设置领袖的年龄
+                # 不想设置可以写
+                # hide_age = yes
+                # 隐藏它的年龄
+                event_leader = yes
+                # 使其成为一个事件领袖
+                traits = {
+                    # 使用traits引入领袖应有的特质
+                    trait = leader_trait_zijian
+                }
+                effect = {
+                    # 只是想写个领袖可以不写effect和领袖的flag
+                    set_leader_flag = zijiande
+                }
+            }
+            last_created_leader = {
+                # 使用last_created_leader来注册领袖的图片
+                # 使用change_leader_portrait，后面填入你注册的领袖图的id或者说key
+                change_leader_portrait = zijian
+            }
+        }
+    }
+}
+# 只想写个领袖不想做适配和真正的不死到这里就可以停止了
+# 我们需要这个领袖事件不重复被执行获得，只需要在事件前添加
+# 现在因为原版的部分事件，飞升，特质，人口转变会改变我们的领袖立绘，所以需要制作一个自动重置立绘的事件
+country_event = {
+    id = zijiande.2
+    # 注册事件ID 由zijiande + . + 数字组成，数字不要太大最好也不要写个0
+    hide_window = yes
+    # 因为不需要弹窗，所以直接使用hide_window = yes让这个事件不弹出弹窗
+    is_triggered_only = yes
+    # 使这个事件不随随便便触发
+    trigger = {
+        # 因为只有这个flag的国家在获得领袖时候会给自己设置一个国家flag，
+        # 那么直接使用has_country_flag + flag单独检测这个国家并给它执行即可
+        has_country_flag = zijiande
+    }
+    immediate = {
+        # 执行事件
+        every_owned_leader = {
+            # 使用every_owned_leader检索我们所有的领袖
+            if = {
+                # 使用if判断，limit写入条件，因为我们创建的哪个领袖在创建时给它设置了一个领袖flag，
+                # 那么我们可以使用那个领袖flag快速的让事件在我们的领袖中找到这个领袖
+                limit = { has_leader_flag = zijiande }
+                change_leader_portrait = zijian
+                # 使用和上方代码注册领袖图一样的方式即可
+                # 还可以自动清除负面特质
+                remove_all_negative_traits = yes
+                # 移除全部负面特质，使用这串代码即可
+            }
+        }
+    }
+}
+# 再写一个领袖自动复活的事件
+country_event = {
+    id = zijiande.3
+    # 注册事件ID 由zijiande + . + 数字组成，数字不要太大最好也不要写个0
+    title = 领袖复活啦
+    desc = 我们亲爱的领袖复活了......
+    is_triggered_only = yes
+    # 使这个事件不随随便便触发
+    trigger = {
+        # 只需要检测有这个领袖的国家即可
+        has_country_flag = zijiande
+        # 因为等下需要将这个复活事件放在事件接口上，所以使用from直接检测它的领袖特质即可
+        from = {
+            OR = {
+                # has_trait是检测领袖有什么特质，值写入你得领袖特质即可
+                has_trait = leader_trait_zijian
+            }
+        }
+    }
+    immediate = {
+        # 因为从事件接口可知from直接可以检测领袖特质
+        # 所以使用save_event_target_as来存储这个被检测到死亡的领袖的数据
+        from = { save_event_target_as = zijiandelingxiu }
+    }
+    option = {
+        name = OK
+        clone_leader = {
+            # 使用clone_leader来克隆一个一模一样的领袖
+            target = event_target:zijiandelingxiu
+            # 使用target引入领袖的数据
+            effect = {
+                # 执行事件
+                if = {
+                    # 判断
+                    limit = {
+                        # 条件
+                        OR = { has_trait = leader_trait_zijian }
+                        AND = { NOT = { has_leader_flag = zijiande } }
+                        # 若是这个领袖有对应的特质且没有对应的领袖FLAG那么重新给它加上一个领袖FLAG
+                        # AND = { NOT = { has_leader_flag = zijiande } }
+                        # 这段其实可以不写直接给它加
+                    }
+                    set_leader_flag = zijiande
+                    # 加上对应的领袖FLAG
+                }
+            }
+        }
+    }
+
+}
+# 克隆肯定做不到完全一样，但也差不多了

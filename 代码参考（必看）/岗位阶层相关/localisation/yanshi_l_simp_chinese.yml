@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ job_zijiande_gangwei_1: "一号岗位"
+ job_zijiande_gangwei_1_plural: "一号岗位"
+ job_zijiande_gangwei_1_desc: "一号岗位的介绍"
+
+ job_zijiande_gangwei_2: "二号岗位"
+ job_zijiande_gangwei_2_plural: "二号岗位"
+ job_zijiande_gangwei_2_desc: "二号岗位的介绍"
+
+ job_zijiande_gangwei_3: "三号岗位"
+ job_zijiande_gangwei_3_plural: "三号岗位"
+ job_zijiande_gangwei_3_desc: "三号岗位的介绍"
+
+ # 物种阶层
+ purge_magic_ceshi: "测试阶层"
+ purge_magic_ceshi_tooltip: "测试阶层"
+ purge_magic_ceshi_tooltip_delayed: "测试阶层"
+
+ # 岗位阶层
+ pop_cat_zijianjieceng: "自建岗位阶层"
+ pop_cat_zijianjieceng_plural: "自建岗位阶层"
+ pop_cat_zijianjieceng_desc: "自建岗位阶层的介绍"

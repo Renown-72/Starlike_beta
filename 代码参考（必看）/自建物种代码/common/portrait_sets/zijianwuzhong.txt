@@ -1,0 +1,9 @@
+ZIJIANWUZHONG_SET = {
+    species_class = zijianwuzhong
+    portraits = {
+        zijian001
+        zijian001
+        zijian001
+        zijian001
+    }
+}

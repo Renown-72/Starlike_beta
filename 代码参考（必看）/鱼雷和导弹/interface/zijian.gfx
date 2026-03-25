@@ -1,0 +1,11 @@
+# 直接在interface文件夹下新建即可，注意文件格式是.gfx
+spriteTypes = {
+    # spriteTypes，制作前需要先在外面嵌套一层spriteTypes
+    spriteType = {
+        #  再写一个spriteType进行制作
+        name = GFX_zijian_tu
+        # 注册图片的名字，引入图片时需要这个name的值，注意不能重复
+        textureFile = gfx/interface/icons/modules/1.dds
+        # 再使用textureFile引入对应图片的路径就可以了
+    }
+}

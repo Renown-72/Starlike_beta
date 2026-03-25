@@ -1,0 +1,75 @@
+# X槽位武器的制作
+# 武器在common文件夹下的component_templates中编写，在component_sets文件夹中注册
+# 武器需要使用weapon_component_template来写
+weapon_component_template = {
+    key = "ZIJIANDEWUQI"
+    # 武器注册名字只需要使用武器KEY值即可
+    # 武器的KEY值，很重要，写一个唯一的
+    size = extra_large
+    # size代表武器的大小，这里的大小指的是什么槽位，比如extra_large代表X槽，titanic代表T槽等等
+    type = instant
+    # type，武器的种类，一般直接复制原版的即可
+    icon = GFX_zijian_tu
+    # 武器的图片，需要在interface文件夹下注册图片，大小为58 X 58，.dds格式
+    icon_frame = 1
+    # 不知所谓的东西，但武器都有，复制下来设置成1即可
+    prerequisites = { "tech_energy_lance_2" }
+    # prerequisites代表武器所需的科技，这里使用原版的
+    component_set = "ZIJIANDEWUQI"
+    # 武器的注册，在component_set文件夹下注册，没有它你得武器不会显示在游戏中
+    # 再将注册的KEY值复制到component_set后即可注册完毕
+    projectile_gfx = "tachyon_lance"
+    # projectile_gfx代表武器发射的特效，这里直接使用原版光矛特效
+    tags = { zheshiyigebiaoqian }
+    # 武器的标签，一般说它是什么种类的武器，比如说能量武器，
+    # 然后武器可以靠标签吃到循环科技的伤害
+    # 标签可以自设，component_tags文件夹下编写，直接编写值zheshiyigebiaoqian即可
+    # 标签之间需要加空格，注册也是，一般是写个名字拿来看，你想让它吃循环科技需要
+    # 自己整对应的科技
+    resources = {
+        # resources代表资源
+        category = ship_components
+        # category代表种类，ship_components代表武器，复制对应的即可
+        cost = {
+            # cost代表武器的消耗，一般把消耗叠加在建造舰船时的费用
+            alloys = @xl_t6_cost
+        }
+        upkeep = {
+            # upkeep代表武器的维护，一般把维护叠加在舰船上
+            energy = @xl_t6_upkeep_energy
+            alloys = @xl_t6_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        # 使用这个武器的权重，不只是给AI的也是给自动设置的，
+        # 值越高AI越愿意用，自动设置也会优先使用它
+        weight = 0
+    }
+    firing_arc = 360
+    # firing_arc，武器的开火角度，360是圆的一圈，代表每个角度都可以开火
+    damage = { min = 10000 max = 100000 }
+    # damage，武器的伤害，min是这次开火可能造成的最小伤害，max是这次开火可能造成的最大伤害
+    range = 300
+    # range代表武器的射程，min_range代表武器开火所需的最小射程
+    total_fire_time = 30
+    # total_fire_time代表开火所需的时间，你也可以写成 windup = { min = 30 max = 60 }
+    shield_penetration = 10
+    # 武器的双穿之护盾穿透
+    armor_penetration = 10
+    # 武器的双穿之装甲穿透
+    tracking = 1
+    # 武器的追踪，
+    accuracy = 1
+    # 武器的精准度
+    # upgrades_to =
+    # 武器升级所需的，如果你有个ZIJIANDEWUQI_2是它的二级武器
+    # 那么填入即可 upgrades_to = ZIJIANDEWUQI_2
+    entity = large_space_cloud_weapon_entity
+    # 武器的实体，大多数武器不需要写实体，但有时武器在一些舰船上会显示成一个大方块
+    # 那是代表这个武器因为没有实体导致错误，这里只需要加一个即可
+    # 这里推荐使用灵爆，你也可以不设置或者设置成其他的
+    # 进游戏看看
+    # 伤害太高了，重新试一下
+    # 可以看到伤害出来了，并且倒着船也能射
+    # BUFF也在上面，就这样
+}

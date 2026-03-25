@@ -1,0 +1,109 @@
+﻿# 自定义预设名称
+# 在common文件夹下的name_lists文件夹中编写,
+# 注意:你的.txt文件和你编写的MOD是否是正确且能生效的
+# --------------------- #
+# 这里说一下army_names里的machine_defense或者是ship_names里的corvette
+# 这里都是你注册的舰队或者陆军什么的名字
+ZIJIANDE_NAME = {
+    ship_names = {
+        # 通用的(generic)
+        # 通用的写了下面的护卫舰什么的可以不写,其他的也是同理
+        # 这里可以直接写中文,或者你也可以写英文然后到localisation中进行注册
+        # 比如像下面这样,但一般都是建议你直接写成英文然后注册一下
+        # 可以继续加,比如在MAGIC_SHIP_YONGHENGSHOUWANG下面一行直接写中文或者是加个空格写个
+        # MAGIC_SHIP_YONGHENGSHOUWANG_1 MAGIC_SHIP_YONGHENGSHOUWANG_2
+        # 然后去yanshi_l_simp_chinese.yml里给它注册中文
+        generic = {
+            MAGIC_SHIP_SHOUHUXIEYI
+            MAGIC_SHIP_SHENSHENGZHIDI
+            MAGIC_SHIP_SHENGLIYIZHI
+            MAGIC_SHIP_ZHISHIQUANYUAN
+            MAGIC_SHIP_YONGHENGSHOUWANG
+        }
+    }
+    # 舰队名
+    fleet_names = {
+        # random_names里和sequential_name都要写,我偷懒只写一个
+        # 实际上这里不写random_names也行
+        random_names = { }
+        sequential_name = MAGIC_EXPEDITIONARYFLEET
+    }
+    # 军队名称
+    # 不会写的话建议别写或者复制一个原版的,这里是原版的,我基本上没有改陆军名字
+    army_names = {
+        # generic是通用的
+        generic = { sequential_name = MAGIC_WARGUILD }
+        machine_defense = { sequential_name = MAGIC_GROUNDSHIELD }
+        machine_assault_1 = { sequential_name = MAGIC_WARGUILD }
+        machine_assault_2 = { sequential_name = MAGIC_WARGUILD }
+        machine_assault_3 = { sequential_name = MAGIC_WARGUILD }
+        defense_army = { sequential_name = MAGIC_GROUNDSHIELD }
+        assault_army = { sequential_name = MAGIC_WARGUILD }
+        slave_army = { sequential_name = MAGIC_WARPEONS }
+        undead_army = { sequential_name = MAGIC_DREADPEONS }
+        clone_army = { sequential_name = MAGIC_FIGHTINGCLONES }
+        robotic_army = { sequential_name = MAGIC_ROBOTICLANCERS }
+        robotic_defense_army = { sequential_name = MAGIC_ROBOTICPROTECTORS }
+        psionic_army = { sequential_name = MAGIC_WARLOCKCOMPANY }
+        xenomorph_army = { sequential_name = MAGIC_DEATHFLOCK }
+        gene_warrior_army = { sequential_name = MAGIC_STARKNIGHTS }
+        occupation_army = { sequential_name = MAGIC_OCCUPATIONWATCH }
+        individual_machine_occupation_army = { sequential_name = MAGIC_OCCUPATIONWATCH }
+        robotic_occupation_army = { sequential_name = MAGIC_OCCUPATIONDRONES }
+        primitive_army = { sequential_name = MAGIC_PRIMITIVEARMY }
+        industrial_army = { sequential_name = MAGIC_INDUSTRIALARMY }
+        postatomic_army = { sequential_name = MAGIC_POSTATOMICARMY }
+        warpling_army = { sequential_name = seq_warpling_army }
+    }
+    # 行星名称
+    # 因为我暂时不想写行星名称所以这里注释掉了,你可以去搜怎么用编辑器把代码注释回来
+    planet_names = {
+        generic = {
+            # 通用
+            names = {
+                # MAGIC_SHIP_SHOUHUXIEYI
+                # MAGIC_SHIP_SHENSHENGZHIDI
+                # MAGIC_SHIP_SHENGLIYIZHI
+                # MAGIC_SHIP_ZHISHIQUANYUAN
+                # MAGIC_SHIP_YONGHENGSHOUWANG
+            }
+        }
+    }
+    character_names = {
+        # 领袖名字
+        default = {
+            # 一般只用写full_names即可
+            full_names = {
+                MAGIC_CHR_MADOKA
+                MAGIC_CHR_HOMURA
+                MAGIC_CHR_MAMI
+                MAGIC_CHR_SAKAYA
+                MAGIC_CHR_kyoko
+                MAGIC_CHR_NAGISA
+                MAGIC_CHR_YACHIYO
+                MAGIC_CHR_IROHA
+                MAGIC_CHR_ORIKO
+                MAGIC_CHR_KIRIKA
+                MAGIC_CHR_MIFUYU
+                MAGIC_CHR_ASUKA
+                MAGIC_CHR_KANAGI
+                MAGIC_CHR_MITAMA
+                MAGIC_CHR_TOKA
+                MAGIC_CHR_MOMOKA
+                MAGIC_CHR_KAEDE
+                MAGIC_CHR_RENA
+                MAGIC_CHR_FERISHIA
+                MAGIC_CHR_UI
+                MAGIC_CHR_MIKAGE
+                MAGIC_CHR_SUDACHI
+                MAGIC_CHR_MEDIROSU
+                MAGIC_CHR_YOZURU
+                MAGIC_CHR_NAYUTA
+                MAGIC_CHR_GRAY
+                MAGIC_CHR_ISABEAU
+                MAGIC_CHR_YUMA
+            }
+        }
+    }
+}
+# 差不多就像这样就可以了

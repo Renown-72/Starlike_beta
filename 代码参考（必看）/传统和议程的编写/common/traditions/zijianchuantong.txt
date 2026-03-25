@@ -1,0 +1,77 @@
+# 现在来traditions文件夹中写对应的效果，非常简单
+# 只需要对应的值，tr_zijian_kaishi_adopt + = + {} 即可
+# 注意，finish_bonus和adoption_bonus的值可以不设置图片
+tr_zijian_kaishi_adopt = {
+    custom_tooltip = tr_zijian_kaishi_adopt_desc
+    # custom_tooltip的作用是给这个值添加一个提示文本
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+    on_enabled = {
+        # on_enabled代表启用后执行一个效果，这里也代表在使用这个传统槽时直接获得的额外效果
+        # 如果写在finish_bonus，tr_zijian_wanbi_finish里就是在所有的传统点完后执行的效果
+        # 如果写在传统，tr_zijian_1_paleontology里就是选择对应的传统获得的效果，
+        # 比如可以执行一个事件 country_event = { id =  },引入对应的事件ID即可，
+        # 这里没写事件就不演示了
+    }
+    unlocks_agenda = agenda_zijianyicheng
+    # 开启这个传统可以解锁的议程，这里先不写议程，如果写在finish_bonus，tr_zijian_wanbi_finish里
+    # 就是传统点完可以获得的议程
+    # 现在加在我们的传统里,重进看看
+}
+# adoption_bonus和finish_bonus和traditions的写法几乎相同，这里为了快速演示直接复制
+tr_zijian_wanbi_finish = {
+    custom_tooltip = tr_zijian_wanbi_finish_desc
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+}
+# 传统的图片可以使用鼠标指向代码，上面有
+# icon = GFX_tr_zijian_1_paleontology，我们需要GFX_tr_zijian_1_paleontology值即可
+tr_zijian_1_paleontology = {
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+}
+tr_zijian_2_paleontology = {
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+}
+tr_zijian_3_paleontology = {
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+}
+tr_zijian_4_paleontology = {
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+}
+tr_zijian_5_paleontology = {
+    modifier = {
+        # 这个值可以获得的效果修正，同样有条件限制的效果修正，这里不演示了，写法与建筑的写法类似
+        # 这里随便引入一个BUFF修正，如解锁飞升槽
+        # 现在在选择这个传统时会直接解锁一个飞升槽
+        ascension_perks_add = 1
+    }
+}
+# 现在来注册它们的图片，adoption_bonus和finish_bonus的值可以略过

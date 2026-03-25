@@ -1,0 +1,79 @@
+# 宣战目标写完了现在来写宣战
+wg_zijianxuanzhan = {
+    casus_belli = cb_zijianxuanzhan
+    # casus_belli,这个是整这个宣战的宣战目标是什么,也就是填入对应的名字即可
+    hide_if_no_cb = yes
+    # 这个应该是不满足条件就隐藏
+    # set_defender_wargoal = wg_assert_overlordship
+    # set_defender_wargoal是强行设置对方的战争,比如说
+    # 嗜杀蜂群向我们宣战,是净化宣战,那么我们进入战争时会直接设置一个铲除威胁的宣战目标
+    # 如果这里不写那就是让它(被宣战国)自己选宣战目标
+    # total_war = yes
+    # 意思是全面战争，一般向嗜杀蜂群和巨像特有的全面战争使用这个东西
+    allowed_peace_offers = {
+        # allowed_peace_offers是双方可用的和解手段
+        # 一共有三个status_quo,维持现状,surrender投降和demand_surrender,胜利
+        # 也就是让对方投降
+        # 这里也可以不写,如果不写的话双方将无法投降,和和解,必须要有一方被灭掉才能结束这张
+        # 战争,注意，如果这三个你都不写的话total_war = yes一定要写上，不然一直会维持着
+        # 战争状态
+        status_quo
+        surrender
+        demand_surrender
+    }
+    # 等下我直接用控制台演示胜利的效果
+    surrender_acceptance = -100
+    # surrender_acceptance是放对方投降的意愿,一般一开始都是-100就行,
+    # 这次宣战你想让对方快速投降就设置大值,想打的惨烈一点就设置越小越好
+    # 不过我推荐-100就行
+    war_exhaustion = 0.5
+    # war_exhaustion战争的厌战度相关,一般就设置0.5就行
+    potential = {
+        # potential和possible都是写条件的,这里你可以再写一些相关条件
+        # 注意这里你也写了后你需要满足双方的条件才能使用
+        # cb_zijianxuanzhan和wg_zijianxuanzhan
+        # possible就不写了
+        is_ai = no
+    }
+    on_status_quo = {
+        # on_status_quo，如果战争以“维持现状”结束后发生的效果
+        # 如果你上面的allowed_peace_offers里没有写status_quo这里就不用写
+    }
+    on_accept = {
+        # on_accept，如果战争以“胜利”结束后发生的效果
+        # 注意,这里的from一样是想被宣战国执行的
+        # 给你自己执行的效果你只要直接写在外面上面都不用管了
+        # 比如你胜利了给你添加一个BUFF什么的
+        add_modifier = {
+            modifier = naval_cap_homura_limit
+            days = -1
+        }
+        from = {
+            # 这里的意思是如果我们胜利,对方失败那么它们将会被去除对应的国策
+            if = {
+                limit = { has_civic = civic_hive_devouring_swarm }
+                # force_remove_civic是去除国策
+                # 这里合起来的意思就是如果有嗜杀蜂群国策那么它们失败投降的时候
+                # 将会被去掉这个国策
+                force_remove_civic = civic_hive_devouring_swarm
+            }
+            else_if = {
+                limit = { has_civic = civic_fanatic_purifiers }
+                force_remove_civic = civic_fanatic_purifiers
+            }
+            else = {
+                force_remove_civic = civic_machine_terminator
+            }
+        }
+    }
+
+    galactic_empire_joins_defender = {
+        # 这个可写可不写,一般是整星海帝国相关的,下面的这是原版的通用语句
+        from = { is_galactic_emperor = yes }
+        imperial_authority >= 100
+    }
+    # AI使用权重
+    # ai_weight = { weight = 0 }
+
+    # 宣战差不多就是这样
+}

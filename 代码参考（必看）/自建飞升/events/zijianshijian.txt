@@ -1,0 +1,11 @@
+namespace = zijian
+
+country_event = {
+    id = zijian.1
+    title = 效果
+    desc = 这个是效果
+    is_triggered_only = yes
+    option = {
+        name = 确认
+    }
+}

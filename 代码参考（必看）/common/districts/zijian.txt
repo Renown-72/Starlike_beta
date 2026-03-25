@@ -1,0 +1,86 @@
+# 区划
+# 区划在common文件夹下的districts文件夹中编写
+# 图片需要在gfx文件夹下的interface文件夹下的icons文件夹下的districts文件夹下注册
+district_zijian = {
+    base_buildtime = 600
+    # 这个区划的基础建造时间
+    is_capped_by_modifier = no
+    # 是否受到修正影响，一般写个no即可
+
+    potential = {
+        # potential，这里就是条件了，需要满足什么条件这个星球上才会出现这个区划什么的
+        is_planet_class = pc_gaia
+        # pc_gaia是盖亚星球，is_planet_class是检测你得星球类型
+        # 合起来就是只能在盖亚星球上出现
+        # 因为是直接作用于行星，所以要写国家控制者需要包一层owner
+        # 这里演示直接写个is_ai = no，AI不可以获得
+        owner = { is_ai = no }
+    }
+
+    # 这里是星球转化时你得区划会被转化成什么区划，我建议是写个1，1比1转化
+    # 然后convert_to里写你自建的这个区划
+    conversion_ratio = 1
+    convert_to = {
+        district_zijian
+    }
+
+    resources = {
+        # 资源消耗相关了，复制一份原版的对着改即可
+        category = planet_districts
+        cost = {
+            # cost是建造消耗
+            minerals = 1000
+        }
+        upkeep = {
+            # upkeep是建造后的维护
+            energy = 5
+        }
+        produces = {
+            # produces是建造后的直接产出，不需要工人给你打工就能蹦出子的那种
+        }
+    }
+    planet_modifier = {
+        # planet_modifier,这里是行星修正，注意，岗位也是写在修正里的
+        # 这里不写修正，说一下工人岗位是怎么来的
+        # 比如这里建造后原始是给一个消费品岗位和一个铸造岗位
+        job_artisan_add = 100
+        # 消费品
+        job_foundry_add = 100
+        # 铸造
+    }
+    triggered_planet_modifier = {
+        # 那么对星球进行检测，如果是首都星球，那么增加一个消费品减少一个铸造
+        # 那么这个星球是首都星球时，会有两个消费品岗而铸造岗没有
+        potential = {
+            # 使用colony_type进行检测它的星球殖民地类型，col_capital是帝国首都
+            colony_type = col_capital
+        }
+        job_artisan_add = 100
+        # 消费品
+        job_foundry_add = -100
+        # 铸造
+    }
+    triggered_planet_modifier = {
+        # 那么这样就是在铸造首都的情况下，会出现两个铸造岗而消费品岗位一个没有
+        potential = {
+            # col_capital_foundry是铸造首都
+            colony_type = col_capital_foundry
+        }
+        job_artisan_add = -100
+        # 消费品
+        job_foundry_add = 100
+        # 铸造
+    }
+
+    # 这里为了方便演示把岗位数量增多一点
+
+    # 在星球上最小生成的数量和最大生成的数量，我建议是直接不写
+    # min_for_deposits_on_planet = 3
+    # max_for_deposits_on_planet = 15
+
+    prerequisites = {
+        # prerequisites，很逆天的玩意，需要什么科技才可以的，建议不写或者直接写在potential里
+    }
+
+    # 就是这样，show_on_uncolonized建议不写即可
+}

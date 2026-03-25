@@ -1,0 +1,18 @@
+empire_init_capital_planet = {
+    # empire_init_capital_planet，代表如果条件正确，那么这个殖民地将在游戏初始化时执行
+    events = {
+        # 这里的chuangjian.1是给这个系外星系的使用者创建flag和获取控制权的global_event_target的
+        chuangjian.1
+    }
+}
+on_game_start_country = {
+    # on_game_start_country代表开局游戏初始化时执行的事件
+    events = {
+        xingxi.1
+        # xingxi.1是创建系外星系的
+        chuangjian.2
+        # chuangjian.2是用来执行脚本的，使其人口迁移至系外星系
+        # 并且创建殖民地，科研船，工程船和护卫舰，
+        # 并且删除生成在大地图的科研船，工程船和护卫舰，并摧毁这个殖民地变成屏障星球
+    }
+}

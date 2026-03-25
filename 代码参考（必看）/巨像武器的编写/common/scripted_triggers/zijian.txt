@@ -1,0 +1,22 @@
+# 还需要在scripted_triggers里写巨像的轰击条件，需要使用
+# can_destroy_planet_with_ + 武器的KEY来编写条件名
+# 就像我这样
+# 比如我们想让这个巨像不能轰炸恒星，那我们需要写
+# is_star是检测这个行星是不是恒星，yes代表是，no代表不是
+# 这里直接就这样先写点简单的条件，后面自己写了可以依照自己巨像的效果来编写条件
+can_destroy_planet_with_ZIJIANWUQI_JUXIANG = {
+    is_colony = no
+    # 是不是殖民地
+    NOR = {
+        is_star = yes
+
+        is_planet_class = pc_crystal_asteroid
+        # 小行星
+        is_planet_class = pc_rare_crystal_asteroid
+        # 小行星
+        is_planet_class = pc_asteroid
+        # 小行星
+        is_planet_class = pc_ice_asteroid
+        # 小行星
+    }
+}

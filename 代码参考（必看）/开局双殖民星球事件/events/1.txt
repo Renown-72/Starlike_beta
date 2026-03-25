@@ -1,0 +1,27 @@
+namespace = event_yanshi
+
+country_event = {
+    id = event_yanshi.1
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+
+        every_system = {
+            limit = { has_star_flag = zijianxingxi }
+            every_system_planet = {
+                limit = {
+                    is_colony = no
+                    is_colonizable = yes
+                    has_planet_flag = zijianxingxi_3
+                }
+                set_owner = root
+                create_colony = {
+                    owner = root
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+# 自建舰船，我暂时没看生物船,可能生物船有不一样的代码和模块
+# 自己写生物船的话这个只能当作参考
+# 这里拿悖论泰坦的代码来参考
+
+# 舰船差不多就是这样
+zijiandejianchuan = {
+    # zijiandejianchuan,舰船的名字，唯一值,注意一下
+    formation_priority = @titan_formation_priority
+    # formation_priority,形成优先级,至少翻译是这么说的,
+    # 作用？我感觉屁用没有，不知道蠢驴拿来是干什么的,随便复制个值吧
+    graphical_culture = no
+    # graphical_culture,图形文化,建议为no即可
+    entity = "wodezijiande"
+    # entity,代表这舰船的实体,
+    # 那么cosmo_crisis_titan_entity就是舰船的实体？
+    # 哎,其实不是的,可以看到这里就这两行代码,那么真正的实体在哪里呢？
+    # 使用悖论泰坦的名字搜它的区段可以搜到一个
+    # key = "COSMO_CRISIS_TITAN_1T8L4M4H"的区段,这个实体才是我们需要的舰船实体
+    # 至于实体制作自己想办法,这里只是介绍如何用已知的原版实体制作出一个舰船
+    # 将其引入至对应的舰船的entity中即可,这里建议,舰船代码里的entity要么不写,
+    # 要么就保持原始代码不更改即可
+    max_speed = @speed_slow
+    # 现在回到舰船,max_speed是舰船的最大速度,但实际使用肯定不止这点,舰船会受到BUFF的影响
+    acceleration = 0.15
+    # acceleration是舰船的加速度,建议维持个小值即可,不然很突兀
+    rotation_speed = 0.1
+    # rotation_speed是旋转速度,就是舰船的转动,建议整个小值即可
+    collision_radius = @titan_collision_radius
+    # collision_radius是碰撞半径,没什么用随便写个值把
+    modifier = {
+        # 这里的modifier是舰船自带的BUFF，可以写舰船自带了多少闪避，攻速什么的
+        # 这里直接使用原版
+        ship_evasion_add = 2
+        ship_hull_regen_add_perc = 0.1
+        ship_armor_regen_add_perc = 0.1
+    }
+    max_hitpoints = @fe_titan_hp
+    # max_hitpoints,舰船的最大血量，实际使用也会受到其他方面的影响,实际的血量肯定不止这点
+    size_multiplier = 300
+    # size_multiplier是舰船在舰队中占用了多少的数量
+    # 这里的占用很正常的占了300的槽位
+    fleet_slot_size = 8
+    # fleet_slot_size是舰船槽位大小,建议和size_multiplier差不多或者比它小
+    # 我没写过大值不知道写大了会怎么样,也许什么都不会发生
+    section_slots = { "mid" = { locator = "root" } }
+    # 舰船的插槽,这里的mid和插槽里的一样locator随便写即可
+    # 这里注意,因为实体是由舰船的插槽组成的,你如果用插槽实体,那么建议插槽就写一个
+    # 因为插槽会把实体拼在一起,战列舰就是这样,舰船实体是由三个插槽拼起来的
+    # 你想让插槽组成船体你得自己想办法把船体分成对应的份数,然后给插槽
+
+    # 或者只给船体使用真正的船体代码,插槽用空实体代码也可以？
+    # 这个我没试过
+
+    # 注意不止在实体文件里改scale可以整舰船实体的大小
+    # 有些情况下你还可以在舰船代码里改hull_scale改更改实体的大小
+    hull_scale = 3
+
+    num_target_locators = 0
+    # num_target_locators是最大的点数,不是很重要的东西,随便整个放这里或者不写也行？
+
+    icon = ship_size_military_32
+    # icon,舰船的图片,这里建议整个原版的放这里
+
+    combat_disengage_chance = 0.5
+    # combat_disengage_chance,这里是舰船自带的战斗脱离机会机会
+    # 随便整个值吧,建议值不要太大不然舰船几乎都能逃脱
+
+    default_behavior = artillery
+    # 舰船的默认行为,这里的行为就是和作战电脑的行为一样
+    ship_roles = { artillery }
+    # ship_roles是舰船可以使用哪几种行为,这里一般是限制作战电脑的
+
+    resources = {
+        # resources,资源,写过建筑,法令什么的应该都知道这玩意是什么了
+        category = ships
+        cost = {
+            alloys = 10000
+        }
+        upkeep = {
+            energy = @titan_upkeep_energy
+            alloys = @titan_upkeep_alloys
+        }
+    }
+
+    base_buildtime = 1800
+    # base_buildtime是基础建造时间,就是舰船的建造
+
+    use_shipnames_from = titan
+    # 使用的名字来自哪里,这里值都是写原版的舰船,其实不写这玩意也行
+
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+    # required_component_set是舰船的侧槽,五个就对应
+    # 动力室,引擎,跃迁引擎,探测器,和作战电脑,一般舰船都有这五个
+
+    required_component_set = "ship_aura_components"
+    # 而这里的ship_aura_components就是舰船的光环槽了
+    # 一般是泰坦,主宰这种船才有，你写个小船其实也能用它
+
+    class = shipclass_military
+    # class是舰船的类型,这里是一般的舰船使用的类型
+    # 你像恒星基地就是使用的
+    # class = shipclass_starbase
+    # 民用舰船使用的是class = shipclass_constructor等等
+    # 每个类型的舰船都有自己对应的特殊代码,你想整什么样子的东西就复制对应的代码即可
+    construction_type = starbase_shipyard
+    # construction_type是这个舰船是从哪里建造的starbase_shipyard是船坞,
+    # 这里我们也使用船坞
+
+    is_designable = yes
+    # enable_default_design的作用是限制舰船能不能有自己的设计,如果没有自己的设计
+    # 那么一般情况下你无法建造这个舰船,注意是一般情况,
+    # 你还可以靠其他方式造出或者是整到这种舰船
+
+    enable_default_design = yes
+    # enable_default_design的作用是能不能有默认设计,这里建议别启用yes
+    # 为什么呢？我上面不是说了有# 动力室,引擎,跃迁引擎,探测器,和作战电脑,一般舰船都有这五个
+    # 这五个插槽吗,因为动力室(能源)和作战电脑这个原版武器,蠢驴做了很多的限制
+    # 导致你如果是自建的舰船,根本无法使用它原版的作战电脑和动力室
+    # 你想要装这两个东西你得自己写,而上个版本蠢驴更新导致如果没有这两个插槽的船会
+    # 报错导致闪退,我忘了看蠢驴到底修了没有,所以这里以没有修为标准
+    # 你如果要写舰船的话要自己写对应的插槽和动力室,我因为另一个MOD写了这里就不写了
+
+    is_space_station = no
+    # is_space_station代表者是不是是空间站，也就是恒星基地那种,这里我们是普通的船
+    # 建议写不是
+    components_add_to_cost = yes
+    # components_add_to_cost,这里是舰船的武器的消耗是否加到舰船的建造中上
+    # 如果为no，那么你造一个船只需要它的基本建造消耗即可，有什么例子？
+    # 比如说武灾飞的矿船,这也是矿船这么便宜的原因
+    can_have_federation_design = no
+    # can_have_federation_design的意思是联邦舰船里能不能有你这个船
+    # no就是不能
+
+
+    prerequisites = { "tech_cosmogenesis_FE_titan" }
+    # prerequisites就是建造舰船所需要的科技,这里就使用这个悖论泰坦科技
+
+    min_upgrade_cost = {
+        # min_upgrade_cost是最小升级花费
+        alloys = 16
+    }
+
+    potential_construction = {
+        # potential_construction,是建造的条件或者说范围
+        # 这里你可以写国家范围,也可以写像下面的东西
+        # 这里的意识是需要什么巨型结构才可以建造
+        # 什么巨构呢？那肯定是巨型船坞了
+        OR = {
+            is_scope_type = starbase
+            AND = {
+                is_scope_type = megastructure
+                OR = {
+                    is_megastructure_type = mega_shipyard_3
+                    is_megastructure_type = mega_shipyard_restored
+                }
+            }
+        }
+    }
+
+    possible_construction = {
+        # possible_construction和potential_construction
+        # 差不多
+        # 都是写舰船的建造的
+        # 只不过这里比potential_construction多了一个在恒星基地上建造时
+        # 需要对应的模块和对应等级的恒星基地才可以建造
+        custom_tooltip = {
+            fail_text = starbase_citadel_trigger
+            OR = {
+                AND = {
+                    is_scope_type = megastructure
+                    OR = {
+                        is_megastructure_type = mega_shipyard_3
+                        is_megastructure_type = mega_shipyard_restored
+                    }
+                }
+                AND = {
+                    is_scope_type = starbase
+                    # 和这里
+                    has_starbase_size >= starbase_citadel
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = starbase_titan_yards_trigger
+            OR = {
+                AND = {
+                    is_scope_type = megastructure
+                    OR = {
+                        is_megastructure_type = mega_shipyard_3
+                        is_megastructure_type = mega_shipyard_restored
+                    }
+                }
+                AND = {
+                    is_scope_type = starbase
+                    # 在这里
+                    has_starbase_building = titan_yards
+                }
+            }
+        }
+    }
+
+}
+# 就是这样,模型我是肯定不想整的,你想做的话.你得自己想办法做一个舰船模型
+# 然后整到gfx文件夹的对应文件下,再整到
+# 这次就是这样了

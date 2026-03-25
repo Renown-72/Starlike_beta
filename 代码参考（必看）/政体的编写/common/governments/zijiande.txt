@@ -1,0 +1,14 @@
+gov_stagnant_zijian = {
+    ruler_title = RT_EMPEROR
+    ruler_title_female = RT_EMPRESS
+
+    should_force_rename = yes
+
+    possible = {
+        has_authority = zijian
+    }
+
+    weight = {
+        weight = 100000
+    }
+}

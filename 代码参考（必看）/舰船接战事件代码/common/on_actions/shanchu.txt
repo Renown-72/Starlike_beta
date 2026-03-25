@@ -1,0 +1,5 @@
+on_entering_battle = {
+    events = {
+        shanchushijian.1
+    }
+}
