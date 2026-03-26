@@ -1,0 +1,10 @@
+# 归巢计划专属领袖特质
+
+trait_scientist_stellarite_touched = {
+    cost = 1
+    modifier = {
+        scientist_anomaly_research_speed_mult = 0.25
+        scientist_survey_speed_mult = 0.15
+    }
+    initial = yes
+}

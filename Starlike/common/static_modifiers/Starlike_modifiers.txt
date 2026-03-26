@@ -1,0 +1,12 @@
+# 归巢计划专属修正
+
+homing_earth_memories = {
+    country_unity_produces_mult = 0.1
+    icon = "GFX_modifier_unity_01"
+}
+
+homing_legacy = {
+    country_unity_produces_mult = 0.15
+    country_research_speed_mult = 0.1
+    icon = "GFX_modifier_research_01"
+}
