@@ -12,8 +12,8 @@ civic_huisu = {
     }
     modifier = {
         # 博物传承：考古与遗珍收集
-        country_archaeology_speed_mult = 0.25
-        country_relic_energy_produces_mult = 0.15
+        category_archaeostudies_research_speed_mult = 0.25
+        country_unity_produces_mult = 0.10
         # 治理效率：博物馆成员的行政传统
         country_unity_produces_mult = 0.15
         country_edict_fund_add = 10
@@ -35,10 +35,10 @@ civic_martis = {
     }
     modifier = {
         # 科学探索：荧惑派的科研优势
-        country_research_speed_mult = 0.1\
-        country_survey_speed_mult = 0.2
-        country_anomaly_research_speed_mult = 0.2
-        science_ship_survey_speed_mult = 0.15
+        all_technology_research_speed = 0.1
+        science_ship_survey_speed = 0.2
+        ship_anomaly_research_speed_mult = 0.2
+        science_ship_survey_speed = 0.15
         # 代价：领袖池略小（科学治国，人才集中）
         country_leader_pool_size = -1
     }
@@ -58,7 +58,7 @@ civic_phoenix_plume = {
     modifier = {
         # 军事力量：鸾羽派的武装传统
         country_naval_cap_mult = 0.2
-        country_leader_exp_gain_mult = 0.25
+        species_leader_exp_gain = 0.25
         army_damage_mult = 0.15
         # 代价：凝聚力产出略低（武力压制异议）
         country_unity_produces_mult = -0.05

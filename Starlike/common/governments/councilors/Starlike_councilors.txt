@@ -47,8 +47,8 @@ councilor_martis = {
     }
     civic = civic_martis
     modifier = {
-        country_research_speed_mult = 0.05
-        country_anomaly_research_speed_mult = 0.2
+        all_technology_research_speed = 0.05
+        ship_anomaly_research_speed_mult = 0.2
     }
     icon = "GFX_icon_councilor_scientist"
 }
@@ -65,7 +65,7 @@ councilor_phoenix_plume = {
     civic = civic_phoenix_plume
     modifier = {
         country_naval_cap_mult = 0.1
-        country_leader_exp_gain_mult = 0.15
+        species_leader_exp_gain = 0.15
     }
     icon = "GFX_icon_councilor_commander"
 }
