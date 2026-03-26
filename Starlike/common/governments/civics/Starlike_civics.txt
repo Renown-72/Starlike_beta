@@ -1,23 +1,68 @@
-#一体汉和专属国策
-civic_huisu_museum = {
-    description = "civic_huisu_museum_effects" #国策效果
-    negative_description = "civic_huisu_museum_negative_effects" #国策负面效果
-#    traits = {  } #强制给物种加特质
-    modification = yes #开局后是否可以修改
-    possible = { #限制条件
-        OR = {
-            authority = {
-                value = auth_copan
-            }
-        }
-    }
-    modifier = { #给予修正
+# 一体汉和专属国策组
+# 所有国策绑定 origin_homing，通过 origin = { value = origin_homing } 限制
 
+# ── 辉夙派 ── Huixu Faction（民主制路线）
+# 归巢计划主体为博物馆成员，以博物精神维系文明认同
+civic_huisu = {
+    description = "civic_huisu_effects"
+    negative_description = "civic_huisu_negative_effects"
+    modification = no
+    possible = {
+        origin = { value = origin_homing }
     }
-    random_weight = { #AI开局概率
-        base = 0
+    modifier = {
+        # 博物传承：考古与遗珍收集
+        country_archaeology_speed_mult = 0.25
+        country_relic_energy_produces_mult = 0.15
+        # 治理效率：博物馆成员的行政传统
+        country_unity_produces_mult = 0.15
+        country_edict_fund_add = 10
+        # 代价：重文轻武，舰船容量略低
+        country_naval_cap_mult = -0.1
     }
-    ai_weight = { #AI选择概率
-        base = 0
+    random_weight = { base = 0 }
+    ai_weight = { base = 0 }
+}
+
+# ── 荧惑派 ── Martis Faction（独裁制路线）
+# 荧惑派：出身于火星重建时期的科学官群体，以集体智慧带领文明存续
+civic_martis = {
+    description = "civic_martis_effects"
+    negative_description = "civic_martis_negative_effects"
+    modification = no
+    possible = {
+        origin = { value = origin_homing }
     }
+    modifier = {
+        # 科学探索：荧惑派的科研优势
+        country_research_speed_mult = 0.1\
+        country_survey_speed_mult = 0.2
+        country_anomaly_research_speed_mult = 0.2
+        science_ship_survey_speed_mult = 0.15
+        # 代价：领袖池略小（科学治国，人才集中）
+        country_leader_pool_size = -1
+    }
+    random_weight = { base = 0 }
+    ai_weight = { base = 0 }
+}
+
+# ── Phoenix Plume 派 ── Phoenix Plume Faction（帝制路线）
+# 鸾羽派：鸾羽号武官群体，以武力保障文明安全，崇尚军事秩序
+civic_phoenix_plume = {
+    description = "civic_phoenix_plume_effects"
+    negative_description = "civic_phoenix_plume_negative_effects"
+    modification = no
+    possible = {
+        origin = { value = origin_homing }
+    }
+    modifier = {
+        # 军事力量：鸾羽派的武装传统
+        country_naval_cap_mult = 0.2
+        country_leader_exp_gain_mult = 0.25
+        army_damage_mult = 0.15
+        # 代价：凝聚力产出略低（武力压制异议）
+        country_unity_produces_mult = -0.05
+    }
+    random_weight = { base = 0 }
+    ai_weight = { base = 0 }
 }

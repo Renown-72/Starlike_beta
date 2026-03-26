@@ -1,25 +1,71 @@
-#一体汉和内阁
-councilor_ruler_copan = {
+# 一体汉和内阁 — COPAN Council
+# 三个派系内阁职位
 
-    leader_class = { #职位领袖类别
+# ── 统治者 ── Ruler
+councilor_ruler_copan = {
+    leader_class = {
         official
         scientist
         commander
     }
-
-    possible = { #限制条件
-
+    possible = {
+        origin = { value = origin_homing }
     }
-
     modifier = {
-        country_unity_produces_mult = 0.02
+        country_unity_produces_mult = 0.05
         country_edict_fund_add = 5
     }
-
     icon = "GFX_icon_councilor_ruler"
+    ruler_council_position = councilor_ruler_copan
+}
 
-#    is_leader_possible = { #限制单个职位时使用
-#        leader_class = commander
-#    }
+# ── 辉夙委员 ── Huisu Councilor（辉夙派）
+# 博物馆成员出身，统筹博物传承与行政事务
+councilor_huisu = {
+    leader_class = {
+        official
+    }
+    possible = {
+        origin = { value = origin_homing }
+    }
+    civic = civic_huisu
+    modifier = {
+        country_edict_fund_add = 10
+        country_unity_produces_mult = 0.05
+    }
+    icon = "GFX_icon_councilor_curator"
+}
 
+# ── 荧惑科学总监 ── Martis Science Director（荧惑派）
+# 荧惑派科学官，出身火星重建时期的科研领袖群体
+councilor_martis = {
+    leader_class = {
+        scientist
+    }
+    possible = {
+        origin = { value = origin_homing }
+    }
+    civic = civic_martis
+    modifier = {
+        country_research_speed_mult = 0.05
+        country_anomaly_research_speed_mult = 0.2
+    }
+    icon = "GFX_icon_councilor_scientist"
+}
+
+# ── Phoenix Plume 舰队总长 ── Phoenix Plume Fleet Commander（鸾羽派）
+# 鸾羽号武官出身，指挥一体汉和军事力量
+councilor_phoenix_plume = {
+    leader_class = {
+        commander
+    }
+    possible = {
+        origin = { value = origin_homing }
+    }
+    civic = civic_phoenix_plume
+    modifier = {
+        country_naval_cap_mult = 0.1
+        country_leader_exp_gain_mult = 0.15
+    }
+    icon = "GFX_icon_councilor_commander"
 }

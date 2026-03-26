@@ -29,5 +29,55 @@
   #起源相关汉化
   origin_homing: "Project Homing"
   origin_homing_desc: "A thousand-year quest burns in one day's flame,Never dare we forget the primal claim;By sacred oath our destinies are sworn,To forge a new heaven before the morn."
-  origin_tooltip_projece_homing_effects: "DOING"
-  origin_tooltip_project_homing_negative_effects: "DOING"
+  origin_tooltip_projece_homing_effects: "Our StarWhisper bloodline grants heightened sensitivity to the cosmos: anomalies are more readily discovered and resolved. Survey vessels move faster through uncharted systems. The scattered knowledge of our lost homeworld accelerates research. One additional research alternative is available."
+  origin_tooltip_project_homing_negative_effects: "The long exile has cost us dearly: our leader pool is depleted, leaving fewer capable commanders and scientists to draw from."
+
+  # 事件链相关
+  event_homing.2.title: "The Stellar Dust Homeworld"
+  event_homing.2.desc: "The planet designated Homing Earth — turned to stellar dust millennia ago — pulses with an anomalous signal unlike any we have encountered. Something of our old civilization lingers here."
+  event_homing.2.opt.investigate: "Investigate the anomaly."
+  event_homing.2.opt.defer: "Defer the investigation."
+
+  event_homing.3.title: "Echoes of Home"
+  event_homing.3.desc: "Our scientists have decoded fragments of the anomaly's transmission. It contains the architectural schematics of our ancestors — scattered across the void for someone to find. The archive is incomplete, but the knowledge within is invaluable."
+  event_homing.3.opt.archive: "Archive the knowledge for future generations."
+  event_homing.3.opt.decode: "Decode the schematics immediately."
+
+  event_homing.4.title: "Legacy of the StarWhispers"
+  event_homing.4.desc: "The full archive has been unlocked. Among the recovered data are records of a navigational beacon — a device capable of sensing anomalies across the galaxy. This is the legacy of the StarWhispers."
+  event_homing.4.opt.accept: "Accept the legacy."
+  event_homing.4.opt.decline: "Some knowledge is better left sealed."
+
+  # 专属修正
+  homing_earth_memories: "Memories of Homing Earth"
+  homing_earth_memories_desc: "Fragments of our ancestral archive have been recorded, bolstering unity and resolve."
+  homing_legacy: "Legacy of the StarWhispers"
+  homing_legacy_desc: "The decoded archive of Homing Earth grants enhanced research and unity through our shared heritage."
+
+  # 专属科学家特质
+  trait_scientist_stellarite_touched: "Stellarite-Touched"
+  trait_scientist_stellarite_touched_desc: "Touched by the stellar dust of their ancestors, this scientist is exceptionally attuned to cosmic anomalies."
+
+  # 统治者内阁委员
+  councilor_ruler_copan: "Ruler of COPAN"
+  councilor_ruler_copan_desc: "The ruler of the Commonwealth of Pan-Galaxy Unified oversees all administrative affairs with a guiding hand."
+
+  # New faction civics and councilors
+  civic_huisu: "Huixu Faction"
+  civic_huisu_desc: "The Huisu Faction comprises the core crew of Project Homing — the curators and archivists who carried civilization's memory through the void. They govern with an emphasis on heritage, unity, and administrative efficiency."
+  civic_huisu_effects: "§H+25%§! Archaeology Speed\n§H+15%§! Relic Energy Production\n§H+15%§! Unity Production\n§H+10§! Edict Fund\n§R-10%§! Naval Capacity"
+  civic_huisu_negative_effects: ""
+  civic_martis: "Martis Faction"
+  civic_martis_desc: "The Martis Faction: the scientists who rebuilt civilization on Mars after Earth was consumed by stellar assimilation. Their current administrator embodies their collective wisdom, guiding the Commonwealth toward scientific discovery."
+  civic_martis_effects: "§H+10%§! Research Speed\n§H+20%§! Survey Speed\n§H+20%§! Anomaly Research Speed\n§H+15%§! Science Ship Survey Speed\n§R-1§! Leader Pool Size"
+  civic_martis_negative_effects: ""
+  civic_phoenix_plume: "Phoenix Plume Faction"
+  civic_phoenix_plume_desc: "The Phoenix Plume Faction: military officers from the Luanyu vessel, originally stationed to oversee Project Homing. Transported to the stars by accident, they now protect the Commonwealth with disciplined strength."
+  civic_phoenix_plume_effects: "§H+20%§! Naval Capacity\n§H+25%§! Leader Experience Gain\n§H+15%§! Army Damage\n§R-5%§! Unity Production"
+  civic_phoenix_plume_negative_effects: ""
+  councilor_huisu: "Huisu Councilor"
+  councilor_huisu_desc: "The Huisu Councilor oversees the Commonwealth's archival traditions and administrative machinery, representing the values of the original Project Homing crew."
+  councilor_martis: "Martis Science Director"
+  councilor_martis_desc: "The Martis Science Director leads the Commonwealth's research mandate, drawing on the scientific legacy of Mars reconstruction."
+  councilor_phoenix_plume: "Phoenix Plume Fleet Commander"
+  councilor_phoenix_plume_desc: "The Phoenix Plume Fleet Commander commands the Commonwealth's military forces, embodying the martial discipline of the Luanyu vessel."

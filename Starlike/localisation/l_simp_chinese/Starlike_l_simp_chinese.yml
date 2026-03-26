@@ -33,26 +33,62 @@ l_simp_chinese:
   #起源相关汉化
   origin_homing: "归巢计划"
   origin_homing_desc: "征途千年一日，未敢忘其初源；我辈命之所属，定还尔汝新天。“江东子弟今虽在，肯与君王卷土来？” \n$SL_LABEL$"
-  origin_tooltip_projece_homing_effects: "—['concept_robots', £mod_planet_jobs_robotic_produces_mult£机器人]£pop£§H人口§!：800\n—$HOMEWORLD$\n"
-  origin_tooltip_project_homing_negative_effects: "—$INITIAL_POPS$§R-1.8K§!"
+  origin_tooltip_projece_homing_effects: "星语者血脉赋予我们对宇宙的敏锐感知：异常更易发现与解析。勘测船更快穿越未知星域。失落母星的零散知识加速科研。可用额外一个科技替代方案。"
+  origin_tooltip_project_homing_negative_effects: "漫长的流亡让我们付出沉重代价：领袖储备池枯竭，可供选拔的指挥官与科学家更少。"
 
   #恒星系相关汉化
   homing_earth_NAME: "归巢计划地球"
   homing_earth_DESC: "这将是选择归巢计划起源时的起始恒星系。\n\n决定你的一开始的恒星系的布局，但并不确定其具体位置。"
   NAME_Homing_Earth: "星尘化地球"
 
-  #政体相关汉化
-  auth_copan: "一体汉和"
-  auth_copan_DESC: "一体汉和"
-  auth_copan.ethic: "不包含§H$ethic_militarist$§!，§H$ethic_authoritarian$§!，§H$ethic_spiritualist$§!相关思潮"
-  auth_copan_tt: ""
-  auth_ling_new_copan: "User的新时代一体汉和"
-  councilor_ruler_copan: "统治者"
-  councilor_ruler_copan_desc: "一体汉和政体下的统治者统揽一切行政事务。"
-
-
   #国策相关汉化
-  civic_huisu_museum:  "博物遗产"
-  civic_huisu_museum_desc: ""
-  civic_huisu_museum_effects: ""
-  civic_huisu_museum_negative_effects: ""
+
+  # 统治者内阁委员
+  councilor_ruler_copan: "一体汉和统治者"
+  councilor_ruler_copan_desc: "一体汉和政体的统治者以指导性的手统筹一切行政事务。"
+
+  # 事件链相关
+  event_homing.2.title: "星尘故土"
+  event_homing.2.desc: "被命名为"归巢地球"的星球——早在千年前便已化作星尘——此刻正在发出一种前所未见的异常信号。我们古老的文明，似乎仍有残留在此处。"
+  event_homing.2.opt.investigate: "调查异常信号。"
+  event_homing.2.opt.defer: "推迟调查。"
+
+  event_homing.3.title: "故土回响"
+  event_homing.3.desc: "我们的科学家已解码了异常信号的部分内容。其中包含着我们先祖的建筑蓝图——散落在虚空中，等待着被发现。档案并不完整，但其中的知识弥足珍贵。"
+  event_homing.3.opt.archive: "将知识归档，惠及后世。"
+  event_homing.3.opt.decode: "立即解码蓝图。"
+
+  event_homing.4.title: "星语者遗产"
+  event_homing.4.desc: "完整档案已被解锁。在回收的数据中，包含一座导航信标的记录——一种能够感知全星系异常的装置。这便是星语者的遗产。"
+  event_homing.4.opt.accept: "接受这份遗产。"
+  event_homing.4.opt.decline: "有些知识，还是封存为好。"
+
+  # 专属修正
+  homing_earth_memories: "归巢地球的记忆"
+  homing_earth_memories_desc: "先祖档案的碎片已被记录，强化了凝聚力与信念。"
+  homing_legacy: "星语者遗产"
+  homing_legacy_desc: "解码归巢地球档案获得的遗产，通过共同的传承提升了研究与凝聚力。"
+
+  # 专属科学家特质
+  trait_scientist_stellarite_touched: "星尘感应者"
+  trait_scientist_stellarite_touched_desc: "被先祖的星尘所触及，这位科学家对宇宙异常有超乎常人的感知。"
+
+  # COPAN 派系国策
+  civic_huisu: "辉夙派"
+  civic_huisu_desc: "归巢计划的核心船员群体，以博物馆成员和档案管理员为主。他们以传承与治理效率为执政重心，在漫长的流亡中维系着文明的记忆与认同。"
+  civic_huisu_effects: "§H+25%§! 考古速度\n§H+15%§! 遗珍能量产出\n§H+15%§! 凝聚力产出\n§H+10§! 法令基金\n§R-10%§! 舰船容量"
+  civic_huisu_negative_effects: ""
+  civic_martis: "荧惑派"
+  civic_martis_desc: "地球被星尘同化为恒星后，在火星重建时期的科学官群体。星火相传，荧荧不灭。当前执政官即出身于此，其支持者自称荧惑派，以集体智慧引领文明存续。"
+  civic_martis_effects: "§H+10%§! 科研速度\n§H+20%§! 勘测速度\n§H+20%§! 异常研究速度\n§H+15%§! 科学船勘测速度\n§R-1§! 领袖储备容量"
+  civic_martis_negative_effects: ""
+  civic_phoenix_plume: "鸾羽派"
+  civic_phoenix_plume_desc: "鸾羽号武官群体，原为帝国监视归巢计划而派遣的武装力量。意外降临群星位面后，他们以铁律武力护佑文明，崇尚军事秩序与力量。"
+  civic_phoenix_plume_effects: "§H+20%§! 舰船容量\n§H+25%§! 领袖经验获取\n§H+15%§! 陆军伤害\n§R-5%§! 凝聚力产出"
+  civic_phoenix_plume_negative_effects: ""
+  councilor_huisu: "辉夙委员"
+  councilor_huisu_desc: "辉夙委员统筹一体汉和的博物传承与行政事务，代表归巢计划原始船员的价值观。"
+  councilor_martis: "荧惑科学总监"
+  councilor_martis_desc: "荧惑科学总监领导一体汉和的科研使命，承继火星重建时期的科学遗产。"
+  councilor_phoenix_plume: "鸾羽舰队总长"
+  councilor_phoenix_plume_desc: "鸾羽舰队总长指挥一体汉和的军事力量，体现鸾羽号的铁律武力传统。"
