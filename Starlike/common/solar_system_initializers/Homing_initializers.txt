@@ -23,7 +23,14 @@ homing_earth = {
         orbit_angle = 180
         size = 30
         has_ring = no
+        flags = { Homing_Earth_flag }
+        change_orbit = "@orbit_change_medium"
+        init_effect = {
+            create_ambient_object = {
+                type = "anomaly_exoplanet_01_ambient_object"
+            }
         }
+    }
 
     planet = {
         name = "NAME_Mars"
@@ -95,6 +102,7 @@ homing_earth = {
             orbit_distance = 2.5
             orbit_angle = 190
             has_ring = no
+            flags = { Homing_Europa }
         }
         moon = {
             name = "NAME_Ganymede"

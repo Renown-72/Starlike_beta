@@ -5,12 +5,9 @@ origin_homing = {
     icon = "gfx/interface/icons/origins/origins_homing.dds" #小图标
     picture = GFX_origin_project_homing #大图标
 
-    possible = { #起源限制条件
-        authority = {
-            OR = {
-                value = auth_copan
-            }
-        }
+    possible = {
+        # origin_homing 是独立起源，不限制authority
+        # 配合 vanilla auth_dictatorial 使用
     }
     random_weight = {
         base = 0 #AI选用该起源概率
@@ -25,9 +22,18 @@ origin_homing = {
     preferred_planet_class_neighbor = no #是否影响附近宜居球的类型
 
     modifier = {
-        ship_anomaly_generation_chance_mult = 0.2
-        ship_anomaly_research_speed_mult = 1
+        # 探索：星语者血脉对异常的亲和力
+        ship_anomaly_generation_chance_mult = 0.25
+        ship_anomaly_research_speed_mult = 0.5
+        # 探索：更快的星系调查
+        country_survey_speed_mult = 0.25
+        # 科技：归巢计划留下的零散知识碎片
+        research_speed_mult = 0.1
         num_tech_alternatives_add = +1
-        country_leader_pool_size = -1
+        # 代价：流亡文明人才凋零
+        country_leader_pool_size = -2
+        country_leader_exp_gain_mult = 0.25
+        # 叙事特色：凝聚力来自共同的"回归"信念
+        country_unity_produces_mult = 0.15
     }
 }

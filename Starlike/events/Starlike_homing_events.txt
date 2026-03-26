@@ -1,5 +1,8 @@
 namespace = event_homing
 
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.1  开局：自动殖民 Europa
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 country_event = {
     id = event_homing.1
     hide_window = yes
@@ -8,13 +11,13 @@ country_event = {
         is_ai = no
     }
     immediate = {
-
+        # 在 Homing_Sol 恒星系中，找到 Europa（月球），自动殖民
         every_system = {
             limit = { has_star_flag = Homing_Sol }
             every_system_planet = {
                 limit = {
-                    is_colony = no #是不是殖民地
-                    is_colonizable = yes #是不是可殖民
+                    is_colony = no
+                    is_colonizable = yes
                     has_planet_flag = Homing_Europa
                 }
                 set_owner = root
@@ -23,5 +26,128 @@ country_event = {
                 }
             }
         }
+        # 首次开局时在恒星系发现异常，为探索叙事埋线
+        every_system = {
+            limit = { has_star_flag = Homing_Sol }
+            create_ambient_object = {
+                type = "anomaly_exoplanet_01_ambient_object"
+            }
+        }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.2  探索：星尘化地球
+# 触发：玩家首次调查 Homing_Earth（星尘化地球）时发现异常
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+planet_event = {
+    id = event_homing.2
+    title = "event_homing.2.title"
+    desc = "event_homing.2.desc"
+    picture = GFX_evt_anomaly_overheat
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = {
+            has_planet_flag = Homing_Earth_flag
+        }
+    }
+    option = {
+        name = "event_homing.2.opt.investigate"
+        trigger_event = {
+            id = event_homing.3
+            days = 30
+        }
+        set_timed_country_flag = {
+            flag = homing_earth_investigating
+            days = 3650
+        }
+    }
+    option = {
+        name = "event_homing.2.opt.defer"
+        # 延迟探索，flag 保留以便后续重新触发
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.3  调查：异常解析
+# 触发：玩家在星尘化地球完成异常调查
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.3
+    title = "event_homing.3.title"
+    desc = "event_homing.3.desc"
+    picture = GFX_evt_metropolis
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = homing_earth_investigating
+        NOT = { has_country_flag = homing_earth_analyzed }
+    }
+    immediate = {
+        set_country_flag = homing_earth_analyzed
+    }
+    option = {
+        name = "event_homing.3.opt.archive"
+        # 将数据归档，获得凝聚力
+        add_unity = 500
+        add_modifier = {
+            modifier = "homing_earth_memories"
+            days = -1
+        }
+    }
+    option = {
+        name = "event_homing.3.opt.decode"
+        # 尝试解码，获得科技
+        add_research_progress = {
+            area = physics
+            progress = 0.15
+        }
+        add_research_progress = {
+            area = society
+            progress = 0.15
+        }
+        trigger_event = {
+            id = event_homing.4
+            days = 180
+        }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.4  成就：遗产解码完成
+# 触发：选择"解码"路线后延时触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.4
+    title = "event_homing.4.title"
+    desc = "event_homing.4.desc"
+    picture = GFX_evt_fleet_from_surface
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = homing_earth_analyzed
+        NOT = { has_country_flag = homing_earth_legacy_unlocked }
+    }
+    immediate = {
+        set_country_flag = homing_earth_legacy_unlocked
+    }
+    option = {
+        name = "event_homing.4.opt.accept"
+        # 解锁永久修正："归巢遗产"
+        add_modifier = {
+            modifier = "homing_legacy"
+            days = -1
+        }
+        # 获得一颗额外科学家
+        create_leader = {
+            class = scientist
+            species = root
+            name = "NAME_Homing_Scholar"
+            skill = 2
+            traits = { trait_scientist_stellarite_touched }
+        }
+    }
+    option = {
+        name = "event_homing.4.opt.decline"
+        # 拒绝解读，保持神秘
+        add_unity = 1000
     }
 }
