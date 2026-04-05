@@ -1,229 +1,164 @@
-# CLAUDE.md
+# CLAUDE.md — 偌星：归巢计划
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## 项目概述
 
-## Project Overview
-
-Starlike: Project Homing is a **Stellaris v4.3 game mod** built entirely with Paradox Scripting Language (`.txt` files). There is no build system, no test pipeline, and no compiled code. The mod is loaded directly by the Stellaris engine.
+Stellaris v4.3 游戏模组，采用 Paradox Scripting Language（`.txt`）全量开发，无构建系统，无测试管线，由游戏引擎直接加载。
 
 **Steam Workshop ID**: 3480510700
 
-**Core gameplay content**:
-- Custom origin `origin_homing` with a Sol-like starting system (Mars as homeworld, Earth turned to stellar dust)
-- Three faction civics (`civic_huisu`, `civic_martis`, `civic_phoenix_plume`) each gating a councilor
-- 4-event narrative chain (`event_homing.1`-`.4`) covering Europa auto-colonization and Earth exploration
-- 25-track original soundtrack (Arnaud Roy Vol.1, H-Pi Vol.2)
+**核心玩法**：origin_homing（归巢计划）—— Sol 系毁灭后的火星遗民文明，3 个派系国策，4 个事件叙事链，25 首原声。
 
-## Architecture: How the Pieces Connect
-
-The mod's core design is a **dependency chain** that flows from origin through civics to councilors, with events triggered by game hooks and planet flags. Understanding this chain is essential before modifying any file.
+## 架构依赖链
 
 ```
-Starlike.mod (mod descriptor, points engine to Starlike/ directory)
-    |
-    v
-on_game_start_country (common/on_actions/1.txt)
-    |
-    v  triggers
-event_homing.1 (events/Starlike_homing_events.txt)
-    |
-    v  auto-colonizes Europa via Homing_Europa flag
-    |
-    v  (later, player surveys Homing_Earth_flag planet)
-event_homing.2 --> event_homing.3 --> event_homing.4
-    |                   |                   |
-    v                   v                   v
-    flag-gated      homing_earth_memories  homing_legacy modifier
-    planet_event    OR decode path          + stellarite_touched scientist
+Starlike.mod → common/on_actions/1.txt → event_homing.1
+  → auto-colonize Europa → Homing_Earth_flag survey
+  → event_homing.2 → event_homing.3 → event_homing.4
+      (flag-gated planet_event chain)
 
 origin_homing (civics/Starlike_origin.txt)
-    |
-    +-- initializers = { homing_earth }  --> solar_system_initializers/Homing_initializers.txt
-    |
-    +-- possible gate for all civics and councilors:
-        civic_huisu  --> councilor_huisu  (official, archival tradition)
-        civic_martis --> councilor_martis (scientist, Mars reconstruction)
-        civic_phoenix_plume --> councilor_phoenix_plume (commander, military)
+  ├─ initializers = { homing_earth } → solar_system_initializers/Homing_initializers.txt
+  └─ possible = { }  无 authority 限制，兼容 vanilla 独裁制
+      ├─ civic_huisu      → councilor_huisu  （博物传承派）
+      ├─ civic_martis     → councilor_martis （荧惑科学派）
+      └─ civic_phoenix_plume → councilor_phoenix_plume （鸾羽军事派）
 ```
 
-**Critical invariant**: Every civic and councilor is gated by `origin = { value = origin_homing }`. Adding new civics or councilors must preserve this gate or the content will appear outside the intended origin.
+**关键不变式**：所有国策和内阁职位均通过 `origin = { value = origin_homing }` 限制，新增内容必须保留此 gate。
 
-## Version Discrepancy
+## 文件加载与命名
 
-Two `.mod` files exist with different `version` values:
-- `Starlike.mod` (repo root): `version="4.3"` -- this is the file used by the Paradox Launcher
-- `Starlike/descriptor.mod` (inside mod folder): `version="4.0"` -- this is the file uploaded to Steam Workshop
+Stellaris 按**字母序**加载各 `common/` 子目录下的 `.txt` 文件。本模组命名策略：
+- `Starlike_*.txt` — 加载于小写字母开头的 vanilla 文件之后
+- `00_*.txt` / `1.txt` — 显式数字前缀控制加载顺序
 
-These should be kept in sync. `supported_version="v4.3.*"` is consistent in both.
+**标识符前缀**：`homing_`（系统级）、`civic_`（国策）、`councilor_`（内阁）、`event_homing.*`（事件）、`trait_scientist_stellarite_touched`（特质）
 
-## Verifying Changes
+## 跨文件通信 — Flag 系统
 
-There is no automated testing. All verification is manual.
+| Flag | 设置位置 | 读取位置 | 用途 |
+|------|---------|---------|------|
+| `Homing_Sol` | Homing_initializers.txt（系统） | event_homing.1 | 标识起始星系 |
+| `Homing_Earth_flag` | Homing_initializers.txt（星球） | event_homing.2 触发 | 标识星尘化地球 |
+| `Homing_Europa` | Homing_initializers.txt（星球） | event_homing.1 | 标识欧罗巴自动殖民 |
+| `homing_earth_investigating` | event_homing.2（3650天） | event_homing.3 触发 | 调查进行中 |
+| `homing_earth_analyzed` | event_homing.3 | event_homing.4 触发 | 分析完成 |
+| `homing_earth_legacy_unlocked` | event_homing.4 | event_homing.4 自身 | 防重复触发 |
 
-**Launch with mod enabled** via Stellaris launcher. For quick iteration:
+重命名或删除任何 flag 必须同步更新全部引用。
 
-```
-# Trigger specific events from in-game console (tilde key):
-event event_homing.1          # Auto-colonize Europa
-event event_homing.2          # Stellar Dust Homeworld (needs planet scope)
-event event_homing.3          # Echoes of Home
-event event_homing.4          # Legacy of the StarWhispers
+## 本地化工作流
 
-# Useful console commands for mod debugging:
-observe                       # Switch to observer mode
-research_all_technologies     # Unlock all tech (test prerequisites)
-```
-
-**Error log location**:
-```
-%USERPROFILE%\Documents\Paradox Interactive\Stellaris\logs\error.log
-```
-
-Common errors to watch for: missing localization keys (shown as raw key names in-game), undefined modifier names (silent failures), and mismatched flag names between initializer and event files.
-
-## File Loading and Naming Rules
-
-Stellaris loads all `.txt` files within each `common/` subdirectory in **lexical order**. This mod uses two naming strategies:
-- `Starlike_*.txt` -- loads after vanilla files starting with lowercase letters
-- `00_*.txt` or `1.txt` -- explicit numeric prefix for load-order control
-
-All custom identifiers use these prefixes to avoid collisions with vanilla or other mods:
-- `origin_homing`, `homing_*` -- origin and system-level
-- `civic_huisu`, `civic_martis`, `civic_phoenix_plume` -- faction civics
-- `councilor_huisu`, `councilor_martis`, `councilor_phoenix_plume` -- faction councilors
-- `event_homing.*` -- event namespace
-- `trait_scientist_stellarite_touched` -- leader trait
-
-## Flag System (Cross-File Communication)
-
-The mod uses Stellaris flags as the primary mechanism for cross-file state sharing. These must remain consistent across files:
-
-| Flag | Set In | Read In | Purpose |
-|------|--------|---------|---------|
-| `Homing_Sol` | `Homing_initializers.txt` (system flag) | `Starlike_homing_events.txt` (event_homing.1) | Identifies the starting system |
-| `Homing_Earth_flag` | `Homing_initializers.txt` (planet flag) | `Starlike_homing_events.txt` (event_homing.2 trigger) | Marks the stellar-dust Earth |
-| `Homing_Europa` | `Homing_initializers.txt` (planet flag) | `Starlike_homing_events.txt` (event_homing.1) | Marks Europa for auto-colonization |
-| `homing_earth_investigating` | `Starlike_homing_events.txt` (event_homing.2, timed 3650 days) | `Starlike_homing_events.txt` (event_homing.3 trigger) | Investigation in progress |
-| `homing_earth_analyzed` | `Starlike_homing_events.txt` (event_homing.3) | `Starlike_homing_events.txt` (event_homing.4 trigger) | Analysis complete gate |
-| `homing_earth_legacy_unlocked` | `Starlike_homing_events.txt` (event_homing.4) | `Starlike_homing_events.txt` (event_homing.4 trigger) | Prevents re-triggering |
-
-Renaming or removing any flag without updating all references will silently break the event chain.
-
-## Localization Workflow
-
-Both language files must be updated in lockstep. Every scripted `description`, event `title`/`desc`, and option `name` references a localization key.
-
-Files:
+两个文件必须同步更新：
 - `Starlike/localisation/l_english/Starlike_l_english.yml`
 - `Starlike/localisation/l_simp_chinese/Starlike_l_simp_chinese.yml`
 
-Format:
+格式：
 ```yaml
 l_english:
-  key: "Value with §Hcolor codes§! and \nnewlines"
+  key: "值 with §Hcolor codes§! and \nnewlines"
+```
+颜色码：`§g`绿 `§H`黄 `§R`红 `§!`重置。修正器图标：`£mod_name£`。
+
+## 版本与描述文件
+
+- `Starlike.mod`（仓库根）：`version="4.3"` — Paradox Launcher 使用
+- `Starlike/descriptor.mod`（模组内）：`version="4.0"` — Steam Workshop 上传用
+
+两者需保持同步，`supported_version="v4.3.*"` 一致。
+
+## 验证方式
+
+无自动化测试，全部手动验证。通过 Stellaris 启动器加载模组测试。
+
+控制台命令（~键）：
+```
+event event_homing.1  # 自动殖民欧罗巴
+event event_homing.2  # 星尘故土（需科学船 scope）
+event event_homing.3  # 回响家园
+event event_homing.4  # 恒星回响
+observe                # 切换观察者模式
+research_all_technologies  # 解锁全部科技
 ```
 
-Stellaris color codes: `§g` (green), `§H` (yellow highlight), `§R` (red), `§!` (reset). Modifier icons: `£mod_name£`.
+错误日志：`%USERPROFILE%\Documents\Paradox Interactive\Stellaris\logs\error.log`
 
-## Known Bugs in Source Code
+常见错误：本地化 key 缺失（游戏内显示原始 key 名）、修正器名称未定义（静默失败）、initializer 与事件间 flag 名称不一致。
 
-### Duplicate modifier keys (will cause silent override)
+## 已知问题
 
-In `Starlike_civics.txt`:
-- `civic_huisu` defines `country_unity_produces_mult` twice (0.10 and 0.15) -- the second value silently overwrites the first
-- `civic_martis` defines `science_ship_survey_speed` twice (0.2 and 0.15) -- same issue
+### 已在 v0.3 规划中修复
+- [ ] `civic_huisu` 的 `country_unity_produces_mult` 重复定义（0.10 被 0.15 覆盖）
+- [ ] `civic_martis` 的 `science_ship_survey_speed` 重复定义（0.2 被 0.15 覆盖）
+- [ ] event_homing.2 无异常定义触发（planet_event + is_triggered_only = yes 但无触发源）
+- [ ] `Starlike/music/StarlikeOST.txt` 中误导性的注释 file 路径
 
-### Missing anomaly trigger mechanism
+## 版本路线图
 
-`event_homing.2` is a `planet_event` with `is_triggered_only = yes` and a `fromfrom` trigger checking `Homing_Earth_flag`. However, no anomaly definition exists in `common/anomalies/` to actually trigger this event when surveying the planet. The `anomaly_exoplanet_01_ambient_object` created in the initializer is a visual ambient object, not a functional anomaly trigger. This means `event_homing.2` (and by extension `.3` and `.4`) cannot fire during normal gameplay.
+| 版本 | 主题 | 状态 |
+|------|------|------|
+| v0.3 | Bug修复 + 3个内阁议程 | 已有详细设计，待执行 |
+| v0.4 | 传统树 + 飞升 + 派系事件链 | 已有详细设计 |
+| v0.5 | 物种预设 + 命名列表 + 舰船设计 | 已有详细设计 |
+| v0.6 | 起源2：赛琳娜之耀（光海泽生） | 规划中 |
+| v0.7 | 起源3：圣瞳会（卡诺莎选民） | 规划中 |
+| v0.8 | 起源4：芒廷帕斯联合会（恶意收购） | 规划中 |
+| v0.9 | 起源5：沙顿穆恩帝国（即见征服） | 规划中 |
+| v1.0 | 共享基础设施 + 跨文明交互 | 规划中 |
 
-### Music file paths commented out
+详见：`docs/superpowers/plans/2026-04-05-v06-v10-origin-expansion-roadmap.md`
 
-All 25 `file =` lines in `music/StarlikeOST.txt` are commented out. The `.ogg` files exist in the repository but the engine cannot load them. Each `song = { name = "..." }` block currently has no associated audio file path.
+## 参考文档
 
-## Common Development Tasks
+`代码参考（必看）/` 目录含教程示例：
+- `P语言教程.txt` — P 语言语法
+- `群星数值注释.txt` — 数值参考
+- `群星common文件夹下的文件的作用.txt` — common 子目录用途
+- `群星里的部分条件.txt` — 条件/触发器参考
 
-### Adding a new civic
+子目录：起源编写/、国策和配套的领袖编写/、传统和议程的编写/、政体的编写/、科技的编写/、自建物种代码/、桌面图加载图和音乐集/
 
-1. Add definition block to `common/governments/civics/Starlike_civics.txt` with `possible = { origin = { value = origin_homing } }`
-2. Add localization keys: `civic_xxx`, `civic_xxx_desc`, `civic_xxx_effects`, `civic_xxx_negative_effects` in both YAML files
-3. If the civic should have a councilor, add the councilor in `common/governments/councilors/Starlike_councilors.txt` with `civic = civic_xxx`
+## 常见开发任务
 
-### Extending the event chain
+### 新增国策
+1. 在 `common/governments/civics/Starlike_civics.txt` 添加定义块，`possible = { origin = { value = origin_homing } }`
+2. 在两个 YAML 文件添加本地化：`civic_xxx`、`civic_xxx_desc`、`civic_xxx_effects`、`civic_xxx_negative_effects`
+3. 如需内阁职位，在 `common/governments/councilors/Starlike_councilors.txt` 添加，`civic = civic_xxx`
 
-1. All events use `namespace = event_homing` (declared at top of `Starlike_homing_events.txt`)
-2. Next available ID: `event_homing.5`
-3. Add localization for `event_homing.N.title`, `event_homing.N.desc`, and each `event_homing.N.opt.*`
-4. Chain events via `trigger_event = { id = event_homing.N days = X }` in the preceding event's option block
+### 扩展事件链
+1. 所有事件使用 `namespace = event_homing`（文件顶部声明）
+2. 下一个可用 ID：`event_homing.5`
+3. 添加本地化：`event_homing.N.title`、`event_homing.N.desc`、各 `event_homing.N.opt.*`
+4. 通过 `trigger_event = { id = event_homing.N days = X }` 链式触发
 
-### Adding a new modifier
+### 新增修正器
+1. 在 `common/static_modifiers/Starlike_modifiers.txt` 定义，附带 `icon` 引用
+2. 在事件中通过 `add_modifier = { modifier = "modifier_id" days = -1 }` 应用（-1=永久）
+3. 添加 `modifier_id` 和 `modifier_id_desc` 本地化 key
 
-1. Define in `common/static_modifiers/Starlike_modifiers.txt` with an `icon` reference
-2. Apply via `add_modifier = { modifier = "modifier_id" days = -1 }` in events (-1 = permanent)
-3. Add `modifier_id` and `modifier_id_desc` localization keys
+## 模块索引
 
-## Module Index
+| 模块 | 路径 | 内容 |
+|------|------|------|
+| 起源+国策 | `common/governments/` | origin_homing + 3派系国策 + 3内阁 |
+| 太阳系 | `common/solar_system_initializers/` | Sol 系（10行星+5卫星） |
+| 修正器 | `common/static_modifiers/` | homing_earth_memories、homing_legacy |
+| 特质 | `common/traits/` | trait_scientist_stellarite_touched |
+| 触发器 | `common/on_actions/` | on_game_start_country 钩子 |
+| 事件 | `events/` | 4事件叙事链（namespace: event_homing） |
+| 本地化 | `localisation/` | 英中双语完整覆盖 |
+| 音乐 | `music/` | 25首原声（StarlikeOST.asset） |
+| 界面 | `interface/` | GFX_origin_project_homing |
+| 图形 | `gfx/` | 10加载图+2起源 DDS（binary） |
 
-| Module | Path | Entry File(s) | Content |
-|--------|------|---------------|---------|
-| Origin + Civics | `common/governments/civics/` | `Starlike_origin.txt`, `Starlike_civics.txt` | origin_homing + 3 faction civics |
-| Councilors | `common/governments/councilors/` | `Starlike_councilors.txt` | 3 faction councilors (huisu, martis, phoenix_plume) |
-| Solar System | `common/solar_system_initializers/` | `Homing_initializers.txt` | homing_earth system (Sol-like, 10 planets + 5 moons) |
-| Modifiers | `common/static_modifiers/` | `Starlike_modifiers.txt` | homing_earth_memories, homing_legacy |
-| Traits | `common/traits/` | `00_starlike_leader_traits.txt` | trait_scientist_stellarite_touched |
-| On Actions | `common/on_actions/` | `1.txt` | on_game_start_country hook |
-| Events | `events/` | `Starlike_homing_events.txt` | 4-event chain (namespace: event_homing) |
-| Localization | `localisation/` | `Starlike_l_english.yml`, `Starlike_l_simp_chinese.yml` | Full EN+CN |
-| Music | `music/` | `StarlikeOST.txt` + 25 `.ogg` files | Soundtrack metadata (file paths commented) |
-| Interface | `interface/` | `Originpictures.gfx` | GFX_origin_project_homing sprite definition |
-| Graphics | `gfx/` | (binary only) | 10 loading screens, 2 origin assets (DDS) |
+## v0.3 执行入口
 
-## Reference Documentation
+`docs/superpowers/plans/2026-03-31-v03-bugfix-agendas.md` — 详细执行步骤文件级。
 
-The `代码参考（必看）/` directory contains tutorial examples for various Paradox modding topics. Key files at the root level:
-- `P语言教程.txt` -- P-language syntax tutorial
-- `群星数值注释.txt` -- Game balance values reference
-- `群星common文件夹下的文件的作用.txt` -- Guide to `common/` subdirectory purposes
-- `群星里的部分条件.txt` -- Conditions/triggers reference
-
-Tutorial subdirectories with complete example mods: `起源编写/` (origins), `国策和配套的领袖编写/` (civics + councilors), `传统和议程的编写/` (traditions + agendas), `政体的编写/` (authorities), `科技的编写/` (technologies), `自建物种代码/` (custom species), `桌面图，加载图和音乐集/` (UI + music), among others.
-
-## Known Gaps (Not Yet Implemented)
-
-**High priority** -- No anomaly definition file (`common/anomalies/`) exists to trigger `event_homing.2`, breaking the event chain after the opening event.
-
-**Medium priority**:
-- No species/portrait definitions (`common/species/`, `gfx/portraits/`)
-- No council agendas (`common/council_agendas/`)
-
-**Low priority**:
-- Music `file =` paths need uncommenting in `StarlikeOST.txt`
-- No ship designs, name lists, or ascension perks
-- `descriptor.mod` version mismatch with `Starlike.mod`
-
----
-
-## Changelog
-
-### 2026-03-31 -- Documentation Audit & Bug Discovery
-
-- Corrected councilor count from 4 to 3 (no `councilor_ruler_copan` exists in source)
-- Documented duplicate modifier bug in `civic_huisu` and `civic_martis`
-- Identified missing anomaly trigger mechanism for `event_homing.2`
-- Added flag cross-reference table and architecture dependency chain
-- Added `descriptor.mod` version discrepancy note
-- Restructured for faster onboarding with focus on cross-file dependencies
-
-### 2026-03-26 (v0.2.1) -- Documentation & Scan
-
-- Full module documentation scan completed
-- All modules documented with CLAUDE.md files
-
-### 2026-03-26 (v0.2.0) -- Faction Civic & Councilor Rewrite
-
-- origin_homing: Removed auth_copan binding; now independent origin compatible with vanilla auth_dictatorial
-- New civics: civic_huisu, civic_martis, civic_phoenix_plume
-- New councilors: councilor_huisu, councilor_martis, councilor_phoenix_plume
-- New events: event_homing.1-.4
-- New trait: trait_scientist_stellarite_touched
-- New modifiers: homing_earth_memories, homing_legacy
+任务清单：
+1. 创建异常定义 `common/anomalies/Starlike_anomalies.txt`
+2. 修复 event_homing.2 scope（planet_event→ship_event）
+3. 修复 civic 重复修正器
+4. 清理 music 文件 + 同步版本号
+5. 创建 3 个内阁议程
+6. 添加英中双语本地化
