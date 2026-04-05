@@ -1,0 +1,21 @@
+# IDE / Editor
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Paradox
+*.log
+*.bak
+
+# OS
+desktop.ini
