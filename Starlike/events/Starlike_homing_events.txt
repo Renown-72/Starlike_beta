@@ -26,45 +26,42 @@ country_event = {
                 }
             }
         }
-        # 首次开局时在恒星系发现异常，为探索叙事埋线
-        every_system = {
-            limit = { has_star_flag = Homing_Sol }
-            create_ambient_object = {
-                type = "anomaly_exoplanet_01_ambient_object"
-            }
-        }
     }
 }
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # event_homing.2  探索：星尘化地球
-# 触发：玩家首次调查 Homing_Earth（星尘化地球）时发现异常
+# 触发：科学船完成 anomaly_homing_earth_stardust 异常研究
+# 作用域：this = 科学船, owner = 国家
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-planet_event = {
+ship_event = {
     id = event_homing.2
     title = "event_homing.2.title"
     desc = "event_homing.2.desc"
     picture = GFX_evt_anomaly_overheat
     is_triggered_only = yes
     trigger = {
-        fromfrom = {
-            has_planet_flag = Homing_Earth_flag
+        owner = {
+            NOT = { has_country_flag = homing_earth_investigating }
+            NOT = { has_country_flag = homing_earth_analyzed }
         }
     }
     option = {
         name = "event_homing.2.opt.investigate"
-        trigger_event = {
-            id = event_homing.3
-            days = 30
-        }
-        set_timed_country_flag = {
-            flag = homing_earth_investigating
-            days = 3650
+        owner = {
+            country_event = {
+                id = event_homing.3
+                days = 30
+            }
+            set_timed_country_flag = {
+                flag = homing_earth_investigating
+                days = 3650
+            }
         }
     }
     option = {
         name = "event_homing.2.opt.defer"
-        # 延迟探索，flag 保留以便后续重新触发
+        # 延迟探索，异常不会再次出现（max_once_global = 1）
     }
 }
 

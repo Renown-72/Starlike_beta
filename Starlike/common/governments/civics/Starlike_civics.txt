@@ -1,7 +1,7 @@
 # 一体汉和专属国策组
 # 所有国策绑定 origin_homing，通过 origin = { value = origin_homing } 限制
 
-# ── 辉夙派 ── Huixu Faction（民主制路线）
+# ── 辉夙派 ── Huisu Faction（民主制路线）
 # 归巢计划主体为博物馆成员，以博物精神维系文明认同
 civic_huisu = {
     description = "civic_huisu_effects"
@@ -13,7 +13,6 @@ civic_huisu = {
     modifier = {
         # 博物传承：考古与遗珍收集
         category_archaeostudies_research_speed_mult = 0.25
-        country_unity_produces_mult = 0.10
         # 治理效率：博物馆成员的行政传统
         country_unity_produces_mult = 0.15
         country_edict_fund_add = 10
@@ -38,7 +37,6 @@ civic_martis = {
         all_technology_research_speed = 0.1
         science_ship_survey_speed = 0.2
         ship_anomaly_research_speed_mult = 0.2
-        science_ship_survey_speed = 0.15
         # 代价：领袖池略小（科学治国，人才集中）
         country_leader_pool_size = -1
     }
@@ -46,7 +44,7 @@ civic_martis = {
     ai_weight = { base = 0 }
 }
 
-# ── Phoenix Plume 派 ── Phoenix Plume Faction（帝制路线）
+# ── 鸾羽派 ── Phoenix Plume Faction（帝制路线）
 # 鸾羽派：鸾羽号武官群体，以武力保障文明安全，崇尚军事秩序
 civic_phoenix_plume = {
     description = "civic_phoenix_plume_effects"

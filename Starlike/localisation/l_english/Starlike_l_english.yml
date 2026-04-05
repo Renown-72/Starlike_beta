@@ -58,10 +58,6 @@
   trait_scientist_stellarite_touched: "Stellarite-Touched"
   trait_scientist_stellarite_touched_desc: "Touched by the stellar dust of their ancestors, this scientist is exceptionally attuned to cosmic anomalies."
 
-  # 统治者内阁委员
-  councilor_ruler_copan: "Ruler of COPAN"
-  councilor_ruler_copan_desc: "The ruler of the Commonwealth of Pan-Galaxy Unified oversees all administrative affairs with a guiding hand."
-
   # New faction civics and councilors
   civic_huisu: "Huixu Faction"
   civic_huisu_desc: "The Huisu Faction comprises the core crew of Project Homing — the curators and archivists who carried civilization's memory through the void. They govern with an emphasis on heritage, unity, and administrative efficiency."
@@ -69,7 +65,7 @@
   civic_huisu_negative_effects: ""
   civic_martis: "Martis Faction"
   civic_martis_desc: "The Martis Faction: the scientists who rebuilt civilization on Mars after Earth was consumed by stellar assimilation. Their current administrator embodies their collective wisdom, guiding the Commonwealth toward scientific discovery."
-  civic_martis_effects: "§H+10%§! Research Speed\n§H+20%§! Survey Speed\n§H+20%§! Anomaly Research Speed\n§H+15%§! Science Ship Survey Speed\n§R-1§! Leader Pool Size"
+  civic_martis_effects: "§H+10%§! Research Speed\n§H+20%§! Survey Speed\n§H+20%§! Anomaly Research Speed\n§R-1§! Leader Pool Size"
   civic_martis_negative_effects: ""
   civic_phoenix_plume: "Phoenix Plume Faction"
   civic_phoenix_plume_desc: "The Phoenix Plume Faction: military officers from the Luanyu vessel, originally stationed to oversee Project Homing. Transported to the stars by accident, they now protect the Commonwealth with disciplined strength."
@@ -81,3 +77,14 @@
   councilor_martis_desc: "The Martis Science Director leads the Commonwealth's research mandate, drawing on the scientific legacy of Mars reconstruction."
   councilor_phoenix_plume: "Phoenix Plume Fleet Commander"
   councilor_phoenix_plume_desc: "The Phoenix Plume Fleet Commander commands the Commonwealth's military forces, embodying the martial discipline of the Luanyu vessel."
+
+  # Anomaly — Homing Earth stardust
+  anomaly_homing_earth_stardust_desc: "This planet — once called Earth — has been transmuted into stellar dust. Yet faint energy signatures pulse from within, as though the planet remembers what it was."
+
+  # Council Agendas
+  council_agenda_agenda_huisu_name: "Museum Restoration Initiative"
+  council_agenda_agenda_huisu_desc: "Prioritize archival recovery and cultural heritage preservation. Focus resources on archaeological research and unity-building through shared history."
+  council_agenda_agenda_martis_name: "Scientific Vanguard Protocol"
+  council_agenda_agenda_martis_desc: "Accelerate all research programs and survey operations. Channel the scientific legacy of Mars reconstruction into systematic galactic exploration."
+  council_agenda_agenda_phoenix_plume_name: "Military Expansion Directive"
+  council_agenda_agenda_phoenix_plume_desc: "Expand naval capacity and strengthen ground forces. The Phoenix Plume doctrine demands readiness against all threats to the Commonwealth."

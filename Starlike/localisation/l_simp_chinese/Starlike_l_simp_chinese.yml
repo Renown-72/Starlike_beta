@@ -43,10 +43,6 @@ l_simp_chinese:
 
   #国策相关汉化
 
-  # 统治者内阁委员
-  councilor_ruler_copan: "一体汉和统治者"
-  councilor_ruler_copan_desc: "一体汉和政体的统治者以指导性的手统筹一切行政事务。"
-
   # 事件链相关
   event_homing.2.title: "星尘故土"
   event_homing.2.desc: "被命名为"归巢地球"的星球——早在千年前便已化作星尘——此刻正在发出一种前所未见的异常信号。我们古老的文明，似乎仍有残留在此处。"
@@ -80,7 +76,7 @@ l_simp_chinese:
   civic_huisu_negative_effects: ""
   civic_martis: "荧惑派"
   civic_martis_desc: "地球被星尘同化为恒星后，在火星重建时期的科学官群体。星火相传，荧荧不灭。当前执政官即出身于此，其支持者自称荧惑派，以集体智慧引领文明存续。"
-  civic_martis_effects: "§H+10%§! 科研速度\n§H+20%§! 勘测速度\n§H+20%§! 异常研究速度\n§H+15%§! 科学船勘测速度\n§R-1§! 领袖储备容量"
+  civic_martis_effects: "§H+10%§! 科研速度\n§H+20%§! 勘测速度\n§H+20%§! 异常研究速度\n§R-1§! 领袖储备容量"
   civic_martis_negative_effects: ""
   civic_phoenix_plume: "鸾羽派"
   civic_phoenix_plume_desc: "鸾羽号武官群体，原为帝国监视归巢计划而派遣的武装力量。意外降临群星位面后，他们以铁律武力护佑文明，崇尚军事秩序与力量。"
@@ -92,3 +88,14 @@ l_simp_chinese:
   councilor_martis_desc: "荧惑科学总监领导一体汉和的科研使命，承继火星重建时期的科学遗产。"
   councilor_phoenix_plume: "鸾羽舰队总长"
   councilor_phoenix_plume_desc: "鸾羽舰队总长指挥一体汉和的军事力量，体现鸾羽号的铁律武力传统。"
+
+  # 异常 — 归巢地球星尘
+  anomaly_homing_earth_stardust_desc: "这颗曾被称为"地球"的星球，已化作星尘。然而，微弱的能量信号从中脉动，仿佛星球仍记得它曾经的模样。"
+
+  # 内阁议程
+  council_agenda_agenda_huisu_name: "博物归档计划"
+  council_agenda_agenda_huisu_desc: "优先进行档案回收与文化遗产保护。将资源集中于考古研究和通过共同历史凝聚人心。"
+  council_agenda_agenda_martis_name: "科学先行议定"
+  council_agenda_agenda_martis_desc: "加速所有科研项目和勘测行动。将火星重建时期的科学遗产转化为系统性的星系探索。"
+  council_agenda_agenda_phoenix_plume_name: "军备扩张令"
+  council_agenda_agenda_phoenix_plume_desc: "扩充舰队容量，强化地面部队。鸾羽军令要求我们对一切威胁保持戒备。"
