@@ -1,0 +1,17 @@
+# 星尘故土异常 — 在调查 Homing_Earth_flag 星球时自动生成
+anomaly_homing_earth_stardust = {
+    desc = anomaly_homing_earth_stardust_desc
+    picture = GFX_evt_anomaly_overheat
+    level = 2
+    max_once_global = 1
+
+    spawn_chance = {
+        weight = 0
+        modifier = {
+            add = 100
+            has_planet_flag = Homing_Earth_flag
+        }
+    }
+
+    on_success = event_homing.2
+}

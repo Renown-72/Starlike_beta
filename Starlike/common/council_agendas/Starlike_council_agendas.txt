@@ -1,0 +1,38 @@
+# 归巢计划派系议程
+# 每个议程通过 has_civic 绑定对应派系
+
+# ── 辉夙议程 ── 博物归档（Huisu: Museum Restoration）
+agenda_huisu = {
+    agenda_cost = 2000
+    potential = {
+        owner = { has_civic = civic_huisu }
+    }
+    modifier = {
+        category_archaeostudies_research_speed_mult = 0.15
+        country_unity_produces_mult = 0.10
+    }
+}
+
+# ── 荧惑议程 ── 科学先行（Martis: Scientific Vanguard）
+agenda_martis = {
+    agenda_cost = 2000
+    potential = {
+        owner = { has_civic = civic_martis }
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+        science_ship_survey_speed = 0.15
+    }
+}
+
+# ── 鸾羽议程 ── 军备扩张（Phoenix Plume: Military Expansion）
+agenda_phoenix_plume = {
+    agenda_cost = 2000
+    potential = {
+        owner = { has_civic = civic_phoenix_plume }
+    }
+    modifier = {
+        country_naval_cap_mult = 0.10
+        army_damage_mult = 0.10
+    }
+}
