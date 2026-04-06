@@ -2,7 +2,7 @@
 # 所有国策绑定 origin_homing，通过 origin = { value = origin_homing } 限制
 
 # ── 辉夙派 ── Huisu Faction（民主制路线）
-# 归巢计划主体为博物馆成员，以博物精神维系文明认同
+# 归巢计划主体为博物馆成员，
 civic_huisu = {
     description = "civic_huisu_effects"
     negative_description = "civic_huisu_negative_effects"
@@ -45,7 +45,7 @@ civic_martis = {
 }
 
 # ── 鸾羽派 ── Phoenix Plume Faction（帝制路线）
-# 鸾羽派：鸾羽号武官群体，以武力保障文明安全，崇尚军事秩序
+# 鸾羽派：汉和星舰中央成员群体，崇尚军事秩序，渴望在群星位面建立帝制。
 civic_phoenix_plume = {
     description = "civic_phoenix_plume_effects"
     negative_description = "civic_phoenix_plume_negative_effects"
