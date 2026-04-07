@@ -1,0 +1,27 @@
+# ============================================
+# 偌星·汉和物种模板 — 归巢计划专用
+# 标识前缀: homing_han
+# 描述: Sol 毁灭后的火星遗民后裔，中华文明血脉
+# 肖像复用: 原版人形 (HUMANOID / human)
+# ============================================
+
+species_template = {
+    key = "homing_han"
+    sort_priority = 100
+
+    # 基础: 使用原版人类肖像（人形）
+    species_class = HUMANOID
+
+    # 图形: 使用原版人形图形集
+    graphical_culture = humanoid_01
+
+    # 名称表
+    name_list = SL_COPAN
+
+    # ====== 专属特质 ======
+    # 星尘适应: 适应极端环境，模拟火星/太空城生活
+    trait = trait_stellarite_adapted
+
+    # 寻根本能: 对故土/古代遗迹有感知加成
+    trait = trait_stellarite_touched
+}
