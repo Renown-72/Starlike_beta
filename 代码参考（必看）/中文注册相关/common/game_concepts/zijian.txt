@@ -1,6 +1,0 @@
-# 蠢驴是在common文件夹下的game_concepts文件夹里注册的
-# 例如
-concept_zijiande = {
-    # 给它注册对应的文本，使用icon引入对应的图片即可，这里使用原版的图片演示
-    icon = "gfx/interface/icons/message/message_storm_nexus_visible.dds"
-}

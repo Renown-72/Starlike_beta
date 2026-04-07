@@ -1,5 +1,0 @@
-component_set = {
-    key = "ZIJIANDEWUQI_L_M_S"
-    icon = "GFX_zijian_tu"
-    icon_frame = 1
-}
