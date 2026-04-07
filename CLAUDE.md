@@ -147,15 +147,172 @@ research_all_technologies  # 解锁全部科技
 
 详见：`docs/superpowers/plans/2026-04-05-v06-v10-origin-expansion-roadmap.md`
 
+## Paradox 脚本语法
+
+### 四种语言
+
+| 扩展名 | 语言 | 用途 |
+|--------|------|------|
+| `.txt` `.gfx` `.gui` | Paradox Script | 游戏脚本 |
+| `.yml` | Paradox Localisation | 本地化文本 |
+| `.cwt` | CWT | IDE 规则文件（插件用） |
+| `.csv` | Paradox CSV | 分号分隔数据 |
+
+### Paradox Script 基本语法
+
+**分隔符**：`=`（赋值）、`!=` 或 `<>`（不等于）、`<` `>` `<=` `>=`（比较）、`?=`（安全赋值，仅目标不存在时赋值）
+
+**值类型**：布尔（`yes`/`no`）、整数、浮点数、字符串（可引号）、**颜色**（`rgb { 255 128 0 }` / `hsv { 0.5 0.8 1.0 }`）、块、封装变量引用、内联数学表达式
+
+**键的限制**：未加引号的键不能包含 `@ # $ = < > ! ? { } [ ] "` 及空白字符。
+
+```paradox
+enabled = yes
+level >= 2
+size ?= @my_var
+color = rgb { 142 188 241 }
+```
+
+### 封装变量与内联数学
+
+```paradox
+@base_cost = 100
+@bonus_factor = 1.5
+energy = @[ base_cost * bonus_factor ]
+```
+
+- 声明：`@<name> = <value>`，引用：`@<name>`（独立使用时带 `@`，内联数学中不带）
+- 内联数学：`@[ expr ]`，支持 `+ - * / % |abs| (expr)`
+
+### 参数与参数条件块
+
+- 参数语法：`$name$` 或 `$name|default_value$`
+- 参数条件块：`[[PARAM] members...]`（PARAM 存在时包含）、`[[!PARAM] members...]`（PARAM 不存在时包含）
+- 内联参数条件：`"prefix[[PARAM]_$PARAM$]_suffix"`
+
+```paradox
+set_variable = { which = research_$category$ value = $amount|10$ }
+[[!skip_notification] create_message = { type = "done" }]
+```
+
+### 本地化富文本
+
+`l_english:` / `l_simp_chinese:` 为语言标识行，文件必须 **UTF-8 WITH BOM** 编码。
+
+| 语法 | 说明 |
+|------|------|
+| `§R红§!` `§g绿§!` `§H黄§!` | 颜色标记，嵌套可用 |
+| `£icon£` `£icon|frame£` | 图标，`£sl_xxx£` 对应 GFX sprite |
+| `$KEY$` `$KEY|arg$` | 参数，引用其他本地化 key 或脚本变量 |
+| `[Root.GetName]` | 命令，调用作用域链和 Get 方法 |
+| `['concept']` `['civic:civic_name']` | 概念命令（Stellaris 特有），链接到概念定义 |
+| `\$` `\\` `\n` | 转义：富文本标记、反斜杠、换行 |
+| `[[` | 转义字面量 `[` |
+
+### Paradox CSV 格式
+
+列以分号 `;` 分隔，注释以 `#` 开头。
+
+```csv
+# Unit definitions
+id;name;number;status;
+some_id;some_name;0;yes;
+```
+
+## Common 子目录索引
+
+| 目录 | 用途 |
+|------|------|
+| `anomalies/` | 异常事件 |
+| `archaeological_site_types/` | 坟墓事件 |
+| `ascension_perks/` | 飞升 |
+| `astral_rifts/` | 裂隙事件 |
+| `buildings/` | 行星建筑 |
+| `bypass/` | 星门和虫洞 |
+| `casus_belli/` | 宣战理由 |
+| `colony_types/` | 殖民地类型（农业、铸造等） |
+| `component_templates/` | 舰船武器 |
+| `council_agendas/` | 内阁议程 |
+| `decisions/` | 星球决议 |
+| `defines/` | 默认数值（舰船上限、事件等待时间等） |
+| `deposits/` | 行星地块 |
+| `edicts/` | 法令 |
+| `espionage_operation_types/` | 间谍行动类型 |
+| `ethic_categories/` | 思潮类别 |
+| `event_chains/` | 事件链 |
+| `federation_types/` | 联邦类型 |
+| `first_contact/` | 首次联系 |
+| `game_concepts/` | 游戏文本特殊标记 |
+| `global_ship_designs/` | 全局舰船设计（给事件用，不可编辑） |
+| `governments/` | 国策、起源、政体、内阁 |
+| `map_modes/` | 地图模式 |
+| `megastructures/` | 巨构 |
+| `message_types/` | 消息类型 |
+| `name_lists/` | 名称表（帝国、物种等） |
+| `on_actions/` | 游戏接口钩子（on_game_start 等） |
+| `opinion_modifiers/` | 关系修正 |
+| `planet_classes/` | 行星与恒星类别 |
+| `policies/` | 帝国政策 |
+| `pop_jobs/` | 岗位 |
+| `pop_faction_types/` | 人口派系 |
+| `portrait_categories/` `portrait_sets/` | 物种肖像注册 |
+| `relics/` | 遗珍 |
+| `script_values/` | 脚本值 |
+| `scripted_effects/` | 脚本效果 |
+| `scripted_loc/` | 脚本化本地化 |
+| `scripted_modifiers/` | 脚本化修正器 |
+| `scripted_triggers/` | 脚本化条件 |
+| `scripted_variables/` | 变量脚本 |
+| `ship_sizes/` | 舰船型号 |
+| `situations/` | 局势 |
+| `solar_system_initializers/` | 星系初始化器 |
+| `special_projects/` | 特殊项目 |
+| `species_archetypes/` | 物种原型类别 |
+| `species_classes/` | 物种注册 |
+| `species_names/` | 物种名称 |
+| `species_rights/` | 物种权力政策 |
+| `static_modifiers/` | 静态效果修正器 |
+| `strategic_resources/` | 战略资源 |
+| `technology/` | 科技 |
+| `terraform/` | 星球改造 |
+| `tradition_categories/` `traditions/` | 传统树 |
+| `traits/` | 物种特质与领袖特质 |
+| `war_goals/` | 宣战目标 |
+| `ambient_objects/` | 星系环境特效 |
+| `armies/` | 陆军 |
+| `artifact_actions/` | 文物按钮 |
+| `bombardment_stances/` | 轨道轰炸姿态 |
+| `component_sets/` `component_tags/` | 舰船部件注册 |
+| `country_limits/` | 国家舰船数量上限 |
+| `country_types/` | 国家类型（堕落、镜像等） |
+| `crisis_levels/` `crisis_objectives/` `crisis_paths/` | 天灾设定 |
+| `districts/` | 区划 |
+| `galactic_community_actions/` | 银河社区行动 |
+| `starbase_buildings/` `starbase_levels/` `starbase_modules/` `starbase_types/` | 恒星基地 |
+| `start_screen_messages/` | 开局帝国介绍 |
+| `storm_types/` | 风暴 |
+| `system_tooltips/` | 星系提示 |
+| `technology_ages/` | 技术时代 |
+| `trade_conversions/` | 贸易转换 |
+| `observation_station_missions/` | 观测站任务 |
+
 ## 参考文档
 
 `代码参考/` 目录含教程示例：
-- `P语言教程.txt` — P 语言语法
+- `P语言语法参考.md` — Paradox Language Support 插件语法参考（权威）
+- `P语言教程.txt` — 基础教程
 - `群星数值注释.txt` — 数值参考
-- `群星common文件夹下的文件的作用.txt` — common 子目录用途
+- `群星common文件夹下的文件的作用.txt` — 简版 common 目录说明
 - `群星里的部分条件.txt` — 条件/触发器参考
 
 子目录：起源编写/、国策和配套的领袖编写/、传统和议程的编写/、政体的编写/、科技的编写/、自建物种代码/、桌面图加载图和音乐集/
+
+### IDE 支持
+
+推荐安装 **Paradox Language Support**（VS Code 插件），它提供：
+- 四种语言的语法高亮、补全、代码检查
+- CWT 规则文件（`.cwt`）—— 相当于 JSON Schema，为脚本提供类型检查
+- 本地化图标解析：自动匹配 `GFX_text_`/`GFX_` 前缀 sprite 或 `gfx/interface/icons/` 下的图片
 
 ## 常见开发任务
 

@@ -1,6 +1,0 @@
-ZIJIANWUZHONG_CATE = {
-    name = zijianwuzhong_name
-    sets = {
-        ZIJIANWUZHONG_SET
-    }
-}

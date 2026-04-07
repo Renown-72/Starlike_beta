@@ -1,3 +1,0 @@
-concept_mss_tasty_maid_vanilla = { }
-concept_mss_tasty_maid_events = { }
-concept_mss_tasty_maid_portraits = { }

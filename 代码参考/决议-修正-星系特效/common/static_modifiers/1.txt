@@ -1,5 +1,0 @@
-jianduixiuzheng = {
-    ship_hull_damage_mult = 3000
-    ship_armor_mult = 3000
-    ship_hull_mult = 3000
-}
