@@ -1,0 +1,116 @@
+namespace = zijiande
+# 还是事件相关
+country_event = {
+    id = zijiande.1
+    hide_window = yes
+    is_triggered_only = yes
+    # 上面的讲过了，这里补充一下trigger
+    # trigger，意思就是条件，这里的意思也就是事件执行所需的条件
+    # 比如这里的条件是is_ai = no，也就是这个国家事件执行的对象必须不为AI才可正确执行，否则将会不执行
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        # 这里我选择为不是AI的国家，其实就是我们玩家自己的帝国，
+        # 添加一个国家标志，也就是country_flag，值为 ---> zijiande
+        # 给堕落帝国添加一个全局修正，也就是global_event_target，值为 ---> zijiande
+        # 注意这里我改了，这里是给堕落添加的全局修正，
+        # 国家标志是给我自己添加的
+        # 等下我们需要这个标志和全局修正
+        set_country_flag = zijiande
+
+        every_country = {
+            # every_country是所有国家
+            limit = {
+                # limit和trigger差不多，这里同样都是条件
+                is_country_type = fallen_empire
+                # is_country_type = fallen_empire，这里的条件限制是堕落帝国
+                # is_country_type = fallen_empire是原版自己的条件，这里我只是调用一下
+                # 意思是这个帝国是堕落帝国
+                is_machine_empire = yes
+                # 这个是蠢驴自己的条件，我调用一下，这里的条件在原版中的意思是
+                # 这个国家的政体是机械帝国，就是检测这个帝国是机械帝国
+                # 因为五大堕落只有机械爹的政体是机械帝国，所以直接使用
+                # is_country_type = fallen_empire和 is_machine_empire = yes
+                # 就能将国家精确在机械爹身上
+                # 我们再精确一点，精确到机械爹身上
+            }
+            # 然后这里给机械爹添加了一个全局修正
+            save_global_event_target_as = zijiande
+        }
+
+    }
+}
+
+country_event = {
+    id = zijiande.2
+    # 这里的事件2我们等下用控制台执行
+    # 这里我们注册一些中文
+    title = zijiande.2.title
+    desc = zijiande.2.desc
+    is_triggered_only = yes
+    diplomatic = yes
+    # 使用diplomatic = yes将这个国家事件变为国家通讯事件
+    # 这里使用picture_event_data,将通讯事件变为对应帝国领袖,房间等等东西
+    picture_event_data = {
+        # 这里的值填入我们为机械爹设置的全局修正,也就是
+        # event_target: + zijiande(全局修正值),event_target:zijiande
+        # 直接这么填入即可
+        portrait = event_target:zijiande
+        planet_background = event_target:zijiande
+        graphical_culture = event_target:zijiande
+        city_level = event_target:zijiande
+        room = event_target:zijiande
+    }
+    option = {
+        name = zijiande.2.a
+        every_system = {
+            # every_system,这里的意思是所有的星系
+            # 这里加入条件,使其事件能正确的找到这个星系,我们找星系基本都是靠星系内的恒星来快速的
+            # 找到这个星系的,
+            # 如果你想找某个星系的行星的话就是,先找到这个星系
+            limit = { has_star_flag = zijianxingxi_1 }
+            # 这里要改恒星的话不能直接改,需要加一层system_star
+            # 可以看到直接写不会出现change_pc,system_star意思就是星系的恒星
+            system_star = {
+                # 但这里我们不写行星,改一下恒星
+                # 这里调用的是另一个MOD里的恒星
+                change_pc = pc_magic_hexing_star
+                # change_pc可以用来改恒星也可以用来改行星
+                # 这里就是把恒星的类型更改为另一个恒星
+                change_planet_size = 45
+                # 这里的change_planet_size是更改恒星的大小,这里建议自己要改的话不要改太大
+            }
+            # # 再使用every_system_planet,条件写入你得行星flag
+            # every_system_planet = {
+            #     limit = {  }
+            # }
+        }
+    }
+    option = {
+        name = zijiande.2.b
+        every_country = {
+            # 这里的every_country是所有帝国
+            # 条件是has_country_flag = zijiande,
+            # 合起来就是在所有帝国中找到拥有zijiande,这个国家标志的帝国
+            # 其实也是我们自己
+            limit = { has_country_flag = zijiande }
+            # 然后给它执行一个事件,延期三十天,这里不是立即执行
+            # 因为加了一个days = 30,所以这个事件会在三十天后执行
+            # days是的值是天,1days就是一天,
+            # years的值是年,1years就是一年
+            country_event = { id = zijiande.3 days = 30 }
+        }
+    }
+}
+country_event = {
+    # 执行这个事件,事件没什么东西,只是让你知道他执行了
+    id = zijiande.3
+    title = zijiande.3
+    desc = zijiande.3
+    is_triggered_only = yes
+    option = {
+        name = ok
+    }
+}
+# 这次就是这样,下次见~

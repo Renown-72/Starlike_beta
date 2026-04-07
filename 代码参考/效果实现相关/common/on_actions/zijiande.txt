@@ -1,0 +1,11 @@
+# Called during empire initialization when starting a new game if has_secondary_species game rule is true.
+# Called before empire_init_create_capital_pops.
+# scope: planet
+# from: founder species
+# fromfrom: secondary species (if exists)
+empire_init_capital_planet = {
+    events = {
+        # 原版是直接引用的，这里也直接引用即可，输入你得事件名
+        zijiande.1
+    }
+}

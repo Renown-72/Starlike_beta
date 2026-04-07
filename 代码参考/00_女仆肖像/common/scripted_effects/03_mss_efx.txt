@@ -1,0 +1,199 @@
+ms_swap_to_maid_portrait = {
+    if = {
+        limit = { is_robotic = yes }
+        random_list = {
+            1 = { change_species_characteristics = { portrait = ms_robotic_01 } }
+            1 = { change_species_characteristics = { portrait = ms_robotic_02 } }
+            1 = { change_species_characteristics = { portrait = ms_human_01_machine } }
+        }
+    }
+    else = {
+        switch = {
+            trigger = is_species_class
+
+            HUM = { change_species_characteristics = { portrait = ms_human_01 } }
+            #PRE_HUM = { change_species_characteristics = { portrait = ms_human_01 } }
+
+            MAM = { change_species_characteristics = { portrait = ms_mammalian_01 } }
+            PRE_MAM = { change_species_characteristics = { portrait = ms_mammalian_01 } }
+
+            ART = { change_species_characteristics = { portrait = ms_arthropod_01 } }
+            PRE_ART = { change_species_characteristics = { portrait = ms_arthropod_01 } }
+
+            MOL = { change_species_characteristics = { portrait = ms_molluscoid_01 } }
+            PRE_MOL = { change_species_characteristics = { portrait = ms_molluscoid_01 } }
+
+            REP = { change_species_characteristics = { portrait = ms_reptilian_01 } }
+            PRE_REP = { change_species_characteristics = { portrait = ms_reptilian_01 } }
+
+            FUN = { change_species_characteristics = { portrait = ms_fungoid_01 } }
+            PRE_FUN = { change_species_characteristics = { portrait = ms_fungoid_01 } }
+
+            NECROID = { change_species_characteristics = { portrait = ms_necroid_01 } }
+            #PRE_NECROID = { change_species_characteristics = { portrait = ms_necroid_01 } }
+
+            AQUATIC = { change_species_characteristics = { portrait = ms_aquatic_01 } }
+            PRE_AQUATIC = { change_species_characteristics = { portrait = ms_aquatic_01 } }
+
+            PLANT = { change_species_characteristics = { portrait = ms_plantoid_01 } }
+            PRE_PLANT = { change_species_characteristics = { portrait = ms_plantoid_01 } }
+
+            TOX = { change_species_characteristics = { portrait = ms_toxoid_01 } }
+            PRE_TOX = { change_species_characteristics = { portrait = ms_toxoid_01 } }
+
+            AVI = { change_species_characteristics = { portrait = ms_avian_01 } }
+            PRE_AVI = { change_species_characteristics = { portrait = ms_avian_01 } }
+
+            LITHOID = { change_species_characteristics = { portrait = ms_lithoid_01 } }
+            PRE_LITHOID = { change_species_characteristics = { portrait = ms_lithoid_01 } }
+
+            default = { change_species_characteristics = { portrait = ms_human_01 } }
+        }
+    }
+}
+#此乃覆盖之罪！
+#一种极端的做法，也许下个版本就会不见，也许会被别的MOD覆盖
+set_synth_or_robot_portrait_effect = {
+    if = {
+        limit = { prev = { ms_is_any_maid_portrait = yes } }
+        switch = {
+            trigger = species_portrait
+            ms_human_01 = { change_species_characteristics = { portrait = ms_human_01_machine } }
+            ms_fungoid_01 = { change_species_characteristics = { portrait = ms_fungoid_01_machine } }
+            default = {
+                random_list = {
+                    1 = { change_species_characteristics = { portrait = ms_robotic_01 } }
+                    1 = { change_species_characteristics = { portrait = ms_robotic_02 } }
+                    1 = { change_species_characteristics = { portrait = ms_human_01_machine } }
+                    1 = { change_species_characteristics = { portrait = ms_fungoid_01_machine } }
+                }
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_01 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_01" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_02 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_02" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_03 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_03" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_04 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_04" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_05 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_05" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_06 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_06" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_07 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_07" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_08 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_08" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_tma_synth_machine_09 = yes }
+        }
+        change_species_characteristics = { portrait = "synth_machine_09" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_hum_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_hum_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_mam_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_mam_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_rep_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_rep_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_avi_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_avi_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_art_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_art_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_mol_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_mol_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_fun_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_fun_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_pla_robot = yes }
+        }
+        change_species_characteristics = { portrait = "sd_pla_robot" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_lit_robot = yes }
+        }
+        change_species_characteristics = { portrait = "lith_machine" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_nec_robot = yes }
+        }
+        change_species_characteristics = { portrait = "nec_machine" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_aqu_robot = yes }
+        }
+        change_species_characteristics = { portrait = "aqu_machine" }
+    }
+    else_if = {
+        limit = {
+            prev = { use_robot_portrait_sd_tox_robot = yes }
+        }
+        change_species_characteristics = { portrait = "tox_machine" }
+    }
+}

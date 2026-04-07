@@ -1,0 +1,25 @@
+# 领袖死亡时触发
+on_leader_death = {
+    events = {
+        zijiande.3
+    }
+}
+# 每月执行事件检测并重置领袖图片
+on_monthly_pulse_country = {
+    events = {
+        zijiande.2
+    }
+}
+# 完成修正时检测并重置领袖图片
+on_modification_complete = {
+    events = {
+        zijiande.2
+    }
+}
+# 领袖升级时检测并重置领袖图片
+on_leader_level_up = {
+    events = {
+        zijiande.2
+    }
+}
+# 直接使用这些接口即可，我翻译过，只要把死亡事件ID放第一个，重置图片放ID2，3，4个即可

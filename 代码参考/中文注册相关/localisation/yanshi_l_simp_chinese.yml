@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ origin_zijian: "$origin_zijian1111$"
+ origin_zijian1111: "这是自建的起源11111111"
+ origin_zijian_desc: "§Y这是起源的介绍§!['concept_zijiande']\n§R这是起源的介绍§!\n\n§B这是起源的介绍§!\n§P这是起源的介绍§!\n§M这是起源的介绍§!。\n\n$origin_tupian$"
+ origin_tupian: "\n\n£tupian1£\n\n"
+ zheshiyigexiaoguo1: "负面效果"
+ zheshiyigexiaoguo: "正面效果"
+ zheshiyigexiaoguo2: "BUFF修正效果"
+ concept_zijiande: "很厉害的效果"
+ concept_zijiande_desc: "这是一个超级厉害的效果"

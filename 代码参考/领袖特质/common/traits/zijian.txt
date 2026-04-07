@@ -1,0 +1,50 @@
+# 领袖特质
+# 和物种特质在同一个文件夹中编写
+# 领袖图片一样在gfx/ interface/ icons/ traits/文件夹下注册
+# 进游戏看看
+leader_zijian = {
+    # 使用leader_class将其变成领袖特质，
+    # 自建领袖特质时可以不用写inline_script，太麻烦了
+    # 在leader_class中，
+    # official是行政官员，scientist是科学家，commander是指挥官
+    # 现存的领袖只有这三种，或许还有特使，但它不使用特质
+    # 以前的general和admiral已经被合并至commander，指挥官中
+    leader_class = { official }
+    # 特质直接获得的修正，不知道修正BUFF该写在哪个modifier里时可以直接写在这里
+    modifier = {
+        ship_fire_rate_mult = 1
+    }
+    # councilor_modifier,代表拥有这个特质的领袖在内阁上可以发生效果且
+    # 国际能获得的修正buff
+    councilor_modifier = {
+        ship_fire_rate_mult = 1
+    }
+    # 舰船能在这个特质上获得的修正BUFF
+    fleet_modifier = {
+        ship_fire_rate_mult = 1
+    }
+    # 陆军能在这个特质上获得的修正BUFF
+    army_modifier = {
+        armies_upkeep_mult = -1
+    }
+    # 行星能在这个特质上获得的修正BUFF
+    planet_modifier = {
+        planet_building_build_speed_mult = 0.10
+    }
+    # 这个特质是否可以呗选择
+    initial = no
+    # 这个特质是否可以被领袖随机到，这里为了演示所以是yes，一般MOD专属的领袖特质写成no
+    randomized = yes
+    # 领袖获得这个特质时会不会弹出一个弹窗来提示你获得了没有,no表示不弹出弹窗
+    notify_on_gained = no
+    # requires_traits需要哪个特质存在才可获得，一般不使用
+    # requires_traits = {  }
+    # 需要什么政府形式才可获得，一般不使用
+    # requires_governments = {  }
+    # replace_traits,里面放入另一个特质，作用是另一个特质升级时会变为此特质
+    # 一般将replace_traits的值作为一级特质，此特质为二级特质，以此类推，这里不演示了
+    # replace_traits = {}
+    # 这个特质需要什么科技，一般不使用
+    # prerequisites = {  }
+}
+# 我们可以看到自建特质的修正BUFF已经出现，就这样

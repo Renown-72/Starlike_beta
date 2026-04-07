@@ -1,0 +1,106 @@
+# 自建武器-H槽位战斗机相关
+# 一般的武器使用weapon_component_template编写，战斗机使用strike_craft_component_template编写
+strike_craft_component_template = {
+    key = "ZIJIANDEWUQI_FEIJI"
+    # key值，武器最重要的东西，是个唯一值，不可重复，需要他来注册名字
+    # 使用KEY值可以注册武器的名字
+    size = LARGE
+    # 武器槽位大小，H槽使用LARGE
+    entity = "gatebuilder_01_strikecraft_entity"
+    # entity武器的实体，这里使用纳米战斗机实体，不使用实体的话可能会在部分舰船上显示错误
+    resources = {
+        # resources代表资源
+        category = ship_components
+        # category代表类别，舰船武器一般使用ship_components即可
+        cost = {
+            # cost代表这个武器的消耗
+            alloys = 60
+        }
+        upkeep = {
+            # upkeep代表这个武器的维护
+            alloys = 6
+        }
+    }
+    power = -60
+    # power代表武器消耗的能源
+
+    count = 10
+    # 飞机一次性出击的数量
+    regeneration_per_day = 2
+    # 飞机每次再造并出击的数量
+    launch_time = 1.0
+    # 准备的时间
+    damage = { min = 10 max = 12 } # hits hard but slow
+    # 飞机的伤害，min是这次攻击能造成的最小伤害,max反之
+    cooldown = 4
+    # 武器的冷却时间
+    range = 20
+    # 攻击距离，一般代表这个武器能发射的距离
+    engagement_range = 120
+    # engagement_range代表战斗机攻击距离，
+    accuracy = 1.0
+    # 战斗机的准确性能
+    tracking = 1.0
+    # 战斗机的追踪
+
+    health = 100
+    armor = 50
+    shield = 50
+    evasion = 1
+    speed = 800
+    rotation_speed = 1
+    acceleration = 1
+    # 战斗机的血量 = 100
+    # 战斗机的护甲，对它是有护甲的 = 50
+    # 战斗机的护盾，对它是有护盾的 = 50
+    # 战斗机的闪避，战斗机当然能闪避 = 1
+    # 战斗机速度，速度不要拉的太高了，不然战斗机一直乱串 = 600
+    # 战斗机转圈的速度 = 0.2
+    # 战斗机的加速度 = 0.5
+    # 从上之下以此排列，这里是写战斗机的性能
+
+    shield_damage = 1.0
+    # 战斗机对护盾伤害，属于加伤
+    armor_damage = 1
+    # 战斗机对装甲伤害，属于加伤
+    shield_penetration = 1
+    # 战斗机的护盾穿透
+    armor_penetration = 1
+    # 战斗机的装甲穿透
+
+    ship_behavior = "bombers_behavior"
+    # 战斗机的行为，翻译是轰炸机行为，配合weapon_type = instant使用
+    # 他两个搭配可以让战斗机五十对面的导弹，飞机什么的直接攻击对面舰船
+    weapon_type = instant
+    # 这里使用bombers_behavior演示
+
+    # ship_behavior = "fighters_behavior"
+    # # 战斗机的行为，翻译是战斗机行为，配合weapon_type = point_defence使用
+    # # 它们搭配可以让你得舰载机拦截对面的导弹，飞机什么的
+    # weapon_type = point_defence
+    # # point_defence的意思是点防御，一般也用在点防御武器身上
+    projectile_gfx = "tachyon_lance"
+    # 战斗机的武器攻击特效，注意，你可以把其他武器特效拿来给战斗机使用，如光矛，tachyon_lance
+
+    component_set = "ZIJIANDEWUQI_FEIJI"
+    # 使用component_set注册武器
+    icon = "GFX_zijian_tu"
+    # 武器的图片
+    icon_frame = 1
+    # 意义不明，复制icon_frame然后写个1吧
+    tags = { weapon_type_strike_craft }
+    # 战斗机的通用tag，可以写一个上去
+
+    # hidden = yes
+    # hidden代表是否隐藏这个武器，yes代表是,no代表不是，不写hidden就是no
+    prerequisites = { tech_strike_craft_3 }
+    # 这里使用原版先进舰载机科技
+    # prerequisites代表这个武器所需要的科技
+    # upgrades_to =
+    # 这个武器可以升级为哪个武器，一般是再写一个战斗机升级为它
+    ai_weight = {
+        # AI使用它的权重和自动装备武器的权重
+        weight = 100
+    }
+    # 就是这样
+}

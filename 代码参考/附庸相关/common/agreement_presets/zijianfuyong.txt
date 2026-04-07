@@ -1,0 +1,109 @@
+# 制作一个新的附庸类型，需要common下的agreement_term_values文件夹和agreement_presets文件夹
+# 在agreement_presets文件夹中编写我们的附庸类型
+preset_zijianfuyong = {
+    icon = "GFX_diplomacy_status_is_vassal"
+    # 附庸的图片，如果你是只写一个附庸没有等级那就写它，不然就不用写
+    can_preset_be_changed = yes
+    # 是否可以更改协议，不是协议条件，是可不可以从一个协议更改为另一个协议
+    # 为了演示这里写成yes
+    specialist_type = specialist_zijian
+    # 然后在specialist_type和下面的value中填入对应的agreement_term_values的值
+    # 也就是specialist_zijian，这里和原版不一样没有下横线，是因为没有写specialist_subject_types
+    # 也就是我们没有写activate_effect中的convert_to_specialist，这里先不写，进游戏看看这个协议是否能生效
+    # 补充一下协议条件
+
+    # specialist_type和specialist_type下的value匹配，用来写可以升级的附庸协议
+    # 如原版的学邦，在agreement_term_values文件夹中编写
+    term_data = {
+        # 在term_data里写附庸协议的初始条件，注：条件是可以手动更改的
+        discrete_terms = {
+            # discrete_terms是普通的协议条件，比如是否整合，能否外交
+            {
+                key = specialist_type
+                # specialist_type内填入agreement_term_values的值，如specialist_zijian
+                # 如果没有等级可以不填，直接写成specialist_none
+                value = specialist_zijian
+            }
+            {
+                # 附庸协议的条件，key可在agreement_terms文件夹中查看，如
+                key = subject_integration
+                # 整合附属国相关
+                value = subject_can_be_integrated
+                # 这个初始协议的值是禁止整合，现在修改为可以整合
+                # value在agreement_term_values文件夹中
+                # 下面一样可以自行查看并修改
+            }
+            {
+                key = subject_diplomacy
+                value = subject_can_do_diplomacy_but_not_vote
+            }
+            {
+                key = subject_expand
+                value = subject_can_expand_with_tithe
+            }
+            {
+                key = joins_overlord_wars
+                value = joins_overlord_wars_defensive
+            }
+            {
+                key = joins_subject_wars
+                value = joins_subject_wars_defensive
+            }
+            {
+                key = subject_holdings_limit
+                value = subject_holdings_limit_1
+            }
+            # 除了subject_loyalty和protectorate最好不要更改，使用原版的值即可
+            {
+                key = subject_loyalty
+                value = subject_loyalty_effects
+            }
+            {
+                key = protectorate
+                value = subject_is_not_protectorate
+            }
+        }
+        # resource_terms = {
+        #     # resource_terms是资源协议相关，如
+        # }
+        resource_terms = {
+            # 给与附庸的资源,正数是给我，负数是给他
+            {
+                # resource_subsidies_basic是电矿粮
+                key = resource_subsidies_basic
+                value = -0.75
+            }
+            {
+                # resource_subsidies_advanced是合金消费品
+                key = resource_subsidies_advanced
+                value = -0.75
+            }
+            {
+                # resource_subsidies_research是科研资源
+                key = resource_subsidies_research
+                value = -0.75
+            }
+            {
+                # resource_subsidies_strategic是稀有资源
+                key = resource_subsidies_strategic
+                value = -0.75
+            }
+        }
+    }
+
+    potential = {
+        # potential里写条件
+        from = {
+            # 外层套一个from = {}能更好的找到拥有这个条件的国家
+            # 比如使用某种起源的国家，或者不是AI的国家
+            # 这里的起源使用MOD起源，方便演示
+            OR = {
+                # OR代表都可以
+                is_ai = no
+                has_origin = origin_madoka_and_homura
+            }
+        }
+    }
+
+    # 暂时就是这样
+}

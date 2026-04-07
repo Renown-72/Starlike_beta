@@ -1,0 +1,26 @@
+#######################################
+# 这次是星界裂隙坟墓,用了common/astral_rifts和events和localisation文件
+# 这玩意和普通的坟墓差不多
+#######################################
+zijiande = {
+    # zijiande,裂隙的ID,你也可以叫它KEY,需要唯一值
+
+    randomized = no
+    # 禁止随机,等下用事件创建它
+    # 随机出来?你不写它的话就是yes,一般要写的话是把它值写上no
+
+    name = zijiande_name
+    # 裂隙的名字!!!
+    event = zijiande.1
+    # 裂隙执行的事件
+
+    # event_weight = {
+    #     # 这玩意应该是随机的几率,我不是很喜欢整这样的玩意,所以不写
+    #     weight = 1
+    # }
+
+    on_roll_failed = {
+        # on_roll_failed直接复制原版的就成,蠢驴写好了的
+        standard_astral_rift_on_roll_failed = yes
+    }
+}

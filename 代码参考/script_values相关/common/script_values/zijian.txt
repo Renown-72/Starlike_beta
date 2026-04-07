@@ -1,0 +1,33 @@
+# script_values,脚本值,反正翻译是这样的
+# 需要在common下的script_values中注册,可以注册并进行一些计算?
+# --------------- #
+zijiande_xingqiu_renkou = {
+    add = trigger:num_pops
+    # 以此为例,它的效果为,只要这个星球上有一个人口,那么进行一次添加
+    # 可以干什么呢？
+}
+zijiande_jugou_jiance = {
+    # 再以此为例
+    complex_trigger_modifier = {
+        trigger = count_owned_planet
+        # 进行检测,检测的条件为我们拥有的星球,count_owned_planet也一般代指我们拥有的殖民地
+        trigger_scope = owner
+        # 检测的范围,殖民地的控制者
+        parameters = {
+            limit = {
+                # 检测的条件
+                # 这个行星拥有巨构且巨构的类型为星环基地
+                num_pops >= 5
+            }
+        }
+        mode = add
+        mult = 1
+        # 进行添加,添加的数量为1
+    }
+    max = 30
+    # 最好写个最大值,添加的最大值为30,到达30后即使还有多的也不会再添加
+    [[ZIJIANDE_JUGOU_FACTOR]
+        mult = $ZIJIANDE_JUGOU_FACTOR$
+    ]
+    # 写一下这个,等下要用,最好为唯一值
+}

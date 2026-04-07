@@ -1,0 +1,210 @@
+namespace = zijiande
+#############################################
+# 现在是裂隙的事件,这玩意和坟墓差不多,看不懂的话请去看事件教程
+#############################################
+# 一共有五个事件
+# 注意用的是astral_rift_event
+astral_rift_event = {
+    id = zijiande.1
+    title = zijiande.1.title
+    desc = zijiande.1.desc
+    # 这玩意你应该知道是什么意思
+    # ---------------------------- #
+    difficulty = 1
+    # difficulty,难度,一般值是1到10
+    astral_rift = yes
+    # 表明你这个事件是裂隙事件
+    # 虽然我不明白蠢驴都给你整了个专门的事件了还要写这个干什么
+    # 总之你写上去就是了
+    # ---------------------------- #
+    picture = GFX_evt_astral_rift_riftworld
+    show_sound = ap_rift_event_0_astral_wonder
+    is_triggered_only = yes
+    # 这玩意你应该知道是什么意思
+    # ---------------------------- #
+    option = {
+        # 裂隙的选项一
+        name = zijiande.1.a
+        set_next_astral_rift_event = {
+            # 来让你选项下个该执行的是什么
+            # 你这里可以选项一执行zijiande.2,选项二执行zijiande.3
+            id = zijiande.2
+        }
+    }
+    option = {
+        # 裂隙的选项二
+        name = zijiande.1.b
+        set_next_astral_rift_event = {
+            id = zijiande.2
+        }
+    }
+    # ---------------------------- #
+    after = {
+        # 这个是原版的,让你探索完一个事件后随机给你裂隙资源的
+        explorer = {
+            astral_thread_small_reward = yes
+        }
+    }
+    # ---------------------------- #
+}
+astral_rift_event = {
+    id = zijiande.2
+    title = zijiande.2.title
+    desc = zijiande.2.desc
+    # ---------------------------- #
+    difficulty = 2
+    astral_rift = yes
+    # ---------------------------- #
+    picture = GFX_evt_astral_rift_riftworld
+    show_sound = ap_rift_event_0_astral_wonder
+    is_triggered_only = yes
+    # ---------------------------- #
+    option = {
+        name = zijiande.2.a
+        set_next_astral_rift_event = {
+            id = zijiande.3
+        }
+    }
+    option = {
+        name = zijiande.2.b
+        set_next_astral_rift_event = {
+            id = zijiande.3
+        }
+    }
+    # ---------------------------- #
+    after = {
+        explorer = {
+            astral_thread_small_reward = yes
+        }
+    }
+    # ---------------------------- #
+}
+# 注意这五个都是差不多的事件,我只改了部分东西,从事件3这里
+astral_rift_event = {
+    id = zijiande.3
+    title = zijiande.3.title
+    desc = zijiande.3.desc
+    # ---------------------------- #
+    difficulty = 3
+    astral_rift = yes
+    # ---------------------------- #
+    picture = GFX_evt_astral_rift_riftworld
+    show_sound = ap_rift_event_0_astral_wonder
+    is_triggered_only = yes
+    # ---------------------------- #
+    option = {
+        name = zijiande.3.a
+        set_next_astral_rift_event = {
+            id = zijiande.4
+        }
+    }
+    option = {
+        name = zijiande.3.b
+        set_next_astral_rift_event = {
+            id = zijiande.4
+            # 这里有个随机的骰子,在其失败的时候会有几率执行失败的选项
+            on_roll_failed = zijiande.5
+            # 执行的失败的选项
+            fail_probability = 1
+            # 随机的骰子失败时候执行失败选项的几率,一般都是0到1这个值
+        }
+    }
+    # ---------------------------- #
+    after = {
+        explorer = {
+            astral_thread_small_reward = yes
+        }
+    }
+    # ---------------------------- #
+}
+astral_rift_event = {
+    id = zijiande.4
+    title = zijiande.4.title
+    desc = zijiande.4.desc
+    # ---------------------------- #
+    difficulty = 4
+    astral_rift = yes
+    # ---------------------------- #
+    picture = GFX_evt_astral_rift_riftworld
+    show_sound = ap_rift_event_0_astral_wonder
+    is_triggered_only = yes
+    # ---------------------------- #
+    option = {
+        name = zijiande.4.a
+        finish_astral_rift = yes
+        # 执行到这个事件了,使用finish_astral_rift,让裂隙知道它已经被探索完毕了
+    }
+    option = {
+        name = zijiande.4.b
+        finish_astral_rift = yes
+        # 执行到这个事件了,使用finish_astral_rift,让裂隙知道它已经被探索完毕了
+    }
+    # ---------------------------- #
+    after = {
+        explorer = {
+            astral_thread_small_reward = yes
+        }
+    }
+    # ---------------------------- #
+}
+astral_rift_event = {
+    id = zijiande.5
+    title = zijiande.5.title
+    desc = zijiande.5.desc
+    # ---------------------------- #
+    difficulty = 5
+    astral_rift = yes
+    # ---------------------------- #
+    picture = GFX_evt_astral_rift_riftworld
+    show_sound = ap_rift_event_0_astral_wonder
+    is_triggered_only = yes
+    # ---------------------------- #
+    option = {
+        name = zijiande.5.a
+        finish_astral_rift = yes
+        # 执行到这个事件了,使用finish_astral_rift,让裂隙知道它已经被探索完毕了
+    }
+    option = {
+        name = zijiande.5.b
+        finish_astral_rift = yes
+        # 执行到这个事件了,使用finish_astral_rift,让裂隙知道它已经被探索完毕了
+    }
+    # ---------------------------- #
+    after = {
+        explorer = {
+            astral_thread_small_reward = yes
+        }
+    }
+    # ---------------------------- #
+}
+
+# 就用了这五个事件,它们都写的差不多
+# 内容就是探索后会执行事件1
+# 事件1执行后两个选项可以随便选择,都会执行事件2
+# 事件2执行后两个选项可以随便选择,都会执行事件3
+
+# 事件3执行后两个选项可以随便选择
+# 选项【1】会执行事件4,选项【2】在骰子随机的时候会有几率失败,失败的时候执行事件5
+
+# 事件4执行后两个选项可以随便选择,选择后这个裂隙就探索完毕了
+# 事件5执行后两个选项可以随便选择,选择后这个裂隙就探索完毕了
+####################################################################
+# 事件6是拿来创建裂隙的
+country_event = {
+    id = zijiande.6
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        # this,这个执行着|.,的|capital_scope,首都|.,的|solar_system,星系
+        this.capital_scope.solar_system = {
+            # 生成一个裂隙,由于使用了ID所以它是指定的裂隙,不写就是随机生成
+            spawn_astral_rift = {
+                id = zijiande
+                random_pos = yes
+                orbit_angle = 360
+                spawn_sound = no
+            }
+        }
+    }
+}
+####################################################################

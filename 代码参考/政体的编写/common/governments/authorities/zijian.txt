@@ -1,0 +1,34 @@
+zijian = {
+    election_type = oligarchic
+    election_term_years = 10
+    has_heir = no
+    can_reform = yes
+    traits = {}
+    ai_weight = {}
+    random_weight = {}
+    potential = {}
+    possible = {}
+    tags = {}
+    has_agendas = no
+    description = aaaa
+    negative_description = bbbb
+    country_modifier = {
+        country_leader_pool_size = -1
+        # Additional modifiers are found in inline_scripts\buildings\on_all_capital_buildings.txt
+    }
+    ruler_council_position = councilor_ruler_democratic
+    can_have_emergency_elections = yes
+    has_factions = no
+    advanced_authority_swap = {
+        name = "zijian"
+        description = "zijian_desc"
+        inherit_icon = yes
+        inherit_effects = yes
+        modifier = {
+            country_leader_pool_size = 100
+        }
+        weight = {
+            weight = 10000
+        }
+    }
+}

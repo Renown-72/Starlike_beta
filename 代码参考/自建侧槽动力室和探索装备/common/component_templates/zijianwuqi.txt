@@ -1,0 +1,69 @@
+# 舰船的动力室（反应堆）和探查装备，也就是舰船的基础侧槽
+# 使用utility_component_template编写
+utility_component_template = {
+    key = "ZIJIANWUQI_FANYINGDUI"
+    # 武器的KEY值
+    size = small
+    # 逆天蠢驴写了一堆槽位不知道他想干什么，这里使用small
+    icon = "GFX_zijian_tu"
+    # 武器图片
+    icon_frame = 1
+    # 1就行
+    power = 10000
+    # 能源一般是产出所以写正数就行
+    resources = {
+        # 资源消耗相关
+        category = ship_components
+        cost = {
+            alloys = @cruiser_cost_6
+            sr_dark_matter = 4
+        }
+        upkeep = {
+            energy = 1.48
+            alloys = 0.148
+        }
+    }
+    prerequisites = { "tech_dark_matter_power_core" }
+    # 需要的科技
+    component_set = "power_core"
+    # 侧槽不同于武器槽，反应堆直接使用power_core就行，不用给它专门注册
+    ai_weight = {
+        # 权重相关
+        weight = 100000
+    }
+}
+utility_component_template = {
+    key = "ZIJIANWUQI_TANSUO"
+    # 武器的KEY
+    size = medium
+    # 槽位大小，建议直接复制蠢驴的
+    icon = "GFX_zijian_tu"
+    # 图片
+    icon_frame = 1
+    # 1就行
+    power = -300
+    # 能源消耗和产出
+    resources = {
+        # 资源消耗相关
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    sensor_range = 100
+    # 探索范围
+    hyperlane_range = 100
+    # 超空间探索距离
+    ship_modifier = {
+        # 这里是给舰船的修正，同样可以写光环
+        ship_tracking_add = 100
+    }
+    prerequisites = { "tech_sensors_4" }
+    # 所需的科技
+    component_set = "sensor_components"
+    # 不要自己注册，侧槽探索装备使用sensor_components即可
+    ai_weight = {
+        # 权重相关
+        weight = 100000
+    }
+}

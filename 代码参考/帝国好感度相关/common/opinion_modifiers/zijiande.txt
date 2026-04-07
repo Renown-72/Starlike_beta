@@ -1,0 +1,43 @@
+# 帝国外交好感度相关
+# 在common下的opinion_modifiers里编写
+
+# 这里的帝国好感度有两种获得方式,
+# 一种是靠trigger满足条件自动获得
+# 注意,一般写了trigger的好感度里面不写accumulative和decay
+opinion_refused_human_1 = {
+    # 第一种
+    opinion = {
+        # opinion是好感度,正数是绿色添加好感度,负数是红色减少好感度
+        base = 50
+    }
+    trigger = {
+        # 这样当对方是人类联邦的时候,我们会增加一个对对方的好感度
+        # 双方都获得是这样的
+        # 这里以单方面的好感度来演示这个好感
+        has_origin = origin_default
+        from = {
+            has_origin = origin_lost_colony
+        }
+    }
+}
+# 一种是靠事件来添加好感度
+# 注意,一般用事件添加的好感不写trigger
+opinion_refused_human_2 = {
+    # 第二种
+    opinion = {
+        # 和上方一样
+        base = 10
+    }
+    accumulative = yes
+    # accumulative来判断这个好感度是否的好感是否可以叠加,
+    # 就像老登的(多事的年轻种族)一样可以叠加
+    decay = {
+        # decay,增加或者减少好感度,
+        # 当你opinion值为正数时候,这里的1是减少,当你opinion值为负数正时候,这里的1是增加
+        add = 1
+    }
+}
+
+# 这里我们假设以
+# origin_default 繁荣一统起源 帝国为地球联合国
+# origin_lost_colony 失落行星起源 帝国为人类联邦

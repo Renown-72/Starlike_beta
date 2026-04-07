@@ -1,0 +1,110 @@
+# S,M,L槽位武器，编写方式几乎与X槽位相同
+# 这里直接使用的X槽代码来演示
+weapon_component_template = {
+    key = "ZIJIANDEWUQI_S"
+    # 武器的KEY值，注意不要相同
+    size = small
+    # 修改size即可，small是S槽，medium是M槽，large是L槽
+    type = instant
+    icon = GFX_zijian_tu
+    icon_frame = 1
+    prerequisites = { "tech_kinetic_artillery_2" }
+    component_set = "ZIJIANDEWUQI_L_M_S"
+    projectile_gfx = "tachyon_lance"
+    tags = { zheshiyigebiaoqian }
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @xl_t6_cost
+        }
+        upkeep = {
+            energy = @xl_t6_upkeep_energy
+            alloys = @xl_t6_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    firing_arc = 360
+    damage = { min = 10000 max = 100000 }
+    range = 300
+    total_fire_time = 30
+    shield_penetration = 10
+    armor_penetration = 10
+    tracking = 1
+    accuracy = 1
+    entity = large_space_cloud_weapon_entity
+}
+weapon_component_template = {
+    key = "ZIJIANDEWUQI_M"
+    # 武器的KEY值，注意不要相同
+    size = medium
+    # 修改size即可，small是S槽，medium是M槽，large是L槽
+    type = instant
+    icon = GFX_zijian_tu
+    icon_frame = 1
+    prerequisites = { "tech_kinetic_artillery_2" }
+    component_set = "ZIJIANDEWUQI_L_M_S"
+    projectile_gfx = "tachyon_lance"
+    tags = { zheshiyigebiaoqian }
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @xl_t6_cost
+        }
+        upkeep = {
+            energy = @xl_t6_upkeep_energy
+            alloys = @xl_t6_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    firing_arc = 360
+    damage = { min = 20000 max = 200000 }
+    range = 300
+    total_fire_time = 30
+    shield_penetration = 10
+    armor_penetration = 10
+    tracking = 1
+    accuracy = 1
+    entity = large_space_cloud_weapon_entity
+}
+weapon_component_template = {
+    key = "ZIJIANDEWUQI_L"
+    # 武器的KEY值，注意不要相同
+    size = large
+    # 修改size即可，small是S槽，medium是M槽，large是L槽
+    type = instant
+    icon = GFX_zijian_tu
+    icon_frame = 1
+    prerequisites = { "tech_kinetic_artillery_2" }
+    # 想要武器在科技和显示界面处于同一个图片上然后图片右边显示S,M,L
+    # 那么科技和component_set要写同一个值，这里以先进动能火炮演示
+    component_set = "ZIJIANDEWUQI_L_M_S"
+    projectile_gfx = "tachyon_lance"
+    tags = { zheshiyigebiaoqian }
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @xl_t6_cost
+        }
+        upkeep = {
+            energy = @xl_t6_upkeep_energy
+            alloys = @xl_t6_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    firing_arc = 360
+    damage = { min = 30000 max = 300000 }
+    range = 300
+    total_fire_time = 30
+    shield_penetration = 10
+    armor_penetration = 10
+    tracking = 1
+    accuracy = 1
+    entity = large_space_cloud_weapon_entity
+}
+# 改一下数值方便看差别

@@ -1,0 +1,50 @@
+# 物种特质，在common文件夹下的traits文件夹中编写
+# 图片在gfx文件夹下的interface文件夹下的icons文件夹中注册
+# 图片格式为.dds，大小为29PX X 29PX 最佳
+trait_zijian = {
+    # advanced_trait代表这个特质是不是一个高级特质
+    advanced_trait = yes
+    # immortal_leaders代表拥有这个特质的物种，领袖自带不朽，不会因为寿命死去
+    immortal_leaders = yes
+    # improves_leaders,代表是否可以影响到领袖，配合immortal_leaders使用
+    improves_leaders = yes
+    # 消耗的特质点数，正数消耗，负数增加。0就是0
+    cost = 1
+    # 是否可以在自建国家时的特质选择页面出现，no代表只能在进入游戏后选择
+    initial = yes
+    # 是否可以随机出去，一般选no
+    randomized = no
+    # 可以被那些物种选择，或是是限制那些物种能选择这个特质
+    species_class = {}
+    # 哪些物种类别可以选择，如生物，BIOLOGICAL---石头人，LITHOID---机械MACHINE，ROBOT等等
+    # 注:这里必须写，否则特质不会出现!!!
+    # 注:这里必须写，否则特质不会出现!!!
+    # 注:这里必须写，否则特质不会出现!!!
+    allowed_archetypes = { ROBOT MACHINE LITHOID BIOLOGICAL }
+    # 杂交机会，勾式东西，一般杂交关了也不用设置这玩意，不然就写0
+    potential_crossbreeding_chance = 0
+    # 学了什么科技才可以选择这个特质，一般【不】配合initial = yes使用
+    prerequisites = {}
+    # ai使用它的几率，写成0吧
+    ai_weight = {}
+    # 特质直接给与的效果
+    modifier = {
+        planet_jobs_alloys_produces_mult = 3000
+    }
+    # 特质直接给与的行星效果
+    planet_modifier = {
+
+    }
+    # species_potential_add里面填入的是使用这个特质的条件
+    species_potential_add = {
+
+    }
+    # species_possible_remove里面填入的是去掉这个特质的条件
+    species_possible_remove = {
+
+    }
+    # 这个特质可以给哪些领袖效果，一般不使用给物种特质
+    # commander是指挥，scientist是科研，official是行政
+    # leader_class = { commander scientist official }
+}
+# 特质的BUFF已经出现，特质也已经生效，就这样

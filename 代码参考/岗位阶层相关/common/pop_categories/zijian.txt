@@ -1,0 +1,50 @@
+# 岗位阶层一般只需要common/pop_categories文件,其它文件是上一集的东西
+# 岗位图片的注册和科技,建筑,特质什么的差不多,按如下路径将图片放入即可
+# icon = gfx/interface/icons/pop_categories/pop_cat_zijianjieceng.dds
+# 注意图片的名字要正确 pop_cat_zijianjieceng.dds
+zijianjieceng = {
+    rank = 1
+    # 阶层的等级?反正不是很重要,原版有 0,1,2,3,4五个等级,选个喜欢的放进去就行,不是很重要但要写
+    change_job_threshold = 2
+    # change_job_threshold,一般写个2就行,用于更换岗位的门槛?反正也不是很重要,但蠢驴都写了就写上吧
+    allow_resettlement = {
+        # 允许安置的条件,应该是满足了条件才能上这个阶层,一般都是写个always = yes
+        always = yes
+        # 注意这里是人口作用域,条件直接作用于人口上,但可以直接写特质条件
+        # has_trait =
+    }
+    resettlement_cost = {
+        # 安置的费用
+        alloys = 100
+        # 可以直接写消耗的费用
+        trigger = {
+            # 这里也可以写条件,但写了条件的话还想有其它的消耗就得再写一个resettlement_cost了
+            has_trait = trait_hive_mind
+        }
+    }
+    resettlement_cost = {
+        # 就像这样,基础安置费用100,如果你这个物种有蜂巢思维特质还得再加100合金
+        energy = 100
+    }
+    planet_modifier = {
+        # 同样,也可以写modifier,很正常,很多地方都可以加modifier
+        # 这里就懒得写了,注意modifier的作用域和上面对应就行,
+        # 对应的意思就是舰船的modifier修正不能写在planet这个行星作用域上
+    }
+    triggered_planet_modifier = {}
+    resources = {
+        # 很正常,阶层也是要吃东西的,想写什么消耗写多少都可以
+        category = pop_category_specialists
+        cost = {
+            # resources同样能写条件,写法和resettlement_cost差不多
+            # 没有蜂巢思维就是100合金,有就是 100合金 + 100 能量
+            trigger = {
+                has_trait = trait_hive_mind
+            }
+            energy = 100
+        }
+        cost = {
+            alloys = 100
+        }
+    }
+}

@@ -1,0 +1,8 @@
+# 轨道轰炸事件。需要on_actions文件夹下的on_planet_bombarded接口
+# 蠢驴留的接口，可以直接使用
+on_planet_bombarded = {
+    events = {
+        # 最后将事件ID放入on_planet_bombarded下的events中即可
+        zijianhongzha.1
+    }
+}

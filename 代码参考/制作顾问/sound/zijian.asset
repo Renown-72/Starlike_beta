@@ -1,0 +1,1011 @@
+# ------------------------------------------- #
+soundgroup = {
+    name = zijiandeguwen
+    # 顾问的名字,需要在advisor_voice_types中进行汉化
+    soundeffectoverrides = {
+        # 让类似于接口的东西引用你注册的音频,等于号左边的不要乱动乱改,右边的填入你注册的音效
+        # 你可以更改开头的东西,使其不会被别人的覆盖掉,你要写唯一值,后面的建议不要乱改
+        # 也就是_advisor前面的
+        # 省的你不知道你改了哪些音频
+        advisor_sample_voice_type = zijiandeguwen_advisor_generic_phrase
+        advisor_notification_alien_empire_communication_01 = zijiandeguwen_advisor_notification_alien_empire_communication
+        advisor_notification_alien_federation_formed = zijiandeguwen_advisor_notification_alien_federation_formed
+        advisor_notification_alien_spaceport_engaged = zijiandeguwen_advisor_notification_alien_spaceport_engaged
+        advisor_notification_alien_vessel_encountered = zijiandeguwen_advisor_notification_alien_vessel_encountered
+        advisor_notification_building_ruined = zijiandeguwen_advisor_notification_building_ruined
+        advisor_notification_colonization_progress = zijiandeguwen_advisor_notification_colonization_progress
+        advisor_notification_colony_established = zijiandeguwen_advisor_notification_colony_established
+        advisor_notification_colony_ship_destroyed_01 = zijiandeguwen_advisor_notification_colony_ship_destroyed
+        advisor_notification_colony_ship_under_attack = zijiandeguwen_advisor_notification_colony_ship_under_attack
+        advisor_notification_construction_complete = zijiandeguwen_advisor_notification_construction_complete
+        advisor_notification_construction_ship_destroyed = zijiandeguwen_advisor_notification_construction_ship_destroyed
+        advisor_notification_construction_ship_under_attack = zijiandeguwen_advisor_notification_construction_ship_under_attack
+        advisor_notification_debris_analysed = zijiandeguwen_advisor_notification_debri_analysed
+        advisor_notification_discovery_detected = zijiandeguwen_advisor_notification_discovery_detected
+        advisor_notification_enemy_declared_war = zijiandeguwen_advisor_notification_enemy_declared_war
+        advisor_notification_enemy_invasion_defeated = zijiandeguwen_advisor_notification_enemy_invasion_defeated
+        advisor_notification_enemy_troops_landing = zijiandeguwen_advisor_notification_enemy_troops_landing
+        advisor_notification_evade_hostile_fleet = zijiandeguwen_advisor_notification_evade_hostile_fleet
+        advisor_notification_federation_formed = zijiandeguwen_advisor_notification_federation_formed
+        advisor_notification_fleet_destroyed = zijiandeguwen_advisor_notification_fleet_detected
+        advisor_notification_generic_war_declare = zijiandeguwen_advisor_notification_generic_war_declare
+        advisor_notification_hostile_fleet_detected = zijiandeguwen_advisor_notification_hostile_fleet_detected
+        advisor_notification_hostile_fleet_engaged = zijiandeguwen_advisor_notification_hostile_fleet_engaged
+        advisor_notification_hostile_station_engaged = zijiandeguwen_advisor_notification_hostile_station_engaged
+        advisor_notification_incoming_transmission = zijiandeguwen_advisor_notification_incoming_transmission
+        advisor_notification_invasion_enemy_won = zijiandeguwen_advisor_notification_invasion_enemy_won
+        advisor_notification_invasion_failed = zijiandeguwen_advisor_notification_invasion_failed
+        advisor_notification_invasion_progress = zijiandeguwen_advisor_notification_invasion_progress
+        advisor_notification_invasion_success = zijiandeguwen_advisor_notification_invasion_success
+        advisor_notification_mining_station_lost = zijiandeguwen_advisor_notification_mining_station_lost
+        advisor_notification_observation_post_lost = zijiandeguwen_advisor_notification_observation_post_lost
+        advisor_notification_planet_in_revolt = zijiandeguwen_advisor_notification_planet_in_revolt
+        advisor_notification_player_declare_war = zijiandeguwen_advisor_notification_player_declare_war
+        advisor_notification_pre_sapient_uplifted = zijiandeguwen_advisor_notification_pre_sapient_uplifted
+        advisor_notification_primitive_enlighted = zijiandeguwen_advisor_notification_primitive_enlighted
+        advisor_notification_research_complete = zijiandeguwen_advisor_notification_research_complete
+        advisor_notification_research_station_lost = zijiandeguwen_advisor_notification_research_station_lost
+        advisor_notification_science_ship_destroyed = zijiandeguwen_advisor_notification_science_ship_destroyed
+        advisor_notification_science_ship_under_attack = zijiandeguwen_advisor_notification_science_ship_under_attack
+        advisor_notification_ships_upgraded = zijiandeguwen_advisor_notification_ships_upgraded
+        advisor_notification_situation_log = zijiandeguwen_advisor_notification_situation_log
+        advisor_notification_spaceborne_encounter = zijiandeguwen_advisor_notification_spacebourne_encounter
+        advisor_notification_spaceport_lost = zijiandeguwen_advisor_notification_spaceport_lost
+        advisor_notification_spaceport_under_attack = zijiandeguwen_advisor_notification_spaceport_under_attack
+        advisor_notification_special_project_complete = zijiandeguwen_advisor_notification_special_project_complete
+        advisor_notification_species_modified = zijiandeguwen_advisor_notification_species_modified
+        advisor_notification_station_under_attack = zijiandeguwen_advisor_notification_station_under_attack
+        advisor_notification_system_survey_complete = zijiandeguwen_advisor_notification_system_survey_complete
+        advisor_notification_tile_blocker_clear = zijiandeguwen_advisor_notification_tile_blocker_clear
+    }
+}
+# ------------------------------------------- #
+# 注册你得音效类别,这里就是你上面soundeffectoverrides等于号右边所使用的了
+# 如果我们改了开头的值,那么这里也需要更改
+category = {
+    name = "Voice"
+    soundeffects = {
+        # 这里的soundeffects就是下面soundeffect的name值
+        zijiandeguwen_advisor_generic_phrase
+        zijiandeguwen_advisor_notification_alien_empire_communication
+        zijiandeguwen_advisor_notification_alien_federation_formed
+        zijiandeguwen_advisor_notification_alien_spaceport_engaged
+        zijiandeguwen_advisor_notification_alien_vessel_encountered
+        zijiandeguwen_advisor_notification_building_ruined
+        zijiandeguwen_advisor_notification_colonization_progress
+        zijiandeguwen_advisor_notification_colony_established
+        zijiandeguwen_advisor_notification_colony_ship_destroyed
+        zijiandeguwen_advisor_notification_colony_ship_under_attack
+        zijiandeguwen_advisor_notification_construction_complete
+        zijiandeguwen_advisor_notification_construction_ship_destroyed
+        zijiandeguwen_advisor_notification_construction_ship_under_attack
+        zijiandeguwen_advisor_notification_debri_analysed
+        zijiandeguwen_advisor_notification_discovery_detected
+        zijiandeguwen_advisor_notification_enemy_declared_war
+        zijiandeguwen_advisor_notification_enemy_invasion_defeated
+        zijiandeguwen_advisor_notification_enemy_troops_landing
+        zijiandeguwen_advisor_notification_evade_hostile_fleet
+        zijiandeguwen_advisor_notification_federation_formed
+        zijiandeguwen_advisor_notification_fleet_detected
+        zijiandeguwen_advisor_notification_generic_war_declare
+        zijiandeguwen_advisor_notification_hostile_fleet_detected
+        zijiandeguwen_advisor_notification_hostile_fleet_engaged
+        zijiandeguwen_advisor_notification_hostile_station_engaged
+        zijiandeguwen_advisor_notification_incoming_transmission
+        zijiandeguwen_advisor_notification_invasion_enemy_won
+        zijiandeguwen_advisor_notification_invasion_failed
+        zijiandeguwen_advisor_notification_invasion_progress
+        zijiandeguwen_advisor_notification_invasion_success
+        zijiandeguwen_advisor_notification_mining_station_lost
+        zijiandeguwen_advisor_notification_observation_post_lost
+        zijiandeguwen_advisor_notification_planet_in_revolt
+        zijiandeguwen_advisor_notification_player_declare_war
+        zijiandeguwen_advisor_notification_pre_sapient_uplifted
+        zijiandeguwen_advisor_notification_primitive_enlighted
+        zijiandeguwen_advisor_notification_research_complete
+        zijiandeguwen_advisor_notification_research_station_lost
+        zijiandeguwen_advisor_notification_science_ship_destroyed
+        zijiandeguwen_advisor_notification_science_ship_under_attack
+        zijiandeguwen_advisor_notification_ships_upgraded
+        zijiandeguwen_advisor_notification_situation_log
+        zijiandeguwen_advisor_notification_spacebourne_encounter
+        zijiandeguwen_advisor_notification_spaceport_lost
+        zijiandeguwen_advisor_notification_spaceport_under_attack
+        zijiandeguwen_advisor_notification_special_project_complete
+        zijiandeguwen_advisor_notification_species_modified
+        zijiandeguwen_advisor_notification_station_under_attack
+        zijiandeguwen_advisor_notification_system_survey_complete
+        zijiandeguwen_advisor_notification_tile_blocker_clear
+    }
+}
+# ------------------------------------------- #
+# 注册音频集
+# 如果我们改了开头的,那么这里也需要更改
+soundeffect = {
+    name = zijiandeguwen_advisor_generic_phrase
+    # 顾问_通用短语合集
+    # 这个音频集的名字
+    sounds = {
+        # 这个音频集里的音频有哪些,在这里可以写入多个注册的音频
+        # 效果为当触发时随机执行这个音频集里的随机一个音频进行播放
+        # 只有一个音频时只会播放这个唯一的音频
+        weighted_sound = {
+            sound = zijiandeguwen_advisor_generic_phrase_01
+            weight = 1000
+        }
+        weighted_sound = {
+            sound = zijiandeguwen_advisor_generic_phrase_02
+            weight = 1000
+        }
+        weighted_sound = {
+            sound = zijiandeguwen_advisor_generic_phrase_03
+            weight = 1000
+        }
+        weighted_sound = {
+            sound = zijiandeguwen_advisor_generic_phrase_04
+            weight = 1000
+        }
+        weighted_sound = {
+            sound = zijiandeguwen_advisor_generic_phrase_05
+            weight = 1000
+        }
+    }
+    volume = 1
+    # 值为1即可
+    max_audible = 1
+    # 值为1即可
+    max_audible_behaviour = fail
+    # 值为fail即可
+}
+
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_alien_empire_communication
+    # 顾问_通知_外星帝国_通讯合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_alien_empire_communication_01 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_alien_empire_communication_02 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_alien_empire_communication_03 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_alien_federation_formed
+    # 顾问_通知_外星联邦_成立合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_alien_federation_formed_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_alien_spaceport_engaged
+    # 顾问_通知_外星空间站_交战合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_alien_spaceport_engaged_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_alien_vessel_encountered
+    # 顾问_通知_外星飞船_遭遇合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_alien_vessel_encountered_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_building_ruined
+    # 顾问_通知_建筑_毁坏合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_building_ruined_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_colonization_progress
+    # 顾问_通知_殖民_进展合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_colonization_progress_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_colony_established
+    # 顾问_通知_殖民地_建立合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_colony_established_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_colony_ship_destroyed
+    # 顾问_通知_殖民船_被摧毁合集
+    sounds = {
+        weighted_sound = {
+            sound = zijiandeguwen_advisor_notification_colony_ship_destroyed_01 weight = 1000
+        }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_colony_ship_under_attack
+    # 顾问_通知_殖民船_遭受攻击合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_colony_ship_under_attack_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_construction_complete
+    # 顾问_通知_建设完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_construction_complete_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_construction_ship_destroyed
+    # 顾问_通知_建设船_被摧毁合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_construction_ship_destroyed_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_construction_ship_under_attack
+    # 顾问_通知_建设船_遭受攻击合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_construction_ship_under_attack_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_debri_analysed
+    # 顾问_通知_残骸分析完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_debri_analysed_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_discovery_detected
+    # 顾问_通知_发现_检测合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_discovery_detected_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_enemy_declared_war
+    # 顾问_通知_敌方宣战合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_enemy_declared_war_01 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_enemy_declared_war_02 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_enemy_declared_war_03 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_enemy_declared_war_04 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_enemy_invasion_defeated
+    # 顾问_通知_敌方入侵_已击败合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_enemy_invasion_defeated_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_enemy_troops_landing
+    # 顾问_通知_敌方部队_登陆合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_enemy_troops_landing_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_evade_hostile_fleet
+    # 顾问_通知_规避敌对舰队合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_evade_hostile_fleet_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_federation_formed
+    # 顾问_通知_联邦成立合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_federation_formed_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_fleet_detected
+    # 顾问_通知_舰队检测合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_fleet_detected_01 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_fleet_detected_02 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_generic_war_declare
+    # 顾问_通知_一般战争宣告合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_generic_war_declare_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_hostile_fleet_detected
+    # 顾问_通知_敌对舰队检测合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_hostile_fleet_detected_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_hostile_fleet_engaged
+    # 顾问_通知_敌对舰队_交战合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_hostile_fleet_engaged_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_hostile_station_engaged
+    # 顾问_通知_敌对空间站_交战合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_hostile_station_engaged_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_incoming_transmission
+    # 顾问_通知_传入传输合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_incoming_transmission_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_invasion_enemy_won
+    # 顾问_通知_入侵_敌方胜利合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_invasion_enemy_won_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_invasion_failed
+    # 顾问_通知_入侵失败合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_invasion_failed_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_invasion_progress
+    # 顾问_通知_入侵进展合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_invasion_progress_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_invasion_success
+    # 顾问_通知_入侵成功合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_invasion_success_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_mining_station_lost
+    # 顾问_通知_采矿站_丢失合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_mining_station_lost_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_observation_post_lost
+    # 顾问_通知_观测站_丢失合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_observation_post_lost_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_planet_in_revolt
+    # 顾问_通知_星球叛乱合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_planet_in_revolt_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_player_declare_war
+    # 顾问_通知_玩家宣战合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_player_declare_war_01 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_player_declare_war_02 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_player_declare_war_03 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_player_declare_war_04 weight = 1000 }
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_player_declare_war_05 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_pre_sapient_uplifted
+    # 顾问_通知_前智慧生物_提升合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_pre_sapient_uplifted_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_primitive_enlighted
+    # 顾问_通知_原始物种_启蒙合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_primitive_enlighted_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_research_complete
+    # 顾问_通知_研究完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_research_complete_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_research_station_lost
+    # 顾问_通知_研究站_丢失合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_research_station_lost_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_science_ship_destroyed
+    # 顾问_通知_科学船_被摧毁合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_science_ship_destroyed_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_science_ship_under_attack
+    # 顾问_通知_科学船_遭受攻击合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_science_ship_under_attack_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_ships_upgraded
+    # 顾问_通知_舰船升级完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_ships_upgraded_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_situation_log
+    # 顾问_通知_情况日志合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_situation_log_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_spacebourne_encounter
+    # 顾问_通知_太空遭遇事件合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_spacebourne_encounter_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_spaceport_lost
+    # 顾问_通知_太空港_丢失合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_spaceport_lost_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_spaceport_under_attack
+    # 顾问_通知_太空港_遭受攻击合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_spaceport_under_attack_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_special_project_complete
+    # 顾问_通知_特殊项目完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_special_project_complete_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_species_modified
+    # 顾问_通知_物种修改完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_species_modified_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_station_under_attack
+    # 顾问_通知_站点遭受攻击合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_station_under_attack_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_system_survey_complete
+    # 顾问_通知_系统勘测完成合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_system_survey_complete_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = zijiandeguwen_advisor_notification_tile_blocker_clear
+    # 顾问_通知_地块障碍清除合集
+    sounds = {
+        weighted_sound = { sound = zijiandeguwen_advisor_notification_tile_blocker_clear_01 weight = 1000 }
+    }
+    volume = 1
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+# ------------------------------------------- #
+# 引用并注册素材
+# 你只需要把你制作好的音频放在这个对应的file里
+# 这里我注册了一些中文让你知道这个sound是干什么的
+sound = {
+    # 顾问_通用短语
+    name = "zijiandeguwen_advisor_generic_phrase_01"
+    # 注册这个音效的名字
+    file = "vo/zijiandeguwen/advisor_generic_phrase_01.wav"
+    # 引入这个音效
+}
+sound = {
+    # 顾问_通用短语
+    name = "zijiandeguwen_advisor_generic_phrase_02"
+    file = "vo/zijiandeguwen/advisor_generic_phrase_02.wav"
+}
+sound = {
+    # 顾问_通用短语
+    name = "zijiandeguwen_advisor_generic_phrase_03"
+    file = "vo/zijiandeguwen/advisor_generic_phrase_03.wav"
+}
+sound = {
+    # 顾问_通用短语
+    name = "zijiandeguwen_advisor_generic_phrase_04"
+    file = "vo/zijiandeguwen/advisor_generic_phrase_04.wav"
+}
+sound = {
+    # 顾问_通用短语
+    name = "zijiandeguwen_advisor_generic_phrase_05"
+    file = "vo/zijiandeguwen/advisor_generic_phrase_05.wav"
+}
+sound = {
+    # 顾问_通知_外星帝国_通讯
+    name = "zijiandeguwen_advisor_notification_alien_empire_communication_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_外星帝国_通讯
+    name = "zijiandeguwen_advisor_notification_alien_empire_communication_02"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_外星帝国_通讯
+    name = "zijiandeguwen_advisor_notification_alien_empire_communication_03"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_外星联邦_成立
+    name = "zijiandeguwen_advisor_notification_alien_federation_formed_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_federation_formed_01.wav"
+}
+sound = {
+    # 顾问_通知_外星空间站_交战
+    name = "zijiandeguwen_advisor_notification_alien_spaceport_engaged_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_外星飞船_遭遇
+    name = "zijiandeguwen_advisor_notification_alien_vessel_encountered_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_建筑_毁坏
+    name = "zijiandeguwen_advisor_notification_building_ruined_01"
+    file = "vo/zijiandeguwen/advisor_notification_building_ruined_01.wav"
+}
+sound = {
+    # 顾问_通知_殖民_进展
+    name = "zijiandeguwen_advisor_notification_colonization_progress_01"
+    file = "vo/zijiandeguwen/advisor_notification_colonization_progress_01.wav"
+}
+sound = {
+    # 顾问_通知_殖民地_建立
+    name = "zijiandeguwen_advisor_notification_colony_established_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_established_01.wav"
+}
+sound = {
+    # 顾问_通知_殖民船_被摧毁
+    name = "zijiandeguwen_advisor_notification_colony_ship_destroyed_01"
+    file = "vo/zijiandeguwen/advisor_notification_building_ruined_01.wav"
+}
+sound = {
+    # 顾问_通知_殖民船_遭受攻击
+    name = "zijiandeguwen_advisor_notification_colony_ship_under_attack_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_建设完成
+    name = "zijiandeguwen_advisor_notification_construction_complete_01"
+    file = "vo/zijiandeguwen/advisor_notification_construction_complete_01.wav"
+}
+sound = {
+    # 顾问_通知_建设船_被摧毁
+    name = "zijiandeguwen_advisor_notification_construction_ship_destroyed_01"
+    file = "vo/zijiandeguwen/advisor_notification_building_ruined_01.wav"
+}
+sound = {
+    # 顾问_通知_建设船_遭受攻击
+    name = "zijiandeguwen_advisor_notification_construction_ship_under_attack_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_残骸分析完成
+    name = "zijiandeguwen_advisor_notification_debri_analysed_01"
+    file = "vo/zijiandeguwen/advisor_notification_debri_analysed_01.wav"
+}
+sound = {
+    # 顾问_通知_发现_检测
+    name = "zijiandeguwen_advisor_notification_discovery_detected_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_敌方宣战
+    name = "zijiandeguwen_advisor_notification_enemy_declared_war_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_敌方宣战
+    name = "zijiandeguwen_advisor_notification_enemy_declared_war_02"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_敌方宣战
+    name = "zijiandeguwen_advisor_notification_enemy_declared_war_03"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_敌方宣战
+    name = "zijiandeguwen_advisor_notification_enemy_declared_war_04"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_敌方入侵_已击败
+    name = "zijiandeguwen_advisor_notification_enemy_invasion_defeated_01"
+    file = "vo/zijiandeguwen/advisor_notification_enemy_invasion_defeated_01.wav"
+}
+sound = {
+    # 顾问_通知_敌方部队_登陆
+    name = "zijiandeguwen_advisor_notification_enemy_troops_landing_01"
+    file = "vo/zijiandeguwen/advisor_notification_enemy_troops_landing_01.wav"
+}
+sound = {
+    # 顾问_通知_规避敌对舰队
+    name = "zijiandeguwen_advisor_notification_evade_hostile_fleet_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_联邦成立
+    name = "zijiandeguwen_advisor_notification_federation_formed_01"
+    file = "vo/zijiandeguwen/advisor_notification_federation_formed_01.wav"
+}
+sound = {
+    # 顾问_通知_舰队检测
+    name = "zijiandeguwen_advisor_notification_fleet_detected_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_舰队检测
+    name = "zijiandeguwen_advisor_notification_fleet_detected_02"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_一般战争宣告
+    name = "zijiandeguwen_advisor_notification_generic_war_declare_01"
+    file = "vo/zijiandeguwen/advisor_notification_generic_war_declare_01.wav"
+}
+sound = {
+    # 顾问_通知_敌对舰队检测
+    name = "zijiandeguwen_advisor_notification_hostile_fleet_detected_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_敌对舰队_交战
+    name = "zijiandeguwen_advisor_notification_hostile_fleet_engaged_01"
+    file = "vo/zijiandeguwen/advisor_notification_hostile_fleet_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_敌对空间站_交战
+    name = "zijiandeguwen_advisor_notification_hostile_station_engaged_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_传入传输
+    name = "zijiandeguwen_advisor_notification_incoming_transmission_01"
+    file = "vo/zijiandeguwen/advisor_notification_incoming_transmission_01.wav"
+}
+sound = {
+    # 顾问_通知_入侵_敌方胜利
+    name = "zijiandeguwen_advisor_notification_invasion_enemy_won_01"
+    file = "vo/zijiandeguwen/advisor_notification_invasion_enemy_won_01.wav"
+}
+sound = {
+    # 顾问_通知_入侵失败
+    name = "zijiandeguwen_advisor_notification_invasion_failed_01"
+    file = "vo/zijiandeguwen/advisor_notification_invasion_failed_01.wav"
+}
+sound = {
+    # 顾问_通知_入侵进展
+    name = "zijiandeguwen_advisor_notification_invasion_progress_01"
+    file = "vo/zijiandeguwen/advisor_notification_invasion_progress_01.wav"
+}
+sound = {
+    # 顾问_通知_入侵成功
+    name = "zijiandeguwen_advisor_notification_invasion_success_01"
+    file = "vo/zijiandeguwen/advisor_notification_invasion_success_01.wav"
+}
+sound = {
+    # 顾问_通知_采矿站_丢失
+    name = "zijiandeguwen_advisor_notification_mining_station_lost_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_观测站_丢失
+    name = "zijiandeguwen_advisor_notification_observation_post_lost_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_星球叛乱
+    name = "zijiandeguwen_advisor_notification_planet_in_revolt_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_玩家宣战
+    name = "zijiandeguwen_advisor_notification_player_declare_war_01"
+    file = "vo/zijiandeguwen/advisor_notification_player_declare_war_01.wav"
+}
+sound = {
+    # 顾问_通知_玩家宣战
+    name = "zijiandeguwen_advisor_notification_player_declare_war_02"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_玩家宣战
+    name = "zijiandeguwen_advisor_notification_player_declare_war_03"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_玩家宣战
+    name = "zijiandeguwen_advisor_notification_player_declare_war_04"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_玩家宣战
+    name = "zijiandeguwen_advisor_notification_player_declare_war_05"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_前智慧生物_提升
+    name = "zijiandeguwen_advisor_notification_pre_sapient_uplifted_01"
+    file = "vo/zijiandeguwen/advisor_notification_ships_upgraded_01.wav"
+}
+sound = {
+    # 顾问_通知_原始物种_启蒙
+    name = "zijiandeguwen_advisor_notification_primitive_enlighted_01"
+    file = "vo/zijiandeguwen/advisor_notification_ships_upgraded_01.wav"
+}
+sound = {
+    # 顾问_通知_研究完成
+    name = "zijiandeguwen_advisor_notification_research_complete_01"
+    file = "vo/zijiandeguwen/advisor_notification_research_complete_01.wav"
+}
+sound = {
+    # 顾问_通知_研究站_丢失
+    name = "zijiandeguwen_advisor_notification_research_station_lost_01"
+    file = "vo/zijiandeguwen/advisor_notification_colony_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_科学船_被摧毁
+    name = "zijiandeguwen_advisor_notification_science_ship_destroyed_01"
+    file = "vo/zijiandeguwen/advisor_notification_science_ship_destroyed_01.wav"
+}
+sound = {
+    # 顾问_通知_科学船_遭受攻击
+    name = "zijiandeguwen_advisor_notification_science_ship_under_attack_01"
+    file = "vo/zijiandeguwen/advisor_notification_science_ship_under_attack_01.wav"
+}
+sound = {
+    # 顾问_通知_舰船升级完成
+    name = "zijiandeguwen_advisor_notification_ships_upgraded_01"
+    file = "vo/zijiandeguwen/advisor_notification_ships_upgraded_01.wav"
+}
+sound = {
+    # 顾问_通知_情况日志
+    name = "zijiandeguwen_advisor_notification_situation_log_01"
+    file = "vo/zijiandeguwen/advisor_notification_situation_log_01.wav"
+}
+sound = {
+    # 顾问_通知_太空遭遇事件
+    name = "zijiandeguwen_advisor_notification_spacebourne_encounter_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_empire_communication_01.wav"
+}
+sound = {
+    # 顾问_通知_太空港_丢失
+    name = "zijiandeguwen_advisor_notification_spaceport_lost_01"
+    file = "vo/zijiandeguwen/advisor_notification_spaceport_lost_01.wav"
+}
+sound = {
+    # 顾问_通知_太空港_遭受攻击
+    name = "zijiandeguwen_advisor_notification_spaceport_under_attack_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_特殊项目完成
+    name = "zijiandeguwen_advisor_notification_special_project_complete_01"
+    file = "vo/zijiandeguwen/advisor_notification_special_project_complete_01.wav"
+}
+sound = {
+    # 顾问_通知_物种修改完成
+    name = "zijiandeguwen_advisor_notification_species_modified_01"
+    file = "vo/zijiandeguwen/advisor_notification_ships_upgraded_01.wav"
+}
+sound = {
+    # 顾问_通知_站点遭受攻击
+    name = "zijiandeguwen_advisor_notification_station_under_attack_01"
+    file = "vo/zijiandeguwen/advisor_notification_alien_spaceport_engaged_01.wav"
+}
+sound = {
+    # 顾问_通知_系统勘测完成
+    name = "zijiandeguwen_advisor_notification_system_survey_complete_01"
+    file = "vo/zijiandeguwen/advisor_notification_system_survey_complete_01.wav"
+}
+sound = {
+    # 顾问_通知_地块障碍清除
+    name = "zijiandeguwen_advisor_notification_tile_blocker_clear_01"
+    file = "vo/zijiandeguwen/advisor_notification_tile_blocker_clear_01.wav"
+}
+# ------------------------------------------- #
+# 制作顾问,在sound文件下注册,注册的格式为.asset,顾问音频的语音一般放在vo下
+# 并且单独占一个文件夹,方便使用,音频的格式为.wav
+# 不是ogg也不是mp3
+# .asset文件夹下有四个东西,分别是
+# ------------------------------------------- #
+# sound,你注册并需要引用的素材音频,注册方式为如上所示
+# 一个name和一个file,name值唯一,file填入对应的音频路径
+# ------------------------------------------- #
+# soundeffect,你把你的部分素材音频编写成的一个音频集合
+# 作用是什么呢？
+# 作用的效果为当触发时随机执行这个音频集里的随机一个音频进行播放
+# 只有一个音频时只会播放这个唯一的音频
+# 你一般只需要更改soundeffect里的sounds即可,
+# 或许你还可以改一改weighted_sound里的weight值?
+# ------------------------------------------- #
+# category你将你注册的音频集集中进行注册成Voice,顾问语音
+# 注意最好不要改name = "Voice"
+# ------------------------------------------- #
+# soundgroup,注册你得顾问,并给你的顾问引入对应的音频
+# ------------------------------------------- #
+# 跟着注册就能使用了,你不想乱改你就直接把file里对应的引入的音频给更改了即可
+# 其他的不用改

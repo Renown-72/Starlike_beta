@@ -1,0 +1,72 @@
+zijianxingxi = {
+    name = zijianxingxi
+    class = rl_standard_stars
+    usage = custom_empire
+
+    init_effect = {
+        spawn_megastructure = {
+            type = mega_shipyard_ruined
+            coords_from = event_target:zijianxingxi_event
+        }
+        spawn_system = {
+            initializer = cybrex_system
+            min_distance = 1
+            max_distance = 3
+        }
+        spawn_system = {
+            initializer = solarpunk_01
+            min_distance = 1
+            max_distance = 3
+        }
+    }
+
+    planet = {
+        name = zijianxingxi_1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+        init_effect = {
+            save_global_event_target_as = zijianxingxi_event
+        }
+    }
+
+    change_orbit = 45
+
+    planet = {
+        name = zijianxingxi_2
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        starting_planet = yes
+        # 例如我将zijianxingxi_2，设置为我的母星，那么不要在他上面直接给与这个地块
+    }
+
+    planet = {
+        name = zijianxingxi_3
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        init_effect = {
+            # 现在是如何使用地块，一般配合行星使用，
+            # 注：最好不要直接放在大地图上生成的行星里，也就是我们的初始化第一个生成人口的母星
+            # 使用add_deposit =  +  你自建地块的名字即可创建
+            add_deposit = d_zijian
+        }
+    }
+
+    planet = {
+        name = zijianxingxi_4
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+}

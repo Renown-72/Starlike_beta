@@ -1,0 +1,20 @@
+# 因为我们想让这个国家再进入游戏后瞬间执行这个事件,所以我们需要on_actions文件夹中的接口
+# 因为是国家事件,所以我们需要on_game_start_country
+# 然后将我们的事件名字写入events中即可
+# 那么在进去游戏时候我们满足这个条件(是使用繁荣一统这个起源进入游戏)会执行这个事件
+on_game_start_country = {
+    events = {
+        zijian.1
+    }
+}
+# empire_init_capital_planet是星球初始化事件接口,也就是在进入游戏时候为你的母星执行的事件
+empire_init_capital_planet = {
+    events = {
+        zijian.2
+    }
+}
+# 现在进入游戏看看
+# 而原版也不止有 empire_init_capital_planet是星球初始化事件接口
+# 还有empire_init_create_ships,舰船初始化事件接口
+# empire_init_add_technologies,科技初始化事件接口,
+# 但我们可以把科技和舰船直接写在on_game_start_country这个事件中,所以这两个也不是很重要

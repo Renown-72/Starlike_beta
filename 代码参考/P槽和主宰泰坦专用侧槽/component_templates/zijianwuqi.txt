@@ -1,0 +1,82 @@
+# P槽武器和泰坦主宰专用槽位
+weapon_component_template = {
+    # P槽武器也是使用weapon_component_template编写
+    key = "ZIJIANWUQI_P"
+    # 武器的KEY值
+    size = point_defence
+    # 武器的槽位
+    type = point_defence
+    # 武器类型，P槽一般一律使用point_defence
+    icon = "GFX_zijian_tu"
+    # 武器的图片
+    icon_frame = 1
+    # 1就行
+    prerequisites = { "tech_pd_tracking_3" }
+    # 武器所需的科技
+    component_set = "ZIJIANWUQI_P"
+    # 注册这个武器
+    projectile_gfx = "white_laser_pd"
+    # 武器发射出去的特效，或许你可以绑定个其他的
+    resources = {
+        # 资源消耗相关
+        category = ship_components
+        cost = {
+            alloys = 13
+        }
+        upkeep = {
+            energy = 0.13
+            alloys = 0.013
+        }
+    }
+    damage = { min = 100 max = 300 }
+    # 伤害
+    total_fire_time = 1
+    # 武器发射时间
+    accuracy = 1
+    # 准确性
+    tracking = 1
+    # 追踪
+    firing_arc = 360
+    # 发射角度
+    range = 300
+    # 射程
+    armor_penetration = 1
+    # 装甲穿透
+    shield_penetration = 1
+    # 护盾穿透
+    point_defence_targets = { "missile" "strike_craft" }
+    # 武器拦截的东西，missile是导弹，而鱼雷也算是一种导弹所以也在内，但中子发射器这种鱼雷是无法进行拦截的
+    # strike_craft是飞机，也就是舰载机，这种基本都能拦截
+    ai_weight = {
+        # AI使用权重和自动装备相关
+        weight = 0
+    }
+}
+utility_component_template = {
+    # 侧槽一般都是使用utility_component_template来编写
+    key = "ZIJIANWUQI_TAITAN_ZHUZAI"
+    # 武器的key
+    size = medium
+    # 侧槽一般使用medium来编写，且不使用type = point_defence这种东西
+    icon = "GFX_zijian_tu"
+    # 武器的图片
+    icon_frame = 1
+    # 1就行
+    power = 0
+    # 能源消耗
+    size_restriction = { titan cosmo_crisis_titan juggernaut }
+    # size_restriction，代表这个武器能用在什么舰船上
+    # titan是普通泰坦，cosmo_crisis_titan是悖论泰坦，juggernaut是主宰
+    component_set = "ship_aura_components"
+    # 武器注册，注意，侧槽是一种特殊的槽位，不要给它注册component_set，
+    # 直接复制源代码中对应的component_set就行，这里使用的是泰坦和主宰的侧槽，
+    # 所以复制的component_set = "ship_aura_components"
+    modifier = {
+        # 剩下的就是写BUFF修正了，侧槽也是可以写光环的，这里就不演示了
+        ship_speed_mult = 1
+    }
+    ai_weight = {
+        # 权重相关
+        weight = 0
+    }
+}

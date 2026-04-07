@@ -1,0 +1,68 @@
+﻿l_simp_chinese:
+ name_list_ZIJIANDE_NAME: "自建的预设名称"
+ # 自建的的预设选择名称
+ # ---------------- #
+ # ship_names
+ MAGIC_SHIP_SHOUHUXIEYI: "守护协议"
+ MAGIC_SHIP_SHENSHENGZHIDI: "神圣之地"
+ MAGIC_SHIP_SHENGLIYIZHI: "胜利意志"
+ MAGIC_SHIP_ZHISHIQUANYUAN: "知识泉源"
+ MAGIC_SHIP_YONGHENGSHOUWANG: "永恒守望"
+ # ---------------- #
+ # 提前声明ORD是什么,这是原版写好了的东西,比如你造的第一个舰队
+ # 加上这个名字,那它的名字就是第一征服舰队,然后是第二,第三,以此类推
+ # ---------------- #
+ # fleet_names
+ # 注意这里不要更改ORD,这里的ORD是引用的原版,用来整编队数目的,你可以改的是 征服舰队 这个四个字
+ MAGIC_EXPEDITIONARYFLEET: "$ORD$征服舰队"
+ # ---------------- #
+ # army_names
+ # 这里的$ORD$也是整编队数量的,你可以改一下例如"$ORD$征服集团军"中的$ORD$后面的中文 征服集团军
+ MAGIC_WARGUILD: "$ORD$征服集团军"
+ MAGIC_GROUNDSHIELD: "$ORD$守护集团军"
+ MAGIC_WARPEONS: "$ORD$辅助集团军"
+ MAGIC_FIGHTINGCLONES: "$ORD$克隆人军队"
+ MAGIC_DREADPEONS: "$ORD$复苏军队"
+ MAGIC_ROBOTICLANCERS: "$ORD$机器支援军队"
+ MAGIC_ROBOTICPROTECTORS: "$ORD$机器守护者"
+ MAGIC_WARLOCKCOMPANY: "$ORD$魔法少女部队"
+ MAGIC_DEATHFLOCK: "$ORD$异形部队"
+ MAGIC_STARKNIGHTS: "$ORD$繁星骑士"
+ MAGIC_OCCUPATIONWATCH: "$ORD$占领哨兵"
+ MAGIC_OCCUPATIONDRONES: "$ORD$占领无人机"
+ MAGIC_PRIMITIVEARMY: "土著部队$C$"
+ MAGIC_INDUSTRIALARMY: "工业时代部队$C$"
+ MAGIC_POSTATOMICARMY: "后原子时代部队$C$"
+ warpling_army: "曲跃雏"
+ seq_warpling_army: "$ORD$$warpling_army$"
+ # ---------------- #
+ # character_names
+ MAGIC_CHR_MADOKA: "鹿目圆"
+ MAGIC_CHR_HOMURA: "晓美焰"
+ MAGIC_CHR_MAMI: "巴麻美"
+ MAGIC_CHR_SAKAYA: "美树沙耶香"
+ MAGIC_CHR_kyoko: "佐仓杏子"
+ MAGIC_CHR_NAGISA: "百江渚"
+ MAGIC_CHR_YACHIYO: "七海八千代"
+ MAGIC_CHR_IROHA: "环彩羽"
+ MAGIC_CHR_ORIKO: "美国织莉子"
+ MAGIC_CHR_KIRIKA: "吴纪里香"
+ MAGIC_CHR_MIFUYU: "梓美冬"
+ MAGIC_CHR_ASUKA: "龙城明日香"
+ MAGIC_CHR_KANAGI: "和泉十七夜"
+ MAGIC_CHR_MITAMA: "八云御魂"
+ MAGIC_CHR_TOKA: "里见灯花"
+ MAGIC_CHR_MOMOKA: "十咎桃子"
+ MAGIC_CHR_KAEDE: "秋野枫"
+ MAGIC_CHR_RENA: "水波玲奈"
+ MAGIC_CHR_FERISHIA: "深月菲莉希亚"
+ MAGIC_CHR_UI: "环忧"
+ MAGIC_CHR_MIKAGE: "八云御影"
+ MAGIC_CHR_SUDACHI: "佐和月出里"
+ MAGIC_CHR_MEDIROSU: "莉薇娅·梅黛洛斯"
+ MAGIC_CHR_YOZURU: "篠目夜鹤"
+ MAGIC_CHR_NAYUTA: "里见那由他"
+ MAGIC_CHR_GRAY: "阿莉娜·格雷"
+ MAGIC_CHR_ISABEAU: "伊莎贝拉"
+ MAGIC_CHR_YUMA: "千岁由麻"
+# ---------------- #

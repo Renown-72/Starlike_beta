@@ -1,0 +1,7 @@
+# 效果在federation_perks中编写
+PACT_default_federation_zijian = {
+    federation_modifier = {
+        description = default_federation_passive_effect
+        cohesion_ethics_penalty_mult = -0.50
+    }
+}

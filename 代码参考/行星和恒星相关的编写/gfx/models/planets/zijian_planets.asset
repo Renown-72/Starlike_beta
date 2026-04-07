@@ -1,0 +1,76 @@
+entity = {
+    name = "zijiande_gaia_hengxing"
+    # 恒星的name不用加_01_entity
+    # 直接用即可
+
+    pdxmesh = "planet_clouded_mesh"
+
+    #planet surface texture override
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "gaia_01_diffuse.dds"
+        texture_normal = "tropical_03_normal.dds"
+        texture_specular = "tropical_03_spec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "clouds_medium_diffuse.dds"
+        texture_normal = "clouds_medium_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+    default_state = "idle"
+    state = {
+        name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+    }
+}
+# 我这里复制的是原版盖亚星球的实体,改了name值
+entity = {
+    name = "zijiande_gaia_xingxing_01_entity"
+    # 注意行星的name，
+    # 都是 zijiande_gaia_xingxing + _01_entity组成的,所以
+    # 为什么要这么写呢？我也不知道,毕竟谁知道蠢驴脑回路怎么想的
+
+    pdxmesh = "planet_clouded_mesh"
+
+    #planet surface texture override
+    meshsettings = {
+        name = "planet_geosphereShape"
+        texture_diffuse = "gaia_01_diffuse.dds"
+        texture_normal = "tropical_03_normal.dds"
+        texture_specular = "tropical_03_spec.dds"
+    }
+
+    ##cloud texture override
+    meshsettings = {
+        name = "clouds_geosphereShape"
+        texture_diffuse = "clouds_medium_diffuse.dds"
+        texture_normal = "clouds_medium_normal.dds"
+        texture_specular = "clouds_medium_specular.dds"
+    }
+
+    ##cloud shadow texture override
+    meshsettings = {
+        name = "clouds_shadow_geosphereShape"
+        texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+        texture_normal = "nonormal.dds"
+        texture_specular = "nospec.dds"
+    }
+    default_state = "idle"
+    state = {
+        name = "idle" animation = "idle" time_offset = { 0 100 }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+    }
+}

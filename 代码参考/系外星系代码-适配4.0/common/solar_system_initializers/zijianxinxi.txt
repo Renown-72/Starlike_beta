@@ -1,0 +1,134 @@
+zijianxingxi = {
+    # 首先需要三个星系，星系1-zijianxingxi
+    # 使其成为我们在大地图上的出生星系，它将生成我们所需要的人口
+    name = zijianxingxi
+    class = rl_standard_stars
+    usage = custom_empire
+    flags = { xingxi1 }
+    # 除了星系1-zijianxingxi拥有usage = custom_empire
+    # 其他两个星系均无usage和它的值
+    # 否则这些星系会都出现在初始恒星系的选择页面上
+
+    planet = {
+        name = zijianxingxi_1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+    }
+
+    change_orbit = 45
+
+    planet = {
+        name = zijianxingxi_2
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        starting_planet = yes
+        # 给大地图上的其中一个可殖民行星创建一个starting_planet = yes
+        # 使其固定为我们的初始行星
+        init_effect = {
+            # 然后给它设置一个planet_flag,也就是set_planet_flag = xingxi1_de_1_planet
+            # 使其能找到星系内的此行星，它将成为我们所需要的条件
+            set_planet_flag = xingxi1_de_1_planet
+        }
+    }
+
+    planet = {
+        name = zijianxingxi_3
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+}
+
+
+zijianxingxi_1 = {
+    # 星系2-zijianxingxi_1，它将成为系外星系里第一个被创建的星系
+    # 它的其中一个行星将承载着我们zijianxingxi中创建的人口
+    name = zijianxingxi
+    class = rl_standard_stars
+    flags = { xingxi2 }
+
+    planet = {
+        name = zijianxingxi_1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+    }
+
+    change_orbit = 45
+
+    planet = {
+        name = zijianxingxi_2
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+        init_effect = {
+            # 然后来到星系2，zijianxingxi_1，找到其中一个可殖民星球
+            # 给这个星球设置一个planet_flag，也就是set_planet_flag = xingxi2_de_1_planet
+            # 使其事件能正确的找到这个星系的行星，它将承载我们大地图星系的人口
+            set_planet_flag = xingxi2_de_1_planet
+            # 再设置一个全局global_event_target，使其人口能够索引并迁移至这个行星
+            save_global_event_target_as = xingxi2_de_1_planet
+        }
+    }
+
+    planet = {
+        name = zijianxingxi_3
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+}
+
+
+zijianxingxi_2 = {
+    # 星系3-zijianxingxi_2，用来演示的，无其他用处
+    name = zijianxingxi
+    class = rl_standard_stars
+    flags = { xingxi3 }
+
+    planet = {
+        name = zijianxingxi_1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+    }
+
+    change_orbit = 45
+
+    planet = {
+        name = zijianxingxi_2
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+    planet = {
+        name = zijianxingxi_3
+        class = pc_gaia
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 30
+        has_ring = no
+    }
+
+}

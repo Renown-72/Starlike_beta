@@ -1,0 +1,24 @@
+# 在原版的interface文件夹下有一个resource_groups文件夹
+# 里面有sectors_other_resource_groups.txt
+# 和topbar_other_resource_groups.txt文件
+# 你把它复制到你得文件夹下
+# 然后向我演示的这样写在对应的resources下即可
+sectors_others_group = {
+    resources = {
+        volatile_motes
+        exotic_gases
+        rare_crystals
+        sr_living_metal
+        sr_zro
+        sr_dark_matter
+        nanites
+        # --------------- #
+        zijiande_ziyuan
+        # 写在这里
+        # --------------- #
+    }
+    localization = {
+        "RESOURCE_GROUP_BALANCE_ONLY" = default
+        "RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+    }
+}

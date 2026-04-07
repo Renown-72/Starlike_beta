@@ -1,0 +1,40 @@
+namespace = wuzhongxiangguan
+# 注册事件名字
+
+country_event = {
+    id = wuzhongxiangguan.1
+    # 注册事件id
+    hide_window = yes
+    # 因为领袖特质的产生是一种很频繁的效果，所以我们不需要事件弹出弹窗，使用hide_window = yes即可
+    is_triggered_only = yes
+    # 使事件不随随便便触发，且满足条件
+
+    # 从原版蠢驴写的注释可知
+    # a new leader is created
+    # scope: country, from: leader
+    # 创建新的领导者
+    # 范围：国家，来自：领导者
+    # 那么from一般代表领导者相关，它的代码直接写在from里
+    # 但我们的条件不是检测特质，所以需要在from里加条件
+    trigger = {
+        # 我们的条件一般情况需要写在trigger里
+        # species,在原版里代表物种，只需要在species，让其找到我们所拥有的物种特质即可
+        # trait_zijian是我们的物种特质，species和has_trait表示检测这个物种有无某种特质
+        # 注意这里还可以加其他的条件，
+        # 这个trigger下的条件是直接作用于country，也就是国家上的，那么我们可以写如下条件
+        # has_origin = ,检测这个国家是否是某个起源
+        # has_civic = ,检测这个国家是否拥有某种国策等等，这里就不写了
+        from = {
+            species = { has_trait = trait_zijian }
+        }
+    }
+    immediate = {
+        # immediate是满足条件立即执行的效果
+        # 已知FROM是直接作用于领袖的，那么我们的条件也写好了，直接在from里加对应的领袖特质即可
+        # leader_zijian是我们所需要加的领袖特质，
+        # add_trait_no_notify为范围领导者添加特定特征或随机常见/负面特征
+        # 这样就写好了，再复制我们的事件ID
+        from = { add_trait_no_notify = leader_zijian }
+    }
+    # 1
+}

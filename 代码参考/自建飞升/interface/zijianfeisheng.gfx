@@ -1,0 +1,12 @@
+# 注意是gfx文件,
+# 一般飞升图放在gfx文件夹下的interface文件夹下的icons文件夹下的ascension_perks文件夹中
+# 需要在interface里进行注册,注册方式和武器图片差不多
+# 图片一般是52 X 60 PX,不过只要放的对，你也可以用其他大小.dds格式
+spriteTypes = {
+    spriteType = {
+        # 注意name值，写飞升的图片,复制下来放进去即可
+        name = GFX_ap_zijian
+        # 这里直接复制原版的图片路径，你自己做要自己整图片
+        texturefile = "gfx/interface/icons/ascension_perks/ap_hydrocentric.dds"
+    }
+}

@@ -1,0 +1,16 @@
+# 事件链，这里很简单
+# 你要是整个单独的特殊项目就不用写这个，比如巨像的特殊项目
+become_zijiande = {
+    # 写个become_zijiande，也就是事件名字即可，随便取名，要唯一
+    picture = GFX_evt_surreal_visions
+    # 事件链的图片
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    # 事件链的小图
+    counter = {
+        # 这个是整你得事件链绑定的，和特殊项目有关，写个counter，里面随便取个名字
+        # 注意他们可以取名，别忘了整
+        wodezijian = {
+
+        }
+    }
+}

@@ -1,0 +1,65 @@
+# 以这个星球决议为例
+zijiande_jisuan_1 = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    # 声音
+    icon = your_silver_garden_222
+    # 图片
+    potential = {
+        from = {
+            is_ai = no
+        }
+    }
+    resources = {
+        category = decisions
+        cost = {
+            energy = 500
+            # 这个决议的初始消耗为500能量币,没有限制没有效果
+            # 如果我们需要制作成每个人口消耗500能量币该怎么做呢？
+            # 使用mult,
+            # this.planet,这个星球
+            # value:中引入我们的脚本
+            mult = this.planet.value:zijiande_xingqiu_renkou
+            # 这样当这个星球每有一个人口时候,进行以一次增加
+            # 星球上一个人口时候消耗为500,两个人口时候消耗为1000,以此类推
+            # 以此为例
+        }
+    }
+    effect = {
+
+    }
+}
+zijiande_jisuan_2 = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    # 声音
+    icon = your_silver_garden_222
+    # 图片
+    potential = {
+        from = {
+            is_ai = no
+        }
+    }
+    resources = {
+        category = decisions
+        cost = {
+            energy = 500
+        }
+        cost = {
+            trigger = {
+                # 这里为了演示直接随便使用一个简单的条件进行演示
+                from = {
+                    is_ai = no
+                }
+            }
+            energy = -1
+            mult = this.planet.value:zijiande_xingqiu_renkou
+            # 你还可以进行减法计算,
+            # 在trigger里写条件,当星球或者星球的控制者满足什么条件的时候
+            # 你这个星球每有一个人口那么这个决议的消耗减少1的能量币
+        }
+    }
+    effect = {
+
+    }
+}

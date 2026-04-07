@@ -1,0 +1,13 @@
+namespace = zijiande
+# 肯定需要事件，这里我们需要找对应的事件来写，直接搜原版的脚本名即可
+# 因为原版也是使用的planet_event，这里也使用planet_event即可
+planet_event = {
+    id = zijiande.1
+    hide_window = yes
+    is_triggered_only = yes
+    # 依次是注册事件名字，不需要弹窗和让事件不随随便便执行
+    immediate = {
+        #  这里输入你得脚本名字,执行使用yes即可，no是不执行，一般也不使用它
+        zijiande = yes
+    }
+}

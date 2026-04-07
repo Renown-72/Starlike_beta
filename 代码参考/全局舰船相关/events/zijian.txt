@@ -1,0 +1,148 @@
+namespace = zijiande
+
+country_event = {
+    id = zijiande.1
+    title = zijiande.1.title
+    desc = zijiande.1.desc
+    is_triggered_only = yes
+    immediate = {
+        # add_global_ship_design = ZIJIANDE_NAME
+        # # 这里是演示如何给你的建造列表里导入这个全局设计
+        # # 注意我没测试过，好像只有堕落帝国才能导入这个全局设计
+        # # 这里的值就是ship_design里的name的值
+    }
+    option = {
+        name = zijiande.1.a
+    }
+    option = {
+        name = zijiande.1.b
+        # 注意capital_scope是你的首都星球
+        # 这里的意思就是让你的舰船在首都星球上创建,你也可以写其它位置
+        capital_scope = {
+            create_fleet = {
+                # create_fleet就是创建舰船,一般都是用于创建全局设计的舰船
+                name = "NAME_magic_graygoo"
+                # 这里的name就是一个名字罢了,你可以写一个你喜欢的名字
+                settings = {
+                    # settings就是设置这个创建出来的舰船有什么特性
+                    # 比如我下面注释的
+                    can_upgrade = no
+                    # 可以升级
+                    can_change_leader = no
+                    # 可以设置领袖
+                    # can_change_composition = no
+                    # # 可以改变组合(合并)
+                    # can_disband = no
+                    # # 可以解散
+                    uses_naval_capacity = no
+                    # 使用海军容量
+                    spawn_debris = no
+                    # 生成碎片(碎片就是舰船被击碎了会不会产生可研究的东西)
+                    # is_boss = yes
+                    # is_ultra_boss = yes
+                    # 这里分别是BOSS和大BOSS一般用于类似龙或者提扬奇祖母这样的东西
+                }
+                effect = {
+                    set_owner = PREV
+                    # 设置控制权,你可以写你自己或者其他人
+                    while = {
+                        # while里正式创建舰船
+                        create_ship = {
+                            name = "magic_graygoo_mothership"
+                            # 这里的name就是一个名字罢了,你可以写一个你喜欢的名字
+                            design = "ZIJIANDE_NAME"
+                            # design里引入ship_design里的name的值
+                        }
+                        count = 1
+                        # count是创建的数量
+                    }
+                    set_location = prev
+                    # 如果你有event_target也可以使用它来作为创建的位置
+                    # set_location是需要写的!!!!!!
+                    # 我视频演示的时候脑袋发昏给注释和删了
+                    set_fleet_stance = aggressive
+                    # set_fleet_stance是设置舰船的行为，比如逃脱和主动攻击
+                }
+            }
+        }
+    }
+    option = {
+        name = zijiande.1.c
+        # 差不多就是这样，这里说一下你如果把创建陆军和创建全局舰船的代码写一起
+        # 可能会导致这个陆军锁死跟随这个舰船
+        capital_scope = {
+            # 这里说一下陆军,和舰船差不多
+            create_fleet = {
+                name = NAME_magic_graygoo_army
+                # 这里是名字
+                effect = {
+                    set_owner = prev
+                    while = {
+                        create_army_transport = {
+                            army_name = NAME_magic_graygoo_army
+                            # 创建出的陆军的名字
+                            ship_name = NAME_magic_graygoo_army
+                            # 创建出的装陆军的舰船的名字
+                            army_type = magic_gray_building_army
+                            # army_type哪一个陆军
+                        }
+                        count = 3
+                        # 数量
+                    }
+                    set_location = prev
+                    set_fleet_stance = aggressive
+                    # 设置陆军的行为
+                }
+            }
+        }
+    }
+}
+# 创建野怪的示例代码,需要你自己找位置写上去
+# # 遗弃之地的守护舰船
+# create_country = {
+#     # 创建一个国家
+#     name = "NAME_yiqizhidi_Initiative"
+#     # 国家名字
+#     type = faction
+#     # 国家类型
+# }
+# last_created_country = {
+#     # 给这个创建的国家执行效果
+#     set_country_flag = shouhuxieyi_Flotilla
+#     # 设置一个flag
+#     create_fleet = {
+#         name = "NAME_shouhuxieyi_Flotilla"
+#         settings = {
+#             can_upgrade = no
+#             # 可以升级
+#             can_change_leader = no
+#             # 可以设置领袖
+#             can_change_composition = no
+#             # 可以改变组合
+#             can_disband = no
+#             # 可以解散
+#             uses_naval_capacity = no
+#             # 使用海军容量
+#             spawn_debris = no
+#             # 生成碎片
+#         }
+#         effect = {
+#             set_owner = PREV
+#             while = {
+#                 create_ship = {
+#                     name = "NAME_shouhuxieyi_Drone"
+#                     design = "NAME_shouhuxiey"
+#                 }
+#                 count = 1
+#             }
+#             set_location = prevprev
+#             # 设置位置
+#             set_fleet_stance = aggressive
+#             # 设置舰船的行为
+#             set_aggro_range_measure_from = self
+#             # 确定舰队/国家的仇恨范围是从舰队的当前位置还是其重生位置来衡量
+#             set_aggro_range = 1000
+#             # 设置范围内舰队/国家的仇恨范围（以系统内单位为单位）
+#         }
+#     }
+# }

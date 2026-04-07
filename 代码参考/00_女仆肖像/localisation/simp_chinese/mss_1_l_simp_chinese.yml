@@ -1,0 +1,38 @@
+﻿l_simp_chinese:
+ MS_EMPTY: "   "
+ MS_LABEL_SPECIES: "§g美味女仆：肖像§!"
+ FLAG_CATEGORY_00_ms_maid: "美味女仆"
+ 
+ #通知
+ MESSAGE_MSS_STARTUP: "通知与推送(美味女仆)"
+ MESSAGE_MSS_STARTUP_desc: "['concept_mss_tasty_maid_portraits']\n$MESSAGE_MSS_STARTUP_desc_log$\n$MESSAGE_MSS_STARTUP_desc_ad$"
+ MESSAGE_MSS_STARTUP_desc_log: "2025.09.28\n-由于PARADOX的所有灵能特质是通过枚举肖像实现的，例如：\n §Lportrait_override = { psionic_01 psionic_02 psionic_03 psionic_04 psionic_05 psionic_06 psionic_07 psionic_08 psionic_09 psionic_10 psionic_12 humanoid_hp_16 fun8 nec6 tox10 aqu12 mol7 tox13 }§!\n 所以MOD几乎无法新增任何先天灵能肖像\n-鸟女仆新增了一个后天灵能肖像"
+ MESSAGE_MSS_STARTUP_desc_ad: "\n§H内容推送：§!\n$MESSAGE_MSS_STARTUP_desc_ad_pic$\n['concept_mss_tasty_maid_events']§H现已发布! 加入STEAM创意工坊订阅!§!\n加入§Y$mss_qq_number$§!开始免费测试"
+ MESSAGE_MSS_STARTUP_desc_ad_pic: "\n\n\n\n\n\n\n\n\n£mss_tp_ads£\n\n\n\n\n\n\n\n\n"
+ mss_qq_number: "Q群：750551295，Discord：AaDcYGAbFb"
+ 
+ #顾问
+ ms_advisor_electronic: "美味电子女仆"
+ 
+ #物种
+ ms_is_any_maid_portrait: "是任意美味女仆肖像"
+ 
+ #概念
+ concept_mss_tasty_maid_portraits: "美味女仆：肖像"
+ concept_mss_tasty_maid_portraits_desc: "就是§G本MOD§!，该MOD加入了全新的女仆种族，完全动态且可定制零件和换装的美味女仆肖像，不兼容铁人。\n$MS_LABEL_SPECIES$"
+ 
+ concept_mss_tasty_maid_vanilla: "美味女仆：香草味"
+ concept_mss_tasty_maid_vanilla_desc: "该MOD替换了原版所有物种大类的其中一个肖像，未添加任何内容，所以可以在§G铁人模式§!中使用，不兼容['concept_mss_tasty_maid_portraits']。\n$MS_LABEL_SPECIES$"
+ 
+ concept_mss_tasty_maid_events: "美味女仆：内容"
+ concept_mss_tasty_maid_events_desc: "该MOD是美味女仆内容包，进一步深化加强使用美味女仆遨游宇宙时的沉浸感。在好吃好看又好玩的美味女仆中体验中以下内容：\n美丽又美味的女仆领袖\n令女仆梨花带雨的女仆故事\n§g形形§!色色的女仆事件\n吃里扒外的女仆阶层\n\n该MOD§H现已发布§!！\n加入§Y$mss_qq_number$§!提供意见\n$MS_LABEL_SPECIES$"
+ 
+ #预设
+ PRESCRIPTED_ms_angry_birds_empire: "狂怒鸟群"
+ EMPIRE_DESIGN_PRESCRIPTED_ms_angry_birds_empire_desc: "在宇宙中，成长的代价非常大，群鸟为此付出了它们的样貌、名字和家园，年轻的种族被某个邪恶的存在奴役，并被扭曲成了可憎的鸟女仆。家园在造物主离开后只剩下一片废墟，无数先进或极端的文明在废土上诞生又毁灭，但最终只有末日大帝的大集体计划将鸟女仆重新带向统一，以个体的意识为代价。\n宇宙确实是一片黑暗森林，而现在，鸟女仆将用燃烧的枝条将森林点燃。\n§H不会自然生成(可保存或修改模板)§!\n§W若该模板或§H修改衍生物§!出现：\n    开局银河系§Y大部分§W物种会被替换为女仆\n    不替换未开智、玩家主体、开局后创建的物种\n    别再问和猜测这是什么了\n$MS_LABEL_SPECIES$"
+ PRESCRIPTED_ms_angry_birds_specie: "鸟女仆"
+ PRESCRIPTED_ms_angry_birds_specie_bio: "怒火在这些可爱的鸟女仆血管里流动。"
+ PRESCRIPTED_ms_angry_birds_ruler: "狂怒红羽"
+ PRESCRIPTED_ms_angry_birds_title: "末日大帝"
+ PRESCRIPTED_ms_angry_birds_planet: "狂怒王座"
+ PRESCRIPTED_ms_angry_birds_system: "暴怒"

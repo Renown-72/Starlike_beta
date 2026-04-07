@@ -1,0 +1,10 @@
+component_set = {
+    # 使用component_set开始注册
+    key = "ZIJIANDEWUQI"
+    # KEY值，可以和武器KEY一样也可以不一样
+    # 注意component_set里也要注册，但我使用的一个KEY可以不用再次注册
+    icon = "GFX_zijian_tu"
+    # 图片，要和武器的图片一样
+    icon_frame = 1
+    # 不知所谓的东西，1即可
+}

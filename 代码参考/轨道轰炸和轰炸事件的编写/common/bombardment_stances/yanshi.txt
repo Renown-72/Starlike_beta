@@ -1,0 +1,33 @@
+# 轨道轰炸和轰炸事件
+# 轨道轰炸在common文件夹下的bombardment_stances文件夹中
+# 图片需要在interface中注册
+zijianhongzha = {
+    trigger = {
+        # trigger，检测条件，可以直接写作用于舰船的条件
+        # 检测持有者需要加owner,这里使用is_ai = no,禁止AI有
+        owner = { is_ai = no }
+    }
+    army_damage = 10
+    # army_damage是写对陆军的伤害
+    planet_damage = 10
+    # planet_damage是写对行星的伤害
+    default = no
+    # 是不是默认轰炸，这里一般都是no，因为原版已经设置了一个默认轰炸
+    abduct_pops = yes
+    # 这个轰炸可不可以绑架被轰炸行星上的人口
+    kill_pop_chance = {
+        # 被轰炸星球的人口有多少几率可以逃出去
+        base = 0
+    }
+    stop_when_armies_dead = yes
+    # 陆军被轰炸杀死完后轨道轰炸是否停止
+    accept_surrender = yes
+    # 可不可以接受投降
+    min_pops_to_kill_pop = 0
+    # 轰炸到多少人口时轨道轰炸就不再继续杀死行星上的人口
+    ai_weight = {
+        # AI使用它的权重
+        weight = 0
+    }
+    # 1
+}

@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ ZIJIANWUQI_JUXIANG: "巨像武器自建"
+ # 一般还需要使用武器的KEY值来编写发射按钮和发射后信息的文本
+ # 有下面三个文本发射文本，正在发射文本和发射后的文本
+ # 武器的KEY值 + _ACTION
+ # FLEETORDER_DESTROY_PLANET_WITH_ + 武器的KEY值
+ # MESSAGE_DESC_FOR_ + 武器的KEY值
+ ZIJIANWUQI_JUXIANG_ACTION: "发射"
+ FLEETORDER_DESTROY_PLANET_WITH_ZIJIANWUQI_JUXIANG: "正在发射$PLANET|Y$"
+ MESSAGE_DESC_FOR_ZIJIANWUQI_JUXIANG: "被轰击"

@@ -1,0 +1,4 @@
+agenda_infinite_opportunities_finish_zijian = {
+    # 这里不找BUFF修正了，直接给你一个文本来演示
+    custom_tooltip = agenda_infinite_opportunities_finish_zijian
+}

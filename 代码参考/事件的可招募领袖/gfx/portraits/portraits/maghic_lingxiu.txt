@@ -1,0 +1,7 @@
+# 领袖图片聚集地
+portraits = {
+    # 使用portraits注册
+    NAME_MANTOUJIANONG = { textureFile = "gfx/models/portraits/magic_lingxiu/NAME_MANTOUJIANONG.dds" }
+    # NAME_MANTOUJIANONG领袖图片的名字，随意取名即可
+    # 再使用textureFile引入对应文件夹里的文件即可，这样领袖图就做好了
+}
