@@ -1,0 +1,169 @@
+# ===== Starlike v0.4 Tier 2 — Faction Empire Buildings =====
+# 每个派系一个帝国唯一建筑，由传统树采纳解锁
+# 链路：civic → tradition adopt → building visible
+
+# ── 辉夙文明殿 ──
+building_sl_huisu_hall = {
+    base_buildtime = 480
+    category = unity
+
+    empire_limit = { base = 1 }
+
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_homing
+            has_tradition = tr_huisu_adopt
+        }
+    }
+
+    allow = {
+        has_major_capital = yes
+    }
+
+    planet_modifier = {
+        pop_happiness = 0.05
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_tradition = tr_huisu_adopt }
+        }
+        modifier = {
+            job_sl_archivist_add = 3
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            unity = 200
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+
+    prerequisites = { }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = { owner = { has_tradition = tr_huisu_adopt } }
+        }
+    }
+}
+
+# ── 荧惑研究所 ──
+building_sl_martis_institute = {
+    base_buildtime = 480
+    category = research
+
+    empire_limit = { base = 1 }
+
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_homing
+            has_tradition = tr_martis_adopt
+        }
+    }
+
+    allow = {
+        has_major_capital = yes
+    }
+
+    planet_modifier = {
+        planet_researchers_physics_research_produces_add = 2
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_tradition = tr_martis_adopt }
+        }
+        modifier = {
+            job_sl_researcher_add = 3
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            alloys = 100
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+
+    prerequisites = { }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = { owner = { has_tradition = tr_martis_adopt } }
+        }
+    }
+}
+
+# ── 鸾羽军事堡垒 ──
+building_sl_phoenix_fortress = {
+    base_buildtime = 480
+    category = army
+
+    empire_limit = { base = 1 }
+
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_homing
+            has_tradition = tr_phoenix_adopt
+        }
+    }
+
+    allow = {
+        has_major_capital = yes
+    }
+
+    country_modifier = {
+        country_naval_cap_add = 20
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_tradition = tr_phoenix_adopt }
+        }
+        modifier = {
+            job_sl_quartermaster_add = 3
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            alloys = 150
+        }
+        upkeep = {
+            energy = 3
+            alloys = 1
+        }
+    }
+
+    prerequisites = { }
+
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = { owner = { has_tradition = tr_phoenix_adopt } }
+        }
+    }
+}

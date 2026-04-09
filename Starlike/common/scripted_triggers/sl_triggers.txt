@@ -1,0 +1,24 @@
+# ===== Starlike Scripted Triggers =====
+
+# 归巢起源检查
+sl_is_homing_origin = {
+    has_origin = origin_homing
+}
+
+# 任一派系传统树完成
+sl_has_any_faction_tradition = {
+    OR = {
+        has_tradition = tr_huisu_finish
+        has_tradition = tr_martis_finish
+        has_tradition = tr_phoenix_finish
+    }
+}
+
+# 任一派系飞升已点
+sl_has_any_faction_ascendant = {
+    OR = {
+        has_ascension_perk = ap_huisu_ascendant
+        has_ascension_perk = ap_martis_ascendant
+        has_ascension_perk = ap_phoenix_ascendant
+    }
+}

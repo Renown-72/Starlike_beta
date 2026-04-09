@@ -1,0 +1,37 @@
+# ===== Starlike Scripted Effects =====
+
+# 安全推进地球遗产事件链
+sl_progress_earth_chain = {
+    if = {
+        limit = { has_event_chain = sl_chain_earth_legacy }
+        add_event_chain_counter = {
+            event_chain = sl_chain_earth_legacy
+            counter = sl_earth_legacy_progress
+            amount = 1
+        }
+    }
+}
+
+# 安全推进派系叙事事件链
+sl_progress_faction_chain = {
+    if = {
+        limit = { has_event_chain = sl_chain_faction_story }
+        add_event_chain_counter = {
+            event_chain = sl_chain_faction_story
+            counter = sl_faction_story_progress
+            amount = 1
+        }
+    }
+}
+
+# 安全推进汇聚事件链
+sl_progress_convergence_chain = {
+    if = {
+        limit = { has_event_chain = sl_chain_convergence }
+        add_event_chain_counter = {
+            event_chain = sl_chain_convergence
+            counter = sl_convergence_progress
+            amount = 1
+        }
+    }
+}

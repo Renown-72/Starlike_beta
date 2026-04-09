@@ -1,0 +1,93 @@
+# ===== Starlike v0.4 Tier 2 — Faction Jobs =====
+
+# ── 档案官（辉夙文明殿） ──
+sl_archivist = {
+    category = specialist
+    building_icon = building_sl_huisu_hall
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 4
+            society_research = 3
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = { always = yes }
+        planet_amenities_add = 3
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+    }
+}
+
+# ── 荧惑研究员（荧惑研究所） ──
+sl_researcher = {
+    category = specialist
+    building_icon = building_sl_martis_institute
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            physics_research = 4
+            engineering_research = 3
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+    }
+}
+
+# ── 军需官（鸾羽军事堡垒） ──
+sl_quartermaster = {
+    category = specialist
+    building_icon = building_sl_phoenix_fortress
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            alloys = 2
+        }
+    }
+
+    country_modifier = {
+        country_naval_cap_add = 4
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+    }
+}
