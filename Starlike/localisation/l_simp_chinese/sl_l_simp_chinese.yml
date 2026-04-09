@@ -234,3 +234,79 @@ l_simp_chinese:
   modifier_homing_convergence_echoes: "归巢回响"
   modifier_homing_convergence_echoes_desc: "先祖旅程的回响永久强化我们文明的所有面向。"
 
+  # ===== Tier 2 系统 · v0.4 =====
+
+  # 建筑
+  building_sl_huisu_hall: "辉夙文明殿"
+  building_sl_huisu_hall_desc: "辉夙派的王冠明珠——一座宏伟的档案殿堂，保存着太阳系灾变前后的每一份记录。其档案官守护着汉和文明的集体记忆。"
+  building_sl_martis_institute: "荧惑研究所"
+  building_sl_martis_institute_desc: "荧惑科学传统的巅峰——延续火星重建时期尖端实验的帝国级研究枢纽。"
+  building_sl_phoenix_fortress: "鸾羽军事堡垒"
+  building_sl_phoenix_fortress_desc: "鸾羽军事指挥的核心——体现凤翎号战舰精神的帝国级要塞，守护着归巢的最后撤离。"
+
+  # 岗位
+  sl_archivist: "档案官"
+  sl_archivist_desc: "档案官保存并诠释汉和文明的记录，通过文化传承产生凝聚力，并推进社会学研究。"
+  sl_researcher: "荧惑研究员"
+  sl_researcher_desc: "荧惑研究员承载着火星时代的科学之火，在物理学和工程学前沿不断突破。"
+  sl_quartermaster: "军需官"
+  sl_quartermaster_desc: "军需官管理鸾羽舰队的后勤补给，生产合金并扩展海军容量。"
+
+  # 决议
+  decision_sl_rebuild_earth: "重建地球"
+  decision_sl_rebuild_earth_desc: "归巢计划的终极回报——将星尘化的地球重新改造为宜居世界。"
+  decision_sl_rebuild_earth_requirement: "需要染山霞血脉飞升天赋。"
+  decision_sl_homing_broadcast: "归巢广播"
+  decision_sl_homing_broadcast_desc: "向银河广播归巢文明的故事，吸引认同我们愿景的同路人。"
+
+  # 法令
+  edict_sl_homing_recall: "归巢令"
+  edict_sl_homing_recall_desc: "以国家法令号召全民铭记归巢之路，强化文明认同，延长领袖寿命。"
+
+  # 陆军
+  sl_homing_volunteer: "归巢志愿军"
+  sl_homing_volunteer_desc: "怀揣归巢信念的公民自愿参军。他们不靠重装科技，而靠信念与士气作战。"
+  sl_homing_volunteer_plural: "归巢志愿军"
+
+  # 事件链
+  sl_chain_earth_legacy: "地球遗产"
+  sl_chain_earth_legacy_desc: "揭开星尘化地球的秘密，重拾太阳系的遗产。"
+  sl_chain_faction_story: "派系编年史"
+  sl_chain_faction_story_desc: "你所选择的派系故事随文明的成熟而展开。"
+  sl_chain_convergence: "汇聚"
+  sl_chain_convergence_desc: "汉和文明的三脉血脉汇聚，走向共同的命运。"
+
+  # 游戏概念
+  concept_sl_origin_homing: "归巢计划"
+  concept_sl_origin_homing_desc: "归巢计划是汉和文明的起源故事——太阳系灾变的幸存者在火星上重建家园，如今寻求回归群星中的祖居。三大派系引领旅程：辉夙（遗产）、荧惑（科学）和鸾羽（军事）。"
+  concept_sl_huisu: "辉夙派"
+  concept_sl_huisu_desc: "博物传承派。辉夙档案官保存汉和文明的集体记忆，从过去汲取力量引导未来。其传统树聚焦凝聚力、考古学和行政效率。"
+  concept_sl_martis: "荧惑派"
+  concept_sl_martis_desc: "荧惑科学派。荧惑研究员承载火星时代的实验之火，不断突破物理和工程的边界。其传统树聚焦科研速度、异常分析和科学探索。"
+  concept_sl_phoenix: "鸾羽派"
+  concept_sl_phoenix_desc: "鸾羽军事派。鸾羽指挥官传承最初撤离舰队的铁律。其传统树聚焦舰队扩张、武器系统和地面作战优势。"
+  concept_sl_ranshanxia: "染山霞血脉"
+  concept_sl_ranshanxia_desc: "染山霞血脉是汉和三大派系传统的汇聚。以曾温暖旧地球苍穹的大气现象命名，代表遗产、科学和力量的统一。"
+  concept_sl_homing_tradition: "归巢传统"
+  concept_sl_homing_tradition_desc: "每个汉和派系拥有自己的传统树，由对应国策解锁。完成传统树将解锁对应的派系飞升天赋和一座帝国唯一建筑。"
+
+  # 开屏消息
+  origins_sl_homing_start_screen: "§H归巢计划§!\n\n千年之前，太阳系被恒星之火吞噬。幸存者——工程师、学者、军人——逃往火星重建家园。他们称之为归巢计划：终有一日，我们将找到回去的路。\n\n如今，三大派系引领着汉和文明：§Y辉夙§!，记忆的守护者；§Y荧惑§!，科学之火的承载者；§Y鸾羽§!，铁律舰队的卫士。\n\n群星在等待。归巢之旅，启程。"
+
+  # 消息类型
+  MESSAGE_SL_EVENT_PROGRESS: "归巢进展"
+  MESSAGE_SL_EVENT_PROGRESS.s: "归巢事件进展"
+  MESSAGE_SL_HOMING_MILESTONE: "归巢里程碑"
+  MESSAGE_SL_HOMING_MILESTONE.s: "归巢里程碑"
+
+  # Tier 2 修正器
+  modifier_sl_rebuilt_earth: "重建的地球"
+  modifier_sl_rebuilt_earth_desc: "人类的祖居之星已经修复。重生的地表充满生命与工业。"
+  sl_broadcast_active: "归巢广播中"
+  sl_broadcast_active_desc: "我们的故事回荡在银河中，吸引志同道合者前来殖民地。"
+
+  # 事件 17
+  event_homing.17.title: "新的黎明"
+  event_homing.17.desc: "完成了。星尘散尽，海洋重现，天空再次湛蓝。地球——不是它曾经的样子，而是它可以成为的样子——在群星下重生。千年流亡的终点不是归乡，而是创造。我们没有回到旧世界。我们建造了一个新的。"
+  event_homing.17.opt.new_dawn: "欢迎回家。"
+

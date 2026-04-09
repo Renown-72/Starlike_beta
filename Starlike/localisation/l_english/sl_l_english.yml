@@ -232,3 +232,79 @@
   modifier_homing_convergence_echoes: "Homing Echoes"
   modifier_homing_convergence_echoes_desc: "The echoes of our ancestors' journey permanently strengthen our civilization in all aspects."
 
+  # ===== Tier 2 Systems · v0.4 =====
+
+  # Buildings
+  building_sl_huisu_hall: "Huisu Hall of Civilization"
+  building_sl_huisu_hall_desc: "The crown jewel of the Huisu faction — a grand archive preserving every record from before and after the Sol cataclysm. Its archivists safeguard the collective memory of COPAN civilization."
+  building_sl_martis_institute: "Martis Research Institute"
+  building_sl_martis_institute_desc: "The pinnacle of Martis scientific tradition — a research hub continuing the cutting-edge experiments begun during the Mars reconstruction era."
+  building_sl_phoenix_fortress: "Luanyu War Citadel"
+  building_sl_phoenix_fortress_desc: "The heart of the Luanyu military command — a fortress embodying the spirit of the original Phoenix Plume warship that guarded the last evacuation from Sol."
+
+  # Jobs
+  sl_archivist: "Archivist"
+  sl_archivist_desc: "Archivists preserve and interpret the records of COPAN civilization, generating unity through cultural continuity and advancing social research."
+  sl_researcher: "Martis Researcher"
+  sl_researcher_desc: "Martis Researchers carry the flame of Mars-era science, pushing boundaries in physics and engineering."
+  sl_quartermaster: "Quartermaster"
+  sl_quartermaster_desc: "Quartermasters manage the Luanyu fleet's logistics, producing alloys and expanding naval capacity."
+
+  # Decisions
+  decision_sl_rebuild_earth: "Rebuild Earth"
+  decision_sl_rebuild_earth_desc: "The ultimate reward of Project Homing — transform the stellar-dust Earth back into a habitable world."
+  decision_sl_rebuild_earth_requirement: "Requires the Ranshanxia Bloodline ascension perk."
+  decision_sl_homing_broadcast: "Homing Broadcast"
+  decision_sl_homing_broadcast_desc: "Broadcast the story of the Homing civilization across the galaxy, attracting those who share our vision."
+
+  # Edict
+  edict_sl_homing_recall: "Homing Recall"
+  edict_sl_homing_recall_desc: "A national decree calling all citizens to remember the path of Homing, strengthening cultural identity and extending leader lifespans."
+
+  # Army
+  sl_homing_volunteer: "Homing Volunteer"
+  sl_homing_volunteer_desc: "Citizens driven by the shared dream of returning home. They fight not with heavy technology, but with conviction and morale."
+  sl_homing_volunteer_plural: "Homing Volunteers"
+
+  # Event Chains
+  sl_chain_earth_legacy: "Legacy of Earth"
+  sl_chain_earth_legacy_desc: "Uncover the secrets of the stellar-dust Earth and reclaim the heritage of Sol."
+  sl_chain_faction_story: "Faction Chronicles"
+  sl_chain_faction_story_desc: "The story of your chosen faction unfolds as the civilization matures."
+  sl_chain_convergence: "The Convergence"
+  sl_chain_convergence_desc: "The three bloodlines of COPAN civilization converge toward a shared destiny."
+
+  # Game Concepts
+  concept_sl_origin_homing: "Project Homing"
+  concept_sl_origin_homing_desc: "Project Homing is the origin story of the COPAN civilization — survivors of the Sol cataclysm who rebuilt on Mars and now seek to return to their ancestral home among the stars. Three factions guide their journey: Huisu (heritage), Martis (science), and Luanyu (military)."
+  concept_sl_huisu: "Huisu Faction"
+  concept_sl_huisu_desc: "The Museum Heritage faction. Huisu archivists preserve the collective memory of COPAN civilization, drawing strength from the past to guide the future. Their tradition tree focuses on unity, archaeology, and administrative efficiency."
+  concept_sl_martis: "Martis Faction"
+  concept_sl_martis_desc: "The Fervor Science faction. Martis researchers carry the flame of Mars-era experimentation, pushing the boundaries of physics and engineering. Their tradition tree focuses on research speed, anomaly analysis, and scientific exploration."
+  concept_sl_phoenix: "Luanyu Faction"
+  concept_sl_phoenix_desc: "The Phoenix Plume military faction. Luanyu commanders honor the iron discipline of the original evacuation fleet. Their tradition tree focuses on naval expansion, weapon systems, and ground combat superiority."
+  concept_sl_ranshanxia: "Ranshanxia Bloodline"
+  concept_sl_ranshanxia_desc: "The Ranshanxia Bloodline is the convergence of all three COPAN faction traditions. Named after the atmospheric phenomenon that once warmed the skies of Old Earth, it represents the unity of heritage, science, and strength."
+  concept_sl_homing_tradition: "Homing Traditions"
+  concept_sl_homing_tradition_desc: "Each COPAN faction has its own tradition tree, unlocked by the faction's civic. Completing a tradition tree unlocks the corresponding faction ascension perk and a unique empire building."
+
+  # Start Screen
+  origins_sl_homing_start_screen: "§HProject Homing§!\n\nA thousand years ago, the Sol system was consumed by stellar fire. The survivors — engineers, scholars, soldiers — fled to Mars and rebuilt. They called it Project Homing: the promise that one day, they would find their way back.\n\nNow, three factions guide the COPAN civilization: §YHuisu§!, keepers of memory; §YMartis§!, bearers of the scientific flame; and §YLuanyu§!, guardians of the iron fleet.\n\nThe stars await. The journey home begins."
+
+  # Message Types
+  MESSAGE_SL_EVENT_PROGRESS: "Homing Progress"
+  MESSAGE_SL_EVENT_PROGRESS.s: "Homing Event Progress"
+  MESSAGE_SL_HOMING_MILESTONE: "Homing Milestone"
+  MESSAGE_SL_HOMING_MILESTONE.s: "Homing Milestones"
+
+  # Tier 2 Modifiers
+  modifier_sl_rebuilt_earth: "Rebuilt Earth"
+  modifier_sl_rebuilt_earth_desc: "The ancestral home of humanity has been restored. Its renewed surface teems with life and industry."
+  sl_broadcast_active: "Homing Broadcast"
+  sl_broadcast_active_desc: "Our story echoes across the galaxy, drawing kindred spirits to our colonies."
+
+  # Event 17
+  event_homing.17.title: "A New Dawn"
+  event_homing.17.desc: "It is done. The stellar dust has cleared, oceans have returned, and the sky is blue once more. Earth — not as it was, but as it could be — stands reborn beneath the stars. A thousand years of exile end not with a homecoming, but with a creation. We have not returned to the old world. We have built a new one."
+  event_homing.17.opt.new_dawn: "Welcome home."
+
