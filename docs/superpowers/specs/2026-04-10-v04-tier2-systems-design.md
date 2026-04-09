@@ -20,8 +20,8 @@
 
 ## 二、模块 A：建筑（3 个 · 派系帝国建筑）
 
-每个派系拥有一个帝国唯一建筑（`empire_limit = { base = 1 }`），由对应 civic 解锁。
-由于单帝国只能拥有一个派系 civic，实际效果是**三选一**。
+每个派系拥有一个帝国唯一建筑（`empire_limit = { base = 1 }`），由**采纳对应传统树**解锁。
+传统树采纳需要对应 civic（间接 gate），但建筑本身只检查传统树状态，逻辑更清晰。
 
 ### 文件：NEW `Starlike/common/buildings/sl_buildings.txt`
 
@@ -38,7 +38,7 @@ building_sl_huisu_hall = {
         exists = owner
         owner = {
             has_origin = origin_homing
-            has_civic = civic_huisu
+            has_tradition = tr_huisu_adopt
         }
     }
     
@@ -53,7 +53,7 @@ building_sl_huisu_hall = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = { has_civic = civic_huisu }
+            owner = { has_tradition = tr_huisu_adopt }
         }
         modifier = {
             job_sl_archivist_add = 3
@@ -77,14 +77,14 @@ building_sl_huisu_hall = {
         weight = 100
         modifier = {
             factor = 0
-            NOT = { owner = { has_civic = civic_huisu } }
+            NOT = { owner = { has_tradition = tr_huisu_adopt } }
         }
     }
 }
 ```
 
 **定位**：辉夙博物传承派的文明核心——保存 Sol 毁灭前后所有档案的帝国级博物馆。
-**限制**：帝国唯一 + 首都限定 + `civic_huisu` gate。
+**限制**：帝国唯一 + 首都限定 + `tr_huisu_adopt`（采纳辉夙传统树后解锁）。
 **提供**：`sl_archivist` x 3（档案官：凝聚力 + 社会学）。
 
 ### 2.2 building_sl_martis_institute（荧惑研究所）
@@ -100,7 +100,7 @@ building_sl_martis_institute = {
         exists = owner
         owner = {
             has_origin = origin_homing
-            has_civic = civic_martis
+            has_tradition = tr_martis_adopt
         }
     }
     
@@ -115,7 +115,7 @@ building_sl_martis_institute = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = { has_civic = civic_martis }
+            owner = { has_tradition = tr_martis_adopt }
         }
         modifier = {
             job_sl_researcher_add = 3
@@ -139,14 +139,14 @@ building_sl_martis_institute = {
         weight = 100
         modifier = {
             factor = 0
-            NOT = { owner = { has_civic = civic_martis } }
+            NOT = { owner = { has_tradition = tr_martis_adopt } }
         }
     }
 }
 ```
 
 **定位**：荧惑科学派的帝国级研究枢纽——延续火星重建时期的尖端科学传统。
-**限制**：帝国唯一 + 首都限定 + `civic_martis` gate。
+**限制**：帝国唯一 + 首都限定 + `tr_martis_adopt`（采纳荧惑传统树后解锁）。
 **星球加成**：所有研究员 +2 物理学。
 **提供**：`sl_researcher` x 3（荧惑研究员：物理 + 工程）。
 
@@ -163,7 +163,7 @@ building_sl_phoenix_fortress = {
         exists = owner
         owner = {
             has_origin = origin_homing
-            has_civic = civic_phoenix_plume
+            has_tradition = tr_phoenix_adopt
         }
     }
     
@@ -178,7 +178,7 @@ building_sl_phoenix_fortress = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = { has_civic = civic_phoenix_plume }
+            owner = { has_tradition = tr_phoenix_adopt }
         }
         modifier = {
             job_sl_quartermaster_add = 3
@@ -203,14 +203,14 @@ building_sl_phoenix_fortress = {
         weight = 100
         modifier = {
             factor = 0
-            NOT = { owner = { has_civic = civic_phoenix_plume } }
+            NOT = { owner = { has_tradition = tr_phoenix_adopt } }
         }
     }
 }
 ```
 
 **定位**：鸾羽军事派的帝国级军事指挥中枢——凤翎号战舰精神的实体化。
-**限制**：帝国唯一 + 首都限定 + `civic_phoenix_plume` gate。
+**限制**：帝国唯一 + 首都限定 + `tr_phoenix_adopt`（采纳鸾羽传统树后解锁）。
 **帝国加成**：+20 海军容量。
 **提供**：`sl_quartermaster` x 3（军需官：合金 + 海军容量）。
 
