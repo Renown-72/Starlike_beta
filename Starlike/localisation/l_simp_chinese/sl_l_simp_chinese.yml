@@ -176,3 +176,61 @@ l_simp_chinese:
   requires_tradition_phoenix_finish: "需要完成鸾羽传统树。"
   requires_any_faction_ascendant: "需要拥有任意派系飞升天赋（辉夙/荧惑/鸾羽）。"
 
+  # ===== 派系事件 · v0.4 =====
+
+  # 辉夙派系事件 (5-7)
+  event_homing.5.title: "档案中的回响"
+  event_homing.5.desc: "辉夙博物馆深处的档案中，沉寂已久的声音开始骚动。我们保存的先祖记录不仅是数据——它们在诉说，承载着汉和黄金时代的梦想。我们的馆长报告：共鸣正在每个周期不断增强。"
+  event_homing.5.opt.ancestors_speak: "聆听它们要说的话。"
+  event_homing.6.title: "档案觉醒"
+  event_homing.6.desc: "辉夙档案已完全觉醒。知识如水般流经我们的行政网络，我们的人民感到与遗产的联结焕然一新。博物馆不再是静态藏品——它已成为我们文明的活支柱。"
+  event_homing.6.opt.integrate: "整合觉醒的档案。"
+  event_homing.7.title: "遗产与未来"
+  event_homing.7.desc: "随着档案共鸣加剧，来自过去的声息开始与当下交融。部分馆长警告说会迷失于怀旧，但多数人因背负的历史重量而感到振奋。我们必须选择这段遗产如何塑造我们的未来。"
+  event_homing.7.opt.preserve: "守护我们所获。"
+
+  # 荧惑派系事件 (8-10)
+  event_homing.8.title: "首次发现"
+  event_homing.8.desc: "我们的异常研究渠道取得突破——得到一枚远古技术碎片，其年代甚至早于汉和档案。荧惑科学家们振奋不已：这可能是我们起源比已知更久远的证据。"
+  event_homing.8.opt.analyze: "分析这一发现。"
+  event_homing.9.title: "火星之焰重燃"
+  event_homing.9.desc: "碎片已解码，并携带一种模式——火星重建时期的印记。对荧惑派而言，这不只是技术：这是他们认为已逝于历史的星火重燃。对其士气的影响肉眼可见。"
+  event_homing.9.opt.reignite: "重燃星火。"
+  event_homing.10.title: "跨越已知"
+  event_homing.10.desc: "火星之焰炽热重燃，科学家们以焕然一新的活力向前推进。发现如潮水般涌来，每一项都开启新的疑问。已知与未知的边界正在变薄——有人低语说，边界之外的一切或将改变一切。"
+  event_homing.10.opt.beyond: "跨越边界。"
+
+  # 鸾羽派系事件 (11-13)
+  event_homing.11.title: "舰队记忆"
+  event_homing.11.desc: "在一次例行巡逻中，鸾羽舰队的战舰开始在所有频道广播——不是奉命，而是乘员们描述为集体记忆。传输包含着它们执行归巢计划原始使命的碎片，本认为早已失落。舰队已不再只是战舰与水兵——它们背负着流亡的重量。"
+  event_homing.11.opt.honor: "致敬这份记忆。"
+  event_homing.12.title: "铁律与活着的记忆"
+  event_homing.12.desc: "舰队范围的广播已被解析。这不是故障而是显化：鸾羽战舰在太阳爆炸的熔炉中锻造，记得它们为何而建。仅凭铁律无法支撑它们走过数世纪——但铁律加上共同目的可以。舰队已进化。"
+  event_homing.12.opt.strengthen: "强化所浮现者。"
+  event_homing.13.title: "归巢的承诺"
+  event_homing.13.desc: "鸾羽舰队整装待发。它们的纪律比以往任何时候都锋利，其使命因流亡记忆而焕然一新。它们不再只为生存而战——它们为履行出生前的承诺而战。归途在前。"
+  event_homing.13.opt.lead: "领它们归巢。"
+
+  # 汇聚链事件 (14-16)
+  event_homing.14.title: "三脉汇聚"
+  event_homing.14.desc: "辉夙的遗产、荧惑的科研、鸾羽的力量在此交织。染山霞血脉——以曾经温暖先祖苍穹的大气现象命名——此刻流经每一位汉和公民。我们不再是寻求归巢的流亡者：我们是命运本身的继承者。"
+  event_homing.14.opt.convergence: "拥抱汇聚。"
+  event_homing.15.title: "归巢成真"
+  event_homing.15.desc: "三脉汇聚完成了汉和创想者从未设想之事：它治愈了我们民族灵魂的裂痕。千年的流亡从未被遗忘——怎么可能遗忘？——但它不再定义我们。我们不再是逃离黑暗的太阳系幸存者。我们作为一体民族，承载三种愿景走向同一黎明。"
+  event_homing.15.opt.realization: "拥抱真理。"
+  event_homing.16.title: "归巢完成"
+  event_homing.16.desc: "归巢计划已达成其目的。汉和文明找到了它们从未失去之物：群星中配得上先祖与子孙的家园。旅程未终——宇宙浩瀚——但千年来第一次，我们不再独自流浪。"
+  event_homing.16.opt.closure: "展望未来。"
+
+  # 派系修正器 · v0.4
+  modifier_huisu_heritage_resonance: "遗产共鸣"
+  modifier_huisu_heritage_resonance_desc: "辉夙博物馆的觉醒档案流经我们的行政体系，强化科研与凝聚力。"
+  modifier_martis_breakthrough: "科研突破"
+  modifier_martis_breakthrough_desc: "来自汉和时代之前的发现加速了我们的科研项目并增强了异常解析能力。"
+  modifier_phoenix_fleet_readiness: "舰队整备"
+  modifier_phoenix_fleet_readiness_desc: "鸾羽舰队以焕然一新的使命运作，提升海军容量与武器效能。"
+  modifier_ranshanxia_destiny_woven: "命运交织"
+  modifier_ranshanxia_destiny_woven_desc: "三条血脉开始融合，在所有领域给予广泛提升。"
+  modifier_homing_convergence_echoes: "归巢回响"
+  modifier_homing_convergence_echoes_desc: "先祖旅程的回响永久强化我们文明的所有面向。"
+

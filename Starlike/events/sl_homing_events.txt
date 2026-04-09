@@ -148,3 +148,304 @@ country_event = {
         add_unity = 1000
     }
 }
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.5  辉夙派系：档案中的回响
+# 触发：has_civic = civic_huisu + mean_time_to_happen
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.5
+    title = "event_homing.5.title"
+    desc = "event_homing.5.desc"
+    picture = GFX_evt_ancient_records
+    is_triggered_only = yes
+    mean_time_to_happen = { years = 25 }
+    trigger = {
+        has_origin = origin_homing
+        has_civic = civic_huisu
+        NOT = { has_global_flag = huisu_heritage_awakened }
+        years_passed > 20
+    }
+    immediate = {
+        set_global_flag = huisu_heritage_awakened
+    }
+    option = {
+        name = "event_homing.5.opt.ancestors_speak"
+        add_modifier = { modifier = modifier_huisu_heritage_resonance days = -1 }
+        country_event = { id = event_homing.6 days = 365 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.6  辉夙派系：档案觉醒
+# 触发：is_triggered_only，由 event_homing.5 选项链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.6
+    title = "event_homing.6.title"
+    desc = "event_homing.6.desc"
+    picture = GFX_evt_metropolis
+    is_triggered_only = yes
+    trigger = {
+        has_global_flag = huisu_heritage_awakened
+        has_origin = origin_homing
+    }
+    immediate = {
+        clear_global_flag = huisu_heritage_awakened
+    }
+    option = {
+        name = "event_homing.6.opt.integrate"
+        add_modifier = { modifier = modifier_ranshanxia_destiny_woven days = -1 }
+        add_unity = 200
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.7  辉夙派系：遗产与未来
+# 触发：has_modifier = modifier_huisu_heritage_resonance
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.7
+    title = "event_homing.7.title"
+    desc = "event_homing.7.desc"
+    picture = GFX_evt_ancient_records
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+        has_civic = civic_huisu
+        has_modifier = modifier_huisu_heritage_resonance
+        NOT = { has_country_flag = huisu_heritage_resolved }
+    }
+    immediate = {
+        set_country_flag = huisu_heritage_resolved
+    }
+    option = {
+        name = "event_homing.7.opt.preserve"
+        add_modifier = { modifier = modifier_homing_convergence_echoes days = -1 }
+        add_unity = 300
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.8  荧惑派系：首次发现
+# 触发：has_civic = civic_martis + mean_time_to_happen
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.8
+    title = "event_homing.8.title"
+    desc = "event_homing.8.desc"
+    picture = GFX_evt_physics_research
+    is_triggered_only = yes
+    mean_time_to_happen = { years = 25 }
+    trigger = {
+        has_origin = origin_homing
+        has_civic = civic_martis
+        NOT = { has_global_flag = martis_discovery_made }
+        years_passed > 20
+    }
+    immediate = {
+        set_global_flag = martis_discovery_made
+    }
+    option = {
+        name = "event_homing.8.opt.analyze"
+        add_modifier = { modifier = modifier_martis_breakthrough days = -1 }
+        country_event = { id = event_homing.9 days = 365 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.9  荧惑派系：火星之焰重燃
+# 触发：is_triggered_only，由 event_homing.8 选项链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.9
+    title = "event_homing.9.title"
+    desc = "event_homing.9.desc"
+    picture = GFX_evt_physics_research
+    is_triggered_only = yes
+    trigger = {
+        has_global_flag = martis_discovery_made
+        has_origin = origin_homing
+    }
+    immediate = {
+        clear_global_flag = martis_discovery_made
+    }
+    option = {
+        name = "event_homing.9.opt.reignite"
+        add_modifier = { modifier = modifier_ranshanxia_destiny_woven days = -1 }
+        add_research_progress = { area = physics progress = 0.30 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.10  荧惑派系：跨越已知
+# 触发：has_modifier = modifier_martis_breakthrough
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.10
+    title = "event_homing.10.title"
+    desc = "event_homing.10.desc"
+    picture = GFX_evt_physics_research
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+        has_civic = civic_martis
+        has_modifier = modifier_martis_breakthrough
+        NOT = { has_country_flag = martis_boundary_pushed }
+    }
+    immediate = {
+        set_country_flag = martis_boundary_pushed
+    }
+    option = {
+        name = "event_homing.10.opt.beyond"
+        add_modifier = { modifier = modifier_homing_convergence_echoes days = -1 }
+        add_unity = 300
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.11  鸾羽派系：舰队记忆
+# 触发：has_civic = civic_phoenix_plume + mean_time_to_happen
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.11
+    title = "event_homing.11.title"
+    desc = "event_homing.11.desc"
+    picture = GFX_evt_fleet_manuever
+    is_triggered_only = yes
+    mean_time_to_happen = { years = 25 }
+    trigger = {
+        has_origin = origin_homing
+        has_civic = civic_phoenix_plume
+        NOT = { has_global_flag = luanyu_fleet_memory }
+        years_passed > 20
+    }
+    immediate = {
+        set_global_flag = luanyu_fleet_memory
+    }
+    option = {
+        name = "event_homing.11.opt.honor"
+        add_modifier = { modifier = modifier_phoenix_fleet_readiness days = -1 }
+        country_event = { id = event_homing.12 days = 365 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.12  鸾羽派系：铁律与活着的记忆
+# 触发：is_triggered_only，由 event_homing.11 选项链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.12
+    title = "event_homing.12.title"
+    desc = "event_homing.12.desc"
+    picture = GFX_evt_fleet_manuever
+    is_triggered_only = yes
+    trigger = {
+        has_global_flag = luanyu_fleet_memory
+        has_origin = origin_homing
+    }
+    immediate = {
+        clear_global_flag = luanyu_fleet_memory
+    }
+    option = {
+        name = "event_homing.12.opt.strengthen"
+        add_modifier = { modifier = modifier_ranshanxia_destiny_woven days = -1 }
+        add_research_progress = { area = society progress = 0.30 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.13  鸾羽派系：归巢的承诺
+# 触发：has_modifier = modifier_phoenix_fleet_readiness
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.13
+    title = "event_homing.13.title"
+    desc = "event_homing.13.desc"
+    picture = GFX_evt_fleet_manuever
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+        has_civic = civic_phoenix_plume
+        has_modifier = modifier_phoenix_fleet_readiness
+        NOT = { has_country_flag = luanyu_return_promised }
+    }
+    immediate = {
+        set_country_flag = luanyu_return_promised
+    }
+    option = {
+        name = "event_homing.13.opt.lead"
+        add_modifier = { modifier = modifier_homing_convergence_echoes days = -1 }
+        add_unity = 300
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.14  汇聚链：三脉汇聚
+# 触发：ap_ranshanxia_bloodline.on_enabled 自动触发（5天延迟）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.14
+    title = "event_homing.14.title"
+    desc = "event_homing.14.desc"
+    picture = GFX_evt_fleet_from_surface
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+        NOT = { has_global_flag = homing_realized }
+    }
+    immediate = {
+        set_global_flag = homing_realized
+    }
+    option = {
+        name = "event_homing.14.opt.convergence"
+        country_event = { id = event_homing.15 days = 180 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.15  汇聚链：归巢成真
+# 触发：is_triggered_only，由 event_homing.14 选项链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.15
+    title = "event_homing.15.title"
+    desc = "event_homing.15.desc"
+    picture = GFX_evt_planet_settlement
+    is_triggered_only = yes
+    trigger = {
+        has_global_flag = homing_realized
+        has_origin = origin_homing
+    }
+    immediate = {
+        clear_global_flag = homing_realized
+    }
+    option = {
+        name = "event_homing.15.opt.realization"
+        country_event = { id = event_homing.16 days = 180 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.16  汇聚链：归巢完成
+# 触发：is_triggered_only，由 event_homing.15 选项链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.16
+    title = "event_homing.16.title"
+    desc = "event_homing.16.desc"
+    picture = GFX_evt_planet_settlement
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+        NOT = { has_country_flag = homing_convergence_complete }
+    }
+    immediate = {
+        set_country_flag = homing_convergence_complete
+        add_modifier = { modifier = modifier_homing_convergence_echoes days = -1 }
+    }
+    option = {
+        name = "event_homing.16.opt.closure"
+        add_unity = 1000
+    }
+}

@@ -174,3 +174,61 @@
   requires_tradition_phoenix_finish: "Requires completing the Luanyu tradition tree."
   requires_any_faction_ascendant: "Requires having any faction ascension perk (Huisu/Martis/Luanyu)."
 
+  # ===== Faction Events · v0.4 =====
+
+  # Huisu Faction Events (5-7)
+  event_homing.5.title: "Voices from the Archive"
+  event_homing.5.desc: "Deep within the Huisu Museum archives, voices long silent begin to stir. The preserved records of our ancestors are not merely data—they speak, carrying dreams of the COPAN golden age. Our curators report: the resonance is growing stronger with each passing cycle."
+  event_homing.5.opt.ancestors_speak: "Listen to what they have to say."
+  event_homing.6.title: "The Archive Awakens"
+  event_homing.6.desc: "The Huisu archives have fully awakened. Knowledge flows like water through our administrative networks, and our people feel a renewed connection to their heritage. The museum is no longer a static collection—it has become a living pillar of our civilization."
+  event_homing.6.opt.integrate: "Integrate the awakened archive."
+  event_homing.7.title: "Heritage and the Future"
+  event_homing.7.desc: "As the archive resonance intensifies, voices from our past begin to merge with our present. Some curators warn of becoming lost in nostalgia, but the majority feel empowered by the weight of history behind them. We must choose how this heritage shapes our future."
+  event_homing.7.opt.preserve: "Preserve what we have gained."
+
+  # Martis Faction Events (8-10)
+  event_homing.8.title: "The First Discovery"
+  event_homing.8.desc: "A breakthrough in our anomaly research channels has yielded an unexpected result—a fragment of ancient technology, pre-dating even the COPAN archives. The Martis scientists are energized: this could be evidence that our origins stretch further back than we believed."
+  event_homing.8.opt.analyze: "Analyze the discovery."
+  event_homing.9.title: "The Mars Flame Rekindled"
+  event_homing.9.desc: "The fragment has been decoded, and it carries a pattern—the signature of the Mars reconstruction era. For the Martis faction, this is more than technology: it is the reawakening of a flame they thought lost to history. The effect on their morale is palpable."
+  event_homing.9.opt.reignite: "Rekindle the flame."
+  event_homing.10.title: "Beyond What Is Known"
+  event_homing.10.desc: "With the Mars flame burning bright again, our scientists push forward with renewed vigor. Discoveries cascade, each one opening new questions. The boundary between known and unknown is thinning—and some whisper that what lies beyond may change everything."
+  event_homing.10.opt.beyond: "Push past the boundary."
+
+  # Luanyu Faction Events (11-13)
+  event_homing.11.title: "The Fleet Remembers"
+  event_homing.11.desc: "During a routine patrol, ships of the Luanyu Fleet began broadcasting on all channels—not by command, but by what their crews describe as a collective memory. The transmission contains fragments of their original mission to Project Homing, long thought lost. The fleet has become something more than ships and sailors: it carries the weight of their exile."
+  event_homing.11.opt.honor: "Honor their memory."
+  event_homing.12.title: "Iron Discipline, Living Memory"
+  event_homing.12.desc: "The fleet-wide broadcast has been analyzed. It is not a malfunction but a manifestation: the Luanyu ships, forged in the crucible of the Sol explosion, remember what they were built for. Iron discipline alone could not sustain them through the centuries—but discipline plus shared purpose has. The fleet has evolved."
+  event_homing.12.opt.strengthen: "Strengthen what has emerged."
+  event_homing.13.title: "The Return Promise"
+  event_homing.13.desc: "The Luanyu Fleet stands ready. Their discipline is sharper than ever, and their purpose has been renewed by the memory of their exile. They no longer fight merely for survival—they fight to fulfill a promise made before any of them were born. The path home lies before them."
+  event_homing.13.opt.lead: "Lead them home."
+
+  # Convergence Events (14-16)
+  event_homing.14.title: "The Three Bloodlines Converge"
+  event_homing.14.desc: "The strands of Huisu heritage, Martis research, and Luanyu strength have woven together. The Ranshanxia bloodline—named after the atmospheric phenomenon that once warmed the skies of our ancestors—now flows through every COPAN citizen. We are no longer exiles seeking home: we are the inheritors of destiny itself."
+  event_homing.14.opt.convergence: "Embrace the convergence."
+  event_homing.15.title: "Homing Realized"
+  event_homing.15.desc: "The convergence of the three bloodlines has done something the COPAN founders never imagined: it has healed the rupture in our people's soul. The thousand-year exile is not forgotten—how could it be?—but it no longer defines us. We are no longer the survivors of Sol, fleeing into the dark. We stand as one people, carrying three visions toward a single dawn."
+  event_homing.15.opt.realization: "Embrace the truth."
+  event_homing.16.title: "Homing Complete"
+  event_homing.16.desc: "The Project Homing has fulfilled its purpose. The COPAN civilization has found what they never lost: a home among the stars, worthy of their ancestors and their children. The journey is not over—the universe is vast—but for the first time in a millennium, we do not wander alone."
+  event_homing.16.opt.closure: "Look to the future."
+
+  # Faction Modifiers · v0.4
+  modifier_huisu_heritage_resonance: "Heritage Resonance"
+  modifier_huisu_heritage_resonance_desc: "The awakened archives of the Huisu Museum flow through our administration, strengthening research and unity."
+  modifier_martis_breakthrough: "Scientific Breakthrough"
+  modifier_martis_breakthrough_desc: "A discovery from before the COPAN era has accelerated our research programs and enhanced anomaly analysis."
+  modifier_phoenix_fleet_readiness: "Fleet Readiness"
+  modifier_phoenix_fleet_readiness_desc: "The Luanyu Fleet operates with renewed purpose, increasing naval capacity and weapon effectiveness."
+  modifier_ranshanxia_destiny_woven: "Destiny Woven"
+  modifier_ranshanxia_destiny_woven_desc: "The three bloodlines begin to merge, granting broad improvements across all domains."
+  modifier_homing_convergence_echoes: "Homing Echoes"
+  modifier_homing_convergence_echoes_desc: "The echoes of our ancestors' journey permanently strengthen our civilization in all aspects."
+
