@@ -1,0 +1,130 @@
+#noinspection ParadoxScriptUnresolvedExpression
+#Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1
+
+music = {
+    name = "Hui_Su_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 01 Hui Su 辉夙.ogg"
+    volume = 1
+}
+music = {
+    name = "Hinna_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 02 Hinna 海娜.ogg"
+    volume = 1
+}
+music = {
+    name = "Soltos_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 03 Soltos 索尔托斯.ogg"
+    volume = 1
+}
+music = {
+    name = "Fog_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 04 Fog 弗格.ogg"
+    volume = 1
+}
+music = {
+    name = "Dawn_On_Me_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 05 Dawn On Me 朝闻道.ogg"
+    volume = 1
+}
+music = {
+    name = "Canossa_Expectations_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 06 Canossa's Expectations 卡诺莎的期待.ogg"
+    volume = 1
+}
+music = {
+    name = "Light_Sea_Boundary_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 07 Light Sea Boundary 光海边界.ogg"
+    volume = 1
+}
+music = {
+    name = "The_Graham_Act_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 08 The Graham Act 葛立恒行动.ogg"
+    volume = 1
+}
+music = {
+    name = "Planet_Reclamation_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 09 Planet Reclamation 星垦.ogg"
+    volume = 1
+}
+music = {
+    name = "Wiedburt_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 10 Wiedburt 维德伯特.ogg"
+    volume = 1
+}
+music = {
+    name = "The_Hover_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 11 The Hover 萦回.ogg"
+    volume = 1
+}
+music = {
+    name = "Moonlight_Route_Name"
+    file = "Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1/Arnaud Roy - Starlike 偌星 Original Soundtrack Vol.1 - 12 Moonlight Route 月光航线.ogg"
+    volume = 1
+}
+
+#H-Pi - Starlike 偌星 Original Soundtrack Vol.2
+music = {
+    name = "Dive_Into_The_Abyss_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 01 Dive Into the Abyss 潜入深渊.ogg"
+    volume = 1
+}
+music = {
+    name = "Wind_Of_The_Earth_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 02 Wind of the Earth 地球之风.ogg"
+    volume = 1
+}
+music = {
+    name = "Celestial_Rush_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 03 Celestial Rush 天穹奔袭.ogg"
+    volume = 1
+}
+music = {
+    name = "March_On_The_Enemies_Of_The_SUPREME_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 04 March On the Enemies of the SUPREME 向神的敌人前进.ogg"
+    volume = 1
+}
+music = {
+    name = "The_Sacrifice_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 05 The Sacrifice 牺牲.ogg"
+    volume = 1
+}
+music = {
+    name = "Praptro_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 06 Praptro 普拉帕特洛.ogg"
+    volume = 1
+}
+music = {
+    name = "Shine_Like_Our_Fathers_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 07 Shine like Our Fathers 像父辈一样闪烁.ogg"
+    volume = 1
+}
+music = {
+    name = "Core_s_Will_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 08 Core's Will 地核意志.ogg"
+    volume = 1
+}
+music = {
+    name = "Rule_The_Stars_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 09 Rule the Stars 统治星空.ogg"
+    volume = 1
+}
+music = {
+    name = "Blood_Rose_Impact_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 10 Blood Rose Impact 血玫瑰冲击.ogg"
+    volume = 1
+}
+music = {
+    name = "Extinguish_Me_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 11 Extinguish Me 将我熄灭.ogg"
+    volume = 1
+}
+music = {
+    name = "In_The_Name_Of_The_Ocean_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 12 In the Name of the Ocean 以海洋之名.ogg"
+    volume = 1
+}
+music = {
+    name = "Dimensionality_Reduction_Name"
+    file = "H-Pi - Starlike 偌星 Original Soundtrack Vol.2/H-Pi - Starlike 偌星 Original Soundtrack Vol.2 - 13 Dimensionality Reduction 降维.ogg"
+    volume = 1
+}

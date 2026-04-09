@@ -1,0 +1,28 @@
+# Arnaud Roy - Starlike Original Soundtrack Vol.1
+song = { name = "Hui_Su_Name" }
+song = { name = "Hinna_Name" }
+song = { name = "Soltos_Name" }
+song = { name = "Fog_Name" }
+song = { name = "Dawn_On_Me_Name" }
+song = { name = "Canossa_Expectations_Name" }
+song = { name = "Light_Sea_Boundary_Name" }
+song = { name = "The_Graham_Act_Name" }
+song = { name = "Planet_Reclamation_Name" }
+song = { name = "Wiedburt_Name" }
+song = { name = "The_Hover_Name" }
+song = { name = "Moonlight_Route_Name" }
+
+# H-Pi - Starlike Original Soundtrack Vol.2
+song = { name = "Dive_Into_The_Abyss_Name" }
+song = { name = "Wind_Of_The_Earth_Name" }
+song = { name = "Celestial_Rush_Name" }
+song = { name = "March_On_The_Enemies_Of_The_SUPREME_Name" }
+song = { name = "The_Sacrifice_Name" }
+song = { name = "Praptro_Name" }
+song = { name = "Shine_Like_Our_Fathers_Name" }
+song = { name = "Core_s_Will_Name" }
+song = { name = "Rule_The_Stars_Name" }
+song = { name = "Blood_Rose_Impact_Name" }
+song = { name = "Extinguish_Me_Name" }
+song = { name = "In_The_Name_Of_The_Ocean_Name" }
+song = { name = "Dimensionality_Reduction_Name" }

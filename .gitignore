@@ -1,7 +1,8 @@
 # 忽略所有文件
 /*
 
-# 仅跟踪以下文件/目录
+# 仅跟踪以下文件/目录（递归包含）
 !Starlike/
+!Starlike/**
 !README.md
 !descriptor.mod
