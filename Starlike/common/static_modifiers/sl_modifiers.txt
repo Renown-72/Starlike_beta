@@ -10,3 +10,36 @@ homing_legacy = {
     country_research_speed_mult = 0.1
     icon = "GFX_modifier_research_01"
 }
+
+# 派系事件修正器（v0.4）
+
+modifier_huisu_heritage_resonance = {
+    icon = "GFX_modifier_political_power"
+    category_archaeostudies_research_speed_mult = 0.10
+    country_unity_produces_mult = 0.05
+}
+
+modifier_martis_breakthrough = {
+    icon = "GFX_modifier_research_speed"
+    all_technology_research_speed = 0.05
+    ship_anomaly_research_speed_mult = 0.15
+}
+
+modifier_phoenix_fleet_readiness = {
+    icon = "GFX_modifier_naval_capacity"
+    country_naval_cap_mult = 0.05
+    ship_weapon_damage = 0.05
+}
+
+modifier_ranshanxia_destiny_woven = {
+    icon = "GFX_modifier_unity_production"
+    country_unity_produces_mult = 0.10
+    country_naval_cap_mult = 0.05
+}
+
+modifier_homing_convergence_echoes = {
+    icon = "GFX_modifier_unity_production"
+    all_technology_research_speed = 0.03
+    country_unity_produces_mult = 0.03
+    country_naval_cap_mult = 0.03
+}
