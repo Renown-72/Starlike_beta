@@ -11,27 +11,35 @@
 
 | 决策点 | 选定方案 | 拒绝方案 |
 |--------|----------|----------|
-| 建筑/岗位/陆军按派系拆分？ | **共享** — origin_homing gate | 按派系拆分（方案 A，工作量翻倍） |
+| 建筑/岗位/陆军按派系拆分？ | **建筑按派系拆分**（帝国唯一 + civic gate），决议/法令/陆军共享 | 全部共享（方案 B 初版） |
 | 图标方案 | **复用原版 GFX** 作为占位 | 创建自定义 DDS（需美术资源） |
 | 事件链追踪 | **3 条 event_chain** 定义 | 无追踪（现状） |
 | 脚本基础设施 | **scripted_triggers + scripted_effects** | 继续内联重复代码 |
 
 ---
 
-## 二、模块 A：建筑（2 个）
+## 二、模块 A：建筑（3 个 · 派系帝国建筑）
+
+每个派系拥有一个帝国唯一建筑（`empire_limit = { base = 1 }`），由对应 civic 解锁。
+由于单帝国只能拥有一个派系 civic，实际效果是**三选一**。
 
 ### 文件：NEW `Starlike/common/buildings/sl_buildings.txt`
 
-### 2.1 building_sl_memorial（归巢纪念堂）
+### 2.1 building_sl_huisu_hall（辉夙文明殿）
 
 ```plaintext
-building_sl_memorial = {
-    base_buildtime = 360
+building_sl_huisu_hall = {
+    base_buildtime = 480
     category = unity
+    
+    empire_limit = { base = 1 }
     
     potential = {
         exists = owner
-        owner = { has_origin = origin_homing }
+        owner = {
+            has_origin = origin_homing
+            has_civic = civic_huisu
+        }
     }
     
     allow = {
@@ -45,63 +53,10 @@ building_sl_memorial = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = { has_origin = origin_homing }
+            owner = { has_civic = civic_huisu }
         }
         modifier = {
-            job_sl_memorial_keeper_add = 2
-        }
-    }
-    
-    resources = {
-        category = planet_buildings
-        cost = {
-            minerals = 400
-            unity = 200
-        }
-        upkeep = {
-            energy = 2
-        }
-    }
-    
-    prerequisites = { }
-    
-    ai_weight = {
-        weight = 10
-        modifier = {
-            factor = 0
-            NOT = { owner = { has_origin = origin_homing } }
-        }
-    }
-}
-```
-
-**定位**：首都专属，汉和文明对 Sol 毁灭与归巢旅程的集体纪念。精神核心建筑。
-**限制**：`has_major_capital = yes`（首都限建 1 个）。
-**提供**：`sl_memorial_keeper` x 2。
-
-### 2.2 building_sl_homing_archive（归巢档案馆）
-
-```plaintext
-building_sl_homing_archive = {
-    base_buildtime = 480
-    category = research
-    
-    potential = {
-        exists = owner
-        owner = { has_origin = origin_homing }
-    }
-    
-    allow = {
-        has_building = building_research_lab_1
-    }
-    
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { has_origin = origin_homing }
-        }
-        modifier = {
-            job_sl_archivist_add = 2
+            job_sl_archivist_add = 3
         }
     }
     
@@ -109,6 +64,7 @@ building_sl_homing_archive = {
         category = planet_buildings
         cost = {
             minerals = 500
+            unity = 200
         }
         upkeep = {
             energy = 3
@@ -118,31 +74,158 @@ building_sl_homing_archive = {
     prerequisites = { }
     
     ai_weight = {
-        weight = 8
+        weight = 100
         modifier = {
             factor = 0
-            NOT = { owner = { has_origin = origin_homing } }
+            NOT = { owner = { has_civic = civic_huisu } }
         }
     }
 }
 ```
 
-**定位**：殖民地通用，保存归巢计划前后所有文明记录的知识传承设施。
-**限制**：需要已建研究实验室（`building_research_lab_1`）。
-**提供**：`sl_archivist` x 2。
+**定位**：辉夙博物传承派的文明核心——保存 Sol 毁灭前后所有档案的帝国级博物馆。
+**限制**：帝国唯一 + 首都限定 + `civic_huisu` gate。
+**提供**：`sl_archivist` x 3（档案官：凝聚力 + 社会学）。
+
+### 2.2 building_sl_martis_institute（荧惑研究所）
+
+```plaintext
+building_sl_martis_institute = {
+    base_buildtime = 480
+    category = research
+    
+    empire_limit = { base = 1 }
+    
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_homing
+            has_civic = civic_martis
+        }
+    }
+    
+    allow = {
+        has_major_capital = yes
+    }
+    
+    planet_modifier = {
+        planet_researchers_physics_research_produces_add = 2
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_civic = civic_martis }
+        }
+        modifier = {
+            job_sl_researcher_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            alloys = 100
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    
+    prerequisites = { }
+    
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = { owner = { has_civic = civic_martis } }
+        }
+    }
+}
+```
+
+**定位**：荧惑科学派的帝国级研究枢纽——延续火星重建时期的尖端科学传统。
+**限制**：帝国唯一 + 首都限定 + `civic_martis` gate。
+**星球加成**：所有研究员 +2 物理学。
+**提供**：`sl_researcher` x 3（荧惑研究员：物理 + 工程）。
+
+### 2.3 building_sl_phoenix_fortress（鸾羽军事堡垒）
+
+```plaintext
+building_sl_phoenix_fortress = {
+    base_buildtime = 480
+    category = army
+    
+    empire_limit = { base = 1 }
+    
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_homing
+            has_civic = civic_phoenix_plume
+        }
+    }
+    
+    allow = {
+        has_major_capital = yes
+    }
+    
+    country_modifier = {
+        country_naval_cap_add = 20
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_civic = civic_phoenix_plume }
+        }
+        modifier = {
+            job_sl_quartermaster_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            alloys = 150
+        }
+        upkeep = {
+            energy = 3
+            alloys = 1
+        }
+    }
+    
+    prerequisites = { }
+    
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = { owner = { has_civic = civic_phoenix_plume } }
+        }
+    }
+}
+```
+
+**定位**：鸾羽军事派的帝国级军事指挥中枢——凤翎号战舰精神的实体化。
+**限制**：帝国唯一 + 首都限定 + `civic_phoenix_plume` gate。
+**帝国加成**：+20 海军容量。
+**提供**：`sl_quartermaster` x 3（军需官：合金 + 海军容量）。
 
 ---
 
-## 三、模块 B：岗位（2 个）
+## 三、模块 B：岗位（3 个 · 对应派系建筑）
 
 ### 文件：NEW `Starlike/common/pop_jobs/sl_jobs.txt`
 
-### 3.1 sl_memorial_keeper（纪念堂守护者）
+### 3.1 sl_archivist（档案官 · 辉夙）
 
 ```plaintext
-sl_memorial_keeper = {
+sl_archivist = {
     category = specialist
-    building_icon = building_sl_memorial
+    building_icon = building_sl_huisu_hall
     clothes_texture_index = 3
     
     possible_pre_triggers = {
@@ -157,13 +240,14 @@ sl_memorial_keeper = {
     resources = {
         category = planet_jobs
         produces = {
-            unity = 3
+            unity = 4
+            society_research = 3
         }
     }
     
     triggered_planet_modifier = {
         potential = { always = yes }
-        planet_amenities_add = 5
+        planet_amenities_add = 3
     }
     
     weight = {
@@ -172,14 +256,14 @@ sl_memorial_keeper = {
 }
 ```
 
-**产出**：凝聚力 3 + 舒适度 5。
+**产出**：凝聚力 4 + 社会学 3 + 舒适度 3。
 
-### 3.2 sl_archivist（档案官）
+### 3.2 sl_researcher（荧惑研究员 · 荧惑）
 
 ```plaintext
-sl_archivist = {
+sl_researcher = {
     category = specialist
-    building_icon = building_sl_homing_archive
+    building_icon = building_sl_martis_institute
     clothes_texture_index = 3
     
     possible_pre_triggers = {
@@ -194,8 +278,8 @@ sl_archivist = {
     resources = {
         category = planet_jobs
         produces = {
-            society_research = 4
-            unity = 2
+            physics_research = 4
+            engineering_research = 3
         }
     }
     
@@ -205,7 +289,43 @@ sl_archivist = {
 }
 ```
 
-**产出**：社会学 4 + 凝聚力 2。
+**产出**：物理学 4 + 工程学 3。
+
+### 3.3 sl_quartermaster（军需官 · 鸾羽）
+
+```plaintext
+sl_quartermaster = {
+    category = specialist
+    building_icon = building_sl_phoenix_fortress
+    clothes_texture_index = 3
+    
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    
+    possible_precalc = can_fill_specialist_job
+    
+    resources = {
+        category = planet_jobs
+        produces = {
+            alloys = 2
+        }
+    }
+    
+    country_modifier = {
+        country_naval_cap_add = 4
+    }
+    
+    weight = {
+        weight = @specialist_job_weight
+    }
+}
+```
+
+**产出**：合金 2 + 每岗 +4 海军容量。
 
 ---
 
@@ -677,8 +797,8 @@ event_homing.17 = {
 
 | 类别 | 键数 | 说明 |
 |------|------|------|
-| 建筑 | 4 对 | 2 建筑 × (name + desc) |
-| 岗位 | 4 对 | 2 岗位 × (name + desc) |
+| 建筑 | 6 对 | 3 建筑 × (name + desc) |
+| 岗位 | 6 对 | 3 岗位 × (name + desc) |
 | 决议 | 6 对 | 2 决议 × (name + desc + tooltip) |
 | 法令 | 2 对 | 1 法令 × (name + desc) |
 | 陆军 | 2 对 | 1 陆军 × (name + desc) |
@@ -690,13 +810,13 @@ event_homing.17 = {
 | 事件 17 | 3 对 | title + desc + option |
 | 脚本基础设施 | 0 | 无需本地化 |
 
-**小计**：~48 对双语 key
+**小计**：~52 对双语 key
 
 ### 14.2 事件文件改动追加
 
 现有 events 1-16 追加 event_chain 调用的代码改动不需要额外本地化。
 
-**总计**：~48 对双语 key
+**总计**：~52 对双语 key
 
 ---
 
@@ -705,9 +825,9 @@ event_homing.17 = {
 | 序号 | 操作 | 路径 | 说明 |
 |------|------|------|------|
 | 1 | MKDIR | `Starlike/common/buildings/` | 新目录 |
-| 2 | NEW | `Starlike/common/buildings/sl_buildings.txt` | 2 建筑 |
+| 2 | NEW | `Starlike/common/buildings/sl_buildings.txt` | 3 派系帝国建筑 |
 | 3 | MKDIR | `Starlike/common/pop_jobs/` | 新目录 |
-| 4 | NEW | `Starlike/common/pop_jobs/sl_jobs.txt` | 2 岗位 |
+| 4 | NEW | `Starlike/common/pop_jobs/sl_jobs.txt` | 3 岗位 |
 | 5 | MKDIR | `Starlike/common/decisions/` | 新目录 |
 | 6 | NEW | `Starlike/common/decisions/sl_decisions.txt` | 2 决议 |
 | 7 | MKDIR | `Starlike/common/edicts/` | 新目录 |
@@ -728,8 +848,8 @@ event_homing.17 = {
 | 22 | NEW | `Starlike/common/scripted_effects/sl_effects.txt` | 公共效果 |
 | 23 | EDIT | `Starlike/common/static_modifiers/sl_modifiers.txt` | +2 修正器 |
 | 24 | EDIT | `Starlike/events/sl_homing_events.txt` | +event 17 + chain 调用 |
-| 25 | EDIT | `Starlike/localisation/l_english/sl_l_english.yml` | ~48 key |
-| 26 | EDIT | `Starlike/localisation/l_simp_chinese/sl_l_simp_chinese.yml` | ~48 key |
+| 25 | EDIT | `Starlike/localisation/l_english/sl_l_english.yml` | ~52 key |
+| 26 | EDIT | `Starlike/localisation/l_simp_chinese/sl_l_simp_chinese.yml` | ~52 key |
 
 **总计**：11 新目录 + 11 新文件 + 4 编辑文件
 
@@ -744,8 +864,8 @@ event_homing.17 = {
 
 ### 阶段 2：建筑 + 岗位
 
-- sl_buildings.txt + sl_jobs.txt + 双语本地化
-- 验证：殖民地建造菜单可见，建成后岗位产出正确
+- sl_buildings.txt（3 派系帝国建筑）+ sl_jobs.txt（3 岗位）+ 双语本地化
+- 验证：首都建造菜单可见（仅对应 civic），帝国唯一限制生效，建成后岗位产出正确
 
 ### 阶段 3：决议 + 法令 + 修正器
 
@@ -796,8 +916,8 @@ event_homing.17 = {
 
 ## 十九、完成定义（DoD）
 
-- [ ] 2 个建筑在殖民地建造菜单中显示（归巢起源限定）
-- [ ] 2 个岗位在建筑建成后正常产出
+- [ ] 3 个派系帝国建筑在首都建造菜单中显示（对应 civic 限定，帝国唯一）
+- [ ] 3 个岗位在建筑建成后正常产出
 - [ ] 2 个决议在满足条件时可执行（重建地球需完整触发链）
 - [ ] 1 个法令在传统完成后可开启
 - [ ] 1 个陆军在招募界面可见
