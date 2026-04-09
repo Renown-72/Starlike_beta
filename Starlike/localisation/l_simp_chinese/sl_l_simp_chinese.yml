@@ -162,3 +162,17 @@ l_simp_chinese:
   tr_phoenix_elite_ground: "精锐陆战"
   tr_phoenix_elite_ground_desc: "鸾羽号的精锐地面部队——伤害更高，生命更强，是星际战场的决定性力量。"
 
+  # ===== 飞升天赋 · v0.4 =====
+  ap_huisu_ascendant: "辉夙通达"
+  ap_huisu_ascendant_desc: "辉夙博物馆已成为汉和文明鲜活的集体记忆。受过古档案法训练的官僚体系以空前效率治理，我们的遗产助推帝国扩张。"
+  ap_martis_ascendant: "荧惑通达"
+  ap_martis_ascendant_desc: "荧惑派的研究哲学已演进为全新范式。每位科学家都承载着火星的星火，不断突破已知边界。"
+  ap_phoenix_ascendant: "鸾羽通达"
+  ap_phoenix_ascendant_desc: "鸾羽舰队已超越其原始使命。指挥官肩负着流亡舰队的铁律，每艘战舰都在歌唱归乡的决心。"
+  ap_ranshanxia_bloodline: "染山霞血脉"
+  ap_ranshanxia_bloodline_desc: "汉和文明的三支血脉在此交汇。辉夙的智慧、荧惑的科研、鸾羽的力量融为一炉——我们真正归巢了。"
+  requires_tradition_huisu_finish: "需要完成辉夙传统树。"
+  requires_tradition_martis_finish: "需要完成荧惑传统树。"
+  requires_tradition_phoenix_finish: "需要完成鸾羽传统树。"
+  requires_any_faction_ascendant: "需要拥有任意派系飞升天赋（辉夙/荧惑/鸾羽）。"
+

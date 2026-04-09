@@ -160,3 +160,17 @@
   tr_phoenix_elite_ground: "Elite Ground Forces"
   tr_phoenix_elite_ground_desc: "The Luanyu's elite ground troops — higher damage, greater resilience, the decisive force on any battlefield."
 
+  # ===== Ascension Perks · v0.4 =====
+  ap_huisu_ascendant: "Huisu Ascendant"
+  ap_huisu_ascendant_desc: "The Museum of Huisu has become the living memory of COPAN civilization. Bureaucrats trained in ancient archival methods govern with unprecedented efficiency, and our heritage fuels the empire's expansion."
+  ap_martis_ascendant: "Martis Ascendant"
+  ap_martis_ascendant_desc: "The Fervor Faction's research philosophy has evolved into a new paradigm. Every scientist is a carrier of the Mars flame, pushing the boundaries of what is known."
+  ap_phoenix_ascendant: "Luanyu Ascendant"
+  ap_phoenix_ascendant_desc: "The Luanyu Fleet has transcended its original mission. Commanders carry the iron discipline of the exiled fleet, and every ship sings with the determination to return home."
+  ap_ranshanxia_bloodline: "Ranshanxia Bloodline"
+  ap_ranshanxia_bloodline_desc: "The three strands of COPAN heritage converge. The Museum's wisdom, Fervor's research, and Luanyu's strength blend into one destiny—we are truly coming home."
+  requires_tradition_huisu_finish: "Requires completing the Huisu tradition tree."
+  requires_tradition_martis_finish: "Requires completing the Martis tradition tree."
+  requires_tradition_phoenix_finish: "Requires completing the Luanyu tradition tree."
+  requires_any_faction_ascendant: "Requires having any faction ascension perk (Huisu/Martis/Luanyu)."
+
