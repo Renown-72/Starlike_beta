@@ -1,0 +1,38 @@
+# ===== Starlike v0.4 Tier 2 — Edicts =====
+
+# ── 归巢令 ──
+edict_sl_homing_recall = {
+    length = -1
+
+    potential = {
+        has_origin = origin_homing
+        OR = {
+            has_tradition = tr_huisu_finish
+            has_tradition = tr_martis_finish
+            has_tradition = tr_phoenix_finish
+        }
+    }
+
+    allow = { }
+
+    resources = {
+        category = edicts
+        upkeep = {
+            unity = 10
+        }
+    }
+
+    modifier = {
+        country_unity_produces_mult = 0.05
+        leader_lifespan_add = 10
+        pop_happiness = 0.05
+    }
+
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            NOT = { has_origin = origin_homing }
+        }
+    }
+}

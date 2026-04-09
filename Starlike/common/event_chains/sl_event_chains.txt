@@ -1,0 +1,47 @@
+# ===== Starlike v0.4 Tier 2 — Event Chain Trackers =====
+
+# 地球遗产链 (events 1-4)
+sl_chain_earth_legacy = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = GFX_evt_anomaly_overheat
+
+    counter = {
+        sl_earth_legacy_progress = { max = 4 }
+    }
+
+    abort_trigger = {
+        has_country_flag = homing_earth_legacy_unlocked
+    }
+}
+
+# 派系叙事链 (events 5-13)
+sl_chain_faction_story = {
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = GFX_evt_metropolis
+
+    counter = {
+        sl_faction_story_progress = { max = 3 }
+    }
+
+    abort_trigger = {
+        OR = {
+            AND = { has_country_flag = event_homing_5_fired has_country_flag = huisu_heritage_resolved }
+            AND = { has_country_flag = event_homing_8_fired has_country_flag = martis_boundary_pushed }
+            AND = { has_country_flag = event_homing_11_fired has_country_flag = luanyu_return_promised }
+        }
+    }
+}
+
+# 汇聚叙事链 (events 14-16)
+sl_chain_convergence = {
+    icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+    picture = GFX_evt_planet_settlement
+
+    counter = {
+        sl_convergence_progress = { max = 3 }
+    }
+
+    abort_trigger = {
+        has_country_flag = homing_convergence_complete
+    }
+}

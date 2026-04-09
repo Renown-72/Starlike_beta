@@ -1,0 +1,9 @@
+# ===== Starlike v0.4 Tier 2 — Start Screen =====
+
+part = {
+    location = 0
+    localization = origins_sl_homing_start_screen
+    trigger = {
+        has_origin = origin_homing
+    }
+}

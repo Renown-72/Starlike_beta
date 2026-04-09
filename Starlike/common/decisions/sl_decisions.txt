@@ -1,0 +1,82 @@
+# ===== Starlike v0.4 Tier 2 — Decisions =====
+
+# ── 重建地球 ──
+decision_sl_rebuild_earth = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 2000
+            alloys = 500
+        }
+    }
+
+    enactment_time = 720
+
+    potential = {
+        has_planet_flag = Homing_Earth_flag
+        owner = {
+            has_origin = origin_homing
+            has_ascension_perk = ap_ranshanxia_bloodline
+            has_country_flag = homing_earth_legacy_unlocked
+        }
+        NOT = { has_planet_flag = sl_earth_rebuilt }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = "decision_sl_rebuild_earth_requirement"
+            owner = { has_ascension_perk = ap_ranshanxia_bloodline }
+        }
+    }
+
+    effect = {
+        set_planet_flag = sl_earth_rebuilt
+        change_pc = pc_continental
+        add_modifier = { modifier = modifier_sl_rebuilt_earth days = -1 }
+        owner = {
+            country_event = { id = event_homing.17 days = 5 }
+        }
+    }
+
+    ai_weight = { weight = 0 }
+}
+
+# ── 归巢广播 ──
+decision_sl_homing_broadcast = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 500
+        }
+    }
+
+    enactment_time = 180
+
+    potential = {
+        owner = {
+            has_origin = origin_homing
+            OR = {
+                has_tradition = tr_huisu_finish
+                has_tradition = tr_martis_finish
+                has_tradition = tr_phoenix_finish
+            }
+        }
+        NOT = { has_modifier = sl_broadcast_active }
+    }
+
+    effect = {
+        add_modifier = { modifier = sl_broadcast_active days = 3600 }
+    }
+
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            has_modifier = sl_broadcast_active
+        }
+    }
+}

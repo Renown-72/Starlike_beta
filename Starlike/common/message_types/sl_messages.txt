@@ -1,0 +1,23 @@
+# ===== Starlike v0.4 Tier 2 — Message Types =====
+
+message_type = {
+    key = MESSAGE_SL_EVENT_PROGRESS
+    icon = GFX_message_quest
+    icon_frame = 1
+    name = MESSAGE_SL_EVENT_PROGRESS
+    message_setting_key = MESSAGE_SL_EVENT_PROGRESS.s
+    sound = notification
+    ping = ping_notification_green
+    category = science
+}
+
+message_type = {
+    key = MESSAGE_SL_HOMING_MILESTONE
+    icon = GFX_message_quest
+    icon_frame = 1
+    name = MESSAGE_SL_HOMING_MILESTONE
+    message_setting_key = MESSAGE_SL_HOMING_MILESTONE.s
+    sound = event_notification
+    ping = ping_notification_yellow
+    category = unity
+}

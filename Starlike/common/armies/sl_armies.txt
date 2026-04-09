@@ -1,0 +1,39 @@
+# ===== Starlike v0.4 Tier 2 — Armies =====
+
+# ── 归巢志愿军 ──
+sl_homing_volunteer = {
+    damage = 1.50
+    health = 1.20
+    morale = 2.00
+    collateral_damage = 0.75
+    war_exhaustion = 0.80
+    time = 90
+
+    icon = GFX_army_type_defense
+
+    potential_country = {
+        has_origin = origin_homing
+    }
+
+    potential = {
+        from = { is_sapient = yes }
+    }
+
+    resources = {
+        category = armies
+        cost = {
+            minerals = 75
+        }
+        upkeep = {
+            food = 1
+        }
+    }
+
+    ai_weight = {
+        base = 5
+        modifier = {
+            factor = 0
+            NOT = { owner = { has_origin = origin_homing } }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+# ===== Starlike v0.4 Tier 2 — Game Concepts =====
+
+concept_sl_origin_homing = {
+    icon = gfx/interface/icons/concepts/concept_origins.dds
+}
+concept_sl_huisu = {
+    icon = gfx/interface/icons/concepts/concept_civic.dds
+}
+concept_sl_martis = {
+    icon = gfx/interface/icons/concepts/concept_civic.dds
+}
+concept_sl_phoenix = {
+    icon = gfx/interface/icons/concepts/concept_civic.dds
+}
+concept_sl_ranshanxia = {
+    icon = gfx/interface/icons/concepts/concept_trait.dds
+}
+concept_sl_homing_tradition = {
+    icon = gfx/interface/icons/concepts/concept_traditions.dds
+}
