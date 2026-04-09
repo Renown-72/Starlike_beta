@@ -1,0 +1,95 @@
+# ========================================
+# 偌星：归巢计划 - 飞升天赋
+# Version: 0.4
+# Author: Renown-72
+# Description: 归巢起源专属飞升天赋系统
+# ========================================
+
+# 辉夙通达 - 博物传承派飞升
+# 前置：完成辉夙传统树
+ap_huisu_ascendant = {
+    potential = {
+        has_origin = origin_homing
+        NOR = { has_ascension_perk = ap_huisu_ascendant }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_tradition_huisu_finish"
+            has_tradition = tr_huisu_finish
+        }
+    }
+    modifier = {
+        category_archaeostudies_research_speed_mult = 0.15
+        country_unity_produces_mult = 0.10
+        empire_size_penalty_mult = -0.15
+        country_leader_pool_size = 1
+    }
+}
+
+# 荧惑通达 - 荧惑科学派飞升
+# 前置：完成荧惑传统树
+ap_martis_ascendant = {
+    potential = {
+        has_origin = origin_homing
+        NOR = { has_ascension_perk = ap_martis_ascendant }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_tradition_martis_finish"
+            has_tradition = tr_martis_finish
+        }
+    }
+    modifier = {
+        all_technology_research_speed = 0.10
+        ship_anomaly_research_speed_mult = 0.25
+        country_scientist_cap_add = 1
+    }
+}
+
+# 鸾羽通达 - 鸾羽军事派飞升
+# 前置：完成鸾羽传统树
+ap_phoenix_ascendant = {
+    potential = {
+        has_origin = origin_homing
+        NOR = { has_ascension_perk = ap_phoenix_ascendant }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_tradition_phoenix_finish"
+            has_tradition = tr_phoenix_finish
+        }
+    }
+    modifier = {
+        country_naval_cap_mult = 0.15
+        ship_weapon_damage = 0.10
+        country_command_limit_add = 1
+    }
+}
+
+# 染山霞血脉 - 终章汇聚飞升
+# 前置：已解锁任意一个派系飞升天赋
+ap_ranshanxia_bloodline = {
+    potential = {
+        has_origin = origin_homing
+        NOR = { has_ascension_perk = ap_ranshanxia_bloodline }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_any_faction_ascendant"
+            OR = {
+                has_ascension_perk = ap_huisu_ascendant
+                has_ascension_perk = ap_martis_ascendant
+                has_ascension_perk = ap_phoenix_ascendant
+            }
+        }
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+        country_unity_produces_mult = 0.05
+        country_naval_cap_mult = 0.05
+        ship_anomaly_research_speed_mult = 0.15
+    }
+    on_enabled = {
+        country_event = { id = event_homing.14 days = 5 }
+    }
+}
