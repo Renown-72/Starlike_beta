@@ -1,0 +1,80 @@
+# 三派系传统类别定义
+# 每棵树通过 has_civic 限制，与对应派系国策绑定
+
+# ── 辉夙传统 ── 博物传承派
+tradition_huisu = {
+	tree_template = "tree_12_11"
+	adoption_bonus = "tr_huisu_adopt"
+	finish_bonus = "tr_huisu_finish"
+	traditions = {
+		"tr_huisu_admin_rebuild"
+		"tr_huisu_cultural_unity"
+		"tr_huisu_edict_tradition"
+		"tr_huisu_heritage_arms"
+		"tr_huisu_relic_guardian"
+	}
+
+	potential = {
+		has_civic = civic_huisu
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			has_civic = civic_huisu
+		}
+	}
+}
+
+# ── 荧惑传统 ── 荧惑科学派
+tradition_martis = {
+	tree_template = "tree_111_11"
+	adoption_bonus = "tr_martis_adopt"
+	finish_bonus = "tr_martis_finish"
+	traditions = {
+		"tr_martis_experiment_restart"
+		"tr_martis_data_surge"
+		"tr_martis_universal_formula"
+		"tr_martis_stellar_survey"
+		"tr_martis_anomaly_affinity"
+	}
+
+	potential = {
+		has_civic = civic_martis
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			has_civic = civic_martis
+		}
+	}
+}
+
+# ── 鸾羽传统 ── 鸾羽军事派
+tradition_phoenix = {
+	tree_template = "tree_111_11"
+	adoption_bonus = "tr_phoenix_adopt"
+	finish_bonus = "tr_phoenix_finish"
+	traditions = {
+		"tr_phoenix_fleet_expansion"
+		"tr_phoenix_firepower"
+		"tr_phoenix_hawk_strategy"
+		"tr_phoenix_iron_discipline"
+		"tr_phoenix_elite_ground"
+	}
+
+	potential = {
+		has_civic = civic_phoenix_plume
+	}
+
+	ai_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			has_civic = civic_phoenix_plume
+		}
+	}
+}
