@@ -11,6 +11,11 @@ country_event = {
         is_ai = no
     }
     immediate = {
+        # 开始地球遗产事件链追踪
+        begin_event_chain = {
+            event_chain = sl_chain_earth_legacy
+        }
+        sl_progress_earth_chain = yes
         # 在 Homing_Sol 恒星系中，找到 Europa（月球），自动殖民
         every_system = {
             limit = { has_star_flag = Homing_Sol }
@@ -57,6 +62,7 @@ ship_event = {
                 flag = homing_earth_investigating
                 days = 3650
             }
+            sl_progress_earth_chain = yes
         }
     }
     option = {
@@ -81,6 +87,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = homing_earth_analyzed
+        sl_progress_earth_chain = yes
     }
     option = {
         name = "event_homing.3.opt.archive"
@@ -125,6 +132,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = homing_earth_legacy_unlocked
+        sl_progress_earth_chain = yes
     }
     option = {
         name = "event_homing.4.opt.accept"
@@ -168,6 +176,10 @@ country_event = {
     }
     immediate = {
         set_global_flag = huisu_heritage_awakened
+        begin_event_chain = {
+            event_chain = sl_chain_faction_story
+        }
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.5.opt.ancestors_speak"
@@ -192,6 +204,7 @@ country_event = {
     }
     immediate = {
         clear_global_flag = huisu_heritage_awakened
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.6.opt.integrate"
@@ -218,6 +231,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = huisu_heritage_resolved
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.7.opt.preserve"
@@ -245,6 +259,10 @@ country_event = {
     }
     immediate = {
         set_global_flag = martis_discovery_made
+        begin_event_chain = {
+            event_chain = sl_chain_faction_story
+        }
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.8.opt.analyze"
@@ -269,6 +287,7 @@ country_event = {
     }
     immediate = {
         clear_global_flag = martis_discovery_made
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.9.opt.reignite"
@@ -295,6 +314,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = martis_boundary_pushed
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.10.opt.beyond"
@@ -322,6 +342,10 @@ country_event = {
     }
     immediate = {
         set_global_flag = luanyu_fleet_memory
+        begin_event_chain = {
+            event_chain = sl_chain_faction_story
+        }
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.11.opt.honor"
@@ -346,6 +370,7 @@ country_event = {
     }
     immediate = {
         clear_global_flag = luanyu_fleet_memory
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.12.opt.strengthen"
@@ -372,6 +397,7 @@ country_event = {
     }
     immediate = {
         set_country_flag = luanyu_return_promised
+        sl_progress_faction_chain = yes
     }
     option = {
         name = "event_homing.13.opt.lead"
@@ -396,6 +422,10 @@ country_event = {
     }
     immediate = {
         set_global_flag = homing_realized
+        begin_event_chain = {
+            event_chain = sl_chain_convergence
+        }
+        sl_progress_convergence_chain = yes
     }
     option = {
         name = "event_homing.14.opt.convergence"
@@ -419,6 +449,7 @@ country_event = {
     }
     immediate = {
         clear_global_flag = homing_realized
+        sl_progress_convergence_chain = yes
     }
     option = {
         name = "event_homing.15.opt.realization"
@@ -442,10 +473,29 @@ country_event = {
     }
     immediate = {
         set_country_flag = homing_convergence_complete
+        sl_progress_convergence_chain = yes
         add_modifier = { modifier = modifier_homing_convergence_echoes days = -1 }
     }
     option = {
         name = "event_homing.16.opt.closure"
         add_unity = 1000
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# event_homing.17  重建地球庆典
+# 触发：decision_sl_rebuild_earth 完成后 5 天
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = event_homing.17
+    title = "event_homing.17.title"
+    desc = "event_homing.17.desc"
+    picture = GFX_evt_planet_settlement
+    is_triggered_only = yes
+    immediate = { }
+    option = {
+        name = "event_homing.17.opt.new_dawn"
+        add_resource = { type = unity amount = 1000 }
+        add_resource = { type = influence amount = 200 }
     }
 }
