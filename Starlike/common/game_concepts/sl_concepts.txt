@@ -18,3 +18,6 @@ concept_sl_ranshanxia = {
 concept_sl_homing_tradition = {
     icon = gfx/interface/icons/concepts/concept_traditions.dds
 }
+concept_sl_starwhisper = {
+    icon = gfx/interface/icons/concepts/concept_traditions.dds
+}

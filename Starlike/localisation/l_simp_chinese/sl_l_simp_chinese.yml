@@ -33,15 +33,13 @@ l_simp_chinese:
   #起源相关汉化
   origin_homing: "归巢计划"
   origin_homing_desc: "征途千年一日，未敢忘其初源；我辈命之所属，定还尔汝新天。“江东子弟今虽在，肯与君王卷土来？” \n$SL_LABEL$"
-  origin_tooltip_projece_homing_effects: "星语者血脉赋予我们对宇宙的敏锐感知：异常更易发现与解析。勘测船更快穿越未知星域。失落母星的零散知识加速科研。可用额外一个科技替代方案。"
+  origin_tooltip_projece_homing_effects: "—起始领袖: \n—可以选择$leader_trait_ms_org_sp_desc$\n—是一名['concept_sl_starwhisper']\n—有三种['concept_factions']\n—['concept_edict']: ['edict:ms_forbid_election', $edict_ms_forbid_election$]\n£risk£注意['concept_corporate_election']和['concept_oligarchic_election']§R不可连任§!，除非§H$EMERGENCY_ELECTION$§!"
   origin_tooltip_project_homing_negative_effects: "漫长的流亡让我们付出沉重代价：领袖储备池枯竭，可供选拔的指挥官与科学家更少。"
 
   #恒星系相关汉化
   homing_earth_NAME: "归巢计划地球"
   homing_earth_DESC: "这将是选择归巢计划起源时的起始恒星系。\n\n决定你的一开始的恒星系的布局，但并不确定其具体位置。\n$SL_LABEL$"
   NAME_Homing_Earth: "星尘化地球"
-
-  #国策相关汉化
 
   # 事件链相关
   event_homing.2.title: "星尘故土"
@@ -71,7 +69,7 @@ l_simp_chinese:
 
   # COPAN 派系国策
   civic_huisu: "辉夙正统"
-  civic_huisu_desc: "归巢计划的核心船员群体，以辉夙中央的行政官、事务员为主。他们以传承与治理效率为执政重心，在漫长的重建年代中维系着文明的记忆与认同。"
+  civic_huisu_desc: "归巢计划的核心船员群体，以辉夙中央的事务官为主。他们以高效治理与凝聚人心为执政重心，在漫长的重建年代中维系着一体汉和文明的记忆与认同。"
   civic_huisu_effects: "§H+25%§! 考古速度\n§H+15%§! 遗珍能量产出\n§H+15%§! 凝聚力产出\n§H+10§! 法令基金\n§R-10%§! 舰船容量"
   civic_huisu_negative_effects: ""
   civic_martis: "荧惑崛起"
@@ -79,7 +77,7 @@ l_simp_chinese:
   civic_martis_effects: "§H+10%§! 科研速度\n§H+20%§! 勘测速度\n§H+20%§! 异常研究速度\n§R-1§! 领袖储备容量"
   civic_martis_negative_effects: ""
   civic_phoenix_plume: "鸾羽政变"
-  civic_phoenix_plume_desc: "汉和星舰中央为监视归巢计划所派遣的武装力量，名义上归汉和辉夙中央管辖。意外降临群星位面后，他们以铁律武力护佑文明，崇尚军事秩序与力量。"
+  civic_phoenix_plume_desc: "汉和星舰中央为监视归巢计划所派遣的武装力量，意外降临群星位面后，他们立即发动政变，建立起军事秩序，保障了文明延续。"
   civic_phoenix_plume_effects: "§H+20%§! 舰船容量\n§H+25%§! 领袖经验获取\n§H+15%§! 陆军伤害\n§R-5%§! 凝聚力产出"
   civic_phoenix_plume_negative_effects: ""
   councilor_huisu: "辉夙委员"

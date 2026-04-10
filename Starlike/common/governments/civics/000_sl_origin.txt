@@ -13,7 +13,6 @@ origin_homing = {
         base = 0 #AI选用该起源概率
     }
     description = "origin_tooltip_projece_homing_effects" #起源正面效果介绍（纯文本）
-    negative_description = "origin_tooltip_project_homing_negative_effects" #起源负面效果介绍（纯文本）
     initializers = {
         homing_earth #用于锁定开局恒星系
     }
