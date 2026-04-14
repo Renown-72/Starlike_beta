@@ -91,3 +91,36 @@ sl_quartermaster = {
         weight = @specialist_job_weight
     }
 }
+
+# ===== Starlike v0.4 — Stellarite Refiner =====
+
+stellarite_refiner = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = yes
+    clothes_texture_index = 3
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    resources = {
+        category = planet_jobs
+        produces = {
+            sr_stellarite = 2
+        }
+        upkeep = {
+            energy = 1
+            minerals = 1
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+    }
+}

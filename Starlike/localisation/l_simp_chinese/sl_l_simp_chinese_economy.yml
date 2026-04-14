@@ -1,0 +1,58 @@
+﻿l_simp_chinese:
+  # ===== 建筑 =====
+  building_sl_huisu_hall: "辉夙文明殿"
+  building_sl_huisu_hall_desc: "辉夙派的王冠明珠——一座宏伟的档案殿堂，保存着太阳系灾变前后的每一份记录。其档案官守护着汉和文明的集体记忆。"
+  building_sl_martis_institute: "荧惑研究所"
+  building_sl_martis_institute_desc: "荧惑科学传统的巅峰——延续火星重建时期尖端实验的帝国级研究枢纽。"
+  building_sl_phoenix_fortress: "鸾羽军事堡垒"
+  building_sl_phoenix_fortress_desc: "鸾羽军事指挥的核心——体现凤翎号战舰精神的帝国级要塞，守护着归巢的最后撤离。"
+  building_stellarite_refinery: "星尘精炼厂"
+  building_stellarite_refinery_desc: "从宇宙尘埃微粒中提取并加工星尘的专业设施，将先祖遗物转化为可用的战略资源。"
+
+  # ===== 岗位 =====
+  sl_archivist: "档案官"
+  sl_archivist_desc: "档案官保存并诠释汉和文明的记录，通过文化传承产生凝聚力，并推进社会学研究。"
+  sl_researcher: "荧惑研究员"
+  sl_researcher_desc: "荧惑研究员承载着火星时代的科学之火，在物理学和工程学前沿不断突破。"
+  sl_quartermaster: "军需官"
+  sl_quartermaster_desc: "军需官管理鸾羽舰队的后勤补给，生产合金并扩展海军容量。"
+  stellarite_refiner: "星尘精炼师"
+  stellarite_refiner_desc: "星尘精炼师将宇宙尘埃加工为可用的星尘——太阳系遗民独有的战略资源。"
+  stellarite_refiner_effect_desc: "£sr_stellarite£ 从精炼宇宙尘埃中产出§H$sr_stellarite$§!星尘。"
+
+  # ===== 决议 =====
+  decision_sl_rebuild_earth: "重建地球"
+  decision_sl_rebuild_earth_desc: "归巢计划的终极回报——将星尘化的地球重新改造为宜居世界。"
+  decision_sl_rebuild_earth_requirement: "需要染山霞血脉飞升天赋。"
+  decision_sl_homing_broadcast: "归巢广播"
+  decision_sl_homing_broadcast_desc: "向银河广播归巢文明的故事，吸引认同我们愿景的同路人。"
+
+  # ===== 法令 =====
+  edict_sl_homing_recall: "归巢令"
+  edict_sl_homing_recall_desc: "以国家法令号召全民铭记归巢之路，强化文明认同，延长领袖寿命。"
+
+  # ===== 陆军 =====
+  sl_homing_volunteer: "归巢志愿军"
+  sl_homing_volunteer_desc: "怀揣归巢信念的公民自愿参军。他们不靠重装科技，而靠信念与士气作战。"
+  sl_homing_volunteer_plural: "归巢志愿军"
+
+  # ===== 星尘资源 =====
+  sr_stellarite: "星尘"
+  sr_stellarite_desc: "从地球星尘化残留物中提炼的特殊物质。唯有承载太阳系记忆的族群，方能驾驭其力量。"
+  tech_stellarite_refining: "星尘精炼术"
+  tech_stellarite_refining_desc: "研发从先祖故土宇宙残骸中提取和精炼星尘的技术。"
+  TECH_UNLOCK_STELLARITE_REFINING_TITLE: "解锁星尘"
+  TECH_UNLOCK_STELLARITE_REFINING_DESC: "允许建造§H星尘精炼厂§!，启用§H星尘§!战略资源。"
+
+  # ===== 修正器 =====
+  modifier_sl_rebuilt_earth: "重建的地球"
+  modifier_sl_rebuilt_earth_desc: "人类的祖居之星已经修复。重生的地表充满生命与工业。"
+  sl_broadcast_active: "归巢广播中"
+  sl_broadcast_active_desc: "我们的故事回荡在银河中，吸引志同道合者前来殖民地。"
+
+  # ===== 赤字 =====
+  situation_stellarite_deficit: "星尘赤字"
+  situation_stellarite_deficit_desc: "我们的星尘储备已经耗尽。缺少这种关键资源，基础设施将受到严重影响。"
+  string_expenditures_greater_than_income_sr_stellarite: "星尘支出超过收入"
+  string_not_in_deficit_sr_stellarite: "星尘收入为正"
+  string_resource_reserves_sr_stellarite: "星尘仍有储备"

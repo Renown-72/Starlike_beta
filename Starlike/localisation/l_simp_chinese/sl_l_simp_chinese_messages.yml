@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+  # ===== 消息类型 =====
+  MESSAGE_SL_EVENT_PROGRESS: "归巢进展"
+  MESSAGE_SL_EVENT_PROGRESS.s: "归巢事件进展"
+  MESSAGE_SL_HOMING_MILESTONE: "归巢里程碑"
+  MESSAGE_SL_HOMING_MILESTONE.s: "归巢里程碑"

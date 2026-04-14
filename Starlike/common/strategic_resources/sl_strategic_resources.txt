@@ -1,0 +1,20 @@
+# ===== Starlike v0.4 — Stellarite Strategic Resource =====
+# 星尘：归巢起源专属战略资源
+
+sr_stellarite = {
+	tradable = no
+	category = strategic
+	max = 15000
+
+	prerequisites = { "tech_stellarite_refining" }
+
+	deficit_situation = situation_stellarite_deficit
+
+	ai_weight = {
+		weight = 10
+	}
+
+	ai_wants = {
+		base = 10
+	}
+}

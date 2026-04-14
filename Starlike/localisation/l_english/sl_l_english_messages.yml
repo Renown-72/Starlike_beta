@@ -1,0 +1,6 @@
+﻿l_english:
+  # ===== Message Types =====
+  MESSAGE_SL_EVENT_PROGRESS: "Homing Progress"
+  MESSAGE_SL_EVENT_PROGRESS.s: "Homing Event Progress"
+  MESSAGE_SL_HOMING_MILESTONE: "Homing Milestone"
+  MESSAGE_SL_HOMING_MILESTONE.s: "Homing Milestones"

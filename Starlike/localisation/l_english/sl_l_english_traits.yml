@@ -1,0 +1,11 @@
+﻿l_english:
+  # ===== Leader Traits =====
+  trait_scientist_stellarite_touched: "Stellarite-Touched"
+  trait_scientist_stellarite_touched_desc: "Touched by the stellar dust of their ancestors, this scientist is exceptionally attuned to cosmic anomalies."
+
+  # ===== Species =====
+  SPECIES_homing_han: "Commonwealth Human"
+  trait_stellarite_adapted: "Stellarite Adaptation"
+  trait_stellarite_adapted_desc: "After millennia of adaptation to space habitats and the Martian environment, this species has developed exceptional tolerance for extreme conditions and a deep instinct for collective cohesion."
+  trait_stellarite_touched: "Heritage Instinct"
+  trait_stellarite_touched_desc: "The spirits of their ancestors seem to linger in the stellar dust, granting this species heightened sensitivity to ancient ruins and cosmic anomalies."

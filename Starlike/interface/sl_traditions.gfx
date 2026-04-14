@@ -1,0 +1,126 @@
+spriteTypes = {
+
+	# ═══════════════════════════════════════════════════════════════
+	# 传统六边形背景 (hex_bg)
+	# 图片放在 gfx/interface/traditions/，格式 .dds
+	# ═════════════════════════════════════════════════════��═════════
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_huisu"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_huisu.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_martis"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_martis.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_phoenix"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_phoenix.dds"
+	}
+
+	# ═══════════════════════════════════════════════════════════════
+	# 传统树背景图 (category_bg)
+	# 图片放在 gfx/interface/tiles/，格式 306x218 .dds
+	# ═══════════════════════════════════════════════════════════════
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_huisu"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_huisu.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_martis"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_martis.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_phoenix"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_phoenix.dds"
+	}
+
+	# ═══════════════════════════════════════════════════════════════
+	# 传统树分类小图标 (category_icon)
+	# 图片放在 gfx/interface/icons/traditions/tree_icons/，格式 30x30 .dds
+	# ═══════════════════════════════════════════════════════════════
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_huisu"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_huisu.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_martis"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_martis.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_phoenix"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_phoenix.dds"
+	}
+
+	# ═══════════════════════════════════════════════════════════════
+	# 辉夙传统 — 各节点图标
+	# 图片放在 gfx/interface/icons/traditions/，格式 45x45 .dds
+	# ═══════════════════════════════════════════════════════════════
+	spriteType = {
+		name = "GFX_tr_huisu_admin_rebuild"
+		textureFile = "gfx/interface/icons/traditions/tradition_huisu_admin_rebuild.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_huisu_cultural_unity"
+		textureFile = "gfx/interface/icons/traditions/tradition_huisu_cultural_unity.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_huisu_edict_tradition"
+		textureFile = "gfx/interface/icons/traditions/tradition_huisu_edict_tradition.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_huisu_heritage_arms"
+		textureFile = "gfx/interface/icons/traditions/tradition_huisu_heritage_arms.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_huisu_relic_guardian"
+		textureFile = "gfx/interface/icons/traditions/tradition_huisu_relic_guardian.dds"
+	}
+
+	# ═══════════════════════════════════════════════════════════════
+	# 荧惑传统 — 各节点图标
+	# ═══════════════════════════════════════════════════════════════
+	spriteType = {
+		name = "GFX_tr_martis_experiment_restart"
+		textureFile = "gfx/interface/icons/traditions/tradition_martis_experiment_restart.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_martis_data_surge"
+		textureFile = "gfx/interface/icons/traditions/tradition_martis_data_surge.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_martis_universal_formula"
+		textureFile = "gfx/interface/icons/traditions/tradition_martis_universal_formula.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_martis_stellar_survey"
+		textureFile = "gfx/interface/icons/traditions/tradition_martis_stellar_survey.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_martis_anomaly_affinity"
+		textureFile = "gfx/interface/icons/traditions/tradition_martis_anomaly_affinity.dds"
+	}
+
+	# ═══════════════════════════════════════════════════════════════
+	# 鸾羽传统 — 各节点图标
+	# ═══════════════════════════════════════════════════════════════
+	spriteType = {
+		name = "GFX_tr_phoenix_fleet_expansion"
+		textureFile = "gfx/interface/icons/traditions/tradition_phoenix_fleet_expansion.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_phoenix_firepower"
+		textureFile = "gfx/interface/icons/traditions/tradition_phoenix_firepower.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_phoenix_hawk_strategy"
+		textureFile = "gfx/interface/icons/traditions/tradition_phoenix_hawk_strategy.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_phoenix_iron_discipline"
+		textureFile = "gfx/interface/icons/traditions/tradition_phoenix_iron_discipline.dds"
+	}
+	spriteType = {
+		name = "GFX_tr_phoenix_elite_ground"
+		textureFile = "gfx/interface/icons/traditions/tradition_phoenix_elite_ground.dds"
+	}
+}

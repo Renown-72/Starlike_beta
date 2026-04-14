@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+  # ===== 领袖特质 =====
+  trait_scientist_stellarite_touched: "星尘感应者"
+  trait_scientist_stellarite_touched_desc: "被先祖的星尘所触及，这位科学家对宇宙异常有超乎常人的感知。"
+
+  # ===== 物种 =====
+  SPECIES_homing_han: "一体汉和"
+  trait_stellarite_adapted: "星尘适应"
+  trait_stellarite_adapted_desc: "历经千年太空城与火星环境适应，此物种对极端环境有着卓越的耐受性，并以集体凝聚为本能。"
+  trait_stellarite_touched: "寻根本能"

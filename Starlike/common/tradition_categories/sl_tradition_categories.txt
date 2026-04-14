@@ -3,6 +3,18 @@
 
 # ── 辉夙传统 ── 博物传承派
 tradition_huisu = {
+	desc = {
+		trigger = { is_regular_empire = yes }
+		text = tradition_huisu_desc
+	}
+	desc = {
+		trigger = { is_hive_empire = yes }
+		text = tradition_huisu_hive_desc
+	}
+	desc = {
+		trigger = { is_machine_empire = yes }
+		text = tradition_huisu_machine_desc
+	}
 	tree_template = "tree_12_11"
 	adoption_bonus = "tr_huisu_adopt"
 	finish_bonus = "tr_huisu_finish"
@@ -29,6 +41,18 @@ tradition_huisu = {
 
 # ── 荧惑传统 ── 荧惑科学派
 tradition_martis = {
+	desc = {
+		trigger = { is_regular_empire = yes }
+		text = tradition_martis_desc
+	}
+	desc = {
+		trigger = { is_hive_empire = yes }
+		text = tradition_martis_hive_desc
+	}
+	desc = {
+		trigger = { is_machine_empire = yes }
+		text = tradition_martis_machine_desc
+	}
 	tree_template = "tree_111_11"
 	adoption_bonus = "tr_martis_adopt"
 	finish_bonus = "tr_martis_finish"
@@ -55,6 +79,18 @@ tradition_martis = {
 
 # ── 鸾羽传统 ── 鸾羽军事派
 tradition_phoenix = {
+	desc = {
+		trigger = { is_regular_empire = yes }
+		text = tradition_phoenix_desc
+	}
+	desc = {
+		trigger = { is_hive_empire = yes }
+		text = tradition_phoenix_hive_desc
+	}
+	desc = {
+		trigger = { is_machine_empire = yes }
+		text = tradition_phoenix_machine_desc
+	}
 	tree_template = "tree_111_11"
 	adoption_bonus = "tr_phoenix_adopt"
 	finish_bonus = "tr_phoenix_finish"

@@ -1,0 +1,58 @@
+﻿l_english:
+  # ===== Buildings =====
+  building_sl_huisu_hall: "Huisu Hall of Civilization"
+  building_sl_huisu_hall_desc: "The crown jewel of the Huisu faction — a grand archive preserving every record from before and after the Sol cataclysm. Its archivists safeguard the collective memory of COPAN civilization."
+  building_sl_martis_institute: "Martis Research Institute"
+  building_sl_martis_institute_desc: "The pinnacle of Martis scientific tradition — a research hub continuing the cutting-edge experiments begun during the Mars reconstruction era."
+  building_sl_phoenix_fortress: "Luanyu War Citadel"
+  building_sl_phoenix_fortress_desc: "The heart of the Luanyu military command — a fortress embodying the spirit of the original Phoenix Plume warship that guarded the last evacuation from Sol."
+  building_stellarite_refinery: "Stellarite Refinery"
+  building_stellarite_refinery_desc: "A specialized facility that extracts and processes Stellarite from cosmic dust particles, converting ancestral remnants into a usable strategic resource."
+
+  # ===== Jobs =====
+  sl_archivist: "Archivist"
+  sl_archivist_desc: "Archivists preserve and interpret the records of COPAN civilization, generating unity through cultural continuity and advancing social research."
+  sl_researcher: "Martis Researcher"
+  sl_researcher_desc: "Martis Researchers carry the flame of Mars-era science, pushing boundaries in physics and engineering."
+  sl_quartermaster: "Quartermaster"
+  sl_quartermaster_desc: "Quartermasters manage the Luanyu fleet's logistics, producing alloys and expanding naval capacity."
+  stellarite_refiner: "Stellarite Refiner"
+  stellarite_refiner_desc: "Stellarite Refiners process cosmic dust into usable Stellarite, a strategic resource unique to the heirs of Sol."
+  stellarite_refiner_effect_desc: "£sr_stellarite£ Produces §H$sr_stellarite$§! Stellarite from refined cosmic dust."
+
+  # ===== Decisions =====
+  decision_sl_rebuild_earth: "Rebuild Earth"
+  decision_sl_rebuild_earth_desc: "The ultimate reward of Project Homing — transform the stellar-dust Earth back into a habitable world."
+  decision_sl_rebuild_earth_requirement: "Requires the Ranshanxia Bloodline ascension perk."
+  decision_sl_homing_broadcast: "Homing Broadcast"
+  decision_sl_homing_broadcast_desc: "Broadcast the story of the Homing civilization across the galaxy, attracting those who share our vision."
+
+  # ===== Edict =====
+  edict_sl_homing_recall: "Homing Recall"
+  edict_sl_homing_recall_desc: "A national decree calling all citizens to remember the path of Homing, strengthening cultural identity and extending leader lifespans."
+
+  # ===== Army =====
+  sl_homing_volunteer: "Homing Volunteer"
+  sl_homing_volunteer_desc: "Citizens driven by the shared dream of returning home. They fight not with heavy technology, but with conviction and morale."
+  sl_homing_volunteer_plural: "Homing Volunteers"
+
+  # ===== Stellarite Resource =====
+  sr_stellarite: "Stellarite"
+  sr_stellarite_desc: "A refined substance extracted from the stellar dust that once was Earth. Only those who carry the memory of Sol can harness its power."
+  tech_stellarite_refining: "Stellarite Refining"
+  tech_stellarite_refining_desc: "Develop techniques to extract and refine Stellarite from the cosmic remnants of our ancestral homeworld."
+  TECH_UNLOCK_STELLARITE_REFINING_TITLE: "Unlocks Stellarite"
+  TECH_UNLOCK_STELLARITE_REFINING_DESC: "Allows construction of §HStellarite Refineries§! and enables the §HStellarite§! strategic resource."
+
+  # ===== Modifiers =====
+  modifier_sl_rebuilt_earth: "Rebuilt Earth"
+  modifier_sl_rebuilt_earth_desc: "The ancestral home of humanity has been restored. Its renewed surface teems with life and industry."
+  sl_broadcast_active: "Homing Broadcast"
+  sl_broadcast_active_desc: "Our story echoes across the galaxy, drawing kindred spirits to our colonies."
+
+  # ===== Deficit =====
+  situation_stellarite_deficit: "Stellarite Deficit"
+  situation_stellarite_deficit_desc: "Our Stellarite reserves have run dry. Without this vital resource, our infrastructure suffers."
+  string_expenditures_greater_than_income_sr_stellarite: "Stellarite expenditure exceeds income"
+  string_not_in_deficit_sr_stellarite: "Stellarite income is positive"
+  string_resource_reserves_sr_stellarite: "Stellarite reserves remain"

@@ -1,9 +1,9 @@
 # ═══════════════════════════════════════════════════════════════
 # 荧惑传统树 — 荧惑科学派
 # 拓扑: tree_111_11
-#   左支(slot 1-3): 实验重启 → 数据涌流 → 万物公式(汇聚)
+#   左支(slot 1-3): 实验重启 → 数据涌流 → 万物公式
 #   右支(slot 4-5): 星域探查 → 异常亲和
-#   万物公式(slot 3)同时依赖 左2 + 右2
+#   两分支独立，无汇聚点
 # ═══════════════════════════════════════════════════════════════
 
 # ── 采纳 ──
@@ -48,11 +48,10 @@ tr_martis_data_surge = {
 	}
 }
 
-# 汇聚: 万物公式 (slot 3, 依赖左2 + 右2)
+# 左3: 万物公式 (slot 3, 依赖左2)
 tr_martis_universal_formula = {
 	possible = {
 		has_tradition = tr_martis_data_surge
-		has_tradition = tr_martis_anomaly_affinity
 	}
 	modifier = {
 		country_scientist_cap_add = 1
