@@ -89,3 +89,13 @@
   sl_chain_faction_story_desc: "The story of your chosen faction unfolds as the civilization matures."
   sl_chain_convergence: "The Convergence"
   sl_chain_convergence_desc: "The three bloodlines of COPAN civilization converge toward a shared destiny."
+
+  # ===== v0.5 Bloodline Events =====
+  sl_bloodline.500.title: "Fall of the Stellarite Speaker"
+  sl_bloodline.500.desc: "The last Stellarite Speaker has fallen. No final words — only a resonance that pierced the void, as if the stars themselves wept.\n\nThe three faction leaders stand in the ruined council hall, facing each other in tense silence. Without the Speaker's unifying presence, the empire faces its greatest crisis. You must choose one to carry on."
+  sl_bloodline.500.opt.huisu: "Appoint the Huisu Councilor"
+  sl_bloodline.500.opt.huisu.tt: "The Huisu Councilor becomes ruler. §G+Unity§!"
+  sl_bloodline.500.opt.martis: "Appoint the Martis Director"
+  sl_bloodline.500.opt.martis.tt: "The Martis Director becomes ruler. §G+Physics Research§!"
+  sl_bloodline.500.opt.phoenix: "Appoint the Luanyu Commander"
+  sl_bloodline.500.opt.phoenix.tt: "The Luanyu Commander becomes ruler. §G+Alloys§!"

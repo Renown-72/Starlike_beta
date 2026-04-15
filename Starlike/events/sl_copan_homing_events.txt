@@ -479,6 +479,24 @@ country_event = {
     option = {
         name = "event_homing.16.opt.closure"
         add_unity = 1000
+        # ── v0.5 血脉飞升衔接 ──
+        hidden_effect = {
+            # 场景 A：星语者在世 → 永生 + 强化 BUFF
+            if = {
+                limit = { has_country_flag = sl_stellarite_speaker_alive }
+                set_country_flag = sl_bloodline_ascended
+                ruler = { set_immortal = yes }
+                remove_modifier = sl_bloodline_full
+                add_modifier = { modifier = sl_bloodline_eternal days = -1 }
+            }
+            # 场景 B：星语者已死 → 恢复 BUFF（无永生）
+            else_if = {
+                limit = { has_country_flag = sl_stellarite_speaker_dead }
+                set_country_flag = sl_bloodline_ascended
+                remove_modifier = sl_bloodline_fallen
+                add_modifier = { modifier = sl_bloodline_eternal days = -1 }
+            }
+        }
     }
 }
 

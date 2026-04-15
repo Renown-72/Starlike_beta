@@ -1,0 +1,312 @@
+# ===== Starlike v0.5 — Custom Pop Factions =====
+# 归巢起源专属人口派系（压制原版）
+
+##############################
+# 博物传承派 (Huisu Faction)
+##############################
+
+sl_faction_huisu = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_spiritualist
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_factions
+		produces = {
+			unity = 0.5
+		}
+	}
+
+	is_potential = {
+		is_faction_allowed = yes
+		owner = {
+			has_origin = origin_homing
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		can_think = yes
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+
+	attraction = {
+		base = 100
+		modifier = { factor = 1.5 owner = { has_civic = civic_huisu } }
+		modifier = { factor = 0.5 is_militarist = yes }
+	}
+
+	leader = {
+		pool = { base = 1 }
+	}
+
+	# ── demand 1：拥有辉夙国策 ──
+	demand = {
+		title = "sl_faction_huisu_demand_civic"
+		unfulfilled_title = "sl_faction_huisu_demand_civic_unfulfilled"
+		desc = "sl_faction_huisu_demand_civic_desc"
+		fulfilled_effect = 10
+		unfulfilled_effect = -10
+		potential = { exists = owner }
+		trigger = { owner = { has_civic = civic_huisu } }
+	}
+
+	# ── demand 2：处于和平状态 ──
+	demand = {
+		title = "sl_faction_huisu_demand_peace"
+		unfulfilled_title = "sl_faction_huisu_demand_peace_unfulfilled"
+		desc = "sl_faction_huisu_demand_peace_desc"
+		fulfilled_effect = 5
+		unfulfilled_effect = -10
+		potential = { exists = owner }
+		trigger = { owner = { is_at_war = no } }
+	}
+
+	# ── demand 3：凝聚力收入 ≥ 20 ──
+	demand = {
+		title = "sl_faction_huisu_demand_unity"
+		unfulfilled_title = "sl_faction_huisu_demand_unity_unfulfilled"
+		desc = "sl_faction_huisu_demand_unity_desc"
+		fulfilled_effect = 5
+		unfulfilled_effect = 0
+		potential = { exists = owner }
+		trigger = {
+			owner = {
+				resource_income_compare = { resource = unity value >= 20 }
+			}
+		}
+	}
+
+	on_create = { }
+	on_destroy = { }
+	actions = { }
+}
+
+##############################
+# 荧惑科学派 (Martis Faction)
+##############################
+
+sl_faction_martis = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_materialist
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_factions
+		produces = {
+			unity = 0.5
+		}
+	}
+
+	is_potential = {
+		is_faction_allowed = yes
+		owner = {
+			has_origin = origin_homing
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		can_think = yes
+		OR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	attraction = {
+		base = 100
+		modifier = { factor = 1.5 owner = { has_civic = civic_martis } }
+		modifier = { factor = 0.5 is_spiritualist = yes }
+	}
+
+	leader = {
+		pool = { base = 1 }
+	}
+
+	# ── demand 1：拥有荧惑国策 ──
+	demand = {
+		title = "sl_faction_martis_demand_civic"
+		unfulfilled_title = "sl_faction_martis_demand_civic_unfulfilled"
+		desc = "sl_faction_martis_demand_civic_desc"
+		fulfilled_effect = 10
+		unfulfilled_effect = -10
+		potential = { exists = owner }
+		trigger = { owner = { has_civic = civic_martis } }
+	}
+
+	# ── demand 2：拥有 ≥ 2 科学船 ──
+	demand = {
+		title = "sl_faction_martis_demand_science_ship"
+		unfulfilled_title = "sl_faction_martis_demand_science_ship_unfulfilled"
+		desc = "sl_faction_martis_demand_science_ship_desc"
+		fulfilled_effect = 5
+		unfulfilled_effect = -10
+		potential = { exists = owner }
+		trigger = {
+			owner = {
+				count_owned_ship = { limit = { is_ship_size = science } count >= 2 }
+			}
+		}
+	}
+
+	# ── demand 3：科技领先或持平邻国 ──
+	demand = {
+		title = "sl_faction_martis_demand_tech"
+		unfulfilled_title = "sl_faction_martis_demand_tech_unfulfilled"
+		desc = "sl_faction_martis_demand_tech_desc"
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+		potential = { exists = owner }
+		trigger = {
+			owner = {
+				NOT = {
+					any_relation = {
+						is_country_type = default
+						relative_power = { who = root.owner value > equivalent category = technology }
+					}
+				}
+			}
+		}
+	}
+
+	on_create = { }
+	on_destroy = { }
+	actions = { }
+}
+
+##############################
+# 鸾羽军事派 (Phoenix Faction)
+##############################
+
+sl_faction_phoenix = {
+	election_header = "GFX_faction_header_yellow"
+	guiding_ethic = ethic_militarist
+
+	unique = yes
+	support_multiplier = 1
+
+	resources = {
+		category = pop_factions
+		produces = {
+			unity = 0.5
+		}
+	}
+
+	is_potential = {
+		is_faction_allowed = yes
+		owner = {
+			has_origin = origin_homing
+		}
+	}
+
+	parameters = {
+		empire = {
+			type = country
+			valid_objects = {
+				is_same_value = root
+			}
+		}
+	}
+
+	can_join_pre_triggers = {
+		is_enslaved = no
+		is_being_purged = no
+	}
+
+	can_join_faction = {
+		can_think = yes
+		OR = {
+			has_ethic = ethic_militarist
+			has_ethic = ethic_fanatic_militarist
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+
+	attraction = {
+		base = 100
+		modifier = { factor = 1.5 owner = { has_civic = civic_phoenix_plume } }
+		modifier = { factor = 0.5 is_pacifist = yes }
+	}
+
+	leader = {
+		pool = { base = 1 }
+	}
+
+	# ── demand 1：拥有鸾羽国策 ──
+	demand = {
+		title = "sl_faction_phoenix_demand_civic"
+		unfulfilled_title = "sl_faction_phoenix_demand_civic_unfulfilled"
+		desc = "sl_faction_phoenix_demand_civic_desc"
+		fulfilled_effect = 10
+		unfulfilled_effect = -10
+		potential = { exists = owner }
+		trigger = { owner = { has_civic = civic_phoenix_plume } }
+	}
+
+	# ── demand 2：海军 ≥ 上限 50% ──
+	demand = {
+		title = "sl_faction_phoenix_demand_fleet"
+		unfulfilled_title = "sl_faction_phoenix_demand_fleet_unfulfilled"
+		desc = "sl_faction_phoenix_demand_fleet_desc"
+		fulfilled_effect = 5
+		unfulfilled_effect = -10
+		potential = { exists = owner }
+		trigger = {
+			owner = { used_naval_capacity_percentage >= 0.5 }
+		}
+	}
+
+	# ── demand 3：处于战争状态 ──
+	demand = {
+		title = "sl_faction_phoenix_demand_war"
+		unfulfilled_title = "sl_faction_phoenix_demand_war_unfulfilled"
+		desc = "sl_faction_phoenix_demand_war_desc"
+		fulfilled_effect = 5
+		unfulfilled_effect = 0
+		potential = { exists = owner }
+		trigger = { owner = { is_at_war = yes } }
+	}
+
+	on_create = { }
+	on_destroy = { }
+	actions = { }
+}

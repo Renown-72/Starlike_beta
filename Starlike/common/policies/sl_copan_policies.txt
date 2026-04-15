@@ -1,0 +1,80 @@
+# ===== Starlike v0.5 — Policies =====
+
+# ── 星尘研究方针 ──
+sl_stellarite_policy = {
+    potential = {
+        has_origin = origin_homing
+        has_technology = tech_stellarite_refining
+    }
+    option = {
+        name = sl_stellarite_survival_first
+        modifier = {
+            planet_jobs_sr_stellarite_produces_mult = 0.25
+            all_technology_research_speed = -0.05
+        }
+        policy_flags = { sl_plc_survival }
+        ai_weight = {
+            base = 10
+            modifier = { add = 50 has_country_flag = sl_stellarite_speaker_alive }
+        }
+    }
+    option = {
+        name = sl_stellarite_balanced
+        modifier = { }
+        policy_flags = { sl_plc_balanced }
+        ai_weight = { base = 5 }
+    }
+    option = {
+        name = sl_stellarite_progress_first
+        modifier = {
+            all_technology_research_speed = 0.05
+            planet_jobs_sr_stellarite_produces_mult = -0.25
+        }
+        policy_flags = { sl_plc_progress }
+        ai_weight = {
+            base = 5
+            modifier = { add = 20 has_country_flag = sl_bloodline_ascended }
+        }
+    }
+}
+
+# ── 派系治理方针 ──
+sl_faction_governance = {
+    potential = {
+        has_origin = origin_homing
+    }
+    option = {
+        name = sl_governance_autocracy
+        valid = {
+            has_country_flag = sl_stellarite_speaker_alive
+        }
+        modifier = {
+            species_leader_exp_gain = 0.25
+        }
+        policy_flags = { sl_plc_autocracy }
+        ai_weight = {
+            base = 10
+            modifier = { add = 100 has_country_flag = sl_stellarite_speaker_alive }
+        }
+    }
+    option = {
+        name = sl_governance_council
+        modifier = {
+            pop_faction_happiness = 0.10
+            ruler_skill_add = -1
+        }
+        policy_flags = { sl_plc_council }
+        ai_weight = { base = 5 }
+    }
+    option = {
+        name = sl_governance_dominant
+        modifier = {
+            pop_faction_happiness = -0.05
+        }
+        policy_flags = { sl_plc_dominant }
+        ai_weight = {
+            base = 5
+            modifier = { add = 10 is_militarist = yes }
+        }
+    }
+}

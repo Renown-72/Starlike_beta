@@ -1,0 +1,32 @@
+#起源相关
+#归巢计划起源
+origin_homing = {
+    is_origin = yes
+    icon = "gfx/interface/icons/origins/origins_homing.dds"
+    picture = GFX_origin_project_homing
+
+    possible = {
+        authority = { value = auth_dictatorial }
+    }
+    random_weight = {
+        base = 0
+    }
+    description = "origin_tooltip_projece_homing_effects"
+    initializers = {
+        homing_earth
+    }
+    starting_colony = pc_city
+    habitability_preference = pc_continental
+    preferred_planet_class_neighbor = no
+
+    flags = { custom_start_screen }
+
+    modifier = {
+        # 静态项（不随血脉变化）
+        # 代价：流亡文明人才凋零
+        country_leader_pool_size = -2
+        # 星语者血脉的学习天赋
+        species_leader_exp_gain = 0.25
+        # 动态探索/科技/凝聚力加成由血脉 modifier 提供（sl_bloodline_full 等）
+    }
+}

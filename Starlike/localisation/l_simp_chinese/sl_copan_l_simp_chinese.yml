@@ -60,3 +60,31 @@ l_simp_chinese:
 
   # 开屏消息
   origins_sl_homing_start_screen: "§H归巢计划§!\n\n千年之前，太阳系被恒星之火吞噬。幸存者——工程师、学者、军人——逃往火星重建家园。他们称之为归巢计划：终有一日，我们将找到回去的路。\n\n如今，三大派系引领着汉和文明：§Y辉夙§!，记忆的守护者；§Y荧惑§!，科学之火的承载者；§Y鸾羽§!，铁律舰队的卫士。\n\n群星在等待。归巢之旅，启程。"
+
+  # ===== v0.5 血脉修正器 =====
+  sl_bloodline_full: "星语者血脉"
+  sl_bloodline_full_desc: "Sol 灾变中最后的恒星编码基因携带者。血脉赋予对异常和宇宙现象的非凡亲和力。"
+  sl_bloodline_fallen: "陨落的血脉"
+  sl_bloodline_fallen_desc: "星语者已逝。文明集体记忆中只残留着血脉微弱的回响。"
+  sl_bloodline_eternal: "永恒的血脉"
+  sl_bloodline_eternal_desc: "通过染山霞飞升，血脉超越了凡躯的桎梏。其力量甚至超越了最初的恒星编码。"
+  sl_rebellion_aftermath: "叛乱余波"
+  sl_rebellion_aftermath_desc: "星语者的陨落动摇了帝国的根基。恢复秩序需要时间。"
+
+  # ===== v0.5 政策 =====
+  sl_stellarite_policy: "星尘研究方针"
+  sl_stellarite_policy_desc: "决定帝国如何在续命和科研发展之间分配星尘资源。"
+  sl_stellarite_survival_first: "续命优先"
+  sl_stellarite_survival_first_desc: "所有星尘产出优先用于维持星语者的生命。科研受损。"
+  sl_stellarite_balanced: "均衡分配"
+  sl_stellarite_balanced_desc: "星尘在生存和发展之间均匀分配。"
+  sl_stellarite_progress_first: "发展优先"
+  sl_stellarite_progress_first_desc: "科研优先于续命。星语者的存亡退居次要。"
+  sl_faction_governance: "派系治理方针"
+  sl_faction_governance_desc: "决定星语者与三大派系之间的权力结构。"
+  sl_governance_autocracy: "星语者独断"
+  sl_governance_autocracy_desc: "星语者以绝对权威统治。派系声音仅作参考。"
+  sl_governance_council: "议会共治"
+  sl_governance_council_desc: "三大派系领袖与统治者共享治权。稳定性提升但执行力被稀释。"
+  sl_governance_dominant: "优势派系主导"
+  sl_governance_dominant_desc: "执政派系的国策凌驾于其他派系之上，集中权力但滋生不满。"

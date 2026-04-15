@@ -89,3 +89,13 @@
   sl_chain_faction_story_desc: "你所选择的派系故事随文明的成熟而展开。"
   sl_chain_convergence: "汇聚"
   sl_chain_convergence_desc: "汉和文明的三脉血脉汇聚，走向共同的命运。"
+
+  # ===== v0.5 血脉事件 =====
+  sl_bloodline.500.title: "星语者陨落"
+  sl_bloodline.500.desc: "最后的星语者倒下了。没有遗言——只有一声穿透虚空的共鸣，仿佛恒星本身在哀鸣。\n\n三大派系的领袖在废墟般的议事厅中对峙，沉默而紧张。没有了星语者的凝聚力，帝国面临前所未有的危机。你必须从中选择一人，继续带领这个文明。"
+  sl_bloodline.500.opt.huisu: "委任辉夙议长"
+  sl_bloodline.500.opt.huisu.tt: "辉夙议长成为统治者。§G+凝聚力§!"
+  sl_bloodline.500.opt.martis: "委任荧惑总监"
+  sl_bloodline.500.opt.martis.tt: "荧惑总监成为统治者。§G+物理研究§!"
+  sl_bloodline.500.opt.phoenix: "委任鸾羽总长"
+  sl_bloodline.500.opt.phoenix.tt: "鸾羽总长成为统治者。§G+合金§!"

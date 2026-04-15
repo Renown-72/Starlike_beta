@@ -59,3 +59,31 @@
 
   # Start Screen
   origins_sl_homing_start_screen: "§HProject Homing§!\n\nA thousand years ago, the Sol system was consumed by stellar fire. The survivors — engineers, scholars, soldiers — fled to Mars and rebuilt. They called it Project Homing: the promise that one day, they would find their way back.\n\nNow, three factions guide the COPAN civilization: §YHuisu§!, keepers of memory; §YMartis§!, bearers of the scientific flame; and §YLuanyu§!, guardians of the iron fleet.\n\nThe stars await. The journey home begins."
+
+  # ===== v0.5 Bloodline Modifiers =====
+  sl_bloodline_full: "Stellarite Speaker's Bloodline"
+  sl_bloodline_full_desc: "The last carrier of stellar-encoded genes from the Sol cataclysm. The bloodline grants extraordinary affinity with anomalies and cosmic phenomena."
+  sl_bloodline_fallen: "Fallen Bloodline"
+  sl_bloodline_fallen_desc: "The Stellarite Speaker has perished. Only a faint echo of the bloodline remains in the civilization's collective memory."
+  sl_bloodline_eternal: "Eternal Bloodline"
+  sl_bloodline_eternal_desc: "Through the Ranshanxia Ascension, the bloodline has transcended mortality. Its power surpasses even the original encoding."
+  sl_rebellion_aftermath: "Rebellion Aftermath"
+  sl_rebellion_aftermath_desc: "The death of the Stellarite Speaker has shaken the foundations of the empire. Order will take time to restore."
+
+  # ===== v0.5 Policies =====
+  sl_stellarite_policy: "Stellarite Research Doctrine"
+  sl_stellarite_policy_desc: "Determines how the empire allocates Stellarite resources between life extension and scientific progress."
+  sl_stellarite_survival_first: "Survival Priority"
+  sl_stellarite_survival_first_desc: "All Stellarite production is directed toward sustaining the Speaker's life. Research suffers."
+  sl_stellarite_balanced: "Balanced Allocation"
+  sl_stellarite_balanced_desc: "Stellarite is distributed evenly between survival and development."
+  sl_stellarite_progress_first: "Progress Priority"
+  sl_stellarite_progress_first_desc: "Research takes precedence over life extension. The Speaker's survival is secondary."
+  sl_faction_governance: "Faction Governance"
+  sl_faction_governance_desc: "Determines the power structure between the Speaker and the three factions."
+  sl_governance_autocracy: "Speaker's Decree"
+  sl_governance_autocracy_desc: "The Stellarite Speaker rules with absolute authority. Faction voices are advisory only."
+  sl_governance_council: "Council Rule"
+  sl_governance_council_desc: "The three faction leaders share governance with the ruler. Stability improves but executive power is diluted."
+  sl_governance_dominant: "Dominant Faction"
+  sl_governance_dominant_desc: "The ruling faction's civic is elevated above the others, concentrating power but breeding resentment."

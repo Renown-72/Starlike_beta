@@ -1,5 +1,11 @@
-on_game_start_country = { #开局执行事件
+on_game_start_country = {
     events = {
         event_homing.1
+        sl_bloodline.1
+    }
+}
+on_leader_death = {
+    events = {
+        sl_bloodline.110
     }
 }

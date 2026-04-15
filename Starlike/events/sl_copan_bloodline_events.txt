@@ -1,0 +1,208 @@
+namespace = sl_bloodline
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bloodline.1  开局初始化：血脉系统 + 派系压制 + 多路径开局
+# 触发：on_game_start_country
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = sl_bloodline.1
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+    }
+    immediate = {
+        # ── 血脉初始化 ──
+        set_country_flag = sl_stellarite_speaker_alive
+        ruler = {
+            set_leader_flag = sl_stellarite_speaker
+            set_leader_flag = leader_death_events_blocked
+        }
+        add_modifier = { modifier = sl_bloodline_full days = -1 }
+
+        # ── 压制原版派系，启用归巢三派系 ──
+        set_country_flag = suppress_vanilla_factions
+        enable_faction_of_type = sl_faction_huisu
+        enable_faction_of_type = sl_faction_martis
+        enable_faction_of_type = sl_faction_phoenix
+
+        # ── 多路径开局配置 ──
+        country_event = { id = sl_bloodline.10 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bloodline.10  多路径开局：按 civic 差异化首都
+# 触发：sl_bloodline.1 链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = sl_bloodline.10
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        # 辉夙派开局：文明殿 + 凝聚力/社会研究
+        if = {
+            limit = { has_civic = civic_huisu }
+            capital_scope = {
+                if = {
+                    limit = { has_building = building_commercial_zone }
+                    remove_building = building_commercial_zone
+                    add_building = building_sl_huisu_hall
+                }
+            }
+            add_resource = { unity = 200 society_research = 100 }
+        }
+        # 荧惑派开局：研究所 + 物理/工程 + 额外科学船
+        else_if = {
+            limit = { has_civic = civic_martis }
+            capital_scope = {
+                if = {
+                    limit = { has_building = building_research_lab_1 }
+                    remove_building = building_research_lab_1
+                    add_building = building_sl_martis_institute
+                }
+            }
+            add_resource = { physics_research = 200 engineering_research = 200 }
+            create_fleet = {
+                name = "NAME_SL_MARTIS_SURVEY"
+                effect = {
+                    set_owner = root
+                    create_ship = {
+                        name = "NAME_SL_MARTIS_EXPLORER"
+                        design = "NAME_Scienceship"
+                        graphical_culture = root
+                    }
+                    set_fleet_stance = evasive
+                    set_location = root.capital_scope.solar_system
+                }
+            }
+        }
+        # 鸾羽派开局：军事堡垒 + 合金 + 3 护卫舰
+        else_if = {
+            limit = { has_civic = civic_phoenix_plume }
+            capital_scope = {
+                if = {
+                    limit = { has_building = building_bureaucratic_1 }
+                    remove_building = building_bureaucratic_1
+                    add_building = building_sl_phoenix_fortress
+                }
+            }
+            add_resource = { alloys = 200 }
+            create_fleet = {
+                name = "NAME_SL_PHOENIX_VANGUARD"
+                effect = {
+                    set_owner = root
+                    while = {
+                        count = 3
+                        create_ship = {
+                            name = random
+                            design = "NAME_Corvette"
+                            graphical_culture = root
+                        }
+                    }
+                    set_location = root.capital_scope.solar_system
+                }
+            }
+        }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bloodline.110  领袖死亡检测
+# 触发：on_leader_death，FROM = 死亡的领袖
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = sl_bloodline.110
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_origin = origin_homing
+        FROM = { has_leader_flag = sl_stellarite_speaker }
+        has_country_flag = sl_stellarite_speaker_alive
+        NOT = { has_country_flag = sl_bloodline_ascended }
+    }
+    immediate = {
+        country_event = { id = sl_bloodline.500 days = 3 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bloodline.500  星语者陨落——叛乱与继任
+# 触发：sl_bloodline.110 链式触发
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = sl_bloodline.500
+    title = "sl_bloodline.500.title"
+    desc = "sl_bloodline.500.desc"
+    picture = GFX_evt_collapsing_roof
+    show_sound = event_open_revolt
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = sl_stellarite_speaker_alive
+        NOT = { has_country_flag = sl_bloodline_ascended }
+    }
+    immediate = {
+        remove_country_flag = sl_stellarite_speaker_alive
+        set_country_flag = sl_stellarite_speaker_dead
+        remove_modifier = sl_bloodline_full
+        add_modifier = { modifier = sl_bloodline_fallen days = -1 }
+        add_modifier = { modifier = sl_rebellion_aftermath days = 3600 }
+    }
+    # 选项 1：委任辉夙议长
+    option = {
+        name = "sl_bloodline.500.opt.huisu"
+        custom_tooltip = "sl_bloodline.500.opt.huisu.tt"
+        trigger = {
+            any_owned_leader = { has_councilor_type = councilor_huisu }
+        }
+        hidden_effect = {
+            random_owned_leader = {
+                limit = { has_councilor_type = councilor_huisu }
+                save_event_target_as = sl_new_ruler
+            }
+            if = {
+                limit = { exists = event_target:sl_new_ruler }
+                set_ruler = event_target:sl_new_ruler
+            }
+        }
+        add_monthly_resource_mult = { resource = unity value = 3 min = 300 }
+    }
+    # 选项 2：委任荧惑议长
+    option = {
+        name = "sl_bloodline.500.opt.martis"
+        custom_tooltip = "sl_bloodline.500.opt.martis.tt"
+        trigger = {
+            any_owned_leader = { has_councilor_type = councilor_martis }
+        }
+        hidden_effect = {
+            random_owned_leader = {
+                limit = { has_councilor_type = councilor_martis }
+                save_event_target_as = sl_new_ruler
+            }
+            if = {
+                limit = { exists = event_target:sl_new_ruler }
+                set_ruler = event_target:sl_new_ruler
+            }
+        }
+        add_monthly_resource_mult = { resource = physics_research value = 3 min = 300 }
+    }
+    # 选项 3：委任鸾羽议长
+    option = {
+        name = "sl_bloodline.500.opt.phoenix"
+        custom_tooltip = "sl_bloodline.500.opt.phoenix.tt"
+        trigger = {
+            any_owned_leader = { has_councilor_type = councilor_phoenix_plume }
+        }
+        hidden_effect = {
+            random_owned_leader = {
+                limit = { has_councilor_type = councilor_phoenix_plume }
+                save_event_target_as = sl_new_ruler
+            }
+            if = {
+                limit = { exists = event_target:sl_new_ruler }
+                set_ruler = event_target:sl_new_ruler
+            }
+        }
+        add_monthly_resource_mult = { resource = alloys value = 3 min = 300 }
+    }
+}
