@@ -99,3 +99,37 @@
   sl_bloodline.500.opt.martis.tt: "The Martis Director becomes ruler. §G+Physics Research§!"
   sl_bloodline.500.opt.phoenix: "Appoint the Luanyu Commander"
   sl_bloodline.500.opt.phoenix.tt: "The Luanyu Commander becomes ruler. §G+Alloys§!"
+
+  # ===== SL_BIGE 传奇科学家 =====
+  sl_bige_catch.10.t: "Bige"
+  sl_bige_catch.10.d: "Before you stands your daughter — or rather, what she has become. Bige, the girl who once tugged at your sleeve during the Mars reconstruction, now radiates the quiet confidence of a legendary scientist. 'Father... I've been waiting for this moment.'"
+  sl_bige_catch.hire.tt: "Add Bige to your council."
+  sl_bige_catch.dismiss.tt: "Send Bige away."
+  sl_bige_catch.intro.r: "Father, the stars... they sing to me now. Just like Mother described in her journals."
+  sl_bige_catch.join.r: "I've waited so long to fight beside you again."
+  sl_bige_catch.criticize.r: "Father, violence is never the answer. Though I understand why you might think so."
+  sl_bige_catch.praise.r: "The sword is your heritage. I will honor that, Father."
+
+  sl_bige_chat.10.t: "Bige"
+  sl_bige_chat.d.1: "Father... it's been too long."
+  sl_bige_chat.d.2: "I still remember the smell of Olympus Mons dust in your jacket."
+  sl_bige_chat.d.3: "Sometimes I dream of Sol. The blue sky... it's fading from memory."
+  sl_bige_chat.d.4: "About Mother... I've been sensing her presence in the stellar winds."
+  sl_bige_chat.d.5: "The Phoenix Plume fleet whispers of rebellion. I worry for you, Father."
+  sl_bige_chat.d.6: "There's something beneath Europa's ice. I can feel it, Father."
+  sl_bige_chat.d.7: "Father, I can hear the stars now. They're not just light — they're voices."
+
+  sl_bige_chat.thoughts.d: "What weighs on your mind, Father?"
+  sl_bige_chat.thoughts: "Thoughts"
+  sl_bige_chat.thoughts.player.d.1: "You're carrying something heavy, Father. I can see it in your eyes."
+  sl_bige_chat.thoughts.player.d.2: "Your burden is mine to share. That's what family means."
+  sl_bige_chat.thoughts.player: "I have something to share."
+
+  sl_bige_cmt.survey: "Another world catalogued. We're one step closer to understanding our origins."
+  sl_bige_cmt.survey.2: "The scanner pings. Each planet tells a story, Father."
+  sl_bige_cmt.anomaly: "An anomaly! Father, this signal... it feels like Mother's research."
+  sl_bige_cmt.anomaly.2: "The readings are off the charts. I've never seen energy signatures like this."
+  sl_bige_cmt.scanner: "Another sector scanned. The galaxy is slowly giving up its secrets."
+  sl_bige_cmt.scanner.2: "Father, the data is compiling. There's a pattern emerging."
+
+  sl_bige_opinion.title: "Bige's Trust"
