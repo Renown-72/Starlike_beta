@@ -28,6 +28,9 @@ country_event = {
 
         # ── 多路径开局配置 ──
         country_event = { id = sl_bloodline.10 }
+
+        # ── Bige 获得 ──
+        country_event = { id = sl_bige_catch.10 }
     }
 }
 
