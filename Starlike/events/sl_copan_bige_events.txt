@@ -1,0 +1,340 @@
+# 好感度脚本化效果
+sl_change_bige_opi = {
+    change_variable = { which = sl_bige_opi add = $ADD$ }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bige_catch.10  获得领袖事件
+# 触发：fire_only_once
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+namespace = sl_bige_catch
+
+country_event = {
+    id = sl_bige_catch.10
+    title = sl_bige_catch.10.t
+    desc = sl_bige_catch.10.d
+    show_sound = sl_bige_greetings
+    is_triggered_only = yes
+    fire_only_once = yes
+    auto_opens = yes
+    force_open = yes
+
+    trigger = { }
+
+    immediate = {
+        create_country = {
+            name = UNKNOWN
+            type = global_event
+            auto_delete = yes
+            flag = {
+                icon = { category = "special" file = "unknown.dds" }
+                background = { category = "backgrounds" file = "00_solid.dds" }
+                colors = { "red" "red" "null" "null" }
+            }
+            effect = { save_event_target_as = sl_bige_country }
+        }
+        event_target:sl_bige_country = {
+            create_species = {
+                use_owner = yes
+                portrait = sl_copan_bige
+                effect = { save_event_target_as = sl_bige_species }
+            }
+            create_leader = {
+                class = scientist
+                name = "Bige"
+                tier = leader_tier_legendary
+                species = event_target:sl_bige_species
+                skill = 8
+                gender = female
+                immortal = yes
+                skip_background_generation = yes
+                background_ethic = ethic_spiritualist
+                hide_age = yes
+                randomize_traits = no
+                traits = {
+                    trait = trait_scientist_stellarite_touched
+                    trait = subclass_scientist_scholar
+                    trait = leader_trait_expertise_biology
+                    trait = leader_trait_narrow_minded
+                }
+                effect = {
+                    add_trait = { consume_selection = yes show_message = no trait = subclass_scientist_scholar }
+                    add_trait = { consume_selection = yes show_message = no trait = leader_trait_expertise_biology }
+                    add_trait = { consume_selection = yes show_message = no trait = leader_trait_narrow_minded }
+                    set_leader_flag = sl_bige
+                    set_leader_flag = sl_bige_speaker
+                    set_leader_flag = is_in_recruit_window
+                    set_leader_flag = legendary_leader
+                    set_leader_flag = immune_to_negative_traits
+                    set_variable = { which = sl_bige_opi value = 0 }
+                    save_global_event_target_as = sl_bige
+                    set_owner = Root
+                    exile_leader_as = sl_bige
+                }
+            }
+        }
+    }
+
+    event_window_type = leader_recruit
+    picture = GFX_leader_recruitment_bg_ms_maid
+    picture_event_data = { portrait = event_target:sl_bige room = pre_ftl_modern_room }
+
+    option = {
+        name = DISMISS
+        tag = dismiss_leader
+        custom_tooltip = sl_bige_catch.dismiss.tt
+        default_hide_option = yes
+        hidden_effect = {
+            event_target:sl_bige = { kill_leader = { show_notification = no } }
+        }
+    }
+
+    option = {
+        name = HIRE
+        tag = hire_leader
+        custom_tooltip = sl_bige_catch.hire.tt
+        hidden_effect = {
+            clone_leader = { target = event_target:sl_bige skip_background_generation = yes }
+            last_created_leader = {
+                copy_flags_and_variables_from = event_target:sl_bige
+                remove_leader_flag = is_in_recruit_window
+                save_global_event_target_as = sl_bige
+            }
+            create_message = {
+                type = MESSAGE_RECRUITED_LEADER
+                localization = MESSAGE_RECRUITED_LEADER_DESC
+                days = 30
+                target = event_target:sl_bige
+                variable = { type = name localization = LEADER scope = event_target:sl_bige }
+                variable = { key = "border" value = "GFX_border_legendary" }
+            }
+        }
+    }
+
+    option = {
+        name = sl_bige_catch.intro
+        is_dialog_only = yes
+        response_text = sl_bige_catch.intro.r
+    }
+
+    option = {
+        name = sl_bige_catch.join
+        is_dialog_only = yes
+        response_text = sl_bige_catch.join.r
+    }
+
+    option = {
+        name = sl_bige_catch.criticize
+        is_dialog_only = yes
+        trigger = { OR = { is_xenophile = yes is_pacifist = yes } }
+        response_text = sl_bige_catch.criticize.r
+    }
+
+    option = {
+        name = sl_bige_catch.praise
+        is_dialog_only = yes
+        trigger = { OR = { is_xenophobe = yes is_militarist = yes } }
+        response_text = sl_bige_catch.praise.r
+    }
+
+    after = { }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bige_chat.10  对话主界面
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+namespace = sl_bige_chat
+
+country_event = {
+    id = sl_bige_chat.10
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = { portrait = event_target:sl_bige }
+    show_sound = sl_bige_greetings
+
+    title = sl_bige_chat.10.t
+    diplomatic_title = sl_bige_opinion.title
+
+    desc = {
+        text = sl_bige_chat.d.1
+    }
+    desc = {
+        text = sl_bige_chat.d.2
+    }
+    desc = {
+        text = sl_bige_chat.d.3
+    }
+    desc = {
+        text = sl_bige_chat.d.4
+        trigger = {
+            event_target:sl_bige = { check_variable = { which = sl_bige_opi value >= 20 } }
+        }
+    }
+    desc = {
+        text = sl_bige_chat.d.5
+        trigger = {
+            event_target:sl_bige = { check_variable = { which = sl_bige_opi value >= 40 } }
+        }
+    }
+    desc = {
+        text = sl_bige_chat.d.6
+        trigger = {
+            event_target:sl_bige = { check_variable = { which = sl_bige_opi value >= 60 } }
+        }
+    }
+    desc = {
+        text = sl_bige_chat.d.7
+        trigger = {
+            event_target:sl_bige = { check_variable = { which = sl_bige_opi value >= 80 } }
+        }
+    }
+
+    trigger = {
+        exists = event_target:sl_bige
+        NOT = { has_country_flag = sl_bige_chat_engaged }
+    }
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = sl_bige_chat_engaged
+    }
+
+    option = {
+        name = sl_bige_chat.thoughts
+        hidden_effect = { country_event = { id = sl_bige_chat.100 } }
+    }
+
+    option = {
+        name = LEAVE
+        default_hide_option = yes
+    }
+
+    after = {
+        remove_country_flag = sl_bige_chat_engaged
+        set_timed_country_flag = { flag = sl_bige_chat_sound_cd days = 1 }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bige_chat.100  想法子对话
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+country_event = {
+    id = sl_bige_chat.100
+    is_triggered_only = yes
+    base = sl_bige_chat.10
+    trigger = { exists = event_target:sl_bige }
+
+    desc_clear = yes
+
+    desc = {
+        text = sl_bige_chat.thoughts.d
+        trigger = {
+            event_target:sl_bige = { check_variable = { which = sl_bige_opi value < 20 } }
+        }
+    }
+    desc = {
+        text = sl_bige_chat.thoughts.player.d.1
+        trigger = {
+            event_target:sl_bige = {
+                check_variable = { which = sl_bige_opi value >= 20 }
+                check_variable = { which = sl_bige_opi value < 40 }
+            }
+        }
+    }
+    desc = {
+        text = sl_bige_chat.thoughts.player.d.2
+        trigger = {
+            event_target:sl_bige = { check_variable = { which = sl_bige_opi value >= 40 } }
+        }
+    }
+
+    option_clear = yes
+
+    option = {
+        name = sl_bige_chat.thoughts.player
+        icon = { icon = GFX_leader_trait_narrow_minded }
+        is_dialog_only = yes
+        response_text = sl_bige_chat.thoughts.player.d.2
+        hidden_effect = {
+            event_target:sl_bige = { change_variable = { which = sl_bige_opi add = 2 } }
+        }
+    }
+
+    option = {
+        name = BACK
+        default_hide_option = yes
+        hidden_effect = { country_event = { id = sl_bige_chat.10 } }
+    }
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# sl_bige_cmt.*  锐评事件（3个）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+namespace = sl_bige_cmt
+
+# sl_bige_cmt.10 — 调查星球锐评
+country_event = {
+    id = sl_bige_cmt.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        any_owned_leader = { is_same_value = event_target:sl_bige }
+    }
+
+    immediate = {
+        event_target:sl_bige = {
+            reroll_random = yes
+            random_list = {
+                6 = { }
+                1 = { sl_change_bige_opi = { add = 1 } }
+                1 = { sl_change_bige_opi = { add = 2 } }
+            }
+        }
+    }
+}
+
+# sl_bige_cmt.20 — 发现异常锐评
+country_event = {
+    id = sl_bige_cmt.20
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        any_owned_leader = { is_same_value = event_target:sl_bige }
+        from = { exists = yes is_anomaly = yes }
+    }
+
+    immediate = {
+        event_target:sl_bige = {
+            change_variable = { which = sl_bige_opi add = 2 }
+        }
+    }
+}
+
+# sl_bige_cmt.30 — 扫描完成锐评
+country_event = {
+    id = sl_bige_cmt.30
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        fromfrom = {
+            exists = owner
+            owner = { any_owned_leader = { is_same_value = event_target:sl_bige } }
+            is_ship_class = shipclass_science_vessel
+        }
+    }
+
+    immediate = {
+        event_target:sl_bige = {
+            reroll_random = yes
+            random_list = {
+                6 = { }
+                1 = { change_variable = { which = sl_bige_opi add = 1 } }
+                1 = { change_variable = { which = sl_bige_opi add = 2 } }
+            }
+        }
+    }
+}
