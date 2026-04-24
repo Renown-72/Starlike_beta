@@ -1,6 +1,5 @@
 on_game_start_country = {
     events = {
-        event_homing.1
         sl_bloodline.1
     }
 }

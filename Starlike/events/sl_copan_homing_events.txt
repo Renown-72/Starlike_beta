@@ -1,40 +1,6 @@
 namespace = event_homing
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# event_homing.1  开局：自动殖民 Europa
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-country_event = {
-    id = event_homing.1
-    hide_window = yes
-    is_triggered_only = yes
-    trigger = {
-        is_ai = no
-    }
-    immediate = {
-        # 开始地球遗产事件链追踪
-        begin_event_chain = {
-            event_chain = sl_chain_earth_legacy
-        }
-        sl_progress_earth_chain = yes
-        # 在 Homing_Sol 恒星系中，找到 Europa（月球），自动殖民
-        every_system = {
-            limit = { has_star_flag = Homing_Sol }
-            every_system_planet = {
-                limit = {
-                    is_colony = no
-                    is_colonizable = yes
-                    has_planet_flag = Homing_Europa
-                }
-                set_owner = root
-                create_colony = {
-                    owner = root
-                }
-            }
-        }
-    }
-}
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # event_homing.2  探索：星尘化地球
 # 触发：科学船完成 anomaly_homing_earth_stardust 异常研究
 # 作用域：this = 科学船, owner = 国家
