@@ -1,0 +1,9 @@
+entity = { #
+    name = "sl_copan_bige_entity"
+    pdxmesh = "sl_copan_bige_mesh"
+    default_state = "idle"
+    state = { name = "idle"       animation = "idle1"      animation_blend_time = 0 chance = 4 looping = no next_state = idle
+    }
+    scale = 3.0
+}
+animation = { name = "sl_copan_bige_idle_1" file = "sl_copan_bige_idle_1.anim"

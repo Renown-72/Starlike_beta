@@ -1,0 +1,12 @@
+portraits = {
+    sl_copan_bige = {
+        entity = sl_copan_bige_entity
+        clothes_selector = "no_texture"
+        attachment_selector = "no_texture"
+        greeting_sound = "sl_bige_greetings"
+        character_textures = {
+            "gfx/models/portraits/sl_copan/sl_copan_bige/sl_copan_bige_tex.dds"
+        }
+        custom_close_up_scale = 1.0
+    }
+}

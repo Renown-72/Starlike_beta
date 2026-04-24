@@ -1,0 +1,9 @@
+objectTypes = {
+    pdxmesh = {
+        name = "sl_copan_bige_mesh"
+        file = "gfx/models/portraits/sl_copan/sl_copan_bige/sl_copan_bige_mesh.mesh"
+        scale = 1
+        animation = { id = "idle1"	type = "sl_copan_bige_idle_1"
+        }
+    }
+}

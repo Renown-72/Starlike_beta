@@ -1,0 +1,6 @@
+sl_copan_paragons = {
+    species_class = HUM
+    non_randomized_portraits = {
+        sl_copan_bige
+    }
+}
