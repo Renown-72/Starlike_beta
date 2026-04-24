@@ -65,7 +65,7 @@
 | 42 | `Starlike/localisation/l_english/sl_l_english_factions.yml` | `Starlike/localisation/l_english/sl_copan_l_english_factions.yml` |
 | 43 | `Starlike/localisation/l_simp_chinese/sl_l_simp_chinese_factions.yml` | `Starlike/localisation/l_simp_chinese/sl_copan_l_simp_chinese_factions.yml` |
 | 44 | `Starlike/localisation/l_english/sl_name_lists_copan_l_english.yml` | `Starlike/localisation/l_english/sl_copan_name_lists_l_english.yml` |
-| 45 | `Starlike/localisation/l_simp_chinese/sl_name_lists_copan_l_simp_chinese.yml` | `Starlike/localisation/l_simp_chinese/sl_copan_name_lists_l_simp_chinese.yml` |
+| 45 | `Starlike/localisation/l_simp_chinese/sl_name_lists_copan_l_simp_chinese.yml` | `Starlike/localisation/l_simp_chinese/sl_copan_l_simp_chinese_name_lists.yml` |
 
 ---
 
@@ -168,7 +168,7 @@ git mv Starlike/localisation/l_simp_chinese/sl_l_simp_chinese_economy.yml Starli
 git mv Starlike/localisation/l_english/sl_l_english_factions.yml Starlike/localisation/l_english/sl_copan_l_english_factions.yml
 git mv Starlike/localisation/l_simp_chinese/sl_l_simp_chinese_factions.yml Starlike/localisation/l_simp_chinese/sl_copan_l_simp_chinese_factions.yml
 git mv Starlike/localisation/l_english/sl_name_lists_copan_l_english.yml Starlike/localisation/l_english/sl_copan_name_lists_l_english.yml
-git mv Starlike/localisation/l_simp_chinese/sl_name_lists_copan_l_simp_chinese.yml Starlike/localisation/l_simp_chinese/sl_copan_name_lists_l_simp_chinese.yml
+git mv Starlike/localisation/l_simp_chinese/sl_name_lists_copan_l_simp_chinese.yml Starlike/localisation/l_simp_chinese/sl_copan_l_simp_chinese_name_lists.yml
 ```
 
 - [ ] **Step 2: 验证本地化 rename 结果**

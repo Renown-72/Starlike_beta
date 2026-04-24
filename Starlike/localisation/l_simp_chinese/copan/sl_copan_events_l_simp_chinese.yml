@@ -101,8 +101,9 @@
   sl_bloodline.500.opt.phoenix.tt: "鸾羽总长成为统治者。§G+合金§!"
 
   # ===== SL_BIGE 传奇科学家 =====
+  sl_copan_bige_name: "大E"
   sl_bige_catch.10.t: "大E"
-  sl_bige_catch.10.d: "站在你面前的是你的女儿——或者说，她如今的样子。大E，那个曾在火星重建时期扯着你衣角的小女孩，如今散发出传奇科学家的沉稳自信。"爸爸……这一刻我等了很久。""
+  sl_bige_catch.10.d: "站在你面前的是科学官派系——荧惑派的领袖，她负责攻坚了"爸爸……这一刻我等了很久。""
   sl_bige_catch.hire.tt: "让大E加入你的内阁。"
   sl_bige_catch.dismiss.tt: "让大E离开。"
   sl_bige_catch.intro.r: "爸爸，星星们……它们现在在对我唱歌了。就像妈妈日记里描述的那样。"

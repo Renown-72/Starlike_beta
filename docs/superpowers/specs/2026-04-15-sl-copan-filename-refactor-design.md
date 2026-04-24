@@ -65,7 +65,7 @@
 | `localisation/l_english/sl_l_english_factions.yml` | `localisation/l_english/sl_copan_l_english_factions.yml` |
 | `localisation/l_simp_chinese/sl_l_simp_chinese_factions.yml` | `localisation/l_simp_chinese/sl_copan_l_simp_chinese_factions.yml` |
 | `localisation/l_english/sl_name_lists_copan_l_english.yml` | `localisation/l_english/sl_copan_name_lists_l_english.yml` |
-| `localisation/l_simp_chinese/sl_name_lists_copan_l_simp_chinese.yml` | `localisation/l_simp_chinese/sl_copan_name_lists_l_simp_chinese.yml` |
+| `localisation/l_simp_chinese/sl_name_lists_copan_l_simp_chinese.yml` | `localisation/l_simp_chinese/sl_copan_l_simp_chinese_name_lists.yml` |
 
 ### 3. 保留原样的文件
 
