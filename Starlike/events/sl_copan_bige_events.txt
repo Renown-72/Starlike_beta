@@ -49,7 +49,7 @@ country_event = {
                 name = "sl_copan_bige_specie"
                 class = HUM
                 portrait = sl_copan_bige
-                namelist = "MS_MAID_1"
+                namelist = "SL_COPAN"
                 traits = { trait = trait_adaptive trait = trait_enduring trait = trait_weak trait = trait_hive_mind }
                 effect = { save_event_target_as = sl_copan_species }
             }

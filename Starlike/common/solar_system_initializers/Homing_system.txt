@@ -30,6 +30,7 @@ homing_earth = {
                 type = "anomaly_exoplanet_01_ambient_object"
             }
         }
+
     }
 
     planet = {
@@ -102,7 +103,6 @@ homing_earth = {
             orbit_distance = 2.5
             orbit_angle = 190
             has_ring = no
-            flags = { Homing_Europa }
         }
         moon = {
             name = "NAME_Ganymede"

@@ -1,8 +1,7 @@
 # ============================================
-# 偌星·汉和物种专属特质
+# 物种专属特质
 # ============================================
 
-# 星尘适应: 火星遗民经数千年太空环境适应
 trait_stellarite_adapted = {
     cost = 2
     initial = yes
@@ -22,6 +21,7 @@ trait_stellarite_adapted = {
 # 寻根本能: 对母星/古代遗迹有强烈感知
 trait_stellarite_touched = {
     cost = 1
+    
     initial = yes
     randomized = no
     allowed_archetypes = { BIOLOGICAL }
