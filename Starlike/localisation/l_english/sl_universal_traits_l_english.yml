@@ -1,0 +1,19 @@
+﻿l_english:
+ # ===== Universal Species Traits v1.0 =====
+ # 8 traits: 4 positive + 3 negative + 1 neutral
+ trait_sl_stellar_nomad: "Stellar Nomad"
+ trait_sl_stellar_nomad_desc: "Accustomed to interstellar migration and frontier expansion, this species rapidly establishes colonies and starbase infrastructure, but their population growth lags — the concept of homeland has long faded."
+ trait_sl_relic_keeper: "Relic Keeper"
+ trait_sl_relic_keeper_desc: "Holding deep reverence for ancient civilizations, this species excels at excavating and preserving relics — often identifying lost-civilization keys from mere dust."
+ trait_sl_void_adapted: "Void Adapted"
+ trait_sl_void_adapted_desc: "Generations of orbital existence have made this species highly tolerant of varied planetary environments and proficient at low-overhead ship maintenance — but planetary-scale development is no longer their strength."
+ trait_sl_cultural_exchange: "Cultural Exchange"
+ trait_sl_cultural_exchange_desc: "An open and pluralistic culture grants this species greater diplomatic weight and readiness to relocate across the stars; internal beliefs and schools, however, become increasingly fragmented under foreign influence."
+ trait_sl_homeworld_bound: "Homeworld Bound"
+ trait_sl_homeworld_bound_desc: "This species harbors deep emotional ties to its homeworld and settlements, making colonization and relocation arduous; yet on familiar soil they show exceptional industry, and their capital society stands notably stable."
+ trait_sl_tradition_bound: "Tradition Bound"
+ trait_sl_tradition_bound_desc: "Steadfast in inherited values and rituals, this species absorbs traditional wisdom faster than most — yet hesitates and resists when faced with cutting-edge science and unknown frontiers."
+ trait_sl_resource_dependent: "Resource Dependent"
+ trait_sl_resource_dependent_desc: "Cultural genes inherited from an industrial age make this species adept at mineral extraction, but their grasp on energy production and precision technology lags behind."
+ trait_sl_dual_nature: "Dual Nature"
+ trait_sl_dual_nature_desc: "A species woven of contradiction — at once optimistic and turbulent. The very tension drives their leaders to grow swiftly amid challenge, at the cost of subtle social unease."
