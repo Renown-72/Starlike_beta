@@ -1,0 +1,6 @@
+# ============================================
+# 通用物种特质（v1.0）
+# 设计稿: docs/superpowers/specs/2026-05-02-universal-species-traits-design.md
+# 计划:   docs/superpowers/plans/2026-05-02-universal-species-traits.md
+# 加载顺序: 02_ 前缀，在 01_sl_species_traits.txt（专属特质）之后加载
+# ============================================
