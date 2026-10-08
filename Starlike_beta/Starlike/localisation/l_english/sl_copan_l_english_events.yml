@@ -101,6 +101,7 @@
   sl_bloodline.500.opt.phoenix.tt: "The Luanyu Commander becomes ruler. §G+Alloys§!"
 
   # ===== SL_BIGE 传奇科学家 =====
+  sl_copan_bige_name: "Bige"
   sl_bige_catch.10.t: "Bige"
   sl_bige_catch.10.d: "Before you stands your daughter — or rather, what she has become. Bige, the girl who once tugged at your sleeve during the Mars reconstruction, now radiates the quiet confidence of a legendary scientist. 'Father... I've been waiting for this moment.'"
   sl_bige_catch.hire.tt: "Add Bige to your council."

@@ -1,0 +1,135 @@
+﻿# ============================================
+# 归巢计划名称表 — COPAN 汉和物种专用
+# ============================================
+SL_COPAN = {
+    category = sl_copan
+
+    ship_names = {
+        generic = {
+            SL_SHIP_generic_01 SL_SHIP_generic_02 SL_SHIP_generic_03 SL_SHIP_generic_04 SL_SHIP_generic_05
+            SL_SHIP_generic_06 SL_SHIP_generic_07 SL_SHIP_generic_08 SL_SHIP_generic_09 SL_SHIP_generic_10
+            SL_SHIP_generic_11 SL_SHIP_generic_12 SL_SHIP_generic_13 SL_SHIP_generic_14 SL_SHIP_generic_15
+            SL_SHIP_generic_16 SL_SHIP_generic_17 SL_SHIP_generic_18 SL_SHIP_generic_19 SL_SHIP_generic_20
+            SL_SHIP_generic_21 SL_SHIP_generic_22 SL_SHIP_generic_23 SL_SHIP_generic_24 SL_SHIP_generic_25
+            SL_SHIP_generic_26 SL_SHIP_generic_27 SL_SHIP_generic_28 SL_SHIP_generic_29 SL_SHIP_generic_30
+            SL_SHIP_generic_31 SL_SHIP_generic_32 SL_SHIP_generic_33 SL_SHIP_generic_34 SL_SHIP_generic_35
+            SL_SHIP_generic_36 SL_SHIP_generic_37 SL_SHIP_generic_38 SL_SHIP_generic_39 SL_SHIP_generic_40
+            SL_SHIP_generic_41 SL_SHIP_generic_42 SL_SHIP_generic_43 SL_SHIP_generic_44 SL_SHIP_generic_45
+            SL_SHIP_generic_46 SL_SHIP_generic_47 SL_SHIP_generic_48 SL_SHIP_generic_49 SL_SHIP_generic_50
+        }
+        battleship = {
+            SL_SHIP_battleship_01 SL_SHIP_battleship_02 SL_SHIP_battleship_03 SL_SHIP_battleship_04 SL_SHIP_battleship_05
+            SL_SHIP_battleship_06 SL_SHIP_battleship_07 SL_SHIP_battleship_08 SL_SHIP_battleship_09 SL_SHIP_battleship_10
+            SL_SHIP_battleship_11 SL_SHIP_battleship_12 SL_SHIP_battleship_13 SL_SHIP_battleship_14 SL_SHIP_battleship_15
+            SL_SHIP_battleship_16 SL_SHIP_battleship_17 SL_SHIP_battleship_18 SL_SHIP_battleship_19 SL_SHIP_battleship_20
+            SL_SHIP_battleship_21 SL_SHIP_battleship_22 SL_SHIP_battleship_23 SL_SHIP_battleship_24 SL_SHIP_battleship_25
+            SL_SHIP_battleship_26 SL_SHIP_battleship_27 SL_SHIP_battleship_28 SL_SHIP_battleship_29 SL_SHIP_battleship_30
+            SL_SHIP_battleship_31 SL_SHIP_battleship_32 SL_SHIP_battleship_33 SL_SHIP_battleship_34 SL_SHIP_battleship_35
+            SL_SHIP_battleship_36 SL_SHIP_battleship_37 SL_SHIP_battleship_38 SL_SHIP_battleship_39 SL_SHIP_battleship_40
+            SL_SHIP_battleship_41 SL_SHIP_battleship_42 SL_SHIP_battleship_43 SL_SHIP_battleship_44 SL_SHIP_battleship_45
+            SL_SHIP_battleship_46 SL_SHIP_battleship_47 SL_SHIP_battleship_48 SL_SHIP_battleship_49 SL_SHIP_battleship_50
+        }
+        titan = {
+            SL_SHIP_titan_01 SL_SHIP_titan_02 SL_SHIP_titan_03 SL_SHIP_titan_04 SL_SHIP_titan_05
+            SL_SHIP_titan_06 SL_SHIP_titan_07 SL_SHIP_titan_08 SL_SHIP_titan_09 SL_SHIP_titan_10
+            SL_SHIP_titan_11 SL_SHIP_titan_12 SL_SHIP_titan_13 SL_SHIP_titan_14 SL_SHIP_titan_15
+            SL_SHIP_titan_16 SL_SHIP_titan_17 SL_SHIP_titan_18 SL_SHIP_titan_19 SL_SHIP_titan_20
+        }
+        juggernaut = {
+            SL_SHIP_juggernaut_01 SL_SHIP_juggernaut_02 SL_SHIP_juggernaut_03 SL_SHIP_juggernaut_04 SL_SHIP_juggernaut_05
+        }
+        colossus = {
+            SL_SHIP_colossus_01 SL_SHIP_colossus_02 SL_SHIP_colossus_03 SL_SHIP_colossus_04 SL_SHIP_colossus_05
+            SL_SHIP_colossus_06 SL_SHIP_colossus_07 SL_SHIP_colossus_08 SL_SHIP_colossus_09 SL_SHIP_colossus_10
+        }
+    }
+
+    fleet_names = {
+        random_names = {
+            SL_FLEET_01 SL_FLEET_02 SL_FLEET_03 SL_FLEET_04 SL_FLEET_05
+            SL_FLEET_06 SL_FLEET_07 SL_FLEET_08 SL_FLEET_09 SL_FLEET_10
+            SL_FLEET_11 SL_FLEET_12 SL_FLEET_13 SL_FLEET_14 SL_FLEET_15
+            SL_FLEET_16 SL_FLEET_17 SL_FLEET_18 SL_FLEET_19 SL_FLEET_20
+            SL_FLEET_21 SL_FLEET_22 SL_FLEET_23 SL_FLEET_24 SL_FLEET_25
+            SL_FLEET_26 SL_FLEET_27 SL_FLEET_28 SL_FLEET_29 SL_FLEET_30
+            SL_FLEET_31 SL_FLEET_32 SL_FLEET_33 SL_FLEET_34 SL_FLEET_35
+            SL_FLEET_36 SL_FLEET_37 SL_FLEET_38 SL_FLEET_39 SL_FLEET_40
+            SL_FLEET_41 SL_FLEET_42 SL_FLEET_43 SL_FLEET_44 SL_FLEET_45
+            SL_FLEET_46 SL_FLEET_47 SL_FLEET_48 SL_FLEET_49 SL_FLEET_50
+        }
+        sequential_name = SL_FLEET_ORD
+    }
+
+    army_names = {
+        defense_army = { sequential_name = SL_COPAN_ARMY_DEFENSE_ORD }
+        assault_army = { sequential_name = SL_COPAN_ARMY_ASSAULT_ORD }
+        occupation_army = { sequential_name = SL_COPAN_ARMY_OCCUP_ORD }
+        primitive_army = { sequential_name = SL_COPAN_ARMY_PRIMITIVE_ORD }
+        industrial_army = { sequential_name = SL_COPAN_ARMY_INDUSTRIAL_ORD }
+        postatomic_army = { sequential_name = SL_COPAN_ARMY_ATOMIC_ORD }
+        clone_army = { sequential_name = SL_COPAN_ARMY_CLONE_ORD }
+        gene_warrior_army = { sequential_name = SL_COPAN_ARMY_GENE_ORD }
+        xenomorph_army = { sequential_name = SL_COPAN_ARMY_XENO_ORD }
+        robotic_army = { sequential_name = SL_COPAN_ARMY_ROBOTIC_ORD }
+        robotic_defense_army = { sequential_name = SL_COPAN_ARMY_ROBOTIC_ORD }
+        robotic_occupation_army = { sequential_name = SL_COPAN_ARMY_ROBOTIC_ORD }
+        psionic_army = { sequential_name = SL_COPAN_ARMY_PSI_ORD }
+        slave_army = { sequential_name = SL_COPAN_ARMY_SLAVE_ORD }
+        undead_army = { sequential_name = SL_COPAN_ARMY_UNDEAD_ORD }
+        machine_defense = { sequential_name = SL_COPAN_ARMY_MACHINE_ORD }
+        machine_assault_1 = { sequential_name = SL_COPAN_ARMY_ASSAULT_ORD }
+        machine_assault_2 = { sequential_name = SL_COPAN_ARMY_ASSAULT_ORD }
+        machine_assault_3 = { sequential_name = SL_COPAN_ARMY_ASSAULT_ORD }
+    }
+
+    planet_names = {
+        generic = {
+            names = {
+                SL_PLANET_01 SL_PLANET_02 SL_PLANET_03 SL_PLANET_04 SL_PLANET_05
+                SL_PLANET_06 SL_PLANET_07 SL_PLANET_08 SL_PLANET_09 SL_PLANET_10
+                SL_PLANET_11 SL_PLANET_12 SL_PLANET_13 SL_PLANET_14 SL_PLANET_15
+                SL_PLANET_16 SL_PLANET_17 SL_PLANET_18 SL_PLANET_19 SL_PLANET_20
+                SL_PLANET_21 SL_PLANET_22 SL_PLANET_23 SL_PLANET_24 SL_PLANET_25
+                SL_PLANET_26 SL_PLANET_27 SL_PLANET_28 SL_PLANET_29 SL_PLANET_30
+                SL_PLANET_31 SL_PLANET_32 SL_PLANET_33 SL_PLANET_34 SL_PLANET_35
+                SL_PLANET_36 SL_PLANET_37 SL_PLANET_38 SL_PLANET_39 SL_PLANET_40
+                SL_PLANET_41 SL_PLANET_42 SL_PLANET_43 SL_PLANET_44 SL_PLANET_45
+                SL_PLANET_46 SL_PLANET_47 SL_PLANET_48 SL_PLANET_49 SL_PLANET_50
+            }
+        }
+    }
+
+    character_names = {
+        default = {
+            full_names = { }
+            first_names = {
+                SL_CHR_first_01 SL_CHR_first_02 SL_CHR_first_03 SL_CHR_first_04 SL_CHR_first_05
+                SL_CHR_first_06 SL_CHR_first_07 SL_CHR_first_08 SL_CHR_first_09 SL_CHR_first_10
+                SL_CHR_first_11 SL_CHR_first_12 SL_CHR_first_13 SL_CHR_first_14 SL_CHR_first_15
+                SL_CHR_first_16 SL_CHR_first_17 SL_CHR_first_18 SL_CHR_first_19 SL_CHR_first_20
+                SL_CHR_first_21 SL_CHR_first_22 SL_CHR_first_23 SL_CHR_first_24 SL_CHR_first_25
+                SL_CHR_first_26 SL_CHR_first_27 SL_CHR_first_28 SL_CHR_first_29 SL_CHR_first_30
+                SL_CHR_first_31 SL_CHR_first_32 SL_CHR_first_33 SL_CHR_first_34 SL_CHR_first_35
+                SL_CHR_first_36 SL_CHR_first_37 SL_CHR_first_38 SL_CHR_first_39 SL_CHR_first_40
+                SL_CHR_first_41 SL_CHR_first_42 SL_CHR_first_43 SL_CHR_first_44 SL_CHR_first_45
+                SL_CHR_first_46 SL_CHR_first_47 SL_CHR_first_48 SL_CHR_first_49 SL_CHR_first_50
+            }
+            second_names = {
+                SL_CHR_second_01 SL_CHR_second_02 SL_CHR_second_03 SL_CHR_second_04 SL_CHR_second_05
+                SL_CHR_second_06 SL_CHR_second_07 SL_CHR_second_08 SL_CHR_second_09 SL_CHR_second_10
+                SL_CHR_second_11 SL_CHR_second_12 SL_CHR_second_13 SL_CHR_second_14 SL_CHR_second_15
+                SL_CHR_second_16 SL_CHR_second_17 SL_CHR_second_18 SL_CHR_second_19 SL_CHR_second_20
+                SL_CHR_second_21 SL_CHR_second_22 SL_CHR_second_23 SL_CHR_second_24 SL_CHR_second_25
+                SL_CHR_second_26 SL_CHR_second_27 SL_CHR_second_28 SL_CHR_second_29 SL_CHR_second_30
+                SL_CHR_second_31 SL_CHR_second_32 SL_CHR_second_33 SL_CHR_second_34 SL_CHR_second_35
+                SL_CHR_second_36 SL_CHR_second_37 SL_CHR_second_38 SL_CHR_second_39 SL_CHR_second_40
+                SL_CHR_second_41 SL_CHR_second_42 SL_CHR_second_43 SL_CHR_second_44 SL_CHR_second_45
+                SL_CHR_second_46 SL_CHR_second_47 SL_CHR_second_48 SL_CHR_second_49 SL_CHR_second_50
+                SL_CHR_second_51 SL_CHR_second_52 SL_CHR_second_53 SL_CHR_second_54 SL_CHR_second_55
+                SL_CHR_second_56 SL_CHR_second_57 SL_CHR_second_58 SL_CHR_second_59 SL_CHR_second_60
+                SL_CHR_second_61 SL_CHR_second_62 SL_CHR_second_63 SL_CHR_second_64 SL_CHR_second_65
+                SL_CHR_second_66 SL_CHR_second_67 SL_CHR_second_68 SL_CHR_second_69 SL_CHR_second_70
+            }
+        }
+    }
+}

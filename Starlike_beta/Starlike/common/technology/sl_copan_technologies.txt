@@ -1,28 +1,28 @@
 # ===== Starlike v0.4 — Stellarite Technology =====
 
 tech_stellarite_refining = {
-	area = society
-	category = { new_worlds }
-	tier = 2
-	cost = @tier2cost2
-	weight = 80
+    area = society
+    category = { new_worlds }
+    tier = 2
+    cost = @tier2cost2
+    weight = 80
 
-	potential = {
-		has_origin = origin_homing
-	}
+    potential = {
+        has_origin = origin_homing
+    }
 
-	weight_modifier = {
-		modifier = {
-			factor = 1.5
-			has_origin = origin_homing
-		}
-	}
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            has_origin = origin_homing
+        }
+    }
 
-	prereqfor_desc = {
-		hide_prereq_for_desc = component
-		custom = {
-			title = "TECH_UNLOCK_STELLARITE_REFINING_TITLE"
-			desc = "TECH_UNLOCK_STELLARITE_REFINING_DESC"
-		}
-	}
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_STELLARITE_REFINING_TITLE"
+            desc = "TECH_UNLOCK_STELLARITE_REFINING_DESC"
+        }
+    }
 }

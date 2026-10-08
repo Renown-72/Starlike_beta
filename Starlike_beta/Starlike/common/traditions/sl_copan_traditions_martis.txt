@@ -8,83 +8,83 @@
 
 # ── 采纳 ──
 tr_martis_adopt = {
-	modifier = {
-		science_ship_survey_speed = 0.15
-	}
+    modifier = {
+        science_ship_survey_speed = 0.15
+    }
 }
 
 # ── 完成 ──
 tr_martis_finish = {
-	modifier = {
-		ascension_perks_add = 1
-		all_technology_research_speed = 0.05
-	}
+    modifier = {
+        ascension_perks_add = 1
+        all_technology_research_speed = 0.05
+    }
 }
 
 # ── 左支：科研加速 ──
 
 # 左1: 实验重启 (slot 1, 无额外前置)
 tr_martis_experiment_restart = {
-	modifier = {
-		all_technology_research_speed = 0.10
-		num_tech_alternatives_add = 1
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    modifier = {
+        all_technology_research_speed = 0.10
+        num_tech_alternatives_add = 1
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # 左2: 数据涌流 (slot 2, 依赖左1)
 tr_martis_data_surge = {
-	possible = {
-		has_tradition = tr_martis_experiment_restart
-	}
-	modifier = {
-		all_technology_research_speed = 0.10
-		category_computing_research_speed_mult = 0.15
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    possible = {
+        has_tradition = tr_martis_experiment_restart
+    }
+    modifier = {
+        all_technology_research_speed = 0.10
+        category_computing_research_speed_mult = 0.15
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # 左3: 万物公式 (slot 3, 依赖左2)
 tr_martis_universal_formula = {
-	possible = {
-		has_tradition = tr_martis_data_surge
-	}
-	modifier = {
-		country_scientist_cap_add = 1
-		species_leader_exp_gain = 0.20
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    possible = {
+        has_tradition = tr_martis_data_surge
+    }
+    modifier = {
+        country_scientist_cap_add = 1
+        species_leader_exp_gain = 0.20
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # ── 右支：星域探索 ──
 
 # 右1: 星域探查 (slot 4, 无额外前置)
 tr_martis_stellar_survey = {
-	modifier = {
-		science_ship_survey_speed = 0.25
-		ship_anomaly_generation_chance_mult = 0.15
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    modifier = {
+        science_ship_survey_speed = 0.25
+        ship_anomaly_generation_chance_mult = 0.15
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # 右2: 异常亲和 (slot 5, 依赖右1)
 tr_martis_anomaly_affinity = {
-	possible = {
-		has_tradition = tr_martis_stellar_survey
-	}
-	modifier = {
-		ship_anomaly_research_speed_mult = 0.30
-		ship_anomaly_generation_chance_mult = 0.15
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    possible = {
+        has_tradition = tr_martis_stellar_survey
+    }
+    modifier = {
+        ship_anomaly_research_speed_mult = 0.30
+        ship_anomaly_generation_chance_mult = 0.15
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }

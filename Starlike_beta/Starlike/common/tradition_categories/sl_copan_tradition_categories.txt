@@ -3,114 +3,114 @@
 
 # ── 辉夙传统 ── 博物传承派
 tradition_huisu = {
-	desc = {
-		trigger = { is_regular_empire = yes }
-		text = tradition_huisu_desc
-	}
-	desc = {
-		trigger = { is_hive_empire = yes }
-		text = tradition_huisu_hive_desc
-	}
-	desc = {
-		trigger = { is_machine_empire = yes }
-		text = tradition_huisu_machine_desc
-	}
-	tree_template = "tree_12_11"
-	adoption_bonus = "tr_huisu_adopt"
-	finish_bonus = "tr_huisu_finish"
-	traditions = {
-		"tr_huisu_admin_rebuild"
-		"tr_huisu_cultural_unity"
-		"tr_huisu_edict_tradition"
-		"tr_huisu_heritage_arms"
-		"tr_huisu_relic_guardian"
-	}
+    desc = {
+        trigger = { is_regular_empire = yes }
+        text = tradition_huisu_desc
+    }
+    desc = {
+        trigger = { is_hive_empire = yes }
+        text = tradition_huisu_hive_desc
+    }
+    desc = {
+        trigger = { is_machine_empire = yes }
+        text = tradition_huisu_machine_desc
+    }
+    tree_template = "tree_12_11"
+    adoption_bonus = "tr_huisu_adopt"
+    finish_bonus = "tr_huisu_finish"
+    traditions = {
+        "tr_huisu_admin_rebuild"
+        "tr_huisu_cultural_unity"
+        "tr_huisu_edict_tradition"
+        "tr_huisu_heritage_arms"
+        "tr_huisu_relic_guardian"
+    }
 
-	potential = {
-		has_civic = civic_huisu
-	}
+    potential = {
+        has_civic = civic_huisu
+    }
 
-	ai_weight = {
-		base = 0
-		modifier = {
-			add = 100
-			has_civic = civic_huisu
-		}
-	}
+    ai_weight = {
+        base = 0
+        modifier = {
+            add = 100
+            has_civic = civic_huisu
+        }
+    }
 }
 
 # ── 荧惑传统 ── 荧惑科学派
 tradition_martis = {
-	desc = {
-		trigger = { is_regular_empire = yes }
-		text = tradition_martis_desc
-	}
-	desc = {
-		trigger = { is_hive_empire = yes }
-		text = tradition_martis_hive_desc
-	}
-	desc = {
-		trigger = { is_machine_empire = yes }
-		text = tradition_martis_machine_desc
-	}
-	tree_template = "tree_111_11"
-	adoption_bonus = "tr_martis_adopt"
-	finish_bonus = "tr_martis_finish"
-	traditions = {
-		"tr_martis_experiment_restart"
-		"tr_martis_data_surge"
-		"tr_martis_universal_formula"
-		"tr_martis_stellar_survey"
-		"tr_martis_anomaly_affinity"
-	}
+    desc = {
+        trigger = { is_regular_empire = yes }
+        text = tradition_martis_desc
+    }
+    desc = {
+        trigger = { is_hive_empire = yes }
+        text = tradition_martis_hive_desc
+    }
+    desc = {
+        trigger = { is_machine_empire = yes }
+        text = tradition_martis_machine_desc
+    }
+    tree_template = "tree_111_11"
+    adoption_bonus = "tr_martis_adopt"
+    finish_bonus = "tr_martis_finish"
+    traditions = {
+        "tr_martis_experiment_restart"
+        "tr_martis_data_surge"
+        "tr_martis_universal_formula"
+        "tr_martis_stellar_survey"
+        "tr_martis_anomaly_affinity"
+    }
 
-	potential = {
-		has_civic = civic_martis
-	}
+    potential = {
+        has_civic = civic_martis
+    }
 
-	ai_weight = {
-		base = 0
-		modifier = {
-			add = 100
-			has_civic = civic_martis
-		}
-	}
+    ai_weight = {
+        base = 0
+        modifier = {
+            add = 100
+            has_civic = civic_martis
+        }
+    }
 }
 
 # ── 鸾羽传统 ── 鸾羽军事派
 tradition_phoenix = {
-	desc = {
-		trigger = { is_regular_empire = yes }
-		text = tradition_phoenix_desc
-	}
-	desc = {
-		trigger = { is_hive_empire = yes }
-		text = tradition_phoenix_hive_desc
-	}
-	desc = {
-		trigger = { is_machine_empire = yes }
-		text = tradition_phoenix_machine_desc
-	}
-	tree_template = "tree_111_11"
-	adoption_bonus = "tr_phoenix_adopt"
-	finish_bonus = "tr_phoenix_finish"
-	traditions = {
-		"tr_phoenix_fleet_expansion"
-		"tr_phoenix_firepower"
-		"tr_phoenix_hawk_strategy"
-		"tr_phoenix_iron_discipline"
-		"tr_phoenix_elite_ground"
-	}
+    desc = {
+        trigger = { is_regular_empire = yes }
+        text = tradition_phoenix_desc
+    }
+    desc = {
+        trigger = { is_hive_empire = yes }
+        text = tradition_phoenix_hive_desc
+    }
+    desc = {
+        trigger = { is_machine_empire = yes }
+        text = tradition_phoenix_machine_desc
+    }
+    tree_template = "tree_111_11"
+    adoption_bonus = "tr_phoenix_adopt"
+    finish_bonus = "tr_phoenix_finish"
+    traditions = {
+        "tr_phoenix_fleet_expansion"
+        "tr_phoenix_firepower"
+        "tr_phoenix_hawk_strategy"
+        "tr_phoenix_iron_discipline"
+        "tr_phoenix_elite_ground"
+    }
 
-	potential = {
-		has_civic = civic_phoenix_plume
-	}
+    potential = {
+        has_civic = civic_phoenix_plume
+    }
 
-	ai_weight = {
-		base = 0
-		modifier = {
-			add = 100
-			has_civic = civic_phoenix_plume
-		}
-	}
+    ai_weight = {
+        base = 0
+        modifier = {
+            add = 100
+            has_civic = civic_phoenix_plume
+        }
+    }
 }

@@ -8,83 +8,83 @@
 
 # ── 采纳 ──
 tr_phoenix_adopt = {
-	modifier = {
-		country_naval_cap_mult = 0.10
-	}
+    modifier = {
+        country_naval_cap_mult = 0.10
+    }
 }
 
 # ── 完成 ──
 tr_phoenix_finish = {
-	modifier = {
-		ascension_perks_add = 1
-		country_naval_cap_mult = 0.10
-	}
+    modifier = {
+        ascension_perks_add = 1
+        country_naval_cap_mult = 0.10
+    }
 }
 
 # ── 左支：舰队扩张 ──
 
 # 左1: 舰队扩编 (slot 1, 无额外前置)
 tr_phoenix_fleet_expansion = {
-	modifier = {
-		country_naval_cap_mult = 0.15
-		command_limit_add = 10
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    modifier = {
+        country_naval_cap_mult = 0.15
+        command_limit_add = 10
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # 左2: 火力优势 (slot 2, 依赖左1)
 tr_phoenix_firepower = {
-	possible = {
-		has_tradition = tr_phoenix_fleet_expansion
-	}
-	modifier = {
-		ship_fire_rate_mult = 0.10
-		ship_weapon_damage = 0.10
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    possible = {
+        has_tradition = tr_phoenix_fleet_expansion
+    }
+    modifier = {
+        ship_fire_rate_mult = 0.10
+        ship_weapon_damage = 0.10
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # 左3: 鹰眼战略 (slot 3, 依赖左2)
 tr_phoenix_hawk_strategy = {
-	possible = {
-		has_tradition = tr_phoenix_firepower
-	}
-	modifier = {
-		ship_speed_mult = 0.15
-		ship_disengage_chance_mult = 0.20
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    possible = {
+        has_tradition = tr_phoenix_firepower
+    }
+    modifier = {
+        ship_speed_mult = 0.15
+        ship_disengage_chance_mult = 0.20
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # ── 右支：军事锤炼 ──
 
 # 右1: 铁血锤炼 (slot 4, 无额外前置)
 tr_phoenix_iron_discipline = {
-	modifier = {
-		species_leader_exp_gain = 0.25
-		army_morale = 0.15
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    modifier = {
+        species_leader_exp_gain = 0.25
+        army_morale = 0.15
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }
 
 # 右2: 精锐陆战 (slot 5, 依赖右1)
 tr_phoenix_elite_ground = {
-	possible = {
-		has_tradition = tr_phoenix_iron_discipline
-	}
-	modifier = {
-		army_damage_mult = 0.20
-		army_health = 0.15
-	}
-	ai_weight = {
-		factor = 1000
-	}
+    possible = {
+        has_tradition = tr_phoenix_iron_discipline
+    }
+    modifier = {
+        army_damage_mult = 0.20
+        army_health = 0.15
+    }
+    ai_weight = {
+        factor = 1000
+    }
 }

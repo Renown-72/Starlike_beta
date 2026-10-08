@@ -2,129 +2,129 @@
 # 参照原版 situation_volatile_motes_deficit 模板
 
 situation_stellarite_deficit = {
-	picture = GFX_evt_deficit
-	category = negative
-	fail_icon = GFX_situation_outcome_meh
-	fail_icon_frame = GFX_situation_outcome_frame_green
-	complete_icon = GFX_situation_outcome_bankrupcy
-	complete_icon_frame = GFX_situation_outcome_frame_red
+    picture = GFX_evt_deficit
+    category = negative
+    fail_icon = GFX_situation_outcome_meh
+    fail_icon_frame = GFX_situation_outcome_frame_green
+    complete_icon = GFX_situation_outcome_bankrupcy
+    complete_icon_frame = GFX_situation_outcome_frame_red
 
-	on_start = {
-		set_situation_flag = deficit_situation
-	}
-	on_abort = {
-		owner = {
-			add_resource = {
-				sr_stellarite = @bailout_strategic_base_amount
-				mult = value:bailout_scaling_factor
-			}
-		}
-	}
+    on_start = {
+        set_situation_flag = deficit_situation
+    }
+    on_abort = {
+        owner = {
+            add_resource = {
+                sr_stellarite = @bailout_strategic_base_amount
+                mult = value:bailout_scaling_factor
+            }
+        }
+    }
 
-	initial_progress = 15
-	stages = {
-		deficit_first = {
-			icon = GFX_situation_stage_1
-			icon_background = GFX_situation_stage_frame_red
-			end = 25
-			modifier = {
-				pop_happiness = -0.03
-				planet_jobs_produces_mult = -0.05
-			}
-		}
-		deficit_second = {
-			icon = GFX_situation_stage_2
-			icon_background = GFX_situation_stage_frame_red
-			end = 50
-			modifier = {
-				pop_happiness = -0.05
-				planet_jobs_produces_mult = -0.10
-			}
-		}
-		deficit_third = {
-			icon = GFX_situation_stage_3
-			icon_background = GFX_situation_stage_frame_red
-			end = 75
-			modifier = {
-				pop_happiness = -0.08
-				planet_jobs_produces_mult = -0.18
-			}
-		}
-		deficit_fourth = {
-			icon = GFX_situation_stage_4
-			icon_background = GFX_situation_stage_frame_red
-			end = 100
-			modifier = {
-				pop_happiness = -0.10
-				planet_jobs_produces_mult = -0.25
-			}
-		}
-	}
+    initial_progress = 15
+    stages = {
+        deficit_first = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_red
+            end = 25
+            modifier = {
+                pop_happiness = -0.03
+                planet_jobs_produces_mult = -0.05
+            }
+        }
+        deficit_second = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_red
+            end = 50
+            modifier = {
+                pop_happiness = -0.05
+                planet_jobs_produces_mult = -0.10
+            }
+        }
+        deficit_third = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_red
+            end = 75
+            modifier = {
+                pop_happiness = -0.08
+                planet_jobs_produces_mult = -0.18
+            }
+        }
+        deficit_fourth = {
+            icon = GFX_situation_stage_4
+            icon_background = GFX_situation_stage_frame_red
+            end = 100
+            modifier = {
+                pop_happiness = -0.10
+                planet_jobs_produces_mult = -0.25
+            }
+        }
+    }
 
-	on_progress_complete = {
-		country_defaulted_in_situation_tooltip = yes
-		hidden_effect = {
-			destroy_situation = this
-		}
-	}
-	on_fail = {
-		custom_tooltip = deficit_situation_finish_tooltip
-		hidden_effect = { destroy_situation = this }
-	}
-	monthly_progress = {
-		base = 0
-		modifier = {
-			add = value:deficit_situation_progress_value|RESOURCE|sr_stellarite|
-			desc = string_expenditures_greater_than_income_sr_stellarite
-			owner = { has_actual_deficit = { RESOURCE = sr_stellarite } }
-		}
-		modifier = {
-			subtract = 5
-			desc = string_not_in_deficit_sr_stellarite
-			owner = {
-				resource_income_compare = {
-					resource = sr_stellarite
-					value >= 0
-				}
-			}
-		}
-		modifier = {
-			subtract = 1
-			desc = string_resource_reserves_sr_stellarite
-			owner = {
-				has_negative_income_with_stockpile = { RESOURCE = sr_stellarite }
-			}
-		}
-		modifier = {
-			desc = civilian_difficulty
-			mult = 0.1
-			situation_monthly_progress > 0
-			is_difficulty = 0
-			owner = {
-				is_ai = no
-			}
-		}
-		modifier = {
-			desc = cadet_difficulty
-			mult = 0.5
-			situation_monthly_progress > 0
-			is_difficulty = 1
-			owner = {
-				is_ai = no
-			}
-		}
-	}
-	approach = {
-		name = deficit_approach_do_nothing
-		icon = GFX_situation_approach_this_is_fine
-		icon_background = GFX_situation_approach_bg_yellow
-		default = yes
-		on_select = {
-			custom_tooltip = deficit_approach_do_nothing_tooltip
-		}
-		ai_weight = {
-			base = 1
-		}
-	}
+    on_progress_complete = {
+        country_defaulted_in_situation_tooltip = yes
+        hidden_effect = {
+            destroy_situation = this
+        }
+    }
+    on_fail = {
+        custom_tooltip = deficit_situation_finish_tooltip
+        hidden_effect = { destroy_situation = this }
+    }
+    monthly_progress = {
+        base = 0
+        modifier = {
+            add = value:deficit_situation_progress_value|RESOURCE|sr_stellarite|
+            desc = string_expenditures_greater_than_income_sr_stellarite
+            owner = { has_actual_deficit = { RESOURCE = sr_stellarite } }
+        }
+        modifier = {
+            subtract = 5
+            desc = string_not_in_deficit_sr_stellarite
+            owner = {
+                resource_income_compare = {
+                    resource = sr_stellarite
+                    value >= 0
+                }
+            }
+        }
+        modifier = {
+            subtract = 1
+            desc = string_resource_reserves_sr_stellarite
+            owner = {
+                has_negative_income_with_stockpile = { RESOURCE = sr_stellarite }
+            }
+        }
+        modifier = {
+            desc = civilian_difficulty
+            mult = 0.1
+            situation_monthly_progress > 0
+            is_difficulty = 0
+            owner = {
+                is_ai = no
+            }
+        }
+        modifier = {
+            desc = cadet_difficulty
+            mult = 0.5
+            situation_monthly_progress > 0
+            is_difficulty = 1
+            owner = {
+                is_ai = no
+            }
+        }
+    }
+    approach = {
+        name = deficit_approach_do_nothing
+        icon = GFX_situation_approach_this_is_fine
+        icon_background = GFX_situation_approach_bg_yellow
+        default = yes
+        on_select = {
+            custom_tooltip = deficit_approach_do_nothing_tooltip
+        }
+        ai_weight = {
+            base = 1
+        }
+    }
 }
 
