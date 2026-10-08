@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  # ===== 通用物种特质 v1.0 =====
- # 8 个特质：4 正面 + 3 负面 + 1 中性
+ # 8 个特质：4 正面 + 2 负面 + 2 中性
  trait_sl_stellar_nomad: "星际游牧者"
  trait_sl_stellar_nomad_desc: "习惯于星际间的迁徙与开拓，此种族能极速建立殖民地与轨道设施，但人口繁衍较慢——故土的概念对他们而言早已模糊。"
  trait_sl_relic_keeper: "遗迹守护者"

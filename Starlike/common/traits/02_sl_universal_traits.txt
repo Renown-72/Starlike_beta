@@ -7,105 +7,105 @@
 
 # 1. 星际游牧者（cost 2）：扩张快但繁衍慢
 trait_sl_stellar_nomad = {
- cost = 2
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  planet_colony_development_speed_mult = 0.25
-  starbase_building_build_speed_mult = 0.15
-  logistic_growth_mult = -0.10
- }
- icon = "GFX_trait_icon_nomadic"
+    cost = 2
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        planet_colony_development_speed_mult = 0.25
+        starbase_building_build_speed_mult = 0.15
+        logistic_growth_mult = -0.10
+    }
+    icon = "GFX_trait_icon_nomadic"
 }
 
 # 2. 遗迹守护者（cost 1）：文化研究专精
 trait_sl_relic_keeper = {
- cost = 1
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  researcher_jobs_bonus_workforce_mult = 0.10
- }
- icon = "GFX_trait_icon_conservational"
+    cost = 1
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        researcher_jobs_bonus_workforce_mult = 0.10
+    }
+    icon = "GFX_trait_icon_conservational"
 }
 
 # 3. 虚空适应（cost 1）：宜居耐受+
 trait_sl_void_adapted = {
- cost = 1
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  pop_environment_tolerance = 0.20
- }
- icon = "GFX_trait_icon_void_dweller"
+    cost = 1
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        pop_environment_tolerance = 0.20
+    }
+    icon = "GFX_trait_icon_void_dweller"
 }
 
 # 4. 文化交融（cost 1）：外交+/迁移成本-，但派系吸引力-
 trait_sl_cultural_exchange = {
- cost = 1
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  diplo_weight_mult = 0.10
-  pop_government_ethic_attraction = -0.15
-  pop_resettlement_cost_mult = -0.25
- }
- icon = "GFX_trait_icon_charismatic"
+    cost = 1
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        diplo_weight_mult = 0.10
+        pop_government_ethic_attraction = -0.15
+        pop_resettlement_cost_mult = -0.25
+    }
+    icon = "GFX_trait_icon_charismatic"
 }
 
 # 5. 故土眷恋（cost -1）：殖民慢、迁移贵
 trait_sl_homeworld_bound = {
- cost = -1
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  planet_colony_development_speed_mult = -0.30
-  pop_resettlement_cost_mult = 0.20
- }
- icon = "GFX_trait_icon_sedentary"
+    cost = -1
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        planet_colony_development_speed_mult = -0.30
+        pop_resettlement_cost_mult = 0.20
+    }
+    icon = "GFX_trait_icon_sedentary"
 }
 
 # 6. 文化保守（cost 0，正负抵消）：行政员+，但科研速度-
 trait_sl_tradition_bound = {
- cost = 0
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  bureaucrat_jobs_bonus_workforce_mult = 0.10
-  all_technology_research_speed = -0.10
- }
- icon = "GFX_trait_icon_traditional"
+    cost = 0
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        bureaucrat_jobs_bonus_workforce_mult = 0.10
+        all_technology_research_speed = -0.10
+    }
+    icon = "GFX_trait_icon_traditional"
 }
 
 # 7. 资源依赖（cost -1）：矿工+，技术员-
 trait_sl_resource_dependent = {
- cost = -1
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  miner_jobs_bonus_workforce_mult = 0.10
-  technician_jobs_bonus_workforce_mult = -0.15
- }
- icon = "GFX_trait_icon_industrious"
+    cost = -1
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        miner_jobs_bonus_workforce_mult = 0.10
+        technician_jobs_bonus_workforce_mult = -0.15
+    }
+    icon = "GFX_trait_icon_industrious"
 }
 
 # 8. 双重天性（cost 0）：幸福+/领袖经验+，但派系吸引力-
 trait_sl_dual_nature = {
- cost = 0
- initial = no
- randomized = yes
- allowed_archetypes = { BIOLOGICAL }
- modifier = {
-  pop_happiness = 0.05
-  species_leader_exp_gain = 0.15
-  pop_government_ethic_attraction = -0.10
- }
- icon = "GFX_trait_icon_enigmatic_intelligence"
+    cost = 0
+    initial = no
+    randomized = yes
+    allowed_archetypes = { BIOLOGICAL }
+    modifier = {
+        pop_happiness = 0.05
+        species_leader_exp_gain = 0.15
+        pop_government_ethic_attraction = -0.10
+    }
+    icon = "GFX_trait_icon_enigmatic_intelligence"
 }
