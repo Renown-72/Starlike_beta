@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ # ===== 通用物种特质 v1.0 =====
+ # 8 个特质：4 正面 + 3 负面 + 1 中性
+ trait_sl_stellar_nomad: "星际游牧者"
+ trait_sl_stellar_nomad_desc: "习惯于星际间的迁徙与开拓，此种族能极速建立殖民地与轨道设施，但人口繁衍较慢——故土的概念对他们而言早已模糊。"
+ trait_sl_relic_keeper: "遗迹守护者"
+ trait_sl_relic_keeper_desc: "对古代文明怀有深切敬意，此种族培养出独特的学者气质，研究人员能在浩瀚史册与失落文明的密钥中迅速汲取智慧。"
+ trait_sl_void_adapted: "虚空适应"
+ trait_sl_void_adapted_desc: "数代人在轨道与异星环境中生存，此种族对各类星球的极端环境均有出色的耐受度。"
+ trait_sl_cultural_exchange: "文化交融"
+ trait_sl_cultural_exchange_desc: "开放包容的文化使此种族在外交舞台上更具分量，且乐于跨星迁移；但内部信仰与流派也因吸纳过多外来思想而显得驳杂。"
+ trait_sl_homeworld_bound: "故土眷恋"
+ trait_sl_homeworld_bound_desc: "此种族对母星与定居地有强烈情感联结，殖民新世界与人口迁徙均显得极为困难——故土的羁绊成了他们走向群星的桎梏。"
+ trait_sl_tradition_bound: "文化保守"
+ trait_sl_tradition_bound_desc: "坚守世代传承的价值观与制度，此种族的行政体系运作得井然有序，但对崭新科技与未知领域则显得迟疑与抗拒。"
+ trait_sl_resource_dependent: "资源依赖"
+ trait_sl_resource_dependent_desc: "工业时代遗留的文化基因使此种族擅长开采矿藏，但在能量化生产与精细化技术领域则显得后劲不足。"
+ trait_sl_dual_nature: "双重天性"
+ trait_sl_dual_nature_desc: "矛盾交织的种族性格——他们既乐观坦荡又内心动荡。这种张力使其领袖在挑战中迅速成长，却也让国民派系在意识形态间摇摆不定。"
