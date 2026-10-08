@@ -24,7 +24,7 @@ Test with a new game using the `origin_homing` origin. Check the start setup, Ea
 
 ## Commit & Pull Request Guidelines
 
-Follow the existing Conventional Commit style: `feat:`, `fix:`, `docs:`, `refactor:`, or `chore:` followed by a concise Chinese or English summary. Keep each commit focused. Pull requests should state the affected systems, Stellaris version, whether a new save is required, verification steps, relevant log excerpts, and screenshots for visible changes. Link related issues or Workshop reports when available.
+Follow the existing Conventional Commit style: `feat:`, `fix:`, `docs:`, `refactor:`, or `chore:` followed by a concise Chinese or English summary. Keep each commit focused. Tag every Workshop release with an annotated tag (`git tag -a vX.Y -m "..."`), and push it explicitly — `git push` does not transfer tags. Keep the `version` field in `Starlike.mod` and `Starlike/descriptor.mod` aligned with each other and with the release tag. Pull requests should state the affected systems, Stellaris version, whether a new save is required, verification steps, relevant log excerpts, and screenshots for visible changes. Link related issues or Workshop reports when available.
 
 ## Configuration Tips
 
